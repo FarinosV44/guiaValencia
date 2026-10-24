@@ -90,7 +90,7 @@ ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j).repl
       <img src="/assets/img/logo-96.png" srcset="/assets/img/logo-96.png 1x, /assets/img/logo-192.png 2x" width="48" height="48" alt="">
       <span class="brand__name">${e(site.name)}</span>
     </a>
-    <a class="lang" href="${switchHref}" hreflang="${otherLang}" lang="${otherLang}" data-keep-query="${page.keepQuery ? '1' : ''}" aria-label="${e(ui.langSwitchLabel)}">${e(ui.langSwitch)}</a>
+    <a class="lang" href="${switchHref}" hreflang="${otherLang}" lang="${otherLang}" data-keep-query="${page.keepQuery ? '1' : ''}">${e(ui.langSwitch)}</a>
   </div>
   <nav class="wrap mainnav" aria-label="${e(ui.menu)}"><ul>${nav}</ul></nav>
 </header>

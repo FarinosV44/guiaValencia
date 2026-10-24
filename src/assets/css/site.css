@@ -88,6 +88,7 @@ main:focus { outline: none; }
 .independence { padding-block: 2rem; }
 .independence__claim { font: 800 clamp(1.6rem, 3.5vw, 2.4rem)/1.1 var(--redonda); color: var(--naranja); margin-bottom: .4em; }
 .independence p { max-width: 70ch; }
+.band--ink .small { color: var(--crema); opacity: .9; }
 .independence--page { padding: 1.5rem; border-radius: var(--radio); margin-bottom: 2rem; }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
@@ -157,6 +158,8 @@ main:focus { outline: none; }
 .verdict__item--yes { background: #dff0e6; }
 .verdict__item--no { background: #fbe3e9; }
 .place__grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr); gap: 2.5rem; align-items: start; }
+.place__grid > * { min-width: 0; }
+.evidence a, .sources a, .rc__src a { overflow-wrap: anywhere; }
 .place__main section { margin-bottom: 1.6rem; max-width: 70ch; }
 .place__main h2 { font-size: 1.2rem; }
 .place__side { position: sticky; top: 1rem; display: grid; gap: 1.2rem; }

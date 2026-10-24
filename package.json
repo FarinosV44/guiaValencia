@@ -10,8 +10,8 @@
   "scripts": {
     "build": "node src/build.js",
     "serve": "node scripts/serve.js",
-    "test": "node --test test/",
-    "check": "npm run build && npm test",
+    "test": "node --test test/*.test.js",
+    "check": "npm run build && npm test && npm run a11y",
     "a11y": "node scripts/a11y.js",
     "screenshots": "node scripts/screenshots.js",
     "logo": "node scripts/logo.js"

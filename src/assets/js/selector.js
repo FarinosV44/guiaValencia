@@ -67,7 +67,7 @@ function pickHtml(pick) {
 }
 
 function render(res, q) {
-  const parts = [`<h2 id="results-title" tabindex="-1">${e(ui.resultsTitle)}</h2>`];
+  const parts = [`<h2 id="results-title" tabindex="-1">${e(res.enough ? ui.resultsTitle : ui.resultsTitleFew)}</h2>`];
   if (!res.enough) parts.push(`<p class="lead">${e(ui.resultsFew(res.picks.length))}</p>`);
   if (res.picks.length) parts.push(`<div class="results__picks">${res.picks.map(pickHtml).join('')}</div>`);
 

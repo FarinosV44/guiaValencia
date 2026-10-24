@@ -87,7 +87,7 @@ function homePage(ctx, lang) {
       <p class="hero__tag">${e(ui.tagline)}</p>
       <p>${e(ui.homeIntro)}</p>
     </div>
-    <a class="hero__receipt" href="${PATHS.place[lang](sample.id)}" aria-label="${e(sample.name)}">
+    <a class="hero__receipt" href="${PATHS.place[lang](sample.id)}">
       ${heroReceipt(sample, lang)}
     </a>
   </div>
@@ -537,7 +537,7 @@ function fundingPage(ctx, lang) {
   <section class="block"><h2>${e(ui.fundingRules)}</h2><ul>${ui.fundingRulesList.map((x) => `<li>${e(x)}</li>`).join('')}</ul></section>
   <section class="block"><h2>${e(ui.fundingRegistry)}</h2>
     ${f.entries.length ? `<table><tbody>${f.entries.map((en) => `<tr><td>${e(en.date)}</td><td>${e(ctx.data.byId[en.place]?.name || en.place)}</td><td>${e(t(f.kinds[en.kind], lang))}</td></tr>`).join('')}</tbody></table>` : `<p>${e(ui.fundingRegistryEmpty)}</p>`}
-    <dl class="glossary">${Object.values(f.kinds).map((k) => `<dt>${e(t(k, lang))}</dt>`).join('')}</dl>
+    <p>${e(lang === 'es' ? 'Si llega, cada apoyo se registrará por separado:' : 'If it happens, each kind of support is recorded separately:')}</p><ul>${Object.values(f.kinds).map((k) => `<li>${e(t(k, lang))}</li>`).join('')}</ul>
   </section>
   <section class="block"><h2>${e(ui.fundingHistory)}</h2><ul>${f.history.map((h) => `<li>${e(dateLabel(h.from, lang))}: ${e(t(h.note, lang))}</li>`).join('')}</ul></section>
   <section class="block invite-strip"><p><a href="${PATHS.invite[lang]}">${e(ui.inviteLinkText)}</a></p><p class="small">${e(ui.inviteLinkSub)}</p></section>

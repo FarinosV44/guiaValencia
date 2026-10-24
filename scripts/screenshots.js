@@ -11,8 +11,9 @@ const base = `http://127.0.0.1:${PORT}`;
 const shots = [
   ['portada-es', '/'],
   ['portada-en', '/en/'],
-  ['resultados-es', '/estoy-por-aqui/?zona=cabanyal&dia=sat&hora=13:30&con=pareja&presupuesto=30'],
-  ['resultados-en', '/en/im-around-here/?zona=cabanyal&dia=sat&hora=13:30&con=pareja&presupuesto=30'],
+  ['resultados-es', '/estoy-por-aqui/?con=pareja&presupuesto=30&antojo=asiatico'],
+  ['resultados-en', '/en/im-around-here/?con=pareja&presupuesto=30&antojo=asiatico'],
+  ['resultados-zona-es', '/estoy-por-aqui/?zona=cabanyal&dia=sat&hora=13:30&con=pareja&presupuesto=30'],
   ['ficha-es', '/locales/anyora/'],
   ['ficha-en', '/en/places/anyora/'],
   ['ruta-es', '/rutas/cabanyal-comida-paseo-helado/'],
