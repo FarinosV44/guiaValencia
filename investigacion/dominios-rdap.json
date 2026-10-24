@@ -1,0 +1,27 @@
+[
+  {
+    "domain": "dondecomerenvalencia.com",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "domain": "dondecomervalencia.com",
+    "http": 404,
+    "body": "",
+    "url": "https://rdap.verisign.com/com/v1/domain/dondecomervalencia.com",
+    "checked_at": "2026-10-24T19:35:30.736161+00:00"
+  },
+  {
+    "domain": "valenciaalamesa.com",
+    "http": 404,
+    "body": "",
+    "url": "https://rdap.verisign.com/com/v1/domain/valenciaalamesa.com",
+    "checked_at": "2026-10-24T19:35:35.218945+00:00"
+  },
+  {
+    "domain": "valenciabocado.com",
+    "http": 404,
+    "body": "",
+    "url": "https://rdap.verisign.com/com/v1/domain/valenciabocado.com",
+    "checked_at": "2026-10-24T19:35:38.695496+00:00"
+  }
+]
