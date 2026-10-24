@@ -188,6 +188,15 @@ table.hours, table.kids { border-collapse: collapse; width: 100%; max-width: 480
 .field--wide { grid-column: 1 / -1; }
 .field label, .field legend { font-weight: 700; font-size: .95rem; }
 select, input[type="time"], input[type="number"], input[type="text"], input[type="email"], textarea { font: inherit; color: var(--tinta); background: #fff; border: 2px solid var(--tinta); border-radius: 10px; padding: .55rem .7rem; min-height: 44px; width: 100%; }
+.likes { border: 0; padding: 0; margin: 1rem 0 0; }
+.likes legend { font-weight: 700; font-size: .95rem; margin-bottom: .4rem; }
+.likes__row { display: flex; flex-wrap: wrap; gap: .5rem; }
+.likechip { position: relative; display: inline-flex; }
+.likechip input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.likechip span { display: inline-flex; align-items: center; min-height: 44px; padding: .4rem 1rem; border: 2px solid var(--tinta); border-radius: 999px; background: #fff; font-weight: 700; }
+.likechip input:checked + span { background: var(--naranja); }
+.likechip input:checked + span::before { content: "✓ "; white-space: pre; }
+.likechip input:focus-visible + span { outline: 3px solid var(--tinta); outline-offset: 2px; box-shadow: 0 0 0 6px var(--naranja); }
 .selector__checks { display: grid; gap: .5rem; margin-block: 1rem; }
 .check { display: flex; align-items: flex-start; gap: .55rem; font-weight: 600; cursor: pointer; }
 .check input { width: 22px; height: 22px; margin-top: .1rem; accent-color: var(--tinta); flex: none; }
@@ -199,6 +208,15 @@ select, input[type="time"], input[type="number"], input[type="text"], input[type
 .pick ul { margin: 0; padding-left: 1.1rem; }
 .pick__catch { color: var(--rosa); }
 .pick__actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: .5rem 1rem; padding-top: .5rem; }
+.comparebox { font-size: .95rem; padding-top: .3rem; border-top: 1px dashed var(--linea); }
+.excl .comparebox { display: inline-flex; border: 0; padding: 0; margin-left: .4rem; }
+.alt { display: flex; flex-direction: column; gap: .4rem; }
+.alt__why { font-weight: 700; font-size: .92rem; margin: 0; }
+.alt .ticket { flex: 1; }
+.compare.compare--picks table { min-width: 0; table-layout: fixed; font-size: .9rem; }
+.compare--picks th[scope="row"] { width: 30%; }
+.compare--picks th, .compare--picks td { padding: .45rem .35rem; overflow-wrap: anywhere; hyphens: auto; }
+.compare td.is-open { color: var(--rosa); font-weight: 700; }
 .excl { background: var(--crema); border-radius: var(--radio); padding: 1rem; margin-top: 1rem; }
 .sugg { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
 .sugg button { font: 600 .95rem var(--sans); background: var(--papel); border: 2px solid var(--tinta); border-radius: 999px; padding: .4rem .9rem; min-height: 40px; cursor: pointer; color: var(--tinta); }
@@ -266,4 +284,20 @@ select, input[type="time"], input[type="number"], input[type="text"], input[type
 }
 @media (max-width: 380px) {
   .famgrid, .tickets, .results__picks { grid-template-columns: 1fr; }
+}
+
+/* Impresión (#24): el plan en papel, sin navegación ni formularios. */
+.printnote { display: none; }
+@media print {
+  @page { margin: 14mm; }
+  body { background: #fff; font-size: 11pt; }
+  .masthead, .mainnav, .foot, .skip, .crumbs, .printrow, .routecheck form, .lang, .btn, form { display: none !important; }
+  .printnote { display: block; font-size: 9pt; color: #333; }
+  .draftbar { background: none; border: 1px dashed #000; }
+  .receipt { box-shadow: none; -webkit-mask: none; mask: none; border: 1px solid #000; }
+  .place__grid, .verdict { grid-template-columns: 1fr 1fr; }
+  .place__side { position: static; }
+  a { color: #000; text-decoration: none; }
+  .ticket, .stop, .famcard, .teaser, .mapbox, .verdict__item { break-inside: avoid; border-color: #000; }
+  .block { margin-block: 1rem; }
 }

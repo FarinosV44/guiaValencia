@@ -7,7 +7,7 @@
 import { statusAt, isClosed } from './hours.js';
 import { budgetFit, summarize } from './price.js';
 
-export const RULES_VERSION = '2026-10-24.1';
+export const RULES_VERSION = '2026-10-24.2';
 
 const SCREEN_FREE_OK = new Set(['declarado', 'contrastado']);
 
@@ -106,13 +106,24 @@ function evaluate(p, q) {
     reasons.push({ code: 'plan', plan: q.plan });
   }
 
+  // Gustos del contrato visual: preferencias, nunca requisitos. Solo puntúan donde la investigación da base.
+  for (const like of q.likes || []) {
+    if ((p.likes || []).includes(like)) {
+      score += 2;
+      reasons.push({ code: 'gusto', like });
+    }
+  }
+
+  // «Sin pantalla en la mesa»: requisito duro. Solo cuenta pedir sin móvil declarado o contrastado.
+  const phonePending = !!q.noPhone && !SCREEN_FREE_OK.has(p.kids?.pedir_sin_movil || 'desconocido');
+
   if (p.reviews_sample) score += 0.5;
   if (p.price?.per_adult_base == null && q.budget == null) score -= 0.5;
 
   const ps = summarize(p.price);
   if (p.price?.includes?.postre === 'incluido') reasons.push({ code: 'postre_incluido' });
 
-  const pendingReasons = [...(screenPending ? ['sin_pantallas'] : []), ...(budgetPending ? ['presupuesto'] : [])];
+  const pendingReasons = [...(screenPending ? ['sin_pantallas'] : []), ...(phonePending ? ['pedir_sin_movil'] : []), ...(budgetPending ? ['presupuesto'] : [])];
   return { place: p, score, exclusions, reasons, limits, screenPending, pendingReasons, hours, priceSummary: ps };
 }
 

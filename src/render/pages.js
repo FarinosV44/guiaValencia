@@ -3,11 +3,13 @@ import { summarize, BANDS } from '../lib/price.js';
 import { statement, isFunded } from '../lib/funding.js';
 import { dayTable, checkRoute } from '../lib/route.js';
 import { isEatingVenue, RULES_VERSION } from '../lib/recommend.js';
+import { alternativesFor } from '../lib/alternatives.js';
 import { UI, PATHS, SITE } from '../i18n.js';
 import { icon, CRAVING_ICON } from '../icons.js';
 import { receipt, hoursBlock, kidsBlock, evidenceBlock, placeCard, compareTable, typeLabel, zoneName, scopeBadge, evidenceBadge } from './components.js';
 
 const LANGS = ['es', 'en'];
+const PRINT_DATE = '2026-10-24';
 const other = (l) => (l === 'es' ? 'en' : 'es');
 
 // Página indexable solo si es contenido completo y revisado. Los borradores documentales llevan noindex,
@@ -209,8 +211,10 @@ function selectorPage(ctx, lang) {
       <div class="field"><label for="f-antojo">${e(ui.fCraving)}</label><select id="f-antojo" name="antojo">${opt('', ui.fAnyCraving)}${cravings.map((c) => opt(c, ui.cravings[c])).join('')}</select></div>
       <div class="field"><label for="f-plan">${e(ui.fPlan)}</label><select id="f-plan" name="plan">${opt('', ui.fAnyPlan)}${['rapido', 'sobremesa', 'ocasion'].map((p) => opt(p, ui.plans[p])).join('')}</select></div>
     </div>
+    <fieldset class="likes"><legend>${e(ui.fLikes)}</legend><div class="likes__row">${Object.entries(ui.likes).map(([k, v]) => `<label class="likechip"><input type="checkbox" name="gusto" value="${k}"><span>${e(v)}</span></label>`).join('')}</div></fieldset>
     <div class="selector__checks">
       <label class="check"><input type="checkbox" name="sinpantallas" value="1"> <span>${e(ui.fNoScreens)}</span></label>
+      <label class="check"><input type="checkbox" name="sinmovil" value="1"> <span>${e(ui.fNoPhone)}</span></label>
       <label class="check"><input type="checkbox" name="fuera" value="1"> <span>${e(ui.fOutside)}</span></label>
     </div>
     <button type="submit" class="btn">${e(ui.fSubmit)}</button>
@@ -241,7 +245,7 @@ export function clientCatalog(ctx, lang) {
     zones: Object.fromEntries(ctx.data.zones.map((z) => [z.id, t(z.name, lang)])),
     places: ctx.data.places.map((p) => ({
       id: p.id, name: p.name, type: typeLabel(p, lang), role: p.role, scope: p.scope, zone: p.zone, address: p.address,
-      cravings: p.cravings, tags: p.tags, candidate_only: !!p.candidate_only, reviews_sample: p.reviews_sample || 0,
+      cravings: p.cravings, tags: p.tags, likes: p.likes || [], candidate_only: !!p.candidate_only, reviews_sample: p.reviews_sample || 0,
       price: p.price, hours: p.hours, kids: p.kids,
       text: { fits: p.text[lang].fits, not_for: p.text[lang].not_for, may_disappoint: p.text[lang].may_disappoint },
       url: PATHS.place[lang](p.id), maps: p.maps.search,
@@ -255,7 +259,7 @@ function placePage(ctx, lang, p) {
   const tx = p.text[lang];
   const zone = ctx.data.zoneById[p.zone];
   const sameZone = ctx.data.places.filter((x) => x.zone === p.zone && x.id !== p.id);
-  const sameEat = sameZone.filter(isEatingVenue).slice(0, 3);
+  const alts = alternativesFor(p, ctx.data.places);
   const sameSweet = sameZone.filter((x) => (x.role || []).some((r) => r === 'postre' || r === 'cafe')).slice(0, 3);
   const dessertIncluded = p.price?.includes?.postre === 'incluido';
 
@@ -266,6 +270,7 @@ function placePage(ctx, lang, p) {
     <p class="place__meta">${e(typeLabel(p, lang))}${zone ? `, ${e(t(zone.name, lang))}` : ''}</p>
     <div class="ticket__badges">${evidenceBadge(p, ctx, lang)}${scopeBadge(p, lang)}</div>
     ${p.zone_note ? `<p class="small">${e(t(p.zone_note, lang))}</p>` : ''}
+    <p class="printrow" hidden><button type="button" class="btn btn--ghost" data-print>${e(ui.printPlan)}</button></p><p class="printnote">${e(ui.printNote(dateLabel(PRINT_DATE, lang)))}</p>
   </header>
 
   <div class="verdict">
@@ -294,9 +299,10 @@ function placePage(ctx, lang, p) {
     </aside>
   </div>
 
-  ${sameEat.length || sameSweet.length ? `<section class="block"><h2>${e(ui.sameZone)}</h2>
-    ${dessertIncluded && sameSweet.length ? `<p class="small">${e(ui.continuationIncluded)}</p>` : ''}
-    <div class="tickets">${[...sameEat, ...sameSweet].map((x) => placeCard(x, ctx, lang, { showZone: false })).join('')}</div></section>` : ''}
+  ${alts.length ? `<section class="block"><h2>${e(ui.altTitle)}</h2><div class="tickets">${alts.map((a) => `<div class="alt"><p class="alt__why">${e(ui.altWhy(a, ctx.data.zoneById[a.place.zone] ? t(ctx.data.zoneById[a.place.zone].name, lang) : '', (x) => money(x, lang)))}</p>${placeCard(a.place, ctx, lang)}</div>`).join('')}</div></section>` : ''}
+  ${sameSweet.length ? `<section class="block"><h2>${e(ui.sweetHere)}</h2>
+    ${dessertIncluded ? `<p class="small">${e(ui.continuationIncluded)}</p>` : ''}
+    <div class="tickets">${sameSweet.map((x) => placeCard(x, ctx, lang, { showZone: false })).join('')}</div></section>` : ''}
 </article>`;
 
   const page = pageBase('place', lang, PATHS.place[lang](p.id), PATHS.place[other(lang)](p.id), { indexable: !!p.publication_ready, draft: !p.publication_ready });
@@ -477,6 +483,7 @@ function routePage(ctx, lang, r) {
 <div class="wrap">
   <h1 class="pagetitle">${e(t(r.title, lang))}</h1>
   <p class="lead">${e(t(r.summary, lang))}</p>
+  <p class="printrow" hidden><button type="button" class="btn btn--ghost" data-print>${e(ui.printPlan)}</button></p><p class="printnote">${e(ui.printNote(dateLabel(PRINT_DATE, lang)))}</p>
   <ol class="stops">${stops}</ol>
 
   <section class="block"><h2>${e(ui.routeWeekTable)}</h2>

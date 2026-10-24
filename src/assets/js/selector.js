@@ -3,7 +3,8 @@
 import { UI } from './i18n.js';
 import { recommend, continuation } from './lib/recommend.js';
 import { summarize } from './lib/price.js';
-import { money, escapeHtml as e } from './lib/format.js';
+import { money, escapeHtml as e, clock } from './lib/format.js';
+import { statusAt } from './lib/hours.js';
 
 const catalog = JSON.parse(document.getElementById('catalog').textContent);
 const lang = catalog.lang;
@@ -11,15 +12,23 @@ const ui = UI[lang];
 const m = (x) => money(x, lang);
 const form = document.getElementById('selector');
 const out = document.getElementById('results');
+const MAX_COMPARE = 3;
+const selected = new Set();
+let lastQuery = {};
+const byId = Object.fromEntries(catalog.places.map((p) => [p.id, p]));
 
 const FIELDS = ['zona', 'dia', 'hora', 'con', 'presupuesto', 'antojo', 'plan'];
-const CHECKS = ['sinpantallas', 'fuera'];
+const CHECKS = ['sinpantallas', 'sinmovil', 'fuera'];
 
 function readUrl() {
   const p = new URLSearchParams(location.search);
   let any = false;
   for (const f of FIELDS) if (p.has(f) && form.elements[f]) { form.elements[f].value = p.get(f); any = true; }
   for (const c of CHECKS) if (p.get(c) === '1') { form.elements[c].checked = true; any = true; }
+  for (const g of p.getAll('gusto')) {
+    const box = form.querySelector(`input[name="gusto"][value="${CSS.escape(g)}"]`);
+    if (box) { box.checked = true; any = true; }
+  }
   return any;
 }
 
@@ -30,7 +39,8 @@ function formQuery() {
     zone: v('zona'), day: v('dia'), time: v('hora'), company: v('con'),
     budget: v('presupuesto') ? Number(v('presupuesto')) : null,
     craving: v('antojo'), plan: v('plan'),
-    noScreens: fd.get('sinpantallas') === '1', includeOutside: fd.get('fuera') === '1',
+    noScreens: fd.get('sinpantallas') === '1', noPhone: fd.get('sinmovil') === '1', includeOutside: fd.get('fuera') === '1',
+    likes: fd.getAll('gusto'),
   };
 }
 
@@ -39,6 +49,7 @@ function writeUrl() {
   const p = new URLSearchParams();
   for (const f of FIELDS) if (fd.get(f)) p.set(f, fd.get(f));
   for (const c of CHECKS) if (fd.get(c) === '1') p.set(c, '1');
+  for (const g of fd.getAll('gusto')) p.append('gusto', g);
   const qs = p.toString();
   history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
 }
@@ -63,7 +74,54 @@ function pickHtml(pick) {
     <p class="pick__catch"><strong>${e(ui.catch)}:</strong> ${e(p.text.not_for)}${limits.length ? ' ' + e(limits.join(' ')) : ''}</p>
     <p class="num small">${e(priceLine(p))}</p>
     <p class="pick__actions"><a href="${p.url}">${e(ui.seeCard)}</a><a href="${e(p.maps)}" rel="nofollow noopener">${e(ui.maps)}</a></p>
+    ${compareBox(p)}
   </article>`;
+}
+
+function compareBox(p) {
+  return `<label class="check comparebox"><input type="checkbox" data-compare="${e(p.id)}"${selected.has(p.id) ? ' checked' : ''}> <span>${e(ui.compareAdd)}</span></label>`;
+}
+
+function hoursCell(p) {
+  const q = lastQuery;
+  if (q.day && q.time) {
+    const st = statusAt(p.hours, q.day, q.time);
+    return ui.hoursStates[st.state] + (st.closes ? ` (${clock(st.closes)})` : '');
+  }
+  return ui.hoursStatus[p.hours?.status || 'desconocido'];
+}
+
+function renderCompare() {
+  const box = document.getElementById('compare');
+  if (!box) return;
+  const ps = [...selected].map((id) => byId[id]).filter(Boolean);
+  for (const input of out.querySelectorAll('input[data-compare]')) {
+    input.disabled = !input.checked && selected.size >= MAX_COMPARE;
+  }
+  if (ps.length < 2) {
+    box.innerHTML = `<p class="small">${e(selected.size >= MAX_COMPARE ? ui.compareLimit : ui.compareHint)}</p>`;
+    return;
+  }
+  const R = ui.compareRows;
+  const sums = ps.map((p) => summarize(p.price));
+  const comp = (s, k) => ui.includes[s.components.find((c) => c.key === k).status];
+  const kid = (p, k) => ui.kidsValues[p.kids?.[k] || 'desconocido'];
+  const rows = [
+    [R.base, sums.map((s) => (s.base != null ? m(s.base) : ui.unknownMark))],
+    [R.example, sums.map((s) => (s.perPerson != null ? m(s.perPerson) : ui.unknownMark))],
+    [R.bebida, sums.map((s) => comp(s, 'bebida'))],
+    [R.pan, sums.map((s) => comp(s, 'pan'))],
+    [R.postre, sums.map((s) => comp(s, 'postre'))],
+    [R.cafe, sums.map((s) => comp(s, 'cafe'))],
+    [lastQuery.day && lastQuery.time ? R.hoursAt : R.hours, ps.map(hoursCell)],
+    [R.play, ps.map((p) => kid(p, 'juego_sin_pantallas'))],
+    [R.phone, ps.map((p) => kid(p, 'pedir_sin_movil'))],
+    [R.scope, ps.map((p) => ui.scopes[p.scope])],
+  ];
+  box.innerHTML = `<div class="compare compare--picks" role="region" tabindex="0" aria-label="${e(ui.compareTitle)}"><table><caption>${e(ui.compareTitle)}</caption>
+    <thead><tr><td></td>${ps.map((p) => `<th scope="col"><a href="${p.url}">${e(p.name)}</a></th>`).join('')}</tr></thead>
+    <tbody>${rows.map(([label, cells]) => `<tr><th scope="row">${e(label)}</th>${cells.map((c) => `<td${c === ui.unknownMark || /¿\?/.test(c) ? ' class="is-open"' : ''}>${e(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+    ${selected.size >= MAX_COMPARE ? `<p class="small">${e(ui.compareLimit)}</p>` : ''}`;
 }
 
 function render(res, q) {
@@ -80,7 +138,7 @@ function render(res, q) {
   }
 
   if (res.pending.length) {
-    parts.push(`<section class="excl"><h3>${e(ui.pendingTitle)}</h3><p>${e(ui.pendingLead)}</p><ul>${res.pending.map((x) => `<li><a href="${x.place.url}">${e(x.place.name)}</a>: ${e(x.pendingReasons.map((r) => ui.pendingWhy[r]).join(', '))}</li>`).join('')}</ul></section>`);
+    parts.push(`<section class="excl"><h3>${e(ui.pendingTitle)}</h3><p>${e(ui.pendingLead)}</p><ul>${res.pending.map((x) => `<li><a href="${x.place.url}">${e(x.place.name)}</a>: ${e(x.pendingReasons.map((r) => ui.pendingWhy[r]).join(', '))} ${compareBox(x.place)}</li>`).join('')}</ul></section>`);
   }
 
   const ex = Object.entries(res.exclusionCounts).filter(([k]) => ui.excluded[k]);
@@ -89,12 +147,17 @@ function render(res, q) {
       res.suggestions.length ? `<p><strong>${e(ui.suggestionsTitle)}:</strong></p><div class="sugg">${res.suggestions.map((s) => `<button type="button" data-sugg="${s}">${e(ui.suggestions[s])}</button>`).join('')}</div>` : ''
     }</section>`);
   }
+  parts.push('<section class="block" id="compare" aria-live="polite"></section>');
   out.innerHTML = parts.join('');
+  renderCompare();
 }
 
 function run(focus) {
   const q = formQuery();
   const res = recommend(catalog.places, q);
+  lastQuery = q;
+  const shown = new Set([...res.picks, ...res.pending].map((x) => x.place.id));
+  for (const id of [...selected]) if (!shown.has(id)) selected.delete(id);
   render(res, q);
   writeUrl();
   if (focus) document.getElementById('results-title')?.focus();
@@ -103,6 +166,16 @@ function run(focus) {
 form.addEventListener('submit', (ev) => {
   ev.preventDefault();
   run(true);
+});
+
+out.addEventListener('change', (ev) => {
+  const box = ev.target.closest('input[data-compare]');
+  if (!box) return;
+  if (box.checked) {
+    if (selected.size >= MAX_COMPARE) { box.checked = false; return; }
+    selected.add(box.dataset.compare);
+  } else selected.delete(box.dataset.compare);
+  renderCompare();
 });
 
 out.addEventListener('click', (ev) => {

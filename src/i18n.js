@@ -77,6 +77,15 @@ export const UI = {
     excursion: 'Excursión',
     checked: 'Consultado el',
     sameZone: 'Más en esta zona',
+    printPlan: 'Imprimir o guardar en PDF',
+    printNote: (d) => `Impreso desde Dónde comer en Valencia. Datos consultados el ${d}: comprueba horarios y precios antes de ir.`,
+    altTitle: 'Si este no encaja: dos alternativas comparables',
+    altWhy: (a, zone, m) => {
+      const what = a.shared.map((c) => (c === 'juego' ? 'espacio de juego' : UI.es.cravings[c].toLowerCase())).join(', ');
+      const where = a.sameZone ? 'en la misma zona' : `en otra zona (${zone})`;
+      const price = a.price === 'no_comparable' ? 'precio no comparable: no incluyen lo mismo' : a.price === 'desconocido' ? 'precio sin comparar: falta un dato' : a.price === 'mas_barata' ? `base más baja (${m(a.base)})` : a.price === 'mas_cara' ? `base más alta (${m(a.base)})` : 'misma base';
+      return `En común: ${what}; ${where}; ${price}.`;
+    },
     zone: 'Zona',
     address: 'Dirección',
     typeLabel: 'Tipo',
@@ -128,6 +137,9 @@ export const UI = {
     fZone: 'Zona', fAnyZone: 'Cualquier zona de Valencia', fDay: 'Día', fAnyDay: 'Cualquier día', fTime: 'Hora de llegada', fAnyTime: 'Cualquier hora',
     fCompany: 'Compañía', fAnyCompany: 'Sin especificar', fBudget: 'Presupuesto por persona (base)', fAnyBudget: 'Sin límite', fCraving: 'Antojo', fAnyCraving: 'Lo que sea', fPlan: 'Tipo de plan', fAnyPlan: 'Sin especificar',
     fNoScreens: 'NO PANTALLAS: solo locales con juego sin pantallas confirmado',
+    fNoPhone: 'Sin pantalla en la mesa: solo locales donde se pueda pedir sin móvil (confirmado)',
+    fLikes: 'Gustos (opcional)',
+    likes: { pescado: 'Quiero pescado', salsas: 'Me gustan las salsas', mucha_hambre: 'Mucha hambre', cita_tranquila: 'Cita tranquila', vegano: 'Vegano' },
     fOutside: 'Incluir fuera de Valencia ciudad (área metropolitana y excursiones)',
     fSubmit: 'Recomendar',
     fNoJs: 'Este selector necesita JavaScript. Sin él, puedes explorar por zona:',
@@ -142,7 +154,7 @@ export const UI = {
     excluded: { zona: 'En otras zonas', cerrado: 'Cerrados a esa hora', solo_llevar: 'Solo para llevar a esa hora', presupuesto: 'Base por encima del presupuesto', fuera_ciudad: 'Fuera de Valencia ciudad' },
     pendingTitle: 'Pendientes de confirmar',
     pendingLead: 'Podrían encajar, pero falta un dato que pediste. No los contamos como cumplimiento.',
-    pendingWhy: { sin_pantallas: 'juego sin pantallas sin confirmar', presupuesto: 'precio sin verificar' },
+    pendingWhy: { sin_pantallas: 'juego sin pantallas sin confirmar', pedir_sin_movil: 'pedir sin móvil sin confirmar', presupuesto: 'precio sin verificar' },
     suggestionsTitle: 'Puedes cambiar, si quieres',
     suggestions: { quitar_zona: 'Buscar en cualquier zona', cambiar_hora: 'Probar otra hora o día', subir_presupuesto: 'Subir el presupuesto', ver_pendientes: 'Ver los pendientes de confirmar', quitar_antojo: 'Quitar el antojo', incluir_fuera: 'Incluir fuera de la ciudad' },
     reasons: {
@@ -156,6 +168,7 @@ export const UI = {
       espacio_juego_declarado: () => 'Espacio de juego declarado en el propio local.',
       plan: (r, m, ui) => `Encaja con el plan: ${ui.plans[r.plan].toLowerCase()}.`,
       postre_incluido: () => 'El postre ya va incluido: no hace falta otra parada dulce.',
+      gusto: (r, m, ui) => `Encaja con tu gusto: ${ui.likes[r.like].toLowerCase()}.`,
     },
     limits: {
       cierra_pronto: (l) => `Cierra a las ${l.closes}: poco margen.`,
@@ -258,6 +271,12 @@ export const UI = {
     relatedTitle: 'Sigue explorando',
     compareTitle: 'Comparar de un vistazo',
     compareCols: { name: 'Local', base: 'Base por adulto', drink: 'Bebida', dessert: 'Postre', hours: 'Horario' },
+    compareAdd: 'Comparar',
+    compareHint: 'Marca hasta tres opciones para compararlas.',
+    compareLimit: 'Ya hay tres marcadas: desmarca una para añadir otra.',
+    compareRows: { base: 'Base por adulto', example: 'Pedido de ejemplo por persona', bebida: 'Bebida', pan: 'Pan', postre: 'Postre', cafe: 'Café', hoursAt: 'A la hora elegida', hours: 'Horario', play: 'Juego sin pantallas', phone: 'Pedir sin móvil', scope: 'Ámbito' },
+    hoursStates: { abierto: 'Abierto', solo_llevar: 'Solo para llevar', probable: 'Declara servicio (sin horas)', cerrado: 'Cerrado', contradictorio: 'Fuentes contradictorias', desconocido: 'Sin confirmar' },
+    scopes: { valencia: 'Valencia ciudad', area_metropolitana: 'Fuera de la ciudad', excursion: 'Excursión' },
     zonePageLead: (n) => `${n} fichas documentadas en esta zona. Tres a cinco por plan, no todo el catálogo.`,
     eatHere: 'Para comer',
     sweetHere: 'Para el dulce o el café',
@@ -320,6 +339,15 @@ export const UI = {
     excursion: 'Day trip',
     checked: 'Checked on',
     sameZone: 'More in this area',
+    printPlan: 'Print or save as PDF',
+    printNote: (d) => `Printed from Where to eat in Valencia. Data checked on ${d}: confirm hours and prices before you go.`,
+    altTitle: 'If this one doesn’t fit: two comparable alternatives',
+    altWhy: (a, zone, m) => {
+      const what = a.shared.map((c) => (c === 'juego' ? 'play space' : UI.en.cravings[c].toLowerCase())).join(', ');
+      const where = a.sameZone ? 'in the same area' : `in another area (${zone})`;
+      const price = a.price === 'no_comparable' ? 'price not comparable: they don’t include the same things' : a.price === 'desconocido' ? 'price not comparable: a figure is missing' : a.price === 'mas_barata' ? `lower base price (${m(a.base)})` : a.price === 'mas_cara' ? `higher base price (${m(a.base)})` : 'same base price';
+      return `In common: ${what}; ${where}; ${price}.`;
+    },
     zone: 'Area',
     address: 'Address',
     typeLabel: 'Type',
@@ -366,6 +394,9 @@ export const UI = {
     fZone: 'Area', fAnyZone: 'Anywhere in Valencia', fDay: 'Day', fAnyDay: 'Any day', fTime: 'Arrival time', fAnyTime: 'Any time',
     fCompany: 'Who’s coming', fAnyCompany: 'Not specified', fBudget: 'Budget per person (base)', fAnyBudget: 'No limit', fCraving: 'Craving', fAnyCraving: 'Anything', fPlan: 'Kind of plan', fAnyPlan: 'Not specified',
     fNoScreens: 'NO SCREENS: only venues with confirmed screen-free play',
+    fNoPhone: 'No screen at the table: only venues where you can order without a phone (confirmed)',
+    fLikes: 'Tastes (optional)',
+    likes: { pescado: 'I want fish', salsas: 'I like sauces', mucha_hambre: 'Very hungry', cita_tranquila: 'Quiet date', vegano: 'Vegan' },
     fOutside: 'Include places outside Valencia city (metro area and day trips)',
     fSubmit: 'Recommend',
     fNoJs: 'This picker needs JavaScript. Without it, you can browse by area:',
@@ -380,7 +411,7 @@ export const UI = {
     excluded: { zona: 'In other areas', cerrado: 'Closed at that time', solo_llevar: 'Takeaway only at that time', presupuesto: 'Base price above budget', fuera_ciudad: 'Outside Valencia city' },
     pendingTitle: 'Not yet confirmable',
     pendingLead: 'These might fit, but a detail you asked for is missing. We don’t count them as meeting it.',
-    pendingWhy: { sin_pantallas: 'screen-free play not confirmed', presupuesto: 'price not verified' },
+    pendingWhy: { sin_pantallas: 'screen-free play not confirmed', pedir_sin_movil: 'ordering without a phone not confirmed', presupuesto: 'price not verified' },
     suggestionsTitle: 'You could change, if you like',
     suggestions: { quitar_zona: 'Search any area', cambiar_hora: 'Try another time or day', subir_presupuesto: 'Raise the budget', ver_pendientes: 'See unconfirmed places', quitar_antojo: 'Drop the craving', incluir_fuera: 'Include places outside the city' },
     reasons: {
@@ -394,6 +425,7 @@ export const UI = {
       espacio_juego_declarado: () => 'Play space declared on the premises.',
       plan: (r, m, ui) => `Fits the plan: ${ui.plans[r.plan].toLowerCase()}.`,
       postre_incluido: () => 'Dessert is already included: no need for another sweet stop.',
+      gusto: (r, m, ui) => `Matches your taste: ${ui.likes[r.like].toLowerCase()}.`,
     },
     limits: {
       cierra_pronto: (l) => `Closes at ${l.closes}: not much time.`,
@@ -491,6 +523,12 @@ export const UI = {
     relatedTitle: 'Keep exploring',
     compareTitle: 'Compare at a glance',
     compareCols: { name: 'Venue', base: 'Base per adult', drink: 'Drinks', dessert: 'Dessert', hours: 'Hours' },
+    compareAdd: 'Compare',
+    compareHint: 'Tick up to three options to compare them.',
+    compareLimit: 'Three are already ticked: untick one to add another.',
+    compareRows: { base: 'Base per adult', example: 'Sample order per person', bebida: 'Drinks', pan: 'Bread', postre: 'Dessert', cafe: 'Coffee', hoursAt: 'At the time chosen', hours: 'Hours', play: 'Screen-free play', phone: 'Order without a phone', scope: 'Scope' },
+    hoursStates: { abierto: 'Open', solo_llevar: 'Takeaway only', probable: 'Declares service (no times)', cerrado: 'Closed', contradictorio: 'Sources contradict', desconocido: 'Not confirmed' },
+    scopes: { valencia: 'Valencia city', area_metropolitana: 'Outside the city', excursion: 'Day trip' },
     zonePageLead: (n) => `${n} documented venues in this area. Three to five per plan, not the whole catalogue.`,
     eatHere: 'To eat',
     sweetHere: 'For something sweet or coffee',

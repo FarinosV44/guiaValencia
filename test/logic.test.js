@@ -163,3 +163,31 @@ test('ruta R09: compatibilidad por día y un solo postre', () => {
   const ok = checkRoute(r, data.byId, { day: 'sat', arrival: '13:30', stayMin: 90, walkMin: 15, dessert: 'out' });
   assert.equal(ok.sweetStatus.state, 'abierto');
 });
+
+test('gustos: «quiero pescado» sube locales con base documental, sin excluir al resto', () => {
+  const res = recommend(P, { craving: 'asiatico', likes: ['pescado'] });
+  noHardViolations(res);
+  assert.equal(res.picks[0].place.id, 'aoyama-joaquin');
+  assert.ok(res.picks[0].reasons.some((r) => r.code === 'gusto' && r.like === 'pescado'));
+  assert.ok(res.picks.some((p) => !(p.place.likes || []).includes('pescado')), 'un gusto es preferencia, no requisito');
+});
+
+test('«sin pantalla en la mesa»: sin pedido sin móvil confirmado, todo queda pendiente', () => {
+  const res = recommend(P, { zone: 'eixample', noPhone: true });
+  assert.equal(res.picks.length, 0);
+  assert.ok(res.pending.length > 0);
+  assert.ok(res.pending.every((p) => p.pendingReasons.includes('pedir_sin_movil')));
+  assert.ok(res.suggestions.includes('ver_pendientes'));
+});
+
+test('alternativas: comparables, mismo ámbito y precio comparado solo si cubren lo mismo', async () => {
+  const { alternativesFor } = await import('../src/lib/alternatives.js');
+  const raices = alternativesFor(data.byId.raices, P);
+  assert.equal(raices.length, 2);
+  assert.ok(raices.every((a) => a.shared.includes('pizza')));
+  const cassalla = alternativesFor(data.byId.cassalla, P);
+  assert.ok(cassalla.every((a) => a.price === 'no_comparable'), 'esmorzar completo frente a bocadillo solo');
+  const gato = alternativesFor(data.byId.gato, P).map((a) => a.place.id);
+  assert.ok(gato.includes('petit') && gato.includes('linaje'));
+  assert.deepEqual(alternativesFor(data.byId.fernandet, P), [], 'una excursión no se compara con locales de la ciudad');
+});

@@ -10,7 +10,7 @@ const axeSource = readFileSync(require.resolve('axe-core/axe.min.js'), 'utf8');
 const PORT = 4175;
 const base = `http://127.0.0.1:${PORT}`;
 const PAGES = [
-  '/', '/en/', '/estoy-por-aqui/?zona=cabanyal&dia=sat&hora=13:30', '/en/im-around-here/?antojo=asiatico&presupuesto=30',
+  '/', '/en/', '/estoy-por-aqui/?zona=cabanyal&dia=sat&hora=13:30', '/en/im-around-here/?antojo=asiatico&presupuesto=30', '/estoy-por-aqui/?antojo=asiatico&gusto=pescado&gusto=mucha_hambre&sinmovil=1',
   '/locales/anyora/', '/en/places/la-salita/', '/locales/petit/', '/rutas/cabanyal-comida-paseo-helado/', '/en/routes/cabanyal-lunch-stroll-ice-cream/',
   '/comer-con-ninos-valencia/', '/mejores-buffets-sushi-valencia/', '/en/esmorzar-valencia/', '/restaurantes-playa-valencia/', '/invitanos/', '/como-nos-financiamos/', '/zonas/ruzafa/', '/en/korean-bbq-valencia/',
 ];
@@ -56,6 +56,23 @@ try {
     await page.goto(base + '/estoy-por-aqui/?zona=ruzafa&presupuesto=40', { waitUntil: 'networkidle' });
     await Promise.all([page.waitForURL(/\/en\/im-around-here\/\?zona=ruzafa&presupuesto=40/), page.click('a.lang')]);
     await page.waitForSelector('.results h2');
+
+    // Comparador: dos marcados muestran la tabla; con tres, el cuarto queda deshabilitado.
+    await page.goto(base + '/estoy-por-aqui/?antojo=asiatico&presupuesto=30', { waitUntil: 'networkidle' });
+    await page.waitForSelector('input[data-compare]');
+    const boxes = await page.$$('input[data-compare]');
+    if (boxes.length < 3) failures.push(`[${vpName}] comparador: menos de tres opciones`);
+    await boxes[0].check();
+    await boxes[1].check();
+    if (!(await page.isVisible('#compare table'))) failures.push(`[${vpName}] comparador: no aparece la tabla`);
+    await boxes[2].check();
+    const cols = await page.$$eval('#compare thead th', (t) => t.length);
+    if (cols !== 3) failures.push(`[${vpName}] comparador: ${cols} columnas`);
+    const disabled = await page.$$eval('input[data-compare]', (els) => els.filter((x) => !x.checked).every((x) => x.disabled));
+    if (!disabled) failures.push(`[${vpName}] comparador: permite más de tres`);
+    await page.addScriptTag({ content: axeSource });
+    const cmpViol = await page.evaluate(async () => (await window.axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa'] } })).violations.map((v) => v.id));
+    for (const v of cmpViol) failures.push(`[${vpName}] comparador: ${v}`);
 
     // Ruta: lunes → heladería cerrada; sábado con estimaciones → llegada calculada.
     await page.goto(base + '/rutas/cabanyal-comida-paseo-helado/', { waitUntil: 'networkidle' });

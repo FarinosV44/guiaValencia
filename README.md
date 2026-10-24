@@ -14,6 +14,8 @@ npm run check        # build + test + a11y
 npm run screenshots  # capturas reales en docs/capturas/
 ```
 
+La CI (`.github/workflows/check.yml`) ejecuta build, pruebas y accesibilidad en cada PR.
+
 `SITE_ORIGIN=https://… npm run build` fija el dominio de canonical, hreflang y sitemap. Mientras no haya dominio decidido se usa `https://donde-comer-valencia.example`.
 
 ## Estructura
@@ -33,7 +35,9 @@ npm run screenshots  # capturas reales en docs/capturas/
 - **Atributos de tres estados** (y más): `declarado`, `terceros`, `contrastado`, `no`, `desconocido`, `contradictorio`. Desconocido nunca significa no.
 - **Precio**: `includes` marca bebida, pan, postre, café y suplementos. Un total solo es «completo» sin conceptos desconocidos; si no, es «suma parcial». Importes de terceros (`third_party`) no cuentan como confirmados.
 - **Presupuesto**: con presupuesto pedido, un local sin precio verificable va a «pendientes», no a recomendaciones.
-- **Sin pantallas**: requisito duro; solo cuenta `juego_sin_pantallas` declarado o contrastado.
+- **Sin pantallas**: requisito duro; solo cuenta `juego_sin_pantallas` declarado o contrastado. «Sin pantalla en la mesa» exige `pedir_sin_movil` confirmado (hoy ninguno: todo queda pendiente).
+- **Gustos** (`likes`: pescado, salsas, mucha_hambre, cita_tranquila, vegano): preferencias, nunca requisitos; solo se asignan con base en la investigación.
+- **Alternativas**: dos por ficha, con antojo o espacio de juego en común y mismo ámbito; el precio solo se compara si ambas bases cubren los mismos conceptos.
 - **Horarios**: se comprueba la hora de llegada; `weekly` admite intervalos, `[]` (cerrado) o `{ "slots": [...] }` (franja declarada sin horas).
 - **Ámbito**: `scope` separa `valencia`, `area_metropolitana` y `excursion`; fuera de la ciudad solo aparece si se pide.
 - **Indexación**: una página es indexable solo si su contenido está revisado (`publication_ready` en locales, `status: "revisado"` en categorías). Los borradores llevan `noindex`, no tienen hreflang y no entran en el sitemap.

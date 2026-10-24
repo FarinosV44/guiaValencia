@@ -14,3 +14,9 @@ for (const box of document.querySelectorAll('input[data-hide]')) {
   box.addEventListener('change', sync);
   sync();
 }
+
+// 3) Imprimir o guardar en PDF: el botón solo aparece con JavaScript.
+for (const btn of document.querySelectorAll('[data-print]')) {
+  btn.closest('[hidden]')?.removeAttribute('hidden');
+  btn.addEventListener('click', () => window.print());
+}

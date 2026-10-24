@@ -4,7 +4,7 @@
     {
       "id": "blanqueries", "name": "Blanqueries", "type": "restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "carmen", "address": "Blanqueries, 12",
-      "cravings": ["mediterranea", "valenciano"], "tags": ["pareja", "sobremesa", "visitante"],
+      "cravings": ["mediterranea", "valenciano"], "tags": ["pareja", "sobremesa", "visitante"], "likes": ["cita_tranquila"],
       "reviews_sample": 3,
       "text": {
         "es": {
@@ -281,7 +281,7 @@
     {
       "id": "nozomi", "name": "Nozomi Sushi Bar", "type": "restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "ruzafa", "address": "Pere III el Gran, 11",
-      "cravings": ["asiatico", "japones"], "tags": ["pareja", "ocasion"],
+      "cravings": ["asiatico", "japones"], "tags": ["pareja", "ocasion"], "likes": ["pescado"],
       "reviews_sample": 3,
       "text": {
         "es": {
@@ -458,7 +458,7 @@
           { "label": { "es": "Limonada", "en": "Lemonade" }, "amount": 3.5, "unit": "bebida" }
         ],
         "example": { "party": 2, "items": [ { "label": { "es": "Menú mediodía", "en": "Lunch menu" }, "qty": 2, "amount": 16.9 }, { "label": { "es": "Limonada", "en": "Lemonade" }, "qty": 2, "amount": 3.5 } ] },
-        "includes": { "bebida": "aparte", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" },
+        "includes": { "bebida": "en_ejemplo", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" },
         "source": "https://www.volteretarestaurante.com/es/restaurantes/valencia/bali/carta"
       },
       "hours": { "status": "desconocido" },
@@ -503,7 +503,7 @@
     {
       "id": "komori", "name": "Komori", "type": "restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "mestalla", "address": "General Gil Dolz s/n, Hotel The Westin Valencia",
-      "cravings": ["asiatico", "japones"], "tags": ["pareja", "ocasion"],
+      "cravings": ["asiatico", "japones"], "tags": ["pareja", "ocasion"], "likes": ["pescado"],
       "text": {
         "es": { "offer": "Cocina japonesa con producto mediterráneo.", "fits": "Una alternativa especial al asiático informal.", "not_for": "Calcular presupuesto: no hay precio actual documentado.", "order": "Sin pedido documentado; no reutilizamos menús de guías de 2015.", "may_disappoint": "Sin críticas documentadas en nuestra muestra (reseñas pendientes).", "before": "Confirma acceso desde el hotel y el menú actual. Sin juegos verificados." },
         "en": { "offer": "Japanese cooking with Mediterranean produce.", "fits": "A special-occasion alternative to casual Asian food.", "not_for": "Budgeting: no current price is documented.", "order": "No order documented; we do not reuse menus from 2015 guides.", "may_disappoint": "No criticism documented in our sample (reviews pending).", "before": "Check access through the hotel and the current menu. No play area verified." }
@@ -620,7 +620,7 @@
     {
       "id": "anyora", "name": "Anyora", "type": "bodega restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "cabanyal", "address": "Vicent Gallart, 15",
-      "cravings": ["tapas", "valenciano"], "tags": ["pareja", "amigos", "visitante"],
+      "cravings": ["tapas", "valenciano"], "tags": ["pareja", "amigos", "visitante"], "likes": ["pescado"],
       "reviews_sample": 3,
       "text": {
         "es": {
@@ -659,7 +659,7 @@
     {
       "id": "sastreria", "name": "La Sastrería", "type": "restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "cabanyal", "address": "Josep Benlliure, 42 y 44b",
-      "cravings": ["mediterranea"], "tags": ["pareja", "visitante"],
+      "cravings": ["mediterranea"], "tags": ["pareja", "visitante"], "likes": ["pescado"],
       "text": {
         "es": { "offer": "Cocina de mar en un local de fuerte diseño.", "fits": "Comida y espacio visual a la vez.", "not_for": "Quien solo quiere el precio más bajo: el menú publicado es de 44 €.", "order": "Menú Bordado (inclusiones por confirmar).", "may_disappoint": "Sin críticas documentadas en nuestra muestra. Ser fotogénico no implica comer mal.", "before": "No reutilices el precio turístico de 30 € como coste actual." },
         "en": { "offer": "Seafood cooking in a strongly designed space.", "fits": "Food and a striking room at the same time.", "not_for": "Anyone after the lowest price: the published menu is €44.", "order": "The 'Bordado' menu (inclusions to be confirmed).", "may_disappoint": "No criticism documented in our sample. Being photogenic does not mean the food is poor.", "before": "Do not reuse the €30 tourist-site price as the current cost." }

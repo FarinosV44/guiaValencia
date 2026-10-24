@@ -4,7 +4,7 @@
     {
       "id": "aoyama-joaquin", "name": "Aoyama", "type": "buffet de sushi", "role": ["comer"],
       "scope": "valencia", "zone": "eixample", "address": "Joaquín Costa, 3",
-      "cravings": ["asiatico", "japones", "buffet"], "tags": ["amigos", "pareja", "familia_bebe"],
+      "cravings": ["asiatico", "japones", "buffet"], "tags": ["amigos", "pareja", "familia_bebe"], "likes": ["pescado", "mucha_hambre"],
       "reviews_sample": 3,
       "text": {
         "es": {
@@ -45,7 +45,7 @@
     {
       "id": "kaisen-centro", "name": "Kaisen Centro", "type": "buffet de sushi", "role": ["comer"],
       "scope": "valencia", "zone": "xativa", "address": "Xàtiva, 12",
-      "cravings": ["asiatico", "japones", "buffet"], "tags": ["amigos"],
+      "cravings": ["asiatico", "japones", "buffet"], "tags": ["amigos"], "likes": ["salsas", "mucha_hambre"],
       "reviews_sample": 3,
       "text": {
         "es": {
@@ -84,7 +84,7 @@
     {
       "id": "kyoto-valladolid", "name": "Kyoto Valladolid", "type": "buffet de sushi", "role": ["comer"],
       "scope": "valencia", "zone": "benimaclet", "address": "Avenida Valladolid, 5",
-      "cravings": ["asiatico", "japones", "buffet"], "tags": ["amigos"],
+      "cravings": ["asiatico", "japones", "buffet"], "tags": ["amigos"], "likes": ["mucha_hambre"],
       "text": {
         "es": { "offer": "Buffet de sushi con modalidades A, B y C.", "fits": "Comparar modalidades antes que cantidad.", "not_for": "Recomendarlo por barato: aún no hay cifra contrastada.", "order": "Comprueba qué especialidades entran en tu modalidad: una foto no lo demuestra.", "may_disappoint": "Sin reseñas revisadas para esta sucursal.", "before": "La tarifa depende del local; no extrapoles especialidades al básico." },
         "en": { "offer": "Sushi buffet with A, B and C tiers.", "fits": "Comparing tiers rather than quantity.", "not_for": "Recommending it as cheap: there is no confirmed figure yet.", "order": "Check which specialities your tier includes: a photo does not prove it.", "may_disappoint": "No reviews checked for this branch.", "before": "Prices vary by branch; do not assume the basic tier includes the specialities." }
@@ -96,7 +96,7 @@
     {
       "id": "goisushi-granvia", "name": "Goisushi Gran Via", "type": "buffet de sushi", "role": ["comer"],
       "scope": "valencia", "zone": "eixample", "address": "Gran Via Marqués del Túria, 43",
-      "cravings": ["asiatico", "japones", "buffet"], "tags": [],
+      "cravings": ["asiatico", "japones", "buffet"], "tags": [], "likes": ["mucha_hambre"],
       "text": {
         "es": { "offer": "Buffet de sushi (confirmado por su página).", "fits": "Candidato pendiente de precio verificable.", "not_for": "Decidir por precio: la carta consultada no cargó imágenes.", "order": "Sin pedido documentado.", "may_disappoint": "Sin reseñas revisadas. No le asignamos una ganga imaginaria para completar la tabla.", "before": "No lo confundas con Kaisen." },
         "en": { "offer": "Sushi buffet (confirmed on its page).", "fits": "A candidate pending verifiable prices.", "not_for": "Choosing on price: the menu we checked did not load its images.", "order": "No order documented.", "may_disappoint": "No reviews checked. We will not invent a bargain to fill the table.", "before": "Do not confuse it with Kaisen." }
@@ -182,7 +182,7 @@
     {
       "id": "km0", "name": "Pizzería Km0", "type": "pizzería", "role": ["comer"],
       "scope": "valencia", "zone": "benimaclet", "address": "Emilio Baró, 82",
-      "cravings": ["pizza", "vegano"], "tags": ["amigos", "descubrimiento"],
+      "cravings": ["pizza", "vegano"], "tags": ["amigos", "descubrimiento"], "likes": ["vegano"],
       "text": {
         "es": { "offer": "Masa italiana con ingredientes locales y de temporada; sección vegana amplia.", "fits": "Explorar producto local y alternativas veganas en Benimaclet.", "not_for": "Comparar totales sin reconfirmar la carta de temporada.", "order": "Una Margherita para comparar; luego alguna de temporada.", "may_disappoint": "Sin reseñas revisadas. La estacionalidad importa más que colgarle «auténtica».", "before": "La carta de mesa es «Invierno 2026»: confirma vigencia." },
         "en": { "offer": "Italian dough with local, seasonal ingredients; a large vegan section.", "fits": "Exploring local produce and vegan options in Benimaclet.", "not_for": "Comparing totals without re-checking the seasonal menu.", "order": "A Margherita for comparison, then a seasonal one.", "may_disappoint": "No reviews checked. Seasonality matters more than calling it 'authentic'.", "before": "The table menu is 'Winter 2026': check it is still current." }
@@ -317,7 +317,7 @@
     {
       "id": "hankook-alfafar", "name": "Hankook Alfafar", "type": "buffet de barbacoa coreana", "role": ["comer"],
       "scope": "area_metropolitana", "zone": "alfafar", "address": "Alcalde José Puertes, 26", "city": "Alfafar",
-      "cravings": ["asiatico", "coreano", "buffet"], "tags": ["amigos"],
+      "cravings": ["asiatico", "coreano", "buffet"], "tags": ["amigos"], "likes": ["mucha_hambre"],
       "text": {
         "es": { "offer": "Buffet con parrilla y sushi, fuera de Valencia ciudad.", "fits": "Grupos a los que divierte cocinar por tandas y probar varias carnes.", "not_for": "Quien come poco o quiere una preparación concreta: el ilimitado aporta poco.", "order": "Decide base o premium sabiendo que la base cobra suplementos premium.", "may_disappoint": "Sin reseñas revisadas. Tener tarifa infantil no demuestra que encaje con un niño que se levanta.", "before": "Bebida y postre aparte; franja infantil por altura por confirmar. No uses tarifas de Barcelona." },
         "en": { "offer": "Grill-and-sushi buffet, outside Valencia city.", "fits": "Groups who enjoy cooking in rounds and trying several meats.", "not_for": "Light eaters, or anyone wanting one specific dish: unlimited access adds little.", "order": "Choose basic or premium knowing the basic tier charges premium supplements.", "may_disappoint": "No reviews checked. A children's rate does not prove it suits a child who keeps getting up.", "before": "Drinks and dessert extra; child pricing by height to be confirmed. Do not use Barcelona prices." }
