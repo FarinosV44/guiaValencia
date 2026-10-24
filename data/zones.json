@@ -1,0 +1,23 @@
+{
+  "_note": "Zonas editoriales de navegación. No equivalen al barrio administrativo (Ruzafa pertenece al distrito de L'Eixample). 'scope' separa Valencia ciudad de área metropolitana y excursiones. Sin tiempos andando: la adyacencia no se usa para inventar trayectos.",
+  "zones": [
+    { "id": "carmen", "scope": "valencia", "name": { "es": "El Carmen / La Seu", "en": "El Carmen / La Seu" } },
+    { "id": "mercat", "scope": "valencia", "name": { "es": "Mercat / Sant Francesc", "en": "Central Market / Sant Francesc" } },
+    { "id": "ruzafa", "scope": "valencia", "name": { "es": "Ruzafa", "en": "Ruzafa" }, "note": { "es": "Administrativamente forma parte del distrito de L'Eixample.", "en": "Officially part of the L'Eixample district." } },
+    { "id": "eixample", "scope": "valencia", "name": { "es": "Eixample / Colón / Cánovas", "en": "Eixample / Colón / Cánovas" } },
+    { "id": "mestalla", "scope": "valencia", "name": { "es": "Mestalla / Alameda", "en": "Mestalla / Alameda" } },
+    { "id": "benimaclet", "scope": "valencia", "name": { "es": "Benimaclet", "en": "Benimaclet" } },
+    { "id": "cabanyal", "scope": "valencia", "name": { "es": "Cabanyal / Canyamelar", "en": "Cabanyal / Canyamelar" } },
+    { "id": "malvarrosa", "scope": "valencia", "name": { "es": "Malvarrosa / paseo marítimo", "en": "Malvarrosa / seafront promenade" } },
+    { "id": "zaidia", "scope": "valencia", "name": { "es": "Zaidía / Trinitat / Viveros", "en": "Zaidía / Trinitat / Viveros" } },
+    { "id": "castellar", "scope": "valencia", "name": { "es": "Castellar-Oliveral", "en": "Castellar-Oliveral" }, "note": { "es": "Pedanía de Valencia, al sur. Desplazamiento: compruébalo en Maps.", "en": "A Valencia city district to the south. Check travel in Maps." } },
+    { "id": "petxina", "scope": "valencia", "name": { "es": "La Petxina / Extramurs", "en": "La Petxina / Extramurs" } },
+    { "id": "torrefiel", "scope": "valencia", "name": { "es": "Torrefiel", "en": "Torrefiel" } },
+    { "id": "abastos", "scope": "valencia", "name": { "es": "Abastos / Arrancapins", "en": "Abastos / Arrancapins" } },
+    { "id": "xativa", "scope": "valencia", "name": { "es": "Xàtiva / entorno estación", "en": "Xàtiva / station area" } },
+    { "id": "puerto", "scope": "valencia", "name": { "es": "Avenida del Puerto", "en": "Avenida del Puerto" } },
+    { "id": "ciencias", "scope": "valencia", "name": { "es": "Ciudad de las Artes y las Ciencias", "en": "City of Arts and Sciences" } },
+    { "id": "alfafar", "scope": "area_metropolitana", "name": { "es": "Alfafar (fuera de Valencia ciudad)", "en": "Alfafar (outside Valencia city)" } },
+    { "id": "sueca", "scope": "excursion", "name": { "es": "Playa de Sueca (excursión)", "en": "Sueca beach (day trip)" } }
+  ]
+}

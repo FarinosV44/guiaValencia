@@ -1,0 +1,371 @@
+{
+  "_note": "Páginas por intención (#17, #20, #37). Una URL principal por intención y por idioma. Textos adaptados de los borradores documentales de investigacion/; estado borrador_documental => noindex hasta revisión del propietario.",
+  "categories": [
+    {
+      "id": "arroces", "icon": "arroz", "status": "borrador_documental",
+      "slug": { "es": "mejores-arroces-valencia", "en": "best-rice-restaurants-valencia" },
+      "nav": { "es": "Arroces", "en": "Rice & paella" },
+      "title": { "es": "Dónde comer arroz en Valencia: paella, senyoret y melosos", "en": "Where to eat rice in Valencia: paella, senyoret and creamy rice" },
+      "h1": { "es": "Arroces: el socarrat no incluye derecho a quemarte la cartera", "en": "Rice in Valencia: the socarrat doesn’t come with the right to burn your wallet" },
+      "description": { "es": "Elige arroz en Valencia según zona y plan. Encargos, raciones mínimas, precio por persona y qué comprobar antes de reservar.", "en": "Choose rice in Valencia by area and plan. Advance orders, minimum portions, price per person and what to check before booking." },
+      "lead": {
+        "es": ["Valencia no termina donde acaba la lista de restaurantes de la playa. Para elegir un arroz empieza por el tipo, la hora y cuántos vais a comerlo. Después pregunta por el encargo, las raciones mínimas y el precio del pedido entero."],
+        "en": ["Valencia does not end where the list of beach restaurants does. To choose a rice dish, start with the type, the time and how many of you are eating. Then ask about advance orders, minimum portions and the price of the whole order."]
+      },
+      "sections": [
+        {
+          "heading": { "es": "Selección inicial", "en": "Starting shortlist" },
+          "body": { "es": ["Orden documental por encaje, no podio de sabor. Ninguno está catado por nosotros."], "en": ["Ordered by documented fit, not a taste podium. We have not eaten at any of them."] },
+          "places": ["brosquil", "baret-tofona", "carmela", "pepica"]
+        },
+        {
+          "heading": { "es": "La cuenta que sí ayuda", "en": "The maths that actually helps" },
+          "body": {
+            "es": ["Mostramos siempre euros por ración × raciones cobradas, entrantes, pan y alioli, bebidas, postre y suplementos de marisco o temporada.", "Un arroz a 25 € por ración con mínimo de dos son 50 € de arroz, no 25 € la paella para la pareja. Este ejemplo es didáctico, no la tarifa de estos restaurantes."],
+            "en": ["We always show euros per portion × portions charged, starters, bread and allioli, drinks, dessert and seafood or seasonal supplements.", "A rice at €25 per portion with a two-portion minimum is €50 of rice, not €25 for the couple’s paella. This example is illustrative, not these restaurants’ prices."]
+          }
+        },
+        {
+          "heading": { "es": "No todo arroz seco es paella valenciana", "en": "Not every dry rice is paella valenciana" },
+          "glossary": [
+            { "term": "Paella valenciana", "def": { "es": "La receta tradicional de la huerta; pregunta ingredientes y si va por encargo.", "en": "The traditional market-garden recipe; ask about ingredients and whether it must be ordered ahead." } },
+            { "term": "Arroz del senyoret", "def": { "es": "Marisco ya pelado; no garantiza ausencia de espinas ni de alérgenos.", "en": "Seafood already peeled; does not guarantee no bones or allergens." } },
+            { "term": "Arroz a banda", "def": { "es": "Arroz con fondo de pescado; el pescado puede servirse aparte.", "en": "Rice cooked in fish stock; the fish may be served separately." } },
+            { "term": "Arroz negro", "def": { "es": "Con tinta de sepia o calamar.", "en": "Made with cuttlefish or squid ink." } },
+            { "term": { "es": "Meloso", "en": "Meloso (creamy rice)" }, "def": { "es": "Más caldoso que un seco; quien busca meloso no necesita ganar la discusión del socarrat.", "en": "Wetter than a dry rice; if you want creamy, you don’t need to win the socarrat debate." } }
+          ]
+        },
+        {
+          "heading": { "es": "Postre y plan", "en": "Dessert and what comes next" },
+          "body": {
+            "es": ["En Castellar no inventamos una heladería vecina para completar la ruta: quedarse al postre puede ser la continuación más sensata. En la playa, La Pepica y Véneta Neptuno comparten paseo, pero el horario de la heladería está sin confirmar."],
+            "en": ["In Castellar we will not invent a nearby ice-cream shop to complete the route: staying for dessert may be the sensible next step. At the beach, La Pepica and Véneta Neptuno share a promenade, but the ice-cream shop’s hours are unconfirmed."]
+          }
+        }
+      ],
+      "sources": [
+        { "label": "Alquería del Brosquil", "url": "https://restaurantealqueriadelbrosquil.com/en/rices/" },
+        { "label": "Ojo al Plato: El Baret de la Tòfona", "url": "https://www.ojoalplato.com/cards/restaurant/baret-de-la-t%C3%B2fona/" },
+        { "label": "Casa Carmela", "url": "https://www.casa-carmela.com/carta/carta.pdf" },
+        { "label": "La Pepica", "url": "https://lapepica.com/reserva/" }
+      ]
+    },
+    {
+      "id": "sushi", "icon": "sushi", "status": "borrador_documental",
+      "slug": { "es": "mejores-buffets-sushi-valencia", "en": "best-sushi-buffets-valencia" },
+      "nav": { "es": "Sushi y buffets", "en": "Sushi & buffets" },
+      "title": { "es": "Buffets de sushi en Valencia: precios y cómo elegir", "en": "Sushi buffets in Valencia: prices and how to choose" },
+      "h1": { "es": "Buffets de sushi: que el arroz no decida por ti", "en": "Sushi buffets in Valencia: don’t let the rice decide for you" },
+      "description": { "es": "Compara buffets japoneses por franja, bebida, suplementos y estilo. Qué mirar para elegir sushi sin perderte entre cien platos.", "en": "Compare Japanese buffets by time slot, drinks, supplements and style. What to check so you don’t get lost among a hundred dishes." },
+      "lead": {
+        "es": ["Una carta de cien platos puede contener cien ideas. O cinco ideas que han cambiado de chaqueta. Antes de elegir buffet, decide si vienes a por pescado, por mezclas con salsas o por una cena de grupo con apetito de excursión. Las tres cosas son legítimas; pagar por la que no quieres es lo que sale caro."],
+        "en": ["A hundred-dish menu can hold a hundred ideas. Or five ideas wearing different jackets. Before picking a buffet, decide whether you are there for the fish, for sauce-heavy combinations or for a group dinner with field-trip appetite. All three are fine; paying for the one you don’t want is what gets expensive."]
+      },
+      "sections": [
+        {
+          "heading": { "es": "Selección inicial por plan", "en": "Starting shortlist by plan" },
+          "body": { "es": ["Orden documental, no ranking de cata. El «top 1» que se atribuye algún local es autopromoción."], "en": ["Documentary order, not a tasting ranking. A venue calling itself ‘number one’ is self-promotion."] },
+          "places": ["aoyama-joaquin", "kaisen-centro", "kyoto-valladolid", "goisushi-granvia"],
+          "compare": true
+        },
+        {
+          "heading": { "es": "Cómo detectar variedad de verdad", "en": "How to spot real variety" },
+          "body": {
+            "es": ["Cuenta técnicas y productos, no apellidos. Un roll con queso, otro con queso y salsa y otro con queso y otra salsa pueden gustarte muchísimo, pero quizá no resuelvan tus ganas de probar pescado distinto. Es una regla para leer cualquier carta, no una acusación sobre proveedores.", "Prueba una primera tanda pequeña: pieza sencilla, pieza con salsa y un caliente. Pide otra cuando sepas qué te interesa. El objetivo es disfrutar, no cerrar una ronda de financiación contra el arroz. Si comes poco, compara con un japonés a la carta."],
+            "en": ["Count techniques and ingredients, not names. A roll with cheese, another with cheese and sauce, and another with cheese and a different sauce may be delicious, but they may not satisfy a wish to try different fish. This is a rule for reading any menu, not an accusation about suppliers.", "Start with a small first round: one plain piece, one with sauce and one hot dish. Order more once you know what you like. The aim is to enjoy dinner, not close a funding round against the rice. Light eaters should compare with an à la carte Japanese restaurant."]
+          }
+        },
+        {
+          "heading": { "es": "Si no quieres buffet", "en": "If you don’t want a buffet" },
+          "body": { "es": ["Japonés a la carta con otro presupuesto y reserva."], "en": ["À la carte Japanese, on a different budget and with a booking."] },
+          "places": ["nozomi", "komori"]
+        },
+        {
+          "heading": { "es": "Pantallas, niños y sobremesa", "en": "Screens, children and lingering" },
+          "body": {
+            "es": ["En las reseñas visibles aparecen pedidos por QR o tablet. «Sin pantallas para los niños» puede permitir que pida un adulto; «sin usar el móvil en la mesa» necesita alternativa en papel o del personal, aún por confirmar. Un menú infantil no es un espacio de juego. Y no recomendamos sobremesa larga sin comprobar el límite de mesa."],
+            "en": ["Visible reviews mention ordering by QR code or tablet. ‘No screens for the children’ may still let an adult order; ‘no phone at the table’ needs a paper or staff alternative, still to be confirmed. A children’s menu is not a play area. And we don’t recommend lingering without checking the table time limit."]
+          }
+        }
+      ],
+      "related": ["barbacoa-coreana"],
+      "sources": [
+        { "label": "Aoyama (PDF menú de día)", "url": "https://www.aoyama.es/web/aoyama1/menu_day2.pdf" },
+        { "label": "Kaisen Centro", "url": "https://kaisenexperience.com/nkaisen-experience-centro-valencia/" },
+        { "label": "Kyoto", "url": "https://kyoto-franquicia.com/" },
+        { "label": "Goisushi Gran Via", "url": "https://kaisushiexperience.com/restaurante/vlc-granvia/" }
+      ]
+    },
+    {
+      "id": "barbacoa-coreana", "icon": "parrilla", "status": "borrador_documental",
+      "slug": { "es": "barbacoa-coreana-valencia", "en": "korean-bbq-valencia" },
+      "nav": { "es": "Barbacoa coreana", "en": "Korean BBQ" },
+      "title": { "es": "Barbacoa coreana en Valencia: carta y buffet, diferencias", "en": "Korean barbecue in Valencia: à la carte vs buffet" },
+      "h1": { "es": "¿Cuándo se llenará esto de barbacoas coreanas? Ya han encendido la parrilla", "en": "When will Valencia fill up with Korean barbecues? They’ve already lit the grill" },
+      "description": { "es": "Ya hay barbacoa coreana en Valencia y Alfafar. Qué cambia entre pagar por ración y un buffet con parrilla, y qué revisar antes de reservar.", "en": "Korean barbecue is already here, in Valencia and Alfafar. What changes between paying by the portion and a grill buffet, and what to check before booking." },
+      "lead": {
+        "es": ["Cuando te sientas a cenar y te entregan unas pinzas, la relación laboral empieza a resultar ambigua. Tú has venido a cenar; el restaurante cree que también tienes potencial en cocina. La pregunta útil es cuánto pagas, qué incluye y si te apetece participar.", "No tenemos una estadística que demuestre una invasión de aperturas ni una fecha para el próximo boom. Sí tenemos ejemplos comprobables de oferta actual."],
+        "en": ["When you sit down to dinner and are handed tongs, the employment relationship gets a little ambiguous. You came to eat; the restaurant thinks you have kitchen potential. The useful question is what you pay, what is included and whether you fancy joining in.", "We have no statistics proving a wave of openings, nor a date for the next boom. We do have verifiable examples of what is on offer now."]
+      },
+      "sections": [
+        {
+          "heading": { "es": "Carta en la ciudad, buffet fuera", "en": "À la carte in the city, buffet outside it" },
+          "places": ["eter-artes", "hankook-alfafar"]
+        },
+        {
+          "heading": { "es": "Buffet o carta: compra el plan que quieres", "en": "Buffet or à la carte: buy the plan you want" },
+          "body": {
+            "es": ["Si te apetece una preparación concreta, el acceso ilimitado aporta poco. Si os divierte cocinar por tandas y probar varias carnes, investigad el buffet: tiempo, ayuda con la parrilla, cortes incluidos y suplementos. La decoración industrial no cuenta como ración.", "Para una cita, cocinar juntos puede dar conversación; también ocupa atención. Con bebé o niño que se levanta, confirmad distribución y mesa antes: ninguna foto demuestra que la parrilla sea compatible con ese plan."],
+            "en": ["If you want one specific dish, unlimited access adds little. If you enjoy cooking in rounds and trying several meats, look into the buffet: time limit, help with the grill, cuts included and supplements. Industrial décor does not count as a portion.", "On a date, cooking together can spark conversation; it also takes attention. With a baby or a child who keeps getting up, check the layout and table first: no photo proves the grill suits that plan."]
+          }
+        },
+        {
+          "heading": { "es": "La metamorfosis de la carta interminable", "en": "The metamorphosis of the endless menu" },
+          "figure": "metamorfosis",
+          "body": {
+            "es": ["Nuestra viñeta pasa del restaurante chino clásico al wok, luego al sushi ilimitado y termina preguntando por la parrilla. Es una broma sobre formatos reconocibles y nuestra afición a la abundancia, no la historia de negocios concretos: no implica que compartan propietarios, calidad ni proveedor. Y no: el yakiniku japonés y la barbacoa coreana no son el mismo nombre para la misma cosa.", "Lo exigible sigue siendo sencillo: explicar qué se come, qué cuesta y qué hace especial a esa mesa. Si la novedad consiste solo en que ahora trabajas tú, queremos al menos unas buenas instrucciones."],
+            "en": ["Our cartoon goes from the classic Chinese restaurant to the wok bar, then all-you-can-eat sushi, and ends up asking about the grill. It is a joke about recognisable formats and our love of abundance, not the history of any real business: it does not imply shared owners, quality or suppliers. And no, Japanese yakiniku and Korean barbecue are not two names for the same thing.", "What we ask for is simple: explain what you eat, what it costs and what makes that table special. If the novelty is just that you now do the cooking, we would at least like good instructions."]
+          }
+        }
+      ],
+      "related": ["sushi"],
+      "sources": [
+        { "label": "Éter, propuesta Artes y Ciencias", "url": "https://etervalencia.com/nuestras-propuestas-artes-y-ciencias/" },
+        { "label": "Hankook Alfafar", "url": "https://hankookbbq.es/alfafar" }
+      ]
+    },
+    {
+      "id": "pizzas", "icon": "pizza", "status": "borrador_documental",
+      "slug": { "es": "mejores-pizzerias-valencia", "en": "best-pizza-valencia" },
+      "nav": { "es": "Pizzas", "en": "Pizza" },
+      "title": { "es": "Pizzerías en Valencia: Filippa’s, Raíces y Km0 según tu plan", "en": "Pizza in Valencia: Filippa’s, Raíces and Km0 for your plan" },
+      "h1": { "es": "¿Otra pizzería napolitana en Valencia? Vale, pero dime por qué", "en": "Another Neapolitan pizzeria in Valencia? Fine, but tell me why" },
+      "description": { "es": "Pizza napolitana y contemporánea en Valencia: cartas, diferencias, reservas y presupuesto. Tres opciones para empezar a elegir.", "en": "Neapolitan and contemporary pizza in Valencia: menus, differences, bookings and budget. Three places to start choosing." },
+      "lead": {
+        "es": ["El borde ya tiene más volumen que muchos pisos. Bien. Ahora queremos saber qué hay en el centro, cuánto cuesta y si podremos sentarnos antes de perder las ganas de hablar.", "La selección parte de tres nombres propuestos por un lector y contrasta sus cartas. No es una cata comparativa de toda Valencia ni convierte la sugerencia en premio editorial."],
+        "en": ["The crust now has more volume than many flats. Fine. Now we want to know what is in the middle, what it costs and whether we can sit down before we lose the will to talk.", "This shortlist starts from three names suggested by a reader and checks their menus. It is not a comparative tasting of all Valencia, and the suggestion is not an editorial award."]
+      },
+      "sections": [
+        {
+          "heading": { "es": "Elige la diferencia que te importa", "en": "Pick the difference that matters to you" },
+          "body": { "es": ["Si pesa más una carta centrada y sois hasta cuatro, empezaría por Raíces. Para gustos mezclados en Ruzafa, por Filippa’s. Para opciones veganas y producto local en Benimaclet, por Km0. Orden por encaje documental: el podio de la mejor masa exige comerlas en condiciones comparables."], "en": ["If a focused menu matters most and you are up to four, start with Raíces. For mixed tastes in Ruzafa, Filippa’s. For vegan options and local produce in Benimaclet, Km0. Ordered by documented fit: a podium for the best dough requires eating them under comparable conditions."] },
+          "places": ["raices", "filippas-sueca", "km0"],
+          "compare": true
+        },
+        {
+          "heading": { "es": "¿Nos quedamos al postre?", "en": "Do we stay for dessert?" },
+          "body": {
+            "es": ["Que un restaurante haga pizza no obliga a escaparse del tiramisú; tampoco obliga a pedirlo. Raíces publica postres propios y permite presupuestarlos; para decir que merecen especialmente la pena falta probarlos. En Ruzafa puede plantearse un paseo hacia Antigua Lechería, comprobando apertura y sabores del día. El paseo no es una segunda factura automática.", "Una pizza sencilla ayuda a comparar masa y cocción; una especial enseña la mano con los ingredientes. El pistacho puede venir a cenar: no necesita presidir todas las reuniones."],
+            "en": ["A pizzeria does not oblige you to flee the tiramisu, nor to order it. Raíces lists its own desserts so you can budget them; to say they are especially worth it we would need to taste them. In Ruzafa you could stroll to Antigua Lechería, checking opening and flavours of the day. A stroll is not an automatic second bill.", "A simple pizza helps compare dough and bake; a special shows how the kitchen handles toppings. Pistachio can come to dinner: it doesn’t need to chair every meeting."]
+          }
+        }
+      ],
+      "sources": [
+        { "label": "Raíces", "url": "https://raicespizza.com/" },
+        { "label": "Filippa’s (carta de sala)", "url": "https://filippas.buenacarta.com/es" },
+        { "label": "Km0 (carta)", "url": "https://www.pizzeriakm0.com/carta" }
+      ]
+    },
+    {
+      "id": "hamburguesas", "icon": "burger", "status": "borrador_documental",
+      "slug": { "es": "mejores-hamburguesas-valencia", "en": "best-burgers-valencia" },
+      "nav": { "es": "Hamburguesas", "en": "Burgers" },
+      "title": { "es": "Hamburguesas en Valencia: premios, estilos y precio completo", "en": "Burgers in Valencia: awards, styles and the full price" },
+      "h1": { "es": "Hamburguesas en Valencia: el cheddar no es una estrategia", "en": "Burgers in Valencia: cheddar is not a strategy" },
+      "description": { "es": "Hundred, Soul y Tasty: compara estilo, premios con fuente y lo que incluye el precio. Una burger no siempre es un menú.", "en": "Hundred, Soul and Tasty: compare style, sourced awards and what the price includes. A burger is not always a meal." },
+      "lead": {
+        "es": ["La hamburguesa ha pasado de cenar contigo a necesitar representante. Lleva premio, edición limitada, apellido anglosajón y una salsa que quizá tenga más biografía que tú. Podemos disfrutarla y seguir mirando la cuenta."],
+        "en": ["The burger has gone from having dinner with you to needing an agent. It comes with an award, a limited edition, an Anglo-Saxon surname and a sauce that may have a longer biography than you. We can enjoy it and still read the bill."]
+      },
+      "sections": [
+        {
+          "heading": { "es": "Un orden inicial con razones", "en": "A starting order, with reasons" },
+          "body": { "es": ["Premio externo, prueba propia y encaje del plan son tres cosas distintas. Este orden combina la referencia externa (Burgerdudes 2026, no Michelin) con utilidad documental; no es una puntuación de sabor nuestra."], "en": ["An outside award, our own tasting and fit for your plan are three different things. This order combines the outside reference (Burgerdudes 2026, not Michelin) with documentary usefulness; it is not our taste score."] },
+          "places": ["hundred", "soul-valencia", "tasty-carmen", "beak-cabanyal"]
+        },
+        {
+          "heading": { "es": "Cómo debería decidirse un ranking propio", "en": "How our own ranking should be decided" },
+          "body": {
+            "es": ["Para valorar cocina hacen falta visitas comparables y ticket: pan que aguante, carne al punto pedido, equilibrio de salsa, temperatura y constancia. Para valor/precio sumamos burger, patatas cuando no vengan, bebida y suplementos. El entrante deja de ser obligatorio por mucho que tenga nombre de rapero.", "En una cita relajada interesa poder hablar sin prisa. Para niños activos importan espera y espacio, no que exista hamburguesa pequeña. Nada de eso lo certifica ganar un campeonato."],
+            "en": ["Judging the cooking takes comparable visits with receipts: a bun that holds up, meat cooked as ordered, balanced sauce, temperature and consistency. For value we add burger, fries when not included, drink and supplements. A starter does not become compulsory just because it is named like a rapper.", "On a relaxed date you want to talk without being rushed. With active children, waiting time and space matter, not whether there is a small burger. Winning a championship certifies none of that."]
+          }
+        }
+      ],
+      "sources": [
+        { "label": "Burgerdudes: The World’s Best Burgers 2026", "url": "https://www.burgerdudes.se/news/the-worlds-best-burgers-2026/" },
+        { "label": "Hundred (carta)", "url": "https://hundredburgers.com/carta" },
+        { "label": "Soul (carta)", "url": "https://soulcoffeebeer.com/carta/" },
+        { "label": "Tasty (carta)", "url": "https://tastyamericanburger.com/carta/" },
+        { "label": "Beak & Trotter", "url": "https://beakandtrotter.com/" }
+      ]
+    },
+    {
+      "id": "citas", "icon": "cita", "status": "borrador_documental",
+      "slug": { "es": "restaurantes-cita-valencia", "en": "date-night-restaurants-valencia" },
+      "nav": { "es": "Citas", "en": "Date night" },
+      "title": { "es": "Restaurantes para una cita en Valencia: cena y presupuesto", "en": "Date-night restaurants in Valencia: dinner and budget" },
+      "h1": { "es": "Una cita en Valencia sin financiarle el local al restaurante", "en": "A date in Valencia without bankrolling the restaurant’s rent" },
+      "description": { "es": "Planes para cenar en pareja en Valencia con pedido y coste explicado. La Lambrusquería y alternativas según zona, gustos y sobremesa.", "en": "Dinner plans for two in Valencia with the order and cost explained. La Lambrusquería and alternatives by area, taste and how long you want to linger." },
+      "lead": {
+        "es": ["Una vela ayuda. Una cuenta entendible también. Elegir para una cita no exige fingir que el dinero no existe: exige saber si pagas comida, ambiente o una mezcla que os apetece a los dos."],
+        "en": ["A candle helps. So does a bill you can understand. Choosing for a date doesn’t mean pretending money doesn’t exist: it means knowing whether you are paying for food, atmosphere or a mix you both fancy."]
+      },
+      "sections": [
+        {
+          "heading": { "es": "Un pedido concreto antes de decir «barato»", "en": "A concrete order before saying ‘cheap’" },
+          "body": { "es": ["Si vuestro techo son 50 € entre dos, el pedido de ejemplo deja muy poco margen para bebidas. No lo presentaríamos como «cita completa por menos de 50». Dos principales sin entrante pueden cuadrar mejor."], "en": ["If your ceiling is €50 for two, the sample order leaves very little room for drinks. We would not sell it as a ‘full date under €50’. Two mains without a starter may fit better."] },
+          "places": ["lambrus-caballeros"]
+        },
+        {
+          "heading": { "es": "Alternativas que cambian el plan", "en": "Alternatives that change the plan" },
+          "body": { "es": ["Pizza por la Seu (la espera sin reserva puede romper una cita con hora fija), smash y paseo por El Carmen, o sushi con mucha hambre comparando en la misma franja. Para una pareja que come poco, el buffet puede salir más caro que pedir lo que desea."], "en": ["Pizza by the Cathedral (waiting without a booking can wreck a date with a fixed time), a smash burger and a stroll in El Carmen, or sushi when you are very hungry, comparing the same time slot. For a couple who eat little, a buffet can cost more than ordering what you want."] },
+          "places": ["raices", "tasty-carmen", "aoyama-joaquin", "kaisen-centro"]
+        },
+        {
+          "heading": { "es": "El paseo es una opción, no una factura por etapas", "en": "A stroll is an option, not a bill in instalments" },
+          "body": { "es": ["Propuesta por verificar: Lambrusquería Caballeros → paseo por El Carmen → Véneta Brodadors si sigue abierta (horario sin confirmar). O quedarse a compartir el tiramisú ya presupuestado. No sumamos tiramisú, helado y café por inercia editorial."], "en": ["A proposal still to verify: Lambrusquería Caballeros → stroll through El Carmen → Véneta Brodadors if still open (hours unconfirmed). Or stay and share the tiramisu already in the budget. We won’t add tiramisu, ice cream and coffee out of editorial habit."] }
+        }
+      ],
+      "sources": [ { "label": "La Lambrusquería, carta Caballeros", "url": "https://lambrusqueria.com/wp-content/uploads/2025/12/LAMBRUSQUERIA-CARTA-CABALLEROS-WEB.pdf" } ]
+    },
+    {
+      "id": "barrios", "icon": "lupa", "status": "borrador_documental",
+      "slug": { "es": "restaurantes-barrios-valencia", "en": "valencia-neighbourhood-restaurants" },
+      "nav": { "es": "Sorpresas por barrios", "en": "Neighbourhood finds" },
+      "title": { "es": "Dónde comer en los barrios de Valencia: sorpresas fuera del centro", "en": "Where to eat in Valencia’s neighbourhoods: finds beyond the centre" },
+      "h1": { "es": "Sorpresas para comer bien: el talento también sabe aparcar fuera de Ruzafa", "en": "Eating well off the beaten track: talent can park outside Ruzafa too" },
+      "description": { "es": "Castellar-Oliveral, La Petxina y más barrios de Valencia: restaurantes con motivos para ir, precios por comprobar y límites claros.", "en": "Castellar-Oliveral, La Petxina and more Valencia neighbourhoods: restaurants worth the trip, prices to check and clear limits." },
+      "lead": {
+        "es": ["La buena cocina no necesita un código postal de moda. Tampoco hace falta llamar escondido a un restaurante que conoce medio barrio. Aquí buscamos motivos para desplazarse y explicamos cuándo ese viaje no compensa para tu plan."],
+        "en": ["Good cooking doesn’t need a fashionable postcode. Nor do we need to call a place ‘hidden’ when half the neighbourhood knows it. Here we look for reasons to make the trip, and say when it isn’t worth it for your plan."]
+      },
+      "sections": [
+        { "heading": { "es": "Castellar-Oliveral", "en": "Castellar-Oliveral" }, "places": ["baret-tofona", "brosquil"] },
+        { "heading": { "es": "La Petxina / Extramurs", "en": "La Petxina / Extramurs" }, "body": { "es": ["No es periferia lejana ni un secreto recién descubierto; está aquí por su cocina de producto y sus clásicos de barra."], "en": ["Neither remote outskirts nor a newly discovered secret; it is here for its produce-led cooking and counter classics."] }, "places": ["ricardo"] },
+        { "heading": { "es": "Torrefiel: siguiente candidatura, no recomendación cerrada", "en": "Torrefiel: next candidate, not a firm recommendation" }, "places": ["malkebien"] },
+        { "heading": { "es": "Otros barrios con fichas", "en": "Other neighbourhoods with venue cards" }, "body": { "es": ["Benimaclet y Cabanyal ya tienen fichas documentadas. No creamos páginas vacías para Patraix, Jesús o Benicalap hasta tener selección propia."], "en": ["Benimaclet and Cabanyal already have documented venue cards. We will not create empty pages for Patraix, Jesús or Benicalap until we have our own selection."] }, "zones": ["benimaclet", "cabanyal"] },
+        { "heading": { "es": "Preguntas que merecen el paseo", "en": "Questions worth the trip" }, "body": { "es": ["¿Me compensa desviarme? ¿Puedo ir sin reserva? ¿De verdad hay menú? ¿Cómo vuelvo? Tiempo de traslado, transporte y accesos están por verificar: no inventamos distancias ni plazas de aparcamiento."], "en": ["Is the detour worth it? Can I go without booking? Is there really a set menu? How do I get back? Travel time, transport and access still need checking: we don’t invent distances or parking spaces."] } }
+      ],
+      "sources": [
+        { "label": "Ojo al Plato: El Baret de la Tòfona", "url": "https://www.ojoalplato.com/cards/restaurant/baret-de-la-t%C3%B2fona/" },
+        { "label": "Alquería del Brosquil", "url": "https://restaurantealqueriadelbrosquil.com/" },
+        { "label": "Bar Ricardo (carta de mesa)", "url": "https://barricardo.com/cartamesa.pdf" },
+        { "label": "Malkebien", "url": "https://restaurante-malkebien.eatbu.com/?lang=es" }
+      ]
+    },
+    {
+      "id": "alta-cocina", "icon": "estrella", "status": "borrador_documental",
+      "slug": { "es": "restaurantes-alta-cocina-valencia", "en": "fine-dining-valencia" },
+      "nav": { "es": "Alta cocina", "en": "Fine dining" },
+      "title": { "es": "Alta cocina en Valencia: La Salita y RiFF, precios y límites", "en": "Fine dining in Valencia: La Salita and RiFF, prices and limits" },
+      "h1": { "es": "Paga fuerte y accede a otro nivel. Que sea el del restaurante", "en": "Pay big and step up a level. Make sure it’s the restaurant’s level" },
+      "description": { "es": "Paga fuerte, pero sabiendo a qué vas: menús, tiempo, bebidas y críticas atribuidas de La Salita y RiFF.", "en": "Spend big, but know what you are paying for: menus, time, drinks and attributed criticism of La Salita and RiFF." },
+      "lead": {
+        "es": ["Pagar mucho puede comprar técnica, producto, servicio y una experiencia distinta. No compra la obligación de salir emocionado. Aquí explicamos para quién tiene sentido y qué puede torcer una ocasión especial."],
+        "en": ["Paying a lot can buy technique, produce, service and a different experience. It does not buy an obligation to leave thrilled. Here we explain who it makes sense for and what can spoil a special occasion."]
+      },
+      "sections": [
+        { "heading": { "es": "Lo que justifica ir, para quién no encaja y qué críticas encontramos", "en": "What justifies going, who it doesn’t suit and what criticism we found" }, "places": ["la-salita", "riff"], "compare": true },
+        { "heading": { "es": "Cuándo merece el desembolso", "en": "When the spend is worth it" }, "body": { "es": ["Reserva el formato que te interesa, conoce el coste de bebidas y las condiciones de cancelación y avisa de restricciones antes. Si lo que quieres es arroz abundante y sobremesa flexible, quizá una buena arrocería se ajuste mejor.", "Veredicto provisional: candidatos para una ocasión deliberada; sin visita propia no les asignamos «chollo», «timo» ni superioridad sensorial. Forzar un «pero» por cada estrella sería otro panfleto, solo que enfadado."], "en": ["Book the format you want, know the cost of drinks and the cancellation terms, and flag restrictions in advance. If what you want is plenty of rice and an open-ended lunch, a good rice restaurant may suit you better.", "Provisional verdict: candidates for a deliberate occasion; without our own visit we won’t label them a ‘bargain’, a ‘rip-off’ or sensorially superior. Forcing a ‘but’ for every star would be another pamphlet, just an angry one."] } }
+      ],
+      "sources": [
+        { "label": "La Salita, menús 2026", "url": "https://www.anarkiagroup.com/menus-la-salita-4" },
+        { "label": "RiFF", "url": "https://restaurante-riff.com/" },
+        { "label": "RiFF en TheFork (carta)", "url": "https://www.thefork.es/restaurante/riff-r9399/menu" },
+        { "label": "RiFF en TheFork (opiniones)", "url": "https://www.thefork.com/restaurant/riff-r9399/reviews" }
+      ]
+    },
+    {
+      "id": "esmorzar", "icon": "esmorzar", "status": "borrador_documental",
+      "slug": { "es": "esmorzar-valencia", "en": "esmorzar-valencia" },
+      "nav": { "es": "Esmorzar", "en": "Esmorzar" },
+      "title": { "es": "Esmorzar en Valencia: qué es, cuánto cuesta y dónde empezar", "en": "Esmorzar in Valencia: the ‘Valencian brunch’ explained" },
+      "h1": { "es": "Esmorzar: el almuerzo valenciano de media mañana, sin perderse en el bocadillo", "en": "Esmorzar: Valencia’s substantial mid-morning ritual" },
+      "description": { "es": "Qué incluye un esmorzar, bocadillo entero o medio, cremaet y suplementos. Dónde empezar y qué premios significan qué.", "en": "If you searched for ‘Valencian brunch’, start here: what an esmorzar includes, whole or half sandwich, cremaet and supplements, and where to begin." },
+      "lead": {
+        "es": ["El esmorzar es una pausa salada y contundente de media mañana, a menudo alrededor de un bocadillo. Pregunta qué incluye: tamaño del bocadillo, cacaos y olivas, bebida, café y suplementos. Pedir un bocadillo grande para «picar antes de comer» es un proyecto que conviene discutir con tu estómago."],
+        "en": ["If you searched for ‘Valencian brunch’, start here. Esmorzar is its own tradition: usually a substantial savoury break in the morning, often built around a bocadillo. It is not simply eggs Benedict translated into Valencian. Ask what the deal includes: sandwich size, peanuts and olives, drink, coffee and any supplements."]
+      },
+      "sections": [
+        { "heading": { "es": "Dónde empezar en la ciudad", "en": "Where to start in the city" }, "body": { "es": ["Cassalla y Cremaet son conceptos contemporáneos del mismo grupo; no comparten tarifas y ninguno está en primera línea de playa."], "en": ["Cassalla and Cremaet are contemporary concepts from the same group; they do not share prices and neither is on the seafront."] }, "places": ["cassalla", "cremaet", "pascuala"] },
+        { "heading": { "es": "Glosario", "en": "Glossary" }, "glossary": [
+          { "term": "Esmorzar", "def": { "es": "Almuerzo valenciano de media mañana; inclusiones según local.", "en": "Valencia’s mid-morning meal; what is included varies by venue." } },
+          { "term": "Bocadillo / medio", "def": { "es": "Bocadillo entero o medio; pregunta si hay medio.", "en": "A whole or half sandwich; ask whether a half is available." } },
+          { "term": { "es": "Gasto / picaeta", "en": "Gasto / picaeta" }, "def": { "es": "Lo que acompaña antes del bocadillo, como cacaos y olivas; cambia por local.", "en": "Nibbles served before the sandwich, such as peanuts and olives; varies by venue." } },
+          { "term": "Cremaet", "def": { "es": "Café con alcohol en su preparación tradicional; no asumas que el fuego elimina todo el alcohol. Pide café normal si lo prefieres.", "en": "Coffee prepared with alcohol in the traditional way; don’t assume flaming removes all of it. Order ordinary coffee if you prefer." } },
+          { "term": "Cassalla", "def": { "es": "Un anisado, no una palabra local para el agua.", "en": "An anise spirit, not a local word for water." } }
+        ] },
+        { "heading": { "es": "Sin alcohol y sin presión", "en": "Alcohol-free, no pressure" }, "body": { "es": ["Café normal o bebida sin alcohol, sin presión para niños, conductores o quien no beba. Ni el cremaet ni la cassalla son obligatorios para obtener el carné cultural."], "en": ["Ordinary coffee or an alcohol-free drink, with no pressure on children, drivers or anyone who doesn’t drink. Neither cremaet nor cassalla is compulsory for cultural admission."] } },
+        { "heading": { "es": "Premios Cacau d’Or: qué significa cada uno", "en": "Cacau d’Or awards: what each one means" }, "body": { "es": ["Palmarés para descubrir, no ranking de esta guía. Los premios cuentan con apoyo comercial de Amstel; eso no implica pagos a esta guía. No convertimos listas de premiados en posiciones del 1 al 10."], "en": ["Awards to help discovery, not this guide’s ranking. The awards are commercially backed by Amstel; that implies no payment to this guide. We don’t turn award lists into made-up top-10 positions."] }, "awards": [
+          { "entity": "Pitti (Especial Amstel); Pizcueta 14 y Pensat i Fet entre distinguidos", "year": "2022", "scope": { "es": "Valencia ciudad; no ticket ni recomendación actual automática", "en": "Valencia city; not a current price or automatic recommendation" }, "status": { "es": "Fuente municipal", "en": "City council source" }, "url": "https://www.valencia.es/cas/actualidad/-/content/premios-cacau-d-or" },
+          { "entity": "Gastroadictos (grupo de Cassalla y Cremaet)", "year": "2024", "scope": { "es": "Premio al grupo; no dos premios individuales", "en": "Award to the group; not two individual awards" }, "status": { "es": "Comunicado recogido por prensa sectorial", "en": "Press release in trade media" }, "url": "https://www.hosteleriaenvalencia.com/Proveedores?id=10766" },
+          { "entity": "Casa Baldo (Especial Amstel)", "year": "2024", "scope": { "es": "Ciudad; premio específico, no campeón universal", "en": "City; a specific award, not universal champion" }, "status": { "es": "Mismo comunicado", "en": "Same press release" }, "url": "https://www.hosteleriaenvalencia.com/Proveedores?id=10766" },
+          { "entity": "Los Abetos (Especial Amstel)", "year": "2025", "scope": { "es": "Torrent, fuera de Valencia ciudad", "en": "Torrent, outside Valencia city" }, "status": { "es": "Noticia; confirmación del organizador pendiente", "en": "News report; organiser confirmation pending" }, "url": "https://www.eldebate.com/espana/comunidad-valenciana/20251122/abetos-alza-premio-cacau-dor-amstel-2025_357970.html" },
+          { "entity": "La Pascuala", "year": { "es": "Histórico (edición exacta pendiente)", "en": "Historic (exact edition pending)" }, "scope": { "es": "Cerca de la playa; no se asigna a 2026", "en": "Near the beach; not attributed to 2026" }, "status": { "es": "Pendiente de fuente primaria", "en": "Primary source pending" }, "url": "https://valenciaplaza.com/guiahedonista/comer3/amstel-homenajea-a-los-mejores-locales-para-almorzar-en-fallas" },
+          { "entity": "Bodega La Aldeana y Fernandet", "year": { "es": "Reportado como 2020", "en": "Reported as 2020" }, "scope": { "es": "Cabanyal y Sueca; confirmar vigencia de servicio", "en": "Cabanyal and Sueca; confirm current service" }, "status": { "es": "Cerrar con archivo del organizador", "en": "To confirm with the organiser’s archive" }, "url": "https://www.hortanoticias.com/bodega-la-aldeana-cacau-dor/" }
+        ] },
+        { "heading": { "es": "¿Y Fernandet?", "en": "What about Fernandet?" }, "body": { "es": ["Está en la playa de Sueca, fuera de Valencia ciudad. Su horario actual empieza a las 13:00 de viernes a domingo y no confirma esmorzar matinal: no te mandamos a desayunar allí hasta confirmarlo."], "en": ["It is on Sueca beach, outside Valencia city. Its current hours start at 13:00 Friday to Sunday and do not confirm a morning esmorzar: we won’t send you there for breakfast until that is confirmed."] }, "places": ["fernandet"] }
+      ],
+      "sources": [
+        { "label": "Bar Cassalla, carta de esmorzar", "url": "https://barcassalla.es/carta/esmorzar/" },
+        { "label": "Bar Cremaet, carta", "url": "https://barcremaet.com/carta/esmorzar/" },
+        { "label": "La Pascuala", "url": "https://bodegalapascuala.es/" },
+        { "label": "Ayuntamiento de Valencia: premios Cacau d’Or", "url": "https://www.valencia.es/cas/actualidad/-/content/premios-cacau-d-or" }
+      ]
+    },
+    {
+      "id": "playa", "icon": "ola", "status": "borrador_documental",
+      "slug": { "es": "restaurantes-playa-valencia", "en": "restaurants-near-valencia-beach" },
+      "nav": { "es": "Playa", "en": "Beach" },
+      "title": { "es": "Dónde comer cerca de la playa en Valencia: Cabanyal, Malvarrosa y excursiones", "en": "Where to eat near Valencia beach: Cabanyal, Malvarrosa and day trips" },
+      "h1": { "es": "Comer cerca de la playa sin encoger el mapa", "en": "Eating near Valencia’s beach without shrinking the map" },
+      "description": { "es": "Esmorzar, tapas o arroz cerca del mar con condiciones claras. Y Fernandet, en Sueca, como excursión aparte.", "en": "Esmorzar, tapas or rice near the sea with clear conditions. And Fernandet, in Sueca, as a separate day trip." },
+      "lead": {
+        "es": ["No todos estos locales están en primera línea. Decide entre un festín de mañana y un arroz grande a mediodía en lugar de suponer que tu estómago quiere los dos."],
+        "en": ["Not all these venues are on the seafront. Choose between a morning feast and a big rice lunch rather than assuming your stomach wants both."]
+      },
+      "sections": [
+        { "heading": { "es": "Esmorzar y paseo", "en": "Esmorzar and a stroll" }, "places": ["pascuala"] },
+        { "heading": { "es": "Tapas y producto en el Cabanyal", "en": "Tapas and produce in Cabanyal" }, "places": ["montana", "anyora"], "route": "R09" },
+        { "heading": { "es": "Arroz junto al paseo", "en": "Rice by the promenade" }, "body": { "es": ["La Pepica y Véneta Neptuno comparten paseo; Casa Carmela es otra opción más al norte, no contigua."], "en": ["La Pepica and Véneta Neptuno share a promenade; Casa Carmela is a separate option further north, not next door."] }, "places": ["pepica", "carmela", "veneta-mar"] },
+        { "heading": { "es": "Excursión: Fernandet, playa de Sueca", "en": "Day trip: Fernandet, Sueca beach" }, "excursion": true, "body": { "es": ["Fuera de Valencia ciudad: excursión con ida y vuelta, no continuación andando desde la Marina. Temporada, cocina abierta, precios, transporte y entrada actual por verificar."], "en": ["Outside Valencia city: a round trip, not a walk on from the Marina. Season, kitchen hours, prices, transport and current entrance still to verify."] }, "places": ["fernandet"] },
+        { "heading": { "es": "Con bebé o niño activo", "en": "With a baby or an active child" }, "body": { "es": ["Una terraza no prueba juego ni supervisión. Ninguno de estos locales tiene espacio infantil documentado; consulta la página de familias."], "en": ["A terrace is not proof of play space or supervision. None of these venues has a documented children’s area; see the families page."] } }
+      ],
+      "related": ["esmorzar", "arroces"],
+      "sources": [
+        { "label": "La Pascuala", "url": "https://bodegalapascuala.es/" },
+        { "label": "Fernandet, ubicación y horario", "url": "https://restaurantefernandet.com/ubicacion/" }
+      ]
+    },
+    {
+      "id": "visitantes", "icon": "maleta", "status": "borrador_documental",
+      "slug": { "es": "guia-gastronomica-valencia", "en": "valencia-food-guide" },
+      "nav": { "es": "Guía para visitantes", "en": "Visitor food guide" },
+      "title": { "es": "Qué comer en Valencia: guía para visitantes, del italiano al esmorzar", "en": "Where to eat in Valencia: local food, beach plans and esmorzar" },
+      "h1": { "es": "Del pasaporte de la pizza a la inmersión valenciana", "en": "Valencia, from pizza comfort to full local immersion" },
+      "description": { "es": "Comida valenciana explicada: sabores fáciles, arroces, bocadillos y platos para explorar. Playa, precios claros y rutas con sentido.", "en": "From familiar Italian food to Valencian specialities: what to order, what you will spend and how to try esmorzar near the coast." },
+      "lead": {
+        "es": ["Puedes pasar una semana comiendo italiano en Valencia y ser feliz. También puedes descubrir que lo que buscabas estaba entre dos trozos de pan a las diez de la mañana. Proponemos grados de aventura por ingredientes y formato; no repartimos carnés de buen turista."],
+        "en": ["You are allowed to land in Valencia and want pizza. Your passport will survive. But if you fancy going further, this guide helps you understand what is on the plate, what the bill covers and whether the plan suits you."]
+      },
+      "sections": [
+        { "heading": { "es": "Hoy aterrizo suave: «Tu pasaporte todavía huele a mozzarella»", "en": "Comfort zone: “My passport still smells of mozzarella”" }, "body": { "es": ["Italiano y burgers. Lo familiar puede ser una buena elección; no convierte un sitio en trampa para turistas ni en auténtico local."], "en": ["Italian food and burgers. Familiar food can be a perfectly good choice; it doesn’t make somewhere a tourist trap, or local and authentic."] }, "places": ["filippas-sueca", "raices", "km0", "tasty-carmen"] },
+        { "heading": { "es": "Valencia sin examen oral", "en": "First local steps: “One foot outside the airport lounge”" }, "body": { "es": ["Bravas, tortilla, croquetas, esgarraet (pimiento asado y bacalao, receta según local) y arroz del senyoret. El precio por persona del arroz no es el precio de la paella entera."], "en": ["Try tortilla, croquetas or esgarraet: roasted peppers and salted cod, with the exact recipe checked at the venue. Rice is a whole category: ask whether the price is per person, whether there is a minimum for two, and whether you need to order ahead."] }, "places": ["ricardo", "central", "pepica"] },
+        { "heading": { "es": "El brunch valenciano se llama esmorzar", "en": "Meet esmorzar: Valencia’s substantial mid-morning ritual" }, "places": ["cassalla", "cremaet"], "related_category": "esmorzar" },
+        { "heading": { "es": "Inmersión con conocimiento de causa", "en": "Go deeper: “Tell me what it is before I become adventurous”" }, "body": { "es": ["All i pebre: pregunta qué pescado lleva; la versión tradicional de anguila puede sorprender a quien esperaba marisco. Figatell: carne y vísceras según receta. Callos, sangre con cebolla y carne de caballo se nombran claramente cuando estén en carta. Comerlos no demuestra valentía moral."], "en": ["Eel, tripe, blood dishes and horse meat are not euphemisms we hide in a translation. We name ingredients when a dish actually contains them. Ask about the recipe of a figatell rather than assuming every version is the same. You can enjoy local food without ordering any of these."] }, "places": ["anyora"] },
+        { "heading": { "es": "Ocasión especial: «Una cuenta mayor merece mejores preguntas»", "en": "Creative local cooking: “A bigger bill deserves better questions”" }, "places": ["la-salita", "riff"], "related_category": "alta-cocina" },
+        { "heading": { "es": "Preguntas pequeñas, respuestas útiles", "en": "Small questions, useful answers" }, "phrases": [
+          { "es": "¿Qué incluye el almuerzo?", "en": "What does the esmorzar deal include?" },
+          { "es": "¿Hay medio bocadillo?", "en": "Is a half sandwich available?" },
+          { "es": "¿El arroz es por persona? ¿Mínimo dos?", "en": "Is rice priced per person, with a two-person minimum?" },
+          { "es": "¿Cuánto cuesta lo que está fuera de carta?", "en": "How much is the special?" },
+          { "es": "¿Podemos pedir sin móvil?", "en": "Can we order without using a phone?" }
+        ], "body": { "es": ["Un texto en inglés no demuestra que el personal hable inglés."], "en": ["English copy is not evidence that staff speak English."] } }
+      ],
+      "related": ["esmorzar", "playa", "arroces"],
+      "sources": [
+        { "label": "Fuentes, premios y zonas (investigación 24/10/2026)", "url": "https://github.com/FarinosV44/guiaValencia/blob/main/investigacion/guia-visitantes-es-en/fuentes-y-premios.md" }
+      ]
+    }
+  ]
+}

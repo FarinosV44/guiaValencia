@@ -1,0 +1,41 @@
+{
+  "_note": "Rutas de investigacion/rutas-editoriales.json. Solo R09 tiene horarios documentados en todas sus paradas y se publica como ejemplo completo con comprobación por día y hora. El resto queda como propuesta pendiente: no se generan páginas de ruta sin validar un tramo esencial (#12). Sin minutos andando inventados: el tramo a pie se abre en Maps.",
+  "routes": [
+    {
+      "id": "R09",
+      "slug": { "es": "cabanyal-comida-paseo-helado", "en": "cabanyal-lunch-stroll-ice-cream" },
+      "status": "ejemplo_completo",
+      "title": { "es": "Cabanyal: comer en Anyora, pasear y decidir dónde va el dulce", "en": "Cabanyal: lunch at Anyora, a stroll, then decide where dessert happens" },
+      "summary": {
+        "es": "Comida temprana en Anyora y paseo por las calles del Cabanyal hacia Gelática. O quedarse al helado de cremaet de Anyora y saltarse la heladería. Un solo postre, no dos.",
+        "en": "An early lunch at Anyora and a stroll through Cabanyal's streets to Gelática. Or stay for Anyora's cremaet ice cream and skip the ice-cream shop. One dessert, not two."
+      },
+      "stops": [
+        { "kind": "place", "place": "anyora", "role": "comer" },
+        { "kind": "walk", "from": "anyora", "to": "gelatica", "text": { "es": "Paseo por las calles del Cabanyal. Tiempo y recorrido: ábrelo en Maps; no lo hemos medido ni inspeccionado cruces o accesos con carrito.", "en": "A stroll through Cabanyal's streets. Time and route: open it in Maps; we have not measured it or checked crossings or pushchair access." } },
+        { "kind": "place", "place": "gelatica", "role": "postre", "optional": true, "alternative": "stay" }
+      ],
+      "dessert_options": {
+        "stay": { "place": "anyora", "label": { "es": "Quedarse al helado de cremaet en Anyora", "en": "Stay for the cremaet ice cream at Anyora" }, "amount": 6, "unit": "postre" },
+        "out": { "place": "gelatica", "label": { "es": "Salir a Gelática (brownie, pistacho, sorbete…)", "en": "Head to Gelática (brownie, pistachio, sorbet…)" }, "amount": null }
+      },
+      "base_order": { "place": "anyora", "party": 2 },
+      "maps_walk": "https://www.google.com/maps/dir/?api=1&origin=Anyora%2C+Vicent+Gallart%2C+15%2C+Valencia&destination=Gel%C3%A1tica+Ice+Concept%2C+Remunta%2C+11%2C+Valencia&travelmode=walking",
+      "caveats": {
+        "es": "Gelática cierra a las 18:00 de miércoles a viernes y a las 19:30 sábado y domingo; los últimos 30 minutos son solo para llevar. Anyora cierra la cocina el domingo. No generamos versión de cena que termine en Gelática.",
+        "en": "Gelática closes at 18:00 Wednesday to Friday and 19:30 at weekends; the last 30 minutes are takeaway only. Anyora's kitchen is closed on Sundays. We do not offer a dinner version ending at Gelática."
+      }
+    },
+    { "id": "R01", "status": "propuesta_pendiente", "places": ["blanqueries", "veneta-brodadors"], "title": { "es": "Carmen: menú y paseo, sin pagar dos postres", "en": "Carmen: set lunch and a stroll, without paying for two desserts" }, "pending": { "es": "Horario de Véneta Brodadors sin confirmar.", "en": "Véneta Brodadors hours not confirmed." } },
+    { "id": "R02", "status": "propuesta_pendiente", "places": ["rentaora", "kuzina", "veneta-brodadors"], "title": { "es": "Carmen: tapas por Mossén Sorell o cocina griega", "en": "Carmen: tapas on Mossén Sorell or Greek food" }, "pending": { "es": "Horarios de Rentaora y Véneta pendientes; los de Kuzina, contradictorios.", "en": "Rentaora and Véneta hours pending; Kuzina's are contradictory." } },
+    { "id": "R03", "status": "propuesta_pendiente", "places": ["central", "romana-centro"], "title": { "es": "Centro: mercado y dulce", "en": "Centre: market bite and something sweet" }, "pending": { "es": "Horarios de Central Bar y La Romana pendientes.", "en": "Central Bar and La Romana hours pending." } },
+    { "id": "R04", "status": "propuesta_pendiente", "places": ["bluebell", "canalla", "antigua"], "title": { "es": "Ruzafa: café primero, cocina después", "en": "Ruzafa: coffee first, food later" }, "pending": { "es": "Horarios de Canalla y Antigua Lechería pendientes.", "en": "Canalla and Antigua Lechería hours pending." } },
+    { "id": "R05", "status": "propuesta_pendiente", "places": ["canalla", "hippolatte"], "title": { "es": "Ruzafa con niño activo: una comida y juego", "en": "Ruzafa with an active child: one meal and play" }, "pending": { "es": "Horario de Canalla y temporada de Hippolatte pendientes.", "en": "Canalla hours and Hippolatte's seasonal hours pending." } },
+    { "id": "R06", "status": "propuesta_pendiente", "places": ["habitual", "daniel", "romana-costa"], "title": { "es": "Colón: comida, horchata o paseo por Cánovas", "en": "Colón: lunch, horchata or a stroll through Cánovas" }, "pending": { "es": "Horarios de Daniel y La Romana Joaquín Costa pendientes.", "en": "Daniel and La Romana Joaquín Costa hours pending." } },
+    { "id": "R07", "status": "propuesta_pendiente", "places": ["principal", "komori", "petit"], "title": { "es": "Mestalla-Alameda: comer cerca y jugar", "en": "Mestalla-Alameda: eat nearby and play" }, "pending": { "es": "Tarifas de Petit Niu contradictorias; accesos y cruces sin comprobar.", "en": "Petit Niu pricing contradictory; access and crossings unchecked." } },
+    { "id": "R08", "status": "propuesta_pendiente", "places": ["negri", "sariers", "ola"], "title": { "es": "Benimaclet: cocina viajera y horchata", "en": "Benimaclet: travelling flavours and horchata" }, "pending": { "es": "Horario estacional de Els Sariers contradictorio; La Negri sin horas exactas.", "en": "Els Sariers seasonal hours contradictory; La Negri without exact times." } },
+    { "id": "R10", "status": "propuesta_pendiente", "places": ["montana", "sastreria", "gelatica"], "title": { "es": "Cabanyal bodega: el paseo no exige otra cuenta", "en": "Cabanyal bodega: a stroll does not require another bill" }, "pending": { "es": "Horarios de Casa Montaña y La Sastrería pendientes.", "en": "Casa Montaña and La Sastrería hours pending." } },
+    { "id": "R11", "status": "propuesta_pendiente", "places": ["pepica", "veneta-mar"], "title": { "es": "Paseo marítimo: arroz y helado sin cruzar Valencia", "en": "Seafront: rice and ice cream without crossing the city" }, "pending": { "es": "Horario estacional de Véneta Neptuno sin confirmar.", "en": "Véneta Neptuno seasonal hours not confirmed." } },
+    { "id": "R12", "status": "propuesta_pendiente", "places": ["gato"], "title": { "es": "Zaidía: comer y jugar sin duplicar gasto", "en": "Zaidía: eat and play without doubling the bill" }, "pending": { "es": "No se ha inspeccionado un parque concreto para el paseo posterior.", "en": "No specific park inspected for the walk afterwards." } }
+  ]
+}

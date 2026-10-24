@@ -1,0 +1,20 @@
+{
+  "_note": "Estado económico versionado (#29, #41). La declaración pública se deriva de aquí: mientras 'current.state' sea 'sin_financiacion' y 'entries' esté vacío se muestra «Aquí no nos paga nadie». En cuanto se registre una financiación, el texto cambia automáticamente y se conserva el historial. No hay pasarela de pago ni cobros activos.",
+  "current": { "state": "sin_financiacion", "since": "2026-10-24", "declared_by": { "es": "el propietario de la guía", "en": "the guide's owner" } },
+  "history": [
+    { "from": "2026-10-24", "state": "sin_financiacion", "note": { "es": "Declaración inicial del propietario: nadie paga la guía.", "en": "Owner's initial declaration: nobody pays for the guide." } }
+  ],
+  "entries": [],
+  "kinds": {
+    "honorario": { "es": "Honorario por el trabajo", "en": "Fee for our work" },
+    "comida_invitada": { "es": "Comida invitada", "en": "Hosted meal" },
+    "viaje_alojamiento": { "es": "Viaje o alojamiento", "en": "Travel or accommodation" },
+    "descuento": { "es": "Descuento", "en": "Discount" },
+    "regalo": { "es": "Regalo", "en": "Gift" },
+    "comision": { "es": "Comisión", "en": "Commission" }
+  },
+  "proposals": {
+    "endpoint": null,
+    "_endpoint_note": "Sin destino configurado: el formulario de /invitanos/ valida y prepara la propuesta, pero no envía nada hasta que el propietario decida el canal (correo o servicio de formularios). Sin cobro."
+  }
+}

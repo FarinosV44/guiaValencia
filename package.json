@@ -1,0 +1,23 @@
+{
+  "name": "donde-comer-valencia",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dónde comer en Valencia: guía gastronómica independiente ES/EN (generador estático, sin publicar).",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node src/build.js",
+    "serve": "node scripts/serve.js",
+    "test": "node --test test/",
+    "check": "npm run build && npm test",
+    "a11y": "node scripts/a11y.js",
+    "screenshots": "node scripts/screenshots.js",
+    "logo": "node scripts/logo.js"
+  },
+  "devDependencies": {
+    "axe-core": "^4.14.0",
+    "playwright": "^1.63.0"
+  }
+}
