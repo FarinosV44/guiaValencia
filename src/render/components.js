@@ -109,9 +109,10 @@ export function hoursBlock(place, lang) {
     }).join('')}</tbody></table>`;
   }
   if (h.service) table += `<p>${e(ui.serviceHours)}: ${h.service.map(([a, b]) => `${clock(a)}–${clock(b)}`).join(', ')}</p>`;
+  const hol = h.holidays === 'cerrado' ? `<p class="small">${e(ui.holidaysClosed)}</p>` : h.status !== 'desconocido' ? `<p class="small">${e(ui.holidaysUnknown)}</p>` : '';
   const kitchen = h.kitchen && !h.note ? `<p class="small">${e(ui.kitchenHours)}</p>` : '';
   const note = h.note ? `<p class="small">${e(t(h.note, lang))}</p>` : '';
-  return `${status}${table}${kitchen}${note}`;
+  return `${status}${table}${kitchen}${note}${hol}`;
 }
 
 // ——— Niños ———

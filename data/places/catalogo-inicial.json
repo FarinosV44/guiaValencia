@@ -25,7 +25,7 @@
         }
       },
       "price": {
-        "per_adult_base": 27,
+        "per_adult_base": 27, "base_overrides": {"sat": 32, "festivo": 32},
         "basis": { "es": "menú ejecutivo de lunes a viernes", "en": "weekday set lunch (Mon–Fri)" },
         "lines": [
           { "label": { "es": "Menú ejecutivo (L–V)", "en": "Set lunch (Mon–Fri)" }, "amount": 27, "unit": "persona" },
@@ -450,7 +450,7 @@
         }
       },
       "price": {
-        "per_adult_base": 16.9,
+        "per_adult_base": 16.9, "base_overrides": {"sat": null, "sun": null, "festivo": null},
         "basis": { "es": "menú mediodía laborable no festivo", "en": "weekday lunch menu (not holidays)" },
         "lines": [
           { "label": { "es": "Menú mediodía laborable no festivo", "en": "Weekday lunch menu (not holidays)" }, "amount": 16.9, "unit": "persona" },
@@ -497,7 +497,7 @@
         "en": { "offer": "Counter, market cooking and rice dishes.", "fits": "Produce and counter dining around Mestalla.", "not_for": "A cheap meal: there is no basis to call it that.", "order": "Ask the price of off-menu specials before ordering them.", "may_disappoint": "No criticism documented in our sample (reviews pending).", "before": "Do not confuse kitchen closing time with dining-room closing time." }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": { "bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" }, "note": { "es": "Coste de pedido completo pendiente.", "en": "Full order cost pending." } },
-      "hours": { "status": "documentado", "weekly": { "mon": [["13:30", "16:00"], ["20:45", "24:30"]], "tue": [["13:30", "16:00"]], "wed": [["13:30", "16:00"]], "thu": [["13:30", "16:00"], ["20:45", "24:30"]], "fri": [["13:30", "16:00"], ["20:45", "24:30"]], "sat": [["13:30", "16:00"], ["20:45", "24:30"]], "sun": [] }, "note": { "es": "Martes y miércoles noche cerrado; domingos y festivos cerrado.", "en": "Closed Tuesday and Wednesday evenings, Sundays and holidays." }, "source": "https://www.laprincipalrestaurante.es/" },
+      "hours": { "holidays": "cerrado", "status": "documentado", "weekly": { "mon": [["13:30", "16:00"], ["20:45", "24:30"]], "tue": [["13:30", "16:00"]], "wed": [["13:30", "16:00"]], "thu": [["13:30", "16:00"], ["20:45", "24:30"]], "fri": [["13:30", "16:00"], ["20:45", "24:30"]], "sat": [["13:30", "16:00"], ["20:45", "24:30"]], "sun": [] }, "note": { "es": "Martes y miércoles noche cerrado; domingos y festivos cerrado.", "en": "Closed Tuesday and Wednesday evenings, Sundays and holidays." }, "source": "https://www.laprincipalrestaurante.es/" },
       "sources": ["https://www.laprincipalrestaurante.es/"]
     },
     {
@@ -509,7 +509,7 @@
         "en": { "offer": "Japanese cooking with Mediterranean produce.", "fits": "A special-occasion alternative to casual Asian food.", "not_for": "Budgeting: no current price is documented.", "order": "No order documented; we do not reuse menus from 2015 guides.", "may_disappoint": "No criticism documented in our sample (reviews pending).", "before": "Check access through the hotel and the current menu. No play area verified." }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": { "bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" }, "note": { "es": "Precio pendiente.", "en": "Price pending." } },
-      "hours": { "status": "documentado", "weekly": { "mon": [["14:00", "16:00"], ["20:30", "23:00"]], "tue": [["14:00", "16:00"], ["20:30", "23:00"]], "wed": [["14:00", "16:00"], ["20:30", "23:00"]], "thu": [["14:00", "16:00"], ["20:30", "23:00"]], "fri": [["14:00", "16:00"], ["20:30", "23:00"]], "sat": [["14:00", "16:00"], ["20:30", "23:00"]], "sun": [] }, "note": { "es": "Horario publicado; domingos y festivos cerrado. Confirmar.", "en": "Published hours; closed Sundays and holidays. Confirm." }, "source": "https://restaurantekomori.com/" },
+      "hours": { "holidays": "cerrado", "status": "documentado", "weekly": { "mon": [["14:00", "16:00"], ["20:30", "23:00"]], "tue": [["14:00", "16:00"], ["20:30", "23:00"]], "wed": [["14:00", "16:00"], ["20:30", "23:00"]], "thu": [["14:00", "16:00"], ["20:30", "23:00"]], "fri": [["14:00", "16:00"], ["20:30", "23:00"]], "sat": [["14:00", "16:00"], ["20:30", "23:00"]], "sun": [] }, "note": { "es": "Horario publicado; domingos y festivos cerrado. Confirmar.", "en": "Published hours; closed Sundays and holidays. Confirm." }, "source": "https://restaurantekomori.com/" },
       "sources": ["https://restaurantekomori.com/"]
     },
     {

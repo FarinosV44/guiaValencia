@@ -14,7 +14,7 @@
     "check": "npm run build && npm test && npm run a11y",
     "a11y": "node scripts/a11y.js",
     "screenshots": "node scripts/screenshots.js",
-    "logo": "node scripts/logo.js"
+    "revision": "node scripts/revision.js"
   },
   "devDependencies": {
     "axe-core": "^4.14.0",

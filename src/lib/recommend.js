@@ -7,7 +7,7 @@
 import { statusAt, isClosed } from './hours.js';
 import { budgetFit, summarize } from './price.js';
 
-export const RULES_VERSION = '2026-10-24.2';
+export const RULES_VERSION = '2026-10-25.1';
 
 const SCREEN_FREE_OK = new Set(['declarado', 'contrastado']);
 
@@ -28,10 +28,11 @@ function evaluate(p, q) {
 
   if (!q.includeOutside && p.scope !== 'valencia') exclusions.push({ code: 'fuera_ciudad', scope: p.scope });
   if (q.zone && p.zone !== q.zone) exclusions.push({ code: 'zona' });
+  if (q.date && p.scope !== 'valencia') limits.push({ code: 'festivos_locales_desconocidos' });
 
   let hours = null;
   if (q.day && q.time) {
-    hours = statusAt(p.hours, q.day, q.time);
+    hours = statusAt(p.hours, q.day, q.time, { holiday: !!q.holiday });
     if (isClosed(hours)) exclusions.push({ code: 'cerrado', reason: hours.reason });
     else if (hours.state === 'abierto') {
       score += 2;
@@ -39,6 +40,9 @@ function evaluate(p, q) {
       if (hours.minutesLeft != null && hours.minutesLeft < 60) limits.push({ code: 'cierra_pronto', closes: hours.closes });
     } else if (hours.state === 'solo_llevar') {
       exclusions.push({ code: 'solo_llevar' });
+    } else if (hours.state === 'probable' && hours.reason === 'festivo_sin_dato') {
+      score += 1;
+      limits.push({ code: 'festivo_sin_dato', closes: hours.closes });
     } else if (hours.state === 'probable') {
       score += 1;
       reasons.push({ code: 'franja_declarada' });
@@ -49,7 +53,8 @@ function evaluate(p, q) {
     }
   }
 
-  const budget = budgetFit(p.price, q.budget ?? null);
+  const budget = budgetFit(p.price, q.budget ?? null, { day: q.day, holiday: !!q.holiday });
+  if (budget.dayRule && budget.base != null) reasons.push({ code: 'precio_del_dia', base: budget.base });
   if (budget.state === 'excede') exclusions.push({ code: 'presupuesto', base: budget.base });
   else if (budget.state === 'base_dentro_extras_pendientes') {
     score += 1;

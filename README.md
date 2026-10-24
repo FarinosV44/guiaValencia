@@ -12,6 +12,7 @@ npm test             # datos, escenarios de #26, SEO y enlaces del sitio generad
 npm run a11y         # axe-core + recorridos en navegador (móvil 360 px y escritorio)
 npm run check        # build + test + a11y
 npm run screenshots  # capturas reales en docs/capturas/
+npm run revision     # cola de revisión de datos en docs/revision-datos.md
 ```
 
 La CI (`.github/workflows/check.yml`) ejecuta build, pruebas y accesibilidad en cada PR.
@@ -25,6 +26,7 @@ La CI (`.github/workflows/check.yml`) ejecuta build, pruebas y accesibilidad en 
 | `data/places/*.json` | Locales por lote de investigación. Datos compartidos entre idiomas; textos en `text.es` / `text.en`. |
 | `data/categories.json` | Páginas por intención (arroces, sushi, pizzas, burgers, citas, barrios, alta cocina, esmorzar, playa, barbacoa coreana, visitantes). |
 | `data/routes.json` | Rutas. Solo se genera página para las que tienen todas las paradas con horario documentado. |
+| `data/festivos.json` | Festivos de Valencia ciudad 2026 (comunes y locales), con fuentes. |
 | `data/funding.json` | Estado económico versionado. La declaración pública se deriva de aquí. |
 | `src/lib/` | Lógica compartida por build, pruebas y navegador: precio, horarios, recomendador, rutas, financiación. |
 | `src/render/` | Plantillas HTML. `src/i18n.js` tiene la interfaz por idioma y las URLs. |
@@ -39,6 +41,8 @@ La CI (`.github/workflows/check.yml`) ejecuta build, pruebas y accesibilidad en 
 - **Gustos** (`likes`: pescado, salsas, mucha_hambre, cita_tranquila, vegano): preferencias, nunca requisitos; solo se asignan con base en la investigación.
 - **Alternativas**: dos por ficha, con antojo o espacio de juego en común y mismo ámbito; el precio solo se compara si ambas bases cubren los mismos conceptos.
 - **Horarios**: se comprueba la hora de llegada; `weekly` admite intervalos, `[]` (cerrado) o `{ "slots": [...] }` (franja declarada sin horas).
+- **Festivos**: con fecha, `hours.holidays: "cerrado"` cierra el local; sin dato, el horario semanal pasa a «probable». `price.base_overrides` (`sat`, `sun`, `festivo`) cambia la base solo donde está documentado; `null` = sin precio ese día.
+- **Caducidad**: `npm run revision` marca precios de más de 30 días, horarios de 30 y servicios infantiles de 60.
 - **Ámbito**: `scope` separa `valencia`, `area_metropolitana` y `excursion`; fuera de la ciudad solo aparece si se pide.
 - **Indexación**: una página es indexable solo si su contenido está revisado (`publication_ready` en locales, `status: "revisado"` en categorías). Los borradores llevan `noindex`, no tienen hreflang y no entran en el sitemap.
 - **Financiación**: si `funding.json` registra una entrada, «Aquí no nos paga nadie» se sustituye automáticamente. Ningún campo de pago entra en el recomendador.

@@ -79,9 +79,10 @@ export function loadData() {
   const routes = readJson(join(DATA, 'routes.json')).routes;
   const funding = readJson(join(DATA, 'funding.json'));
   const categories = readJson(join(DATA, 'categories.json')).categories;
+  const festivos = readJson(join(DATA, 'festivos.json'));
   const byId = Object.fromEntries(places.map((p) => [p.id, p]));
   const zoneById = Object.fromEntries(zones.map((z) => [z.id, z]));
-  return { places, byId, zones, zoneById, routes, funding, categories, root: ROOT };
+  return { places, byId, zones, zoneById, routes, funding, categories, festivos, root: ROOT };
 }
 
 // Validación estructural: falla el build si los datos rompen reglas editoriales comprobables.

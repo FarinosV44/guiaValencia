@@ -191,3 +191,66 @@ test('alternativas: comparables, mismo ámbito y precio comparado solo si cubren
   assert.ok(gato.includes('petit') && gato.includes('linaje'));
   assert.deepEqual(alternativesFor(data.byId.fernandet, P), [], 'una excursión no se compara con locales de la ciudad');
 });
+
+test('calendario: día de la semana y festivos de Valencia 2026', async () => {
+  const { dayOfDate, holidayInfo } = await import('../src/lib/calendar.js');
+  assert.equal(dayOfDate('2026-10-25'), 'sun');
+  assert.equal(dayOfDate('2026-03-29'), 'sun', 'el cambio de hora no desplaza el día');
+  assert.equal(dayOfDate('2026-04-13'), 'mon');
+  const f = data.festivos;
+  assert.equal(holidayInfo(f, '2026-04-13').holiday.name.es, 'San Vicente Ferrer');
+  assert.equal(holidayInfo(f, '2026-04-13').holiday.kind, 'local');
+  assert.equal(holidayInfo(f, '2026-04-06').holiday.name.es, 'Lunes de Pascua');
+  assert.equal(holidayInfo(f, '2026-01-22').holiday.kind, 'local');
+  assert.equal(holidayInfo(f, '2026-04-14').holiday, null);
+  assert.equal(holidayInfo(f, '2026-04-13', { scope: 'excursion' }).localUnknown, true, 'fuera de la ciudad no aplicamos locales');
+  assert.equal(holidayInfo(f, '2027-01-22').known, false);
+});
+
+test('festivo: cierres declarados y horario semanal que deja de confirmar', () => {
+  // San Vicente Ferrer, lunes 13/04/2026, 14:00.
+  const q = { day: 'mon', time: '14:00', holiday: true };
+  assert.equal(statusAt(data.byId.principal.hours, q.day, q.time, q).state, 'cerrado');
+  assert.equal(statusAt(data.byId.principal.hours, q.day, q.time).state, 'abierto', 'mismo lunes sin festivo: abierto');
+  const pep = statusAt(data.byId.pepica.hours, q.day, q.time, q);
+  assert.equal(pep.state, 'probable');
+  assert.equal(pep.reason, 'festivo_sin_dato');
+  const res = recommend(P, { ...q, zone: 'mestalla' });
+  assert.ok(!res.picks.some((p) => ['principal', 'komori'].includes(p.place.id)));
+});
+
+test('precio según el día: sábado o festivo cambia la base documentada', () => {
+  assert.equal(budgetFit(data.byId.blanqueries.price, 30, { day: 'mon' }).state, 'base_dentro_extras_pendientes');
+  assert.equal(budgetFit(data.byId.blanqueries.price, 30, { day: 'sat' }).state, 'excede', '32 € en sábado');
+  assert.equal(budgetFit(data.byId.blanqueries.price, 30, { day: 'tue', holiday: true }).base, 32);
+  assert.equal(budgetFit(data.byId.bali.price, 30, { day: 'sat' }).state, 'desconocido', 'menú solo de laborables');
+  assert.equal(budgetFit(data.byId.cassalla.price, 9, { day: 'sun' }).state, 'excede', '8,50 € + 1,50 € en fin de semana');
+  const res = recommend(P, { craving: 'japones', budget: 25, day: 'sat' });
+  assert.ok(!res.picks.some((p) => p.place.id === 'kaisen-centro'), 'Kaisen 28,50 € en fin de semana');
+});
+
+test('cola de revisión: prioriza lo usado en rutas y detecta caducidad', async () => {
+  const { reviewQueue } = await import('../scripts/revision.js');
+  const fresh = reviewQueue(data, '2026-10-25');
+  assert.equal(fresh.length, P.length);
+  assert.ok(fresh[0].used.length > 0, 'primero los locales usados en rutas o categorías');
+  assert.ok(fresh.every((q) => q.stale.length === 0));
+  const petit = fresh.find((q) => q.id === 'petit');
+  assert.ok(petit.items.some(([, t]) => t === 'Coste infantil contradictorio'));
+  const later = reviewQueue(data, '2026-12-15');
+  assert.ok(later.find((q) => q.id === 'anyora').stale.some((x) => x.startsWith('precio')));
+  assert.ok(!later.find((q) => q.id === 'gato').stale.some((x) => x.startsWith('servicios infantiles')), '52 días: aún dentro de 60');
+  const muchLater = reviewQueue(data, '2027-01-10');
+  assert.ok(muchLater.find((q) => q.id === 'gato').stale.some((x) => x.startsWith('servicios infantiles')));
+});
+
+test('postre: quedarse si está incluido, elegir uno si hay opción dentro y fuera, nunca inventar', async () => {
+  const { dessertVerdict } = await import('../src/lib/dessert.js');
+  assert.equal(dessertVerdict(data.byId.blanqueries, P).kind, 'quedate');
+  const a = dessertVerdict(data.byId.anyora, P);
+  assert.equal(a.kind, 'elige');
+  assert.equal(a.line.amount, 6);
+  assert.ok(a.sweet.some((s) => s.place.id === 'gelatica'));
+  assert.equal(dessertVerdict(data.byId['baret-tofona'], P).kind, 'sin_dato', 'no inventamos heladería en Castellar');
+  assert.equal(dessertVerdict(data.byId.gelatica, P), null, 'una heladería no recibe veredicto de restaurante');
+});

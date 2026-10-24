@@ -56,15 +56,26 @@ export function summarize(price) {
   };
 }
 
+// Base efectiva según el día (#16): festivo > día de la semana > base general. Un override null significa
+// «para ese día no hay precio documentado» (p. ej. un menú solo de laborables).
+export function effectiveBase(price, ctx = {}) {
+  const o = price?.base_overrides || {};
+  if (ctx.holiday && 'festivo' in o) return o.festivo;
+  if (ctx.day && ctx.day in o) return o[ctx.day];
+  return price?.per_adult_base ?? null;
+}
+
 // Encaje con presupuesto por persona. «cumple» solo existe cuando el precio es completo (#7: no marcar
 // como dentro de presupuesto una opción con extras obligatorios desconocidos).
-export function budgetFit(price, budgetPerPerson) {
+export function budgetFit(price, budgetPerPerson, ctx = {}) {
   if (budgetPerPerson == null) return { state: 'sin_filtro' };
   const s = summarize(price);
-  if (s.base == null) return { state: 'desconocido' };
-  if (s.base > budgetPerPerson) return { state: 'excede', base: s.base };
-  if (s.complete) return { state: 'cumple', base: s.base };
-  return { state: 'base_dentro_extras_pendientes', base: s.base, open: s.openComponents };
+  const base = effectiveBase(price, ctx);
+  const changed = base !== (price?.per_adult_base ?? null);
+  if (base == null) return { state: 'desconocido', dayRule: changed };
+  if (base > budgetPerPerson) return { state: 'excede', base, dayRule: changed };
+  if (s.complete) return { state: 'cumple', base, dayRule: changed };
+  return { state: 'base_dentro_extras_pendientes', base, open: s.openComponents, dayRule: changed };
 }
 
 // Banda de precio para navegación. Basada en la base documentada; los extras siguen aparte.

@@ -206,7 +206,7 @@
         }
       },
       "price": {
-        "per_adult_base": 8.5,
+        "per_adult_base": 8.5, "base_overrides": {"sat": 10, "sun": 10, "festivo": 10},
         "basis": { "es": "esmorzar completo entre semana", "en": "full esmorzar deal on a weekday" },
         "lines": [
           { "label": { "es": "Esmorzar completo", "en": "Full esmorzar deal" }, "amount": 8.5, "unit": "persona" },

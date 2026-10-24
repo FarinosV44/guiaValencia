@@ -5,6 +5,7 @@ import { recommend, continuation } from './lib/recommend.js';
 import { summarize } from './lib/price.js';
 import { money, escapeHtml as e, clock } from './lib/format.js';
 import { statusAt } from './lib/hours.js';
+import { dayOfDate, holidayInfo } from './lib/calendar.js';
 
 const catalog = JSON.parse(document.getElementById('catalog').textContent);
 const lang = catalog.lang;
@@ -17,7 +18,7 @@ const selected = new Set();
 let lastQuery = {};
 const byId = Object.fromEntries(catalog.places.map((p) => [p.id, p]));
 
-const FIELDS = ['zona', 'dia', 'hora', 'con', 'presupuesto', 'antojo', 'plan'];
+const FIELDS = ['fecha', 'zona', 'dia', 'hora', 'con', 'presupuesto', 'antojo', 'plan'];
 const CHECKS = ['sinpantallas', 'sinmovil', 'fuera'];
 
 function readUrl() {
@@ -25,6 +26,7 @@ function readUrl() {
   let any = false;
   for (const f of FIELDS) if (p.has(f) && form.elements[f]) { form.elements[f].value = p.get(f); any = true; }
   for (const c of CHECKS) if (p.get(c) === '1') { form.elements[c].checked = true; any = true; }
+  if (form.elements.fecha.value) form.elements.dia.value = dayOfDate(form.elements.fecha.value);
   for (const g of p.getAll('gusto')) {
     const box = form.querySelector(`input[name="gusto"][value="${CSS.escape(g)}"]`);
     if (box) { box.checked = true; any = true; }
@@ -35,8 +37,11 @@ function readUrl() {
 function formQuery() {
   const fd = new FormData(form);
   const v = (k) => fd.get(k) || null;
+  const date = v('fecha');
+  const hol = date ? holidayInfo(catalog.festivos, date) : null;
   return {
-    zone: v('zona'), day: v('dia'), time: v('hora'), company: v('con'),
+    date, holiday: hol ? !!hol.holiday : false, holidayInfo: hol,
+    zone: v('zona'), day: date ? dayOfDate(date) : v('dia'), time: v('hora'), company: v('con'),
     budget: v('presupuesto') ? Number(v('presupuesto')) : null,
     craving: v('antojo'), plan: v('plan'),
     noScreens: fd.get('sinpantallas') === '1', noPhone: fd.get('sinmovil') === '1', includeOutside: fd.get('fuera') === '1',
@@ -85,7 +90,7 @@ function compareBox(p) {
 function hoursCell(p) {
   const q = lastQuery;
   if (q.day && q.time) {
-    const st = statusAt(p.hours, q.day, q.time);
+    const st = statusAt(p.hours, q.day, q.time, { holiday: !!q.holiday });
     return ui.hoursStates[st.state] + (st.closes ? ` (${clock(st.closes)})` : '');
   }
   return ui.hoursStatus[p.hours?.status || 'desconocido'];
@@ -125,7 +130,10 @@ function renderCompare() {
 }
 
 function render(res, q) {
-  const parts = [`<h2 id="results-title" tabindex="-1">${e(res.enough ? ui.resultsTitle : ui.resultsTitleFew)}</h2>`];
+  const holNote = q.holidayInfo
+    ? (q.holidayInfo.holiday ? `<p class="notice">${e(ui.holidayNote(q.holidayInfo.holiday.name[lang]))}</p>` : (!q.holidayInfo.known ? `<p class="notice notice--pending">${e(ui.holidayUnknownYear)}</p>` : ''))
+    : '';
+  const parts = [holNote, `<h2 id="results-title" tabindex="-1">${e(res.enough ? ui.resultsTitle : ui.resultsTitleFew)}</h2>`];
   if (!res.enough) parts.push(`<p class="lead">${e(ui.resultsFew(res.picks.length))}</p>`);
   if (res.picks.length) parts.push(`<div class="results__picks">${res.picks.map(pickHtml).join('')}</div>`);
 
@@ -195,3 +203,9 @@ out.addEventListener('click', (ev) => {
 });
 
 if (readUrl()) run(false);
+
+// La fecha fija el día: se refleja en el selector de día para que se vea qué se está comprobando.
+form.elements.fecha.addEventListener('change', () => {
+  const d = form.elements.fecha.value;
+  if (d) form.elements.dia.value = dayOfDate(d);
+});

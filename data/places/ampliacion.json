@@ -25,7 +25,7 @@
         }
       },
       "price": {
-        "per_adult_base": 18,
+        "per_adult_base": 18, "base_overrides": {"sat": null, "sun": null, "festivo": null},
         "basis": { "es": "buffet de adulto (menú de día)", "en": "adult buffet (day menu)" },
         "lines": [
           { "label": { "es": "Adulto, menú de día", "en": "Adult, day menu" }, "amount": 18, "unit": "persona" },
@@ -66,7 +66,7 @@
         }
       },
       "price": {
-        "per_adult_base": 20.5,
+        "per_adult_base": 20.5, "base_overrides": {"sat": 28.5, "sun": 28.5, "festivo": 28.5},
         "basis": { "es": "mediodía laborable", "en": "weekday lunch" },
         "lines": [
           { "label": { "es": "Adulto, mediodía laborable", "en": "Adult, weekday lunch" }, "amount": 20.5, "unit": "persona" },
@@ -323,7 +323,7 @@
         "en": { "offer": "Grill-and-sushi buffet, outside Valencia city.", "fits": "Groups who enjoy cooking in rounds and trying several meats.", "not_for": "Light eaters, or anyone wanting one specific dish: unlimited access adds little.", "order": "Choose basic or premium knowing the basic tier charges premium supplements.", "may_disappoint": "No reviews checked. A children's rate does not prove it suits a child who keeps getting up.", "before": "Drinks and dessert extra; child pricing by height to be confirmed. Do not use Barcelona prices." }
       },
       "price": {
-        "per_adult_base": 18.9,
+        "per_adult_base": 18.9, "base_overrides": {"sat": 26.9, "sun": 26.9, "festivo": 26.9},
         "basis": { "es": "base, mediodía laborable", "en": "basic tier, weekday lunch" },
         "lines": [
           { "label": { "es": "Mediodía L–V, base", "en": "Weekday lunch, basic" }, "amount": 18.9, "unit": "persona" },

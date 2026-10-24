@@ -74,6 +74,12 @@ try {
     const cmpViol = await page.evaluate(async () => (await window.axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa'] } })).violations.map((v) => v.id));
     for (const v of cmpViol) failures.push(`[${vpName}] comparador: ${v}`);
 
+    // Festivo por URL: el día se refleja en el formulario y aparece el aviso.
+    await page.goto(base + '/estoy-por-aqui/?fecha=2026-04-13&hora=14:30', { waitUntil: 'networkidle' });
+    await page.waitForSelector('.results h2');
+    if ((await page.inputValue('#f-dia')) !== 'mon') failures.push(`[${vpName}] fecha: el día no se refleja`);
+    if (!(await page.textContent('#results')).includes('San Vicente Ferrer')) failures.push(`[${vpName}] fecha: sin aviso de festivo`);
+
     // Ruta: lunes → heladería cerrada; sábado con estimaciones → llegada calculada.
     await page.goto(base + '/rutas/cabanyal-comida-paseo-helado/', { waitUntil: 'networkidle' });
     await page.selectOption('#r-dia', 'mon');

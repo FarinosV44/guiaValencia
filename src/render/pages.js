@@ -4,6 +4,7 @@ import { statement, isFunded } from '../lib/funding.js';
 import { dayTable, checkRoute } from '../lib/route.js';
 import { isEatingVenue, RULES_VERSION } from '../lib/recommend.js';
 import { alternativesFor } from '../lib/alternatives.js';
+import { dessertVerdict } from '../lib/dessert.js';
 import { UI, PATHS, SITE } from '../i18n.js';
 import { icon, CRAVING_ICON } from '../icons.js';
 import { receipt, hoursBlock, kidsBlock, evidenceBlock, placeCard, compareTable, typeLabel, zoneName, scopeBadge, evidenceBadge } from './components.js';
@@ -204,6 +205,7 @@ function selectorPage(ctx, lang) {
   <form id="selector" class="selector" novalidate>
     <div class="selector__grid">
       <div class="field"><label for="f-zona">${e(ui.fZone)}</label><select id="f-zona" name="zona">${opt('', ui.fAnyZone)}${zones.map((z) => opt(z.id, t(z.name, lang))).join('')}</select></div>
+      <div class="field"><label for="f-fecha">${e(ui.fDate)}</label><input id="f-fecha" name="fecha" type="date" min="2026-01-01" max="2027-12-31"></div>
       <div class="field"><label for="f-dia">${e(ui.fDay)}</label><select id="f-dia" name="dia">${opt('', ui.fAnyDay)}${DAYS.map((d) => opt(d, DAY_NAMES[lang][d])).join('')}</select></div>
       <div class="field"><label for="f-hora">${e(ui.fTime)}</label><select id="f-hora" name="hora">${opt('', ui.fAnyTime)}${times.map((h) => opt(h, h)).join('')}</select></div>
       <div class="field"><label for="f-con">${e(ui.fCompany)}</label><select id="f-con" name="con">${opt('', ui.fAnyCompany)}${Object.entries(ui.companies).map(([k, v]) => opt(k, v)).join('')}</select></div>
@@ -242,6 +244,7 @@ function selectorPage(ctx, lang) {
 export function clientCatalog(ctx, lang) {
   return {
     lang,
+    festivos: ctx.data.festivos,
     zones: Object.fromEntries(ctx.data.zones.map((z) => [z.id, t(z.name, lang)])),
     places: ctx.data.places.map((p) => ({
       id: p.id, name: p.name, type: typeLabel(p, lang), role: p.role, scope: p.scope, zone: p.zone, address: p.address,
@@ -261,7 +264,19 @@ function placePage(ctx, lang, p) {
   const sameZone = ctx.data.places.filter((x) => x.zone === p.zone && x.id !== p.id);
   const alts = alternativesFor(p, ctx.data.places);
   const sameSweet = sameZone.filter((x) => (x.role || []).some((r) => r === 'postre' || r === 'cafe')).slice(0, 3);
-  const dessertIncluded = p.price?.includes?.postre === 'incluido';
+  const dv = dessertVerdict(p, ctx.data.places);
+  const sweetLinks = (list) => list.map((x) => `<a href="${PATHS.place[lang](x.place.id)}">${e(x.place.name)}</a>`).join(lang === 'es' ? ' o ' : ' or ');
+  const lineAmt = (l) => (l.amount_range ? `${money(l.amount_range[0], lang)}–${money(l.amount_range[1], lang)}` : money(l.amount, lang));
+  let dvText = '';
+  if (dv) {
+    const D = ui.dessert;
+    if (dv.kind === 'quedate') dvText = e(D.quedate);
+    else if (dv.kind === 'elige') dvText = D.elige(e(t(dv.line.label, lang)), e(lineAmt(dv.line)), sweetLinks(dv.sweet));
+    else if (dv.kind === 'aqui') dvText = e(D.aqui(t(dv.line.label, lang), lineAmt(dv.line)));
+    else if (dv.kind === 'fuera') dvText = D.fuera(sweetLinks(dv.sweet));
+    else dvText = e(D.sin_dato);
+  }
+  const dvBlock = dv ? `<section class="dessert dessert--${dv.kind}"><h2>${e(ui.dessertTitle)}</h2><p>${dvText}</p>${dv.sweet.length && dv.kind !== 'quedate' ? `<p class="small">${e(ui.dessert.hours)}</p>` : ''}</section>` : '';
 
   const body = `
 <article class="wrap place">
@@ -284,6 +299,7 @@ function placePage(ctx, lang, p) {
       <section><h2>${e(ui.mayDisappoint)}</h2><p>${e(tx.may_disappoint)}</p></section>
       <section><h2>${e(ui.before)}</h2><p>${e(tx.before)}</p></section>
       <section><h2>${e(ui.offer)}</h2><p>${e(tx.offer)}</p></section>
+      ${dvBlock}
       <section><h2>${e(ui.hours)}</h2>${hoursBlock(p, lang)}</section>
       <section><h2>${e(ui.kids)}</h2>${kidsBlock(p, lang)}</section>
       <section><h2>${e(ui.evidence)}</h2>${evidenceBlock(p, ctx, lang)}</section>
@@ -301,7 +317,6 @@ function placePage(ctx, lang, p) {
 
   ${alts.length ? `<section class="block"><h2>${e(ui.altTitle)}</h2><div class="tickets">${alts.map((a) => `<div class="alt"><p class="alt__why">${e(ui.altWhy(a, ctx.data.zoneById[a.place.zone] ? t(ctx.data.zoneById[a.place.zone].name, lang) : '', (x) => money(x, lang)))}</p>${placeCard(a.place, ctx, lang)}</div>`).join('')}</div></section>` : ''}
   ${sameSweet.length ? `<section class="block"><h2>${e(ui.sweetHere)}</h2>
-    ${dessertIncluded ? `<p class="small">${e(ui.continuationIncluded)}</p>` : ''}
     <div class="tickets">${sameSweet.map((x) => placeCard(x, ctx, lang, { showZone: false })).join('')}</div></section>` : ''}
 </article>`;
 

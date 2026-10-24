@@ -13,7 +13,18 @@ export function slotOf(time) {
 }
 
 // Estados: abierto | solo_llevar | probable | cerrado | contradictorio | desconocido
-export function statusAt(hours, day, time) {
+// opts.holiday: true si la fecha es festivo. Un festivo cierra si el local lo declara (hours.holidays = 'cerrado');
+// si no hay dato, el horario semanal publicado deja de ser una confirmación y pasa a «probable».
+export function statusAt(hours, day, time, opts = {}) {
+  const base = weeklyStatus(hours, day, time);
+  if (!opts.holiday || !hours) return base;
+  if (hours.holidays === 'cerrado') return { state: 'cerrado', reason: 'festivo' };
+  if (hours.holidays === 'abierto') return base;
+  if (base.state === 'abierto' || base.state === 'solo_llevar') return { ...base, state: 'probable', reason: 'festivo_sin_dato' };
+  return base;
+}
+
+function weeklyStatus(hours, day, time) {
   if (!hours) return { state: 'desconocido' };
   const t = toMinutes(time);
   const weekly = hours.weekly || null;
