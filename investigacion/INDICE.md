@@ -46,3 +46,11 @@ No hay «timo» demostrado ni un chollo acreditado por visita propia. Sí hay se
 ## Ampliación: sushi, pizza, hamburguesas y citas
 
 [Entrega para Claude](ampliacion-2026-10-24/LEEME-CLAUDE.md): cinco artículos documentales, 14 candidatos adicionales, doce reseñas visibles de cuatro fichas, propuesta SEO, logo original transparente y viñeta de formatos. No son catas propias ni rankings sensoriales definitivos. Consultado el 24/10/2026. Los candidatos por marca sin sucursal concreta no deben convertirse en rutas hasta resolver su dirección.
+
+## Nuevas secciones y visitantes ES/EN
+
+- [Independencia y visitas financiadas](arroces-barrios-y-alta-cocina/independencia-y-visitas.md).
+- [Arroces](arroces-barrios-y-alta-cocina/arroces.md), [barrios y sorpresas](arroces-barrios-y-alta-cocina/sorpresas-por-barrios.md), [alta cocina crítica](arroces-barrios-y-alta-cocina/paga-fuerte.md), [evidencias](arroces-barrios-y-alta-cocina/evidencias.md).
+- [Guía de visitantes en inglés](guia-visitantes-es-en/visitor-food-guide.en.md), [español](guia-visitantes-es-en/guia-extranjeros-es.md), [premios y fuentes](guia-visitantes-es-en/fuentes-y-premios.md), [web bilingüe y rutas](guia-visitantes-es-en/bilingue-y-rutas.md).
+
+El local solicitado es **El Baret de la Tòfona de Castellar (Ador 47)**. Fernandet, en Sueca, queda como excursión con servicio matinal por confirmar. Revisadas quince opiniones visibles de cinco fichas adicionales de Google y críticas atribuidas en otras plataformas; muestras limitadas, sin cata propia. Issues #38–#45; política de financiación actualizada en #29.
