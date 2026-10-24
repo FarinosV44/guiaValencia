@@ -42,3 +42,7 @@ No hay «timo» demostrado ni un chollo acreditado por visita propia. Sí hay se
 4. Ampliar reseñas con un método documentado; las 33 observadas son exploratorias. Las otras 20 fichas tienen auditoría Google pendiente.
 5. Completar revisión de marca y registrar solo tras decisión del propietario. Las disponibilidades son temporales.
 6. Importar como borradores y revisar: `not_publication_ready: true` es intencional.
+
+## Ampliación: sushi, pizza, hamburguesas y citas
+
+[Entrega para Claude](ampliacion-2026-10-24/LEEME-CLAUDE.md): cinco artículos documentales, 14 candidatos adicionales, doce reseñas visibles de cuatro fichas, propuesta SEO, logo original transparente y viñeta de formatos. No son catas propias ni rankings sensoriales definitivos. Consultado el 24/10/2026. Los candidatos por marca sin sucursal concreta no deben convertirse en rutas hasta resolver su dirección.

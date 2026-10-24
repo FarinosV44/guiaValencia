@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 210" role="img" aria-labelledby="t d">
+<title id="t">La metamorfosis del menú interminable</title><desc id="d">Viñeta satírica: restaurante chino clásico, wok, buffet sushi y la pregunta por una parrilla. No describe la historia de negocios concretos.</desc>
+<rect width="800" height="210" rx="24" fill="#fff4db"/>
+<g fill="none" stroke="#260421" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M52 64h90l-10 66H62Z" fill="#ff8618"/><path d="m60 64 15-22h45l15 22M80 49l47-17M98 59l47-17"/>
+<path d="M240 76q47 90 94 0Z" fill="#ff8618"/><path d="m334 76 28-17M263 57q-12-13 0-25M289 57q-12-13 0-25"/>
+<ellipse cx="493" cy="93" rx="64" ry="35" fill="#7bbe99"/><ellipse cx="493" cy="82" rx="53" ry="29" fill="#fff4db"/><circle cx="470" cy="79" r="12" fill="#ff8618"/><circle cx="514" cy="79" r="12" fill="#ff8618"/>
+<ellipse cx="690" cy="90" rx="55" ry="32" fill="#ff8618"/><path d="m650 77 71 32m-60-43 71 32m-83 1 66-30m-51 40 66-30M180 90h29m-9-9 9 9-9 9M379 90h29m-9-9 9 9-9 9M577 90h29m-9-9 9 9-9 9"/>
+</g>
+<g font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle" fill="#260421" font-size="17"><text x="99" y="158">Chino clásico</text><text x="288" y="158">Wok</text><text x="493" y="158">Buffet sushi</text><text x="690" y="158">¿Parrilla?</text></g>
+<text x="400" y="193" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#260421">Sátira de formatos; no es la biografía de ningún restaurante.</text></svg>
