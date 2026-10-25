@@ -15,7 +15,8 @@
     "a11y": "node scripts/a11y.js",
     "screenshots": "node scripts/screenshots.js",
     "revision": "node scripts/revision.js",
-    "perf": "node scripts/perf.js"
+    "perf": "node scripts/perf.js",
+    "export:relative": "npm run build && node scripts/export-relative.js"
   },
   "devDependencies": {
     "axe-core": "^4.14.0",
