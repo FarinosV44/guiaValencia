@@ -322,3 +322,12 @@ select, input[type="time"], input[type="number"], input[type="text"], input[type
 .labels ul { list-style: none; padding: 0; display: grid; gap: .5rem; }
 .savedlist { list-style: none; padding: 0; }
 .linkbtn { background: none; border: 0; padding: 0; color: inherit; text-decoration: underline; text-decoration-color: var(--naranja); cursor: pointer; font: inherit; }
+
+/* Plan en una frase */
+.nlform { background: var(--papel); border: 2px solid var(--linea); border-radius: var(--radio); padding: 1rem; margin-bottom: 1.2rem; }
+.nlform label { font-weight: 700; display: block; margin-bottom: .4rem; }
+.nlrow { display: flex; gap: .5rem; flex-wrap: wrap; }
+.nlrow input { flex: 1 1 14rem; min-width: 0; font: inherit; padding: .6rem .7rem; border: 2px solid var(--tinta); border-radius: 10px; }
+.nlchips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+.nlchips li { display: inline-flex; align-items: center; gap: .3rem; background: #fff0dd; border: 2px solid var(--naranja-hondo); border-radius: 999px; padding: .1rem .2rem .1rem .7rem; }
+.chipx { border: 0; background: none; font-size: 1.1rem; line-height: 1; cursor: pointer; min-width: 32px; min-height: 32px; color: var(--tinta); }

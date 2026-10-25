@@ -202,6 +202,12 @@ function selectorPage(ctx, lang) {
 <div class="wrap">
   <h1 class="pagetitle">${e(ui.selectorH1)}</h1>
   <p class="lead">${e(ui.selectorLead)}</p>
+  <form id="nl" class="nlform" hidden>
+    <label for="f-frase">${e(ui.nlLabel)}</label>
+    <div class="nlrow"><input id="f-frase" name="frase" type="text" autocomplete="off" maxlength="300" placeholder="${e(ui.nlPlaceholder)}"><button type="submit" class="btn">${e(ui.nlSubmit)}</button></div>
+    <p class="small">${e(ui.nlHint)}</p>
+    <div id="nl-out" aria-live="polite"></div>
+  </form>
   <form id="selector" class="selector" novalidate>
     <div class="selector__grid">
       <div class="field"><label for="f-zona">${e(ui.fZone)}</label><select id="f-zona" name="zona">${opt('', ui.fAnyZone)}${zones.map((z) => opt(z.id, t(z.name, lang))).join('')}</select></div>

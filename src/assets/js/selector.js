@@ -7,6 +7,7 @@ import { money, escapeHtml as e, clock } from './lib/format.js';
 import { statusAt } from './lib/hours.js';
 import { dayOfDate, holidayInfo } from './lib/calendar.js';
 import { copyLink } from './site.js';
+import { parsePlan } from './lib/parse.js';
 
 const catalog = JSON.parse(document.getElementById('catalog').textContent);
 const lang = catalog.lang;
@@ -217,3 +218,46 @@ form.elements.fecha.addEventListener('change', () => {
   const d = form.elements.fecha.value;
   if (d) form.elements.dia.value = dayOfDate(d);
 });
+
+// ——— Plan en una frase (#23): reglas deterministas que rellenan el mismo formulario ———
+const nl = document.getElementById('nl');
+const nlOut = document.getElementById('nl-out');
+if (nl) {
+  nl.hidden = false;
+  const fieldLabel = (k) => ({ zona: ui.fZone, dia: ui.fDay, hora: ui.fTime, con: ui.fCompany, presupuesto: ui.fBudget, antojo: ui.fCraving, plan: ui.fPlan, sinpantallas: ui.fNoScreens, sinmovil: ui.fNoPhone, fuera: ui.fOutside }[k] || k);
+  const valueLabel = (k, v) => {
+    const el = form.elements[k];
+    if (el && el.tagName === 'SELECT') return [...el.options].find((o) => o.value === v)?.text || v;
+    if (k === 'gusto') return v.map((g) => ui.likes[g]).join(', ');
+    return '';
+  };
+  const chipsFor = (fields) => Object.entries(fields).map(([k, v]) => {
+    const text = k === 'gusto' ? `${ui.fLikes}: ${valueLabel(k, v)}` : (['sinpantallas', 'sinmovil', 'fuera'].includes(k) ? fieldLabel(k).split(':')[0] : `${fieldLabel(k)}: ${valueLabel(k, v)}`);
+    return `<li><span>${e(text)}</span> <button type="button" class="chipx" data-clear="${e(k)}" aria-label="${e(ui.nlRemove(text))}">×</button></li>`;
+  }).join('');
+  nl.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const { fields, notes, question } = parsePlan(nl.elements.frase.value, { today: new Date().toISOString().slice(0, 10) });
+    form.reset();
+    for (const [k, v] of Object.entries(fields)) {
+      if (k === 'gusto') for (const g of v) { const b = form.querySelector(`input[name="gusto"][value="${CSS.escape(g)}"]`); if (b) b.checked = true; }
+      else if (['sinpantallas', 'sinmovil', 'fuera'].includes(k)) form.elements[k].checked = true;
+      else if (form.elements[k]) form.elements[k].value = v;
+    }
+    const msgs = notes.map((n) => n.code === 'reparto' ? ui.nlSplit(n) : n.code === 'antojo_extra' ? ui.nlExtra(n.values.map((c) => ui.cravings[c]?.toLowerCase() || c).join(', ')) : n.code === 'presupuesto_bajo' ? ui.nlLow(n) : '').filter(Boolean);
+    if (question) msgs.push(ui.nlQuestion);
+    const any = Object.keys(fields).length;
+    nlOut.innerHTML = any ? `<p><strong>${e(ui.nlUnderstood)}</strong></p><ul class="nlchips">${chipsFor(fields)}</ul>${msgs.map((m) => `<p class="small">${e(m)}</p>`).join('')}` : `<p>${e(ui.nlNothing)}</p>`;
+    if (any) run(true);
+  });
+  nlOut.addEventListener('click', (ev) => {
+    const b = ev.target.closest('[data-clear]');
+    if (!b) return;
+    const k = b.dataset.clear;
+    if (k === 'gusto') for (const x of form.querySelectorAll('input[name="gusto"]')) x.checked = false;
+    else if (form.elements[k]?.type === 'checkbox') form.elements[k].checked = false;
+    else if (form.elements[k]) form.elements[k].value = '';
+    b.closest('li').remove();
+    run(false);
+  });
+}
