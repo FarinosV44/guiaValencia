@@ -271,3 +271,22 @@ if (nl) {
     run(false);
   });
 }
+
+// ——— «Usar mi ubicación» (#15): solo al pulsar; elige la zona más cercana y olvida la posición ———
+const geoBtn = document.getElementById('geo');
+if (geoBtn && 'geolocation' in navigator) {
+  geoBtn.closest('[hidden]')?.removeAttribute('hidden');
+  const st = document.getElementById('geo-status');
+  geoBtn.addEventListener('click', () => {
+    navigator.geolocation.getCurrentPosition((pos) => {
+      const { latitude: la, longitude: lo } = pos.coords;
+      const km = (c) => Math.hypot((c[0] - la) * 111, (c[1] - lo) * 111 * Math.cos((la * Math.PI) / 180));
+      const sel = form.elements.zona;
+      const options = [...sel.options].filter((o) => catalog.centers[o.value]);
+      const best = options.map((o) => ({ o, d: km(catalog.centers[o.value]) })).sort((a, b) => a.d - b.d)[0];
+      if (!best || best.d > 4) { st.textContent = ui.geoFar; return; }
+      sel.value = best.o.value;
+      st.textContent = ui.geoFound(best.o.text);
+    }, () => { st.textContent = ui.geoError; }, { enableHighAccuracy: false, maximumAge: 600000, timeout: 10000 });
+  });
+}

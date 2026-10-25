@@ -213,7 +213,7 @@ function selectorPage(ctx, lang) {
   </form>
   <form id="selector" class="selector" novalidate>
     <div class="selector__grid">
-      <div class="field"><label for="f-zona">${e(ui.fZone)}</label><select id="f-zona" name="zona">${opt('', ui.fAnyZone)}${zones.map((z) => opt(z.id, t(z.name, lang))).join('')}</select></div>
+      <div class="field"><label for="f-zona">${e(ui.fZone)}</label><select id="f-zona" name="zona">${opt('', ui.fAnyZone)}${zones.map((z) => opt(z.id, t(z.name, lang))).join('')}</select><p class="geo" hidden><button type="button" class="linkbtn" id="geo" title="${e(ui.geoNote)}">${e(ui.geoBtn)}</button> <span class="small" id="geo-status" role="status">${e(ui.geoNote)}</span></p></div>
       <div class="field"><label for="f-fecha">${e(ui.fDate)}</label><input id="f-fecha" name="fecha" type="date" min="2026-01-01" max="2027-12-31"></div>
       <div class="field"><label for="f-dia">${e(ui.fDay)}</label><select id="f-dia" name="dia">${opt('', ui.fAnyDay)}${DAYS.map((d) => opt(d, DAY_NAMES[lang][d])).join('')}</select></div>
       <div class="field"><label for="f-hora">${e(ui.fTime)}</label><select id="f-hora" name="hora">${opt('', ui.fAnyTime)}${times.map((h) => opt(h, h)).join('')}</select></div>
@@ -254,6 +254,7 @@ export function clientCatalog(ctx, lang) {
   return {
     lang,
     festivos: ctx.data.festivos,
+    centers: Object.fromEntries(ctx.data.zones.filter((z) => z.center).map((z) => [z.id, z.center])),
     zones: Object.fromEntries(ctx.data.zones.map((z) => [z.id, t(z.name, lang)])),
     places: ctx.data.places.map((p) => ({
       id: p.id, name: p.name, type: typeLabel(p, lang), role: p.role, scope: p.scope, zone: p.zone, address: p.address,
