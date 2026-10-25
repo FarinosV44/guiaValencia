@@ -192,12 +192,15 @@ export function compareTable(places, ctx, lang) {
   const ui = UI[lang];
   const c = ui.compareCols;
   const m = (x) => money(x, lang);
-  const rows = places.map((p) => {
+  // Solo comparamos lo que tiene cifra: una fila de rayas no ayuda a decidir.
+  const priced = places.filter((p) => summarize(p.price).base != null);
+  if (priced.length < 2) return '';
+  const rows = priced.map((p) => {
     const s = summarize(p.price);
     const comp = (k) => ui.includes[s.components.find((x) => x.key === k).status];
-    return `<tr><th scope="row"><a href="${PATHS.place[lang](p.id)}">${e(p.name)}</a></th><td class="num">${s.base != null ? m(s.base) : ui.unknownMark}</td><td>${e(comp('bebida'))}</td><td>${e(comp('postre'))}</td><td>${e(ui.hoursStatus[p.hours?.status] || ui.unknownMark)}</td></tr>`;
+    return `<tr><th scope="row"><a href="${PATHS.place[lang](p.id)}">${e(p.name)}</a></th><td class="num">${s.base != null ? m(s.base) : ui.unknownMark}</td><td>${e(comp('bebida'))}</td><td>${e(comp('postre'))}</td></tr>`;
   }).join('');
-  return `<div class="compare" role="region" aria-label="${e(ui.compareTitle)}" tabindex="0"><table><caption>${e(ui.compareTitle)}</caption><thead><tr><th scope="col">${e(c.name)}</th><th scope="col">${e(c.base)}</th><th scope="col">${e(c.drink)}</th><th scope="col">${e(c.dessert)}</th><th scope="col">${e(c.hours)}</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  return `<div class="compare" role="region" aria-label="${e(ui.compareTitle)}" tabindex="0"><table><caption>${e(ui.compareTitle)}</caption><thead><tr><th scope="col">${e(c.name)}</th><th scope="col">${e(c.base)}</th><th scope="col">${e(c.drink)}</th><th scope="col">${e(c.dessert)}</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 }
 
 export function bandLabel(place, lang) {
