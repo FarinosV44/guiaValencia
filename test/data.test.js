@@ -93,3 +93,16 @@ test('datos verificados el 25/10/2026: precios oficiales y reglas por día', () 
   assert.ok(data.byId.hundred.address_source.includes('visitvalencia.com'));
   assert.equal(data.byId.hundred.hours.status, 'desconocido', 'no usamos horario de agregadores');
 });
+
+test('reseñas: cada punto tiene fuente conocida, tono y texto en ES y EN', () => {
+  const r = data.reviews;
+  assert.ok(Object.keys(r.places).length >= 40);
+  for (const [id, v] of Object.entries(r.places)) {
+    assert.ok(data.byId[id], id);
+    assert.ok(v.verdict.es && v.verdict.en, id);
+    for (const pt of v.points) {
+      assert.ok(r.sources[pt.src], `${id}: ${pt.src}`);
+      assert.notEqual(pt.es, pt.en, `${id}: traducción`);
+    }
+  }
+});

@@ -100,7 +100,7 @@ export function hoursBlock(place, lang) {
   const h = place.hours || { status: 'desconocido' };
   const known = h.weekly && Object.keys(h.weekly).length;
   if (!known && !h.service && h.status !== 'contradictorio' && (!h.note || h.status === 'desconocido')) return '';
-  const status = ui.hoursStatus[h.status] ? `<p class="hours__status hours__status--${h.status}">${e(ui.hoursStatus[h.status])}</p>` : '';
+  const status = ui.hoursStatus[h.status] && !h.note ? `<p class="hours__status hours__status--${h.status}">${e(ui.hoursStatus[h.status])}</p>` : '';
   let table = '';
   if (h.weekly) {
     table = `<table class="hours"><tbody>${DAYS.filter((d) => h.weekly[d] !== undefined).map((d) => {
@@ -137,6 +137,18 @@ export function kidsBlock(place, lang, { full = false } = {}) {
   if (k.acompanamiento) extra.push(`<p><strong>${e(ui.kidsCompany)}:</strong> ${e(t(k.acompanamiento, lang))}</p>`);
   if (place.price?.kids_cost) extra.push(`<p><strong>${e(ui.kidsCost)}:</strong> ${e(t(place.price.kids_cost, lang))}</p>`);
   return `${rows ? `<table class="kids"><tbody>${rows}</tbody></table>` : ''}${extra.join('')}`;
+}
+
+// ——— Lo que cuentan las reseñas ———
+export function reviewsBlock(place, ctx, lang) {
+  const r = place.reviews;
+  if (!r) return '';
+  const ui = UI[lang];
+  const srcName = (k) => (k === 'prensa' && lang === 'en' ? 'the press' : ctx.data.reviews.sources[k]);
+  const used = [...new Set(r.points.map((p) => p.src))].map(srcName);
+  const list = used.length > 1 ? used.slice(0, -1).join(', ') + (lang === 'es' ? ' y ' : ' and ') + used.at(-1) : used[0];
+  const items = r.points.map((p) => `<li class="rv rv--${p.tone === '+' ? 'pro' : 'con'}"><span class="rv__tag">${e(ui.reviewsTone[p.tone])} · ${e(ui.reviewsAspects[p.aspect])}</span> ${e(p[lang])}</li>`).join('');
+  return `<p class="rv__verdict">${e(r.verdict[lang])}</p><ul class="rvlist">${items}</ul><p class="small">${e(ui.reviewsRead(list))}</p>`;
 }
 
 // ——— Evidencias ———

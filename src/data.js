@@ -80,9 +80,11 @@ export function loadData() {
   const funding = readJson(join(DATA, 'funding.json'));
   const categories = readJson(join(DATA, 'categories.json')).categories;
   const festivos = readJson(join(DATA, 'festivos.json'));
+  const reviews = readJson(join(DATA, 'reviews.json'));
+  for (const p of places) p.reviews = reviews.places[p.id] || null;
   const byId = Object.fromEntries(places.map((p) => [p.id, p]));
   const zoneById = Object.fromEntries(zones.map((z) => [z.id, z]));
-  return { places, byId, zones, zoneById, routes, funding, categories, festivos, root: ROOT };
+  return { places, byId, zones, zoneById, routes, funding, categories, festivos, reviews, root: ROOT };
 }
 
 // Validación estructural: falla el build si los datos rompen reglas editoriales comprobables.
@@ -110,6 +112,14 @@ export function validate(data) {
   for (const r of data.routes) {
     const ref = r.places || r.stops?.filter((s) => s.kind === 'place').map((s) => s.place) || [];
     for (const id of ref) if (!data.byId[id]) errors.push(`Ruta ${r.id}: local inexistente ${id}`);
+  }
+  for (const [id, r] of Object.entries(data.reviews?.places || {})) {
+    if (!data.byId[id]) errors.push(`Reseñas: local inexistente ${id}`);
+    for (const pt of r.points) {
+      if (!data.reviews.sources[pt.src]) errors.push(`Reseñas ${id}: fuente desconocida ${pt.src}`);
+      if (!['+', '-'].includes(pt.tone)) errors.push(`Reseñas ${id}: tono inválido`);
+      if (!pt.es || !pt.en) errors.push(`Reseñas ${id}: falta texto ES o EN`);
+    }
   }
   for (const c of data.categories) {
     for (const s of c.sections || []) for (const id of s.places || []) if (!data.byId[id]) errors.push(`Categoría ${c.id}: local inexistente ${id}`);

@@ -1,0 +1,1256 @@
+{
+ "_note": "Lectura editorial de reseñas por local (issue #30). Cada punto: aspecto, tono (+ a favor, - en contra), texto ES/EN y plataforma donde se leyó. Se resume, no se copia; nada sin fuente. Consultado entre el 24 y el 25/10/2026.",
+ "checked_on": "2026-10-25",
+ "sources": {
+  "google": "Google",
+  "gastroranking": "Gastroranking",
+  "wanderlog": "Wanderlog",
+  "thefork": "TheFork",
+  "restaurantguru": "Restaurant Guru",
+  "sluurpy": "Sluurpy",
+  "tripadvisor": "TripAdvisor",
+  "michelin": "Guía Michelin",
+  "mapstr": "Mapstr",
+  "prensa": "prensa"
+ },
+ "places": {
+  "canalla": {
+   "verdict": {
+    "es": "Buena para explorar sabores si pedís variando técnicas; los postres salen bien parados incluso en la crítica.",
+    "en": "Good for exploring flavours if you order across techniques; the desserts come out well even in the critical review."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Dos clientes recientes elogian la cocina fusión.",
+     "en": "Two recent diners praise the fusion cooking.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Servicio bien valorado.",
+     "en": "Service well rated.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Una crítica (2★) se queja de exceso de frituras y sal, y de cambios sin explicar.",
+     "en": "One critical review (2★) complains of too much frying and salt, and unexplained changes.",
+     "src": "google"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Una reseña la describe tranquila.",
+     "en": "One review describes it as quiet.",
+     "src": "google"
+    }
+   ]
+  },
+  "blanqueries": {
+   "verdict": {
+    "es": "Para comer con calma y conversar; el menú es la apuesta segura.",
+    "en": "For a calm, chatty lunch; the set menu is the safe bet."
+   },
+   "points": [
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Se repite la buena atención.",
+     "en": "Good service comes up again and again.",
+     "src": "google"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Tranquilo: se puede hablar.",
+     "en": "Quiet enough to talk.",
+     "src": "google"
+    },
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "El menú gusta; los clientes recuerdan haber pagado entre 30 y 50 €.",
+     "en": "Diners like the set menu; they recall paying between €30 and €50.",
+     "src": "google"
+    }
+   ]
+  },
+  "bali": {
+   "verdict": {
+    "es": "Se viene por el decorado y el menú de mediodía; los entrantes y el sushi, mejor que los principales.",
+    "en": "People come for the set and the lunch menu; starters and sushi beat the mains."
+   },
+   "points": [
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "La decoración es lo más comentado.",
+     "en": "The décor is what everyone mentions.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Servicio bien valorado.",
+     "en": "Service well rated.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Una reseña ve los principales menos memorables que los entrantes y el sushi.",
+     "en": "One review finds the mains less memorable than the starters and sushi.",
+     "src": "google"
+    },
+    {
+     "aspect": "reserva",
+     "tone": "-",
+     "es": "Una clienta se encontró con un límite de mesa de hora y media; el local respondió.",
+     "en": "One diner ran into a 90-minute table limit; the restaurant replied.",
+     "src": "google"
+    }
+   ]
+  },
+  "montana": {
+   "verdict": {
+    "es": "Id a por la brandada y la bodega, con reserva y sin llegar tarde.",
+    "en": "Go for the brandada and the bodega, book, and don’t arrive late."
+   },
+   "points": [
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "La bodega y su ambiente, muy valorados.",
+     "en": "The bodega and its atmosphere are highly rated.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "La brandada es el plato más elogiado.",
+     "en": "The brandada is the most praised dish.",
+     "src": "google"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Incluso en reseñas de 5★ hay reparos al valor de otros platos y de la carne.",
+     "en": "Even 5★ reviews question the value of other dishes and the meat.",
+     "src": "google"
+    },
+    {
+     "aspect": "reserva",
+     "tone": "-",
+     "es": "Quien llegó tarde notó prisas.",
+     "en": "Those who arrived late felt rushed.",
+     "src": "google"
+    }
+   ]
+  },
+  "petit": {
+   "verdict": {
+    "es": "Arranque muy bueno en reseñas: espacio, trato y comida.",
+    "en": "A very good start in reviews: space, staff and food."
+   },
+   "points": [
+    {
+     "aspect": "ninos",
+     "tone": "+",
+     "es": "Las familias elogian el espacio de juego.",
+     "en": "Families praise the play space.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Trato muy bien valorado.",
+     "en": "Staff very well rated.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "La comida también sale bien parada.",
+     "en": "The food also comes out well.",
+     "src": "google"
+    }
+   ]
+  },
+  "hippolatte": {
+   "verdict": {
+    "es": "Funciona como plan de juego para niños de 3 a 5 años; el café es secundario.",
+    "en": "It works as a play plan for 3-to-5-year-olds; the coffee comes second."
+   },
+   "points": [
+    {
+     "aspect": "ninos",
+     "tone": "+",
+     "es": "Rocódromo y juego muy celebrados por familias con niños de 3 y 5 años.",
+     "en": "The climbing wall and play area are a hit with families of 3- and 5-year-olds.",
+     "src": "google"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Google destaca una queja de precio y trato.",
+     "en": "Google highlights a complaint about price and service.",
+     "src": "google"
+    }
+   ]
+  },
+  "gelatica": {
+   "verdict": {
+    "es": "No vengáis solo a por una bola: el brownie y la bollería también justifican la parada.",
+    "en": "Don’t come just for a scoop: the brownie and pastries justify the stop too."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Citan chocolate con turrón, sorbete de limón, pistacho y brownie.",
+     "en": "Reviews mention chocolate with turrón, lemon sorbet, pistachio and brownie.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Atención cercana.",
+     "en": "Friendly service.",
+     "src": "google"
+    }
+   ]
+  },
+  "carmela": {
+   "verdict": {
+    "es": "Se viene por el arroz; reservad con tiempo y no hace falta rematar con postre.",
+    "en": "People come for the rice; book ahead and you can skip dessert."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "El arroz y el producto justifican la visita.",
+     "en": "The rice and produce justify the visit.",
+     "src": "google"
+    },
+    {
+     "aspect": "reserva",
+     "tone": "+",
+     "es": "Los clientes insisten en reservar con antelación.",
+     "en": "Diners insist on booking ahead.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "A un cliente el postre le pareció corriente.",
+     "en": "One diner found the dessert ordinary.",
+     "src": "google"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "-",
+     "es": "Otro se queja de la carta por QR.",
+     "en": "Another complains about the QR menu.",
+     "src": "google"
+    }
+   ]
+  },
+  "pepica": {
+   "verdict": {
+    "es": "Arroz con vistas y buen trato; la cocina no siempre está a la altura del sitio.",
+    "en": "Rice with a view and good service; the cooking doesn’t always match the setting."
+   },
+   "points": [
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Ambiente y ubicación, elogiados incluso por quien sale decepcionado de la comida.",
+     "en": "Setting and location praised even by diners disappointed by the food.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Atención bien valorada.",
+     "en": "Service well rated.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Experiencias desiguales con la valenciana y el arroz de verduras en reseñas de 3★.",
+     "en": "Mixed experiences with the paella valenciana and the vegetable rice in 3★ reviews.",
+     "src": "google"
+    }
+   ]
+  },
+  "anyora": {
+   "verdict": {
+    "es": "Hay razones de cocina para venir, no solo la decoración.",
+    "en": "There are culinary reasons to come, not just the décor."
+   },
+   "points": [
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Atención elogiada.",
+     "en": "Service praised.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Destacan la berenjena con queso y las tapas.",
+     "en": "The aubergine with cheese and the tapas stand out.",
+     "src": "google"
+    }
+   ]
+  },
+  "nozomi": {
+   "verdict": {
+    "es": "Sushi y servicio convencen; lo que falla es improvisar sin reserva.",
+    "en": "The sushi and service convince; what fails is turning up without a booking."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "El sushi sale muy bien valorado.",
+     "en": "The sushi is highly rated.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Servicio elogiado.",
+     "en": "Service praised.",
+     "src": "google"
+    },
+    {
+     "aspect": "reserva",
+     "tone": "-",
+     "es": "Un cliente se quedó sin mesa por no reservar.",
+     "en": "One diner got no table without a booking.",
+     "src": "google"
+    }
+   ]
+  },
+  "raices": {
+   "verdict": {
+    "es": "Pizza contemporánea seria: las reseñas hablan de la masa con detalle.",
+    "en": "Serious contemporary pizza: reviews talk about the dough in detail."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Borde aireado y buen equilibrio de ingredientes.",
+     "en": "An airy crust and well-balanced toppings.",
+     "src": "google"
+    }
+   ]
+  },
+  "aoyama-joaquin": {
+   "verdict": {
+    "es": "Buena cocina para un buffet; el servicio por QR puede despistar en hora punta.",
+    "en": "Good food for a buffet; QR ordering can confuse at peak times."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Pescado que no necesita muchas salsas.",
+     "en": "Fish that doesn’t need much sauce.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "Una reseña cuenta que el QR se explica poco y que algunos platos llegaron tarde.",
+     "en": "One review says the QR system is barely explained and some dishes arrived late.",
+     "src": "google"
+    }
+   ]
+  },
+  "kaisen-centro": {
+   "verdict": {
+    "es": "Buen valor para quien disfruta la fusión; si evitáis el queso crema, decidlo.",
+    "en": "Good value if you enjoy fusion; if you avoid cream cheese, say so."
+   },
+   "points": [
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Reconocen buena relación entre lo que se come y lo que se paga.",
+     "en": "Diners see good value for money.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Ayudan con la tablet de pedidos.",
+     "en": "Staff help with the ordering tablet.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Queso crema en muchas piezas, al gusto de algunos.",
+     "en": "Cream cheese in many pieces, which not everyone likes.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "Prisas al empezar, según una reseña.",
+     "en": "A rushed start, according to one review.",
+     "src": "google"
+    }
+   ]
+  },
+  "filippas-sueca": {
+   "verdict": {
+    "es": "Atención y pizza o pasta bien valoradas; los veganos tienen poco donde elegir.",
+    "en": "Service and pizza or pasta well rated; vegans have little choice."
+   },
+   "points": [
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Atención elogiada.",
+     "en": "Service praised.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Pasta y pizza bien valoradas.",
+     "en": "Pasta and pizza well rated.",
+     "src": "google"
+    },
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Precio que se percibe justo.",
+     "en": "Prices seen as fair.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Una reseña pide más opciones veganas.",
+     "en": "One review asks for more vegan options.",
+     "src": "google"
+    }
+   ]
+  },
+  "la-salita": {
+   "verdict": {
+    "es": "Experiencia muy celebrada; si el vino os importa, pedid guía desde el principio.",
+    "en": "A much-praised experience; if wine matters to you, ask for guidance from the start."
+   },
+   "points": [
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Experiencia y espacio, muy elogiados.",
+     "en": "The experience and the space are highly praised.",
+     "src": "google"
+    },
+    {
+     "aspect": "ninos",
+     "tone": "+",
+     "es": "Se valora la oferta infantil.",
+     "en": "The children’s offer is appreciated.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Alguna queja de un pase plano de sabor o de un postre de naranja demasiado amargo.",
+     "en": "Some complaints about a flat course or an orange dessert that was too bitter.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "Algún cliente echó de menos más guía con el vino.",
+     "en": "Some diners wanted more guidance on wine.",
+     "src": "wanderlog"
+    }
+   ]
+  },
+  "riff": {
+   "verdict": {
+    "es": "Menú y servicio muy bien valorados en las opiniones recientes.",
+    "en": "Menu and service highly rated in recent reviews."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "El menú, muy elogiado.",
+     "en": "The menu is highly praised.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Servicio bien valorado.",
+     "en": "Service well rated.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "Una opinión antigua echó en falta explicaciones del menú y luz natural.",
+     "en": "An older review missed explanations of the menu and natural light.",
+     "src": "thefork"
+    }
+   ]
+  },
+  "brosquil": {
+   "verdict": {
+    "es": "Arroz bien ejecutado; en grupos grandes, pedid que repartan en varias paellas.",
+    "en": "Well-cooked rice; with big groups, ask for it split across several paellas."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Arroz bien ejecutado, aunque a alguien le guste otro estilo de paella.",
+     "en": "Well-cooked rice, even if one diner prefers another style of paella.",
+     "src": "google"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Un cliente encontró el arroz salado en dos visitas.",
+     "en": "One diner found the rice salty on two visits.",
+     "src": "restaurantguru"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Otro, un arroz pasado para un grupo de quince.",
+     "en": "Another, an overcooked rice for a group of fifteen.",
+     "src": "sluurpy"
+    }
+   ]
+  },
+  "baret-tofona": {
+   "verdict": {
+    "es": "Raciones generosas y cocina de mercado; preguntad precio y llegad con tiempo para aparcar.",
+    "en": "Generous portions and market cooking; ask the price and allow time to park."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Raciones generosas.",
+     "en": "Generous portions.",
+     "src": "google"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Una clienta no encontró menú cerrado y recuerda unos 40–50 € por persona.",
+     "en": "One diner found no set menu and recalls about €40–50 per person.",
+     "src": "google"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "-",
+     "es": "Costó aparcar.",
+     "en": "Parking was hard.",
+     "src": "google"
+    }
+   ]
+  },
+  "ricardo": {
+   "verdict": {
+    "es": "Producto de calidad y servicio eficaz; el marisco cambia la cuenta de liga.",
+    "en": "Quality produce and efficient service; seafood takes the bill into another league."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Calidad de producto muy elogiada.",
+     "en": "Produce quality highly praised.",
+     "src": "google"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Servicio eficaz.",
+     "en": "Efficient service.",
+     "src": "google"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Una pareja pagó 250 € con marisco, y le pareció que valía la pena.",
+     "en": "One couple paid €250 with seafood, and felt it was worth it.",
+     "src": "google"
+    },
+    {
+     "aspect": "reserva",
+     "tone": "+",
+     "es": "Hubo quien consiguió mesa sin reservar, para una hora.",
+     "en": "One diner got a table without booking, for about an hour.",
+     "src": "google"
+    }
+   ]
+  },
+  "kyoto-valladolid": {
+   "verdict": {
+    "es": "Buffet familiar con producto fresco y sin esperas al repetir.",
+    "en": "A family buffet with fresh food and no waiting for refills."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Producto fresco y mucha variedad.",
+     "en": "Fresh food and plenty of variety.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Rápido y amable: al repetir no se espera.",
+     "en": "Quick and friendly: no waiting when you reorder.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Salas de tatami caras para familias y un suplemento por reservar.",
+     "en": "Tatami rooms pricey for families, and a booking supplement.",
+     "src": "gastroranking"
+    }
+   ]
+  },
+  "km0": {
+   "verdict": {
+    "es": "Producto local, masa bien levada y la mejor oferta vegana de la lista.",
+    "en": "Local produce, well-risen dough and the best vegan choice on our list."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Masa bien levada e ingredientes con ocurrencia, como el pistacho.",
+     "en": "Well-risen dough and inventive toppings such as pistachio.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Mucha opción vegana.",
+     "en": "Plenty of vegan choice.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Trato amable.",
+     "en": "Friendly staff.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Precios justos.",
+     "en": "Fair prices.",
+     "src": "wanderlog"
+    }
+   ]
+  },
+  "hundred": {
+   "verdict": {
+    "es": "Hamburguesas generosas y personal que ayuda a elegir; las quejas son sueltas.",
+    "en": "Generous burgers and staff who help you choose; complaints are one-offs."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Hamburguesas sabrosas y generosas.",
+     "en": "Tasty, generous burgers.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "El personal ayuda a elegir, y se repite en las reseñas.",
+     "en": "Staff help you choose, and reviews keep saying so.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Buena relación calidad-precio.",
+     "en": "Good value.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Quejas sueltas: nuggets secos, ningún postre vegano.",
+     "en": "One-off complaints: dry nuggets, no vegan dessert.",
+     "src": "tripadvisor"
+    }
+   ]
+  },
+  "soul-valencia": {
+   "verdict": {
+    "es": "Hamburguesa y postres muy elogiados en su local de Paiporta.",
+    "en": "Burger and desserts highly praised at its Paiporta venue."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Buenas hamburguesas y postres muy celebrados.",
+     "en": "Good burgers and much-loved desserts.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Precio justo para la calidad.",
+     "en": "Fair price for the quality.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Una hamburguesa llegó tibia.",
+     "en": "One burger arrived lukewarm.",
+     "src": "gastroranking"
+    }
+   ]
+  },
+  "tasty-carmen": {
+   "verdict": {
+    "es": "Smash burger de las buenas, mejor en mesa que a domicilio.",
+    "en": "A proper smash burger, better eaten in than delivered."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Entre las mejores smash de Valencia; bacon crujiente.",
+     "en": "Among the best smash burgers in Valencia; crispy bacon.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Rápido y muy amable.",
+     "en": "Quick and very friendly.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "En pedidos online, quejas de lentitud y errores.",
+     "en": "Online orders draw complaints about slowness and mistakes.",
+     "src": "wanderlog"
+    }
+   ]
+  },
+  "beak-cabanyal": {
+   "verdict": {
+    "es": "Humo, raciones grandes y buen consejo del personal; reservad.",
+    "en": "Smoke, big portions and good advice from staff; book."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Sabor ahumado y raciones generosas; pedid las patatas.",
+     "en": "Smoky flavour and generous portions; order the fries.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "El personal recomienda bien.",
+     "en": "Staff give good recommendations.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "-",
+     "es": "Sala pequeña y casi siempre llena.",
+     "en": "A small room that is nearly always full.",
+     "src": "wanderlog"
+    }
+   ]
+  },
+  "malkebien": {
+   "verdict": {
+    "es": "Menú de diario muy bien resuelto, con trato cercano y cuidado con las alergias.",
+    "en": "A well-made everyday set menu, with friendly staff who take care with allergies."
+   },
+   "points": [
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Buena comida para lo que cuesta.",
+     "en": "Good food for the price.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Rápido y cercano; explican los ingredientes a celiacos y alérgicos.",
+     "en": "Quick and friendly; they explain ingredients to coeliacs and people with allergies.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Mucha verdura.",
+     "en": "Lots of vegetables.",
+     "src": "gastroranking"
+    }
+   ]
+  },
+  "fernandet": {
+   "verdict": {
+    "es": "Venid por el arroz: es lo que más se elogia.",
+    "en": "Come for the rice: it is what gets the most praise."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Los arroces destacan.",
+     "en": "The rice dishes stand out.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Trato atento y cercano.",
+     "en": "Attentive, friendly service.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Ambiente relajado y familiar.",
+     "en": "A relaxed, family feel.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Algún entrante flojo: calamares escasos, bravas normales.",
+     "en": "Some weaker starters: small squid portion, ordinary bravas.",
+     "src": "gastroranking"
+    }
+   ]
+  },
+  "central": {
+   "verdict": {
+    "es": "Producto de primera para un bocadillo de mercado; se paga, y el trato es correcto sin más.",
+    "en": "Top-quality produce for a market sandwich; you pay for it, and the service is correct, no more."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Producto de primera, sobre todo en los bocadillos.",
+     "en": "Top-quality produce, especially the sandwiches.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Ambiente de mercado.",
+     "en": "Market atmosphere.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Precio de zona turística.",
+     "en": "Tourist-area prices.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "Correcto pero frío.",
+     "en": "Correct but cool.",
+     "src": "gastroranking"
+    }
+   ]
+  },
+  "rentaora": {
+   "verdict": {
+    "es": "Picoteo acogedor con buena carta de vinos y precios razonables.",
+    "en": "Cosy snacking with a good wine list and reasonable prices."
+   },
+   "points": [
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Trato amable.",
+     "en": "Friendly service.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Local acogedor.",
+     "en": "A cosy room.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Buena carta de vinos.",
+     "en": "A good wine list.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Precio justo para las raciones.",
+     "en": "Fair price for the portions.",
+     "src": "wanderlog"
+    }
+   ]
+  },
+  "kuzina": {
+   "verdict": {
+    "es": "Comida sabrosa y buen consejo; se paga y hay que tener paciencia con los principales.",
+    "en": "Tasty food and good advice; it costs, and the mains take patience."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Comida sabrosa.",
+     "en": "Tasty food.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Recomiendan bien.",
+     "en": "Good recommendations.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Terraza al sol a mediodía.",
+     "en": "A sunny terrace at lunchtime.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Caro para lo que es.",
+     "en": "Pricey for what it is.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "Larga espera para los principales.",
+     "en": "A long wait for mains.",
+     "src": "gastroranking"
+    }
+   ]
+  },
+  "veneta-brodadors": {
+   "verdict": {
+    "es": "Gelato premiado de textura fina y poco empalagoso; algo caro.",
+    "en": "Award-winning gelato, smooth and not too sweet; a bit pricey."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Buena textura y poco empalagoso; pistacho y avellana, elogiados.",
+     "en": "Good texture and not too sweet; pistachio and hazelnut praised.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Algo caro.",
+     "en": "A bit pricey.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "Trato a veces seco.",
+     "en": "Service sometimes curt.",
+     "src": "wanderlog"
+    }
+   ]
+  },
+  "romana-centro": {
+   "verdict": {
+    "es": "Helado cremoso sin colorantes; id fuera de hora punta.",
+    "en": "Creamy ice cream with no artificial colours; go outside peak times."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Cremoso, sin colorantes y con opciones veganas.",
+     "en": "Creamy, no artificial colours, with vegan options.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Dejan probar.",
+     "en": "They let you taste.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "reserva",
+     "tone": "-",
+     "es": "Colas largas.",
+     "en": "Long queues.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Hay quien nota las bolas más pequeñas.",
+     "en": "Some find the scoops have got smaller.",
+     "src": "wanderlog"
+    }
+   ]
+  },
+  "romana-costa": {
+   "verdict": {
+    "es": "El mismo helado cremoso de la casa, con sitio para sentarse.",
+    "en": "The same creamy house ice cream, with seating."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Cremoso, sin colorantes y con opciones veganas.",
+     "en": "Creamy, no artificial colours, with vegan options.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "reserva",
+     "tone": "-",
+     "es": "Colas en hora punta.",
+     "en": "Queues at peak times.",
+     "src": "wanderlog"
+    }
+   ]
+  },
+  "bluebell": {
+   "verdict": {
+    "es": "Café excelente y patio agradable; se paga y, lleno, va lento.",
+    "en": "Excellent coffee and a pleasant courtyard; it costs, and gets slow when full."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Café de especialidad excelente y buena comida.",
+     "en": "Excellent specialty coffee and good food.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Patio agradable.",
+     "en": "A pleasant courtyard.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Caro.",
+     "en": "Pricey.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "Lento cuando se llena.",
+     "en": "Slow when busy.",
+     "src": "wanderlog"
+    }
+   ]
+  },
+  "habitual": {
+   "verdict": {
+    "es": "Una forma asequible de probar platos conocidos de Camarena, con la verdura de protagonista.",
+    "en": "An affordable way to try well-known Camarena dishes, with vegetables in the lead."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Menú largo y asequible que recoge platos conocidos de Camarena; la verdura manda.",
+     "en": "A long, affordable menu with well-known Camarena dishes; vegetables lead.",
+     "src": "michelin"
+    }
+   ]
+  },
+  "daniel": {
+   "verdict": {
+    "es": "Horchata de calidad a buen precio; el fin de semana, paciencia.",
+    "en": "Quality horchata at a fair price; at weekends, be patient."
+   },
+   "points": [
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Buena calidad a precio justo.",
+     "en": "Good quality at a fair price.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Rápido y amable.",
+     "en": "Quick and friendly.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Fartons sin gluten.",
+     "en": "Gluten-free fartons.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "reserva",
+     "tone": "-",
+     "es": "Cola para mesa, a veces de más de media hora.",
+     "en": "A queue for tables, sometimes over half an hour.",
+     "src": "gastroranking"
+    }
+   ]
+  },
+  "principal": {
+   "verdict": {
+    "es": "Producto fresco y reservados para grupos; no es para comer barato.",
+    "en": "Fresh produce and private rooms for groups; not a cheap meal."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Producto de temporada fresco y bien cocinado.",
+     "en": "Fresh, well-cooked seasonal produce.",
+     "src": "mapstr"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Reservados cómodos para grupos.",
+     "en": "Comfortable private rooms for groups.",
+     "src": "mapstr"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Por encima de la media.",
+     "en": "Above average prices.",
+     "src": "mapstr"
+    }
+   ]
+  },
+  "ola": {
+   "verdict": {
+    "es": "Desayunos muy bien valorados en un local acogedor; reservad.",
+    "en": "Highly rated breakfasts in a cosy room; book."
+   },
+   "points": [
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Local acogedor y bien decorado, con terraza.",
+     "en": "A cosy, well-decorated room with a terrace.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Trato amable y atento.",
+     "en": "Friendly, attentive staff.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Muy buenos desayunos y café.",
+     "en": "Very good breakfasts and coffee.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Precios justos.",
+     "en": "Fair prices.",
+     "src": "gastroranking"
+    }
+   ]
+  },
+  "cassalla": {
+   "verdict": {
+    "es": "La brasa de carbón y el espacio son su carta de presentación.",
+    "en": "The charcoal grill and the space are its calling card."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "La prensa destaca la gran brasa de carbón.",
+     "en": "The press highlights the big charcoal grill.",
+     "src": "prensa"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Local amplio, con barra y mesas altas.",
+     "en": "A large space, with a counter and high tables.",
+     "src": "prensa"
+    }
+   ]
+  },
+  "cremaet": {
+   "verdict": {
+    "es": "Un bar de los de siempre en formato nuevo, con bocadillos todo el día.",
+    "en": "An old-style bar in a new format, with sandwiches all day."
+   },
+   "points": [
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "La prensa lo resume como «un bar muy bar».",
+     "en": "The press sums it up as “a very bar-like bar”.",
+     "src": "prensa"
+    }
+   ]
+  }
+ }
+}

@@ -304,3 +304,11 @@ select, input[type="time"], input[type="number"], input[type="text"], input[type
   .ticket, .stop, .famcard, .teaser, .mapbox, .verdict__item { break-inside: avoid; border-color: #000; }
   .block { margin-block: 1rem; }
 }
+
+/* Lo que cuentan las reseñas */
+.rv__verdict { font-weight: 600; }
+.rvlist { list-style: none; padding: 0; margin: .4rem 0 .6rem; display: grid; gap: .45rem; }
+.rv { padding: .45rem .7rem; border-left: 4px solid var(--linea); background: var(--papel); border-radius: 0 var(--radio) var(--radio) 0; }
+.rv--pro { border-left-color: var(--menta-hondo); }
+.rv--con { border-left-color: var(--rosa); }
+.rv__tag { display: block; font-size: .8rem; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; color: var(--tinta); opacity: .85; }

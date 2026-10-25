@@ -24,6 +24,7 @@ La CI (`.github/workflows/check.yml`) ejecuta build, pruebas y accesibilidad en 
 | Ruta | Qué contiene |
 |---|---|
 | `data/places/*.json` | Locales por lote de investigación. Datos compartidos entre idiomas; textos en `text.es` / `text.en`. |
+| `data/reviews.json` | Lo que cuentan las reseñas por local: veredicto en una frase y puntos a favor / en contra por aspecto (cocina, servicio, reserva, ambiente, niños, precio), cada uno con la plataforma donde se leyó. Se resume, no se copia. |
 | `data/categories.json` | Páginas por intención (arroces, sushi, pizzas, burgers, citas, barrios, alta cocina, esmorzar, playa, barbacoa coreana, visitantes). |
 | `data/routes.json` | Rutas. Solo se genera página para las que tienen todas las paradas esenciales con horario documentado (hoy R06, R09 y R10). |
 | `data/festivos.json` | Festivos de Valencia ciudad 2026 (comunes y locales), con fuentes. |

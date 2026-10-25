@@ -7,7 +7,7 @@ import { alternativesFor } from '../lib/alternatives.js';
 import { dessertVerdict } from '../lib/dessert.js';
 import { UI, PATHS, SITE } from '../i18n.js';
 import { icon, CRAVING_ICON } from '../icons.js';
-import { receipt, hoursBlock, kidsBlock, evidenceBlock, placeCard, compareTable, typeLabel, zoneName, scopeBadge, evidenceBadge } from './components.js';
+import { receipt, hoursBlock, kidsBlock, evidenceBlock, reviewsBlock, placeCard, compareTable, typeLabel, zoneName, scopeBadge, evidenceBadge } from './components.js';
 
 const LANGS = ['es', 'en'];
 const PRINT_DATE = '2026-10-24';
@@ -250,7 +250,7 @@ export function clientCatalog(ctx, lang) {
       id: p.id, name: p.name, type: typeLabel(p, lang), role: p.role, scope: p.scope, zone: p.zone, address: p.address,
       cravings: p.cravings, tags: p.tags, likes: p.likes || [], candidate_only: !!p.candidate_only, reviews_sample: p.reviews_sample || 0,
       price: p.price, hours: p.hours, kids: p.kids,
-      text: { fits: p.text[lang].fits, not_for: p.text[lang].not_for, may_disappoint: p.text[lang].may_disappoint },
+      text: { fits: p.text[lang].fits, not_for: p.text[lang].not_for, may_disappoint: p.text[lang].may_disappoint, reviews: p.reviews ? p.reviews.verdict[lang] : '' },
       url: PATHS.place[lang](p.id), maps: p.maps.search,
     })),
   };
@@ -297,6 +297,7 @@ function placePage(ctx, lang, p) {
       <section><h2>${e(ui.order)}</h2><p>${e(tx.order)}</p></section>
       <section><h2>${e(ui.mayDisappoint)}</h2><p>${e(tx.may_disappoint)}</p></section>
       <section><h2>${e(ui.before)}</h2><p>${e(tx.before)}</p></section>
+      ${p.reviews ? `<section class="reviews"><h2>${e(ui.reviewsTitle)}</h2>${reviewsBlock(p, ctx, lang)}</section>` : ''}
       <section><h2>${e(ui.offer)}</h2><p>${e(tx.offer)}</p></section>
       ${dvBlock}
       ${(() => { const h = hoursBlock(p, lang); return h ? `<section><h2>${e(ui.hours)}</h2>${h}</section>` : ''; })()}
