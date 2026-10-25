@@ -397,7 +397,7 @@
         "lines": [ { "label": { "es": "Menú del día", "en": "Menu of the day" }, "amount": 15.5, "unit": "persona" } ],
         "example": { "party": 2, "items": [ { "label": { "es": "Menú del día", "en": "Menu of the day" }, "qty": 2, "amount": 15.5 } ] },
         "includes": { "bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" },
-        "kids_cost": { "es": "Entrada a la zona infantil declarada gratuita para clientes; confirmar.", "en": "Play-area entry declared free for customers; confirm." },
+        "kids_cost": { "es": "Zona infantil gratis para clientes, según el local.", "en": "Play area free for customers, according to the venue." },
         "source": "https://gatoblanco.es/"
       },
       "hours": { "status": "documentado", "weekly": { "mon": [], "tue": [], "wed": [["09:00", "21:00"]], "thu": [["09:00", "21:00"]], "fri": [["10:00", "23:00"]], "sat": [["10:00", "23:00"]], "sun": [["10:00", "17:00"]] }, "source": "https://gatoblanco.es/" },
