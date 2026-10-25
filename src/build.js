@@ -51,7 +51,7 @@ const xml = [
   '</urlset>',
 ].join('\n');
 writeFileSync(join(DIST, 'sitemap.xml'), xml + '\n');
-writeFileSync(join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${abs(origin, '/sitemap.xml')}\n`);
+writeFileSync(join(DIST, 'robots.txt'), process.env.PREVIEW === '1' ? 'User-agent: *\nDisallow: /\n' : `User-agent: *\nAllow: /\n\nSitemap: ${abs(origin, '/sitemap.xml')}\n`);
 
 const manifest = pages.map((p) => ({ path: p.path, lang: p.lang, key: p.key, indexable: p.indexable, alt: p.alt }));
 writeFileSync(join(DIST, 'pages.json'), JSON.stringify(manifest, null, 1));

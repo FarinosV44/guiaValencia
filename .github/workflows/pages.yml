@@ -1,0 +1,35 @@
+# Vista previa en GitHub Pages de la rama de desarrollo: publica el build en la rama gh-pages.
+# Todo noindex y robots Disallow (PREVIEW=1): sirve para revisar, no para posicionar.
+# Enlaces relativos porque Pages sirve la web en /guiaValencia/.
+name: pages
+on:
+  push:
+    branches: [claude/primera-entrega, main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build de vista previa
+        run: node src/build.js && node scripts/export-relative.js _site --home=index.html && touch _site/.nojekyll
+        env:
+          PREVIEW: '1'
+          SITE_ORIGIN: https://farinosv44.github.io/guiaValencia
+      - name: Publicar en gh-pages
+        run: |
+          cd _site
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Vista previa de ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" gh-pages

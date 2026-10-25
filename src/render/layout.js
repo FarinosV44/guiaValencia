@@ -43,7 +43,8 @@ export function layout(page, ctx) {
   const site = SITE[lang];
   const origin = ctx.origin;
   const stmt = statement(ctx.data.funding, lang);
-  const robots = page.indexable ? 'index,follow' : 'noindex,follow';
+  // PREVIEW=1 (vista previa en GitHub Pages): nada se indexa mientras no haya dominio ni revisión (#2).
+  const robots = page.indexable && process.env.PREVIEW !== '1' ? 'index,follow' : 'noindex,follow';
   const jsonld = [...(page.jsonld || [])];
   const bc = breadcrumbJsonLd(page, lang, origin);
   if (bc && page.indexable) jsonld.push(bc);
