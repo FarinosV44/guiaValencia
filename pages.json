@@ -1,0 +1,1262 @@
+[
+ {
+  "path": "/",
+  "lang": "es",
+  "key": "home",
+  "indexable": true,
+  "alt": "/en/"
+ },
+ {
+  "path": "/estoy-por-aqui/",
+  "lang": "es",
+  "key": "selector",
+  "indexable": true,
+  "alt": "/en/im-around-here/"
+ },
+ {
+  "path": "/comer-con-ninos-valencia/",
+  "lang": "es",
+  "key": "families",
+  "indexable": false,
+  "alt": "/en/eating-out-with-kids-valencia/"
+ },
+ {
+  "path": "/rutas/",
+  "lang": "es",
+  "key": "routes",
+  "indexable": false,
+  "alt": "/en/routes/"
+ },
+ {
+  "path": "/como-nos-financiamos/",
+  "lang": "es",
+  "key": "funding",
+  "indexable": true,
+  "alt": "/en/how-we-are-funded/"
+ },
+ {
+  "path": "/invitanos/",
+  "lang": "es",
+  "key": "invite",
+  "indexable": true,
+  "alt": "/en/fund-a-visit/"
+ },
+ {
+  "path": "/metodologia/",
+  "lang": "es",
+  "key": "method",
+  "indexable": true,
+  "alt": "/en/methodology/"
+ },
+ {
+  "path": "/mi-plan/",
+  "lang": "es",
+  "key": "saved",
+  "indexable": false,
+  "alt": "/en/my-plan/"
+ },
+ {
+  "path": "/correcciones/",
+  "lang": "es",
+  "key": "fixes",
+  "indexable": false,
+  "alt": "/en/corrections/"
+ },
+ {
+  "path": "/404.html",
+  "lang": "es",
+  "key": "404",
+  "indexable": false,
+  "alt": null
+ },
+ {
+  "path": "/locales/aoyama-joaquin/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/aoyama-joaquin/"
+ },
+ {
+  "path": "/locales/kaisen-centro/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/kaisen-centro/"
+ },
+ {
+  "path": "/locales/kyoto-valladolid/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/kyoto-valladolid/"
+ },
+ {
+  "path": "/locales/raices/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/raices/"
+ },
+ {
+  "path": "/locales/filippas-sueca/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/filippas-sueca/"
+ },
+ {
+  "path": "/locales/km0/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/km0/"
+ },
+ {
+  "path": "/locales/hundred/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/hundred/"
+ },
+ {
+  "path": "/locales/soul-valencia/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/soul-valencia/"
+ },
+ {
+  "path": "/locales/tasty-carmen/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/tasty-carmen/"
+ },
+ {
+  "path": "/locales/beak-cabanyal/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/beak-cabanyal/"
+ },
+ {
+  "path": "/locales/lambrus-caballeros/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/lambrus-caballeros/"
+ },
+ {
+  "path": "/locales/eter-artes/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/eter-artes/"
+ },
+ {
+  "path": "/locales/hankook-alfafar/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/hankook-alfafar/"
+ },
+ {
+  "path": "/locales/baret-tofona/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/baret-tofona/"
+ },
+ {
+  "path": "/locales/brosquil/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/brosquil/"
+ },
+ {
+  "path": "/locales/ricardo/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/ricardo/"
+ },
+ {
+  "path": "/locales/malkebien/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/malkebien/"
+ },
+ {
+  "path": "/locales/la-salita/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/la-salita/"
+ },
+ {
+  "path": "/locales/riff/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/riff/"
+ },
+ {
+  "path": "/locales/cassalla/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/cassalla/"
+ },
+ {
+  "path": "/locales/cremaet/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/cremaet/"
+ },
+ {
+  "path": "/locales/pascuala/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/pascuala/"
+ },
+ {
+  "path": "/locales/fernandet/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/fernandet/"
+ },
+ {
+  "path": "/locales/blanqueries/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/blanqueries/"
+ },
+ {
+  "path": "/locales/rentaora/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/rentaora/"
+ },
+ {
+  "path": "/locales/kuzina/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/kuzina/"
+ },
+ {
+  "path": "/locales/veneta-brodadors/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/veneta-brodadors/"
+ },
+ {
+  "path": "/locales/central/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/central/"
+ },
+ {
+  "path": "/locales/romana-centro/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/romana-centro/"
+ },
+ {
+  "path": "/locales/linaje/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/linaje/"
+ },
+ {
+  "path": "/locales/veneta-ribera/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/veneta-ribera/"
+ },
+ {
+  "path": "/locales/canalla/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/canalla/"
+ },
+ {
+  "path": "/locales/nozomi/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/nozomi/"
+ },
+ {
+  "path": "/locales/antigua/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/antigua/"
+ },
+ {
+  "path": "/locales/bluebell/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/bluebell/"
+ },
+ {
+  "path": "/locales/hippolatte/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/hippolatte/"
+ },
+ {
+  "path": "/locales/habitual/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/habitual/"
+ },
+ {
+  "path": "/locales/bali/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/bali/"
+ },
+ {
+  "path": "/locales/romana-costa/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/romana-costa/"
+ },
+ {
+  "path": "/locales/daniel/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/daniel/"
+ },
+ {
+  "path": "/locales/principal/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/principal/"
+ },
+ {
+  "path": "/locales/komori/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/komori/"
+ },
+ {
+  "path": "/locales/petit/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/petit/"
+ },
+ {
+  "path": "/locales/negri/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/negri/"
+ },
+ {
+  "path": "/locales/ola/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/ola/"
+ },
+ {
+  "path": "/locales/sariers/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/sariers/"
+ },
+ {
+  "path": "/locales/montana/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/montana/"
+ },
+ {
+  "path": "/locales/anyora/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/anyora/"
+ },
+ {
+  "path": "/locales/sastreria/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/sastreria/"
+ },
+ {
+  "path": "/locales/gelatica/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/gelatica/"
+ },
+ {
+  "path": "/locales/carmela/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/carmela/"
+ },
+ {
+  "path": "/locales/pepica/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/pepica/"
+ },
+ {
+  "path": "/locales/veneta-mar/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/veneta-mar/"
+ },
+ {
+  "path": "/locales/gato/",
+  "lang": "es",
+  "key": "place",
+  "indexable": false,
+  "alt": "/en/places/gato/"
+ },
+ {
+  "path": "/zonas/carmen/",
+  "lang": "es",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/en/areas/carmen/"
+ },
+ {
+  "path": "/zonas/mercat/",
+  "lang": "es",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/en/areas/mercat/"
+ },
+ {
+  "path": "/zonas/ruzafa/",
+  "lang": "es",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/en/areas/ruzafa/"
+ },
+ {
+  "path": "/zonas/eixample/",
+  "lang": "es",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/en/areas/eixample/"
+ },
+ {
+  "path": "/zonas/mestalla/",
+  "lang": "es",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/en/areas/mestalla/"
+ },
+ {
+  "path": "/zonas/benimaclet/",
+  "lang": "es",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/en/areas/benimaclet/"
+ },
+ {
+  "path": "/zonas/cabanyal/",
+  "lang": "es",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/en/areas/cabanyal/"
+ },
+ {
+  "path": "/zonas/malvarrosa/",
+  "lang": "es",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/en/areas/malvarrosa/"
+ },
+ {
+  "path": "/mejores-arroces-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/best-rice-restaurants-valencia/"
+ },
+ {
+  "path": "/mejores-buffets-sushi-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/best-sushi-buffets-valencia/"
+ },
+ {
+  "path": "/barbacoa-coreana-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/korean-bbq-valencia/"
+ },
+ {
+  "path": "/mejores-pizzerias-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/best-pizza-valencia/"
+ },
+ {
+  "path": "/mejores-hamburguesas-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/best-burgers-valencia/"
+ },
+ {
+  "path": "/restaurantes-cita-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/date-night-restaurants-valencia/"
+ },
+ {
+  "path": "/restaurantes-barrios-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/valencia-neighbourhood-restaurants/"
+ },
+ {
+  "path": "/restaurantes-alta-cocina-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/fine-dining-valencia/"
+ },
+ {
+  "path": "/esmorzar-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/esmorzar-valencia/"
+ },
+ {
+  "path": "/restaurantes-playa-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/restaurants-near-valencia-beach/"
+ },
+ {
+  "path": "/guia-gastronomica-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/valencia-food-guide/"
+ },
+ {
+  "path": "/heladerias-horchaterias-cafes-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/ice-cream-horchata-coffee-valencia/"
+ },
+ {
+  "path": "/tapas-bravas-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/tapas-valencia/"
+ },
+ {
+  "path": "/restaurantes-asiaticos-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/asian-restaurants-valencia/"
+ },
+ {
+  "path": "/comer-barato-valencia/",
+  "lang": "es",
+  "key": "category",
+  "indexable": false,
+  "alt": "/en/cheap-eats-valencia/"
+ },
+ {
+  "path": "/rutas/cabanyal-comida-paseo-helado/",
+  "lang": "es",
+  "key": "route",
+  "indexable": false,
+  "alt": "/en/routes/cabanyal-lunch-stroll-ice-cream/"
+ },
+ {
+  "path": "/rutas/colon-comida-y-horchata/",
+  "lang": "es",
+  "key": "route",
+  "indexable": false,
+  "alt": "/en/routes/colon-lunch-and-horchata/"
+ },
+ {
+  "path": "/rutas/cabanyal-sastreria-paseo-helado/",
+  "lang": "es",
+  "key": "route",
+  "indexable": false,
+  "alt": "/en/routes/cabanyal-sastreria-stroll-ice-cream/"
+ },
+ {
+  "path": "/en/",
+  "lang": "en",
+  "key": "home",
+  "indexable": true,
+  "alt": "/"
+ },
+ {
+  "path": "/en/im-around-here/",
+  "lang": "en",
+  "key": "selector",
+  "indexable": true,
+  "alt": "/estoy-por-aqui/"
+ },
+ {
+  "path": "/en/eating-out-with-kids-valencia/",
+  "lang": "en",
+  "key": "families",
+  "indexable": false,
+  "alt": "/comer-con-ninos-valencia/"
+ },
+ {
+  "path": "/en/routes/",
+  "lang": "en",
+  "key": "routes",
+  "indexable": false,
+  "alt": "/rutas/"
+ },
+ {
+  "path": "/en/how-we-are-funded/",
+  "lang": "en",
+  "key": "funding",
+  "indexable": true,
+  "alt": "/como-nos-financiamos/"
+ },
+ {
+  "path": "/en/fund-a-visit/",
+  "lang": "en",
+  "key": "invite",
+  "indexable": true,
+  "alt": "/invitanos/"
+ },
+ {
+  "path": "/en/methodology/",
+  "lang": "en",
+  "key": "method",
+  "indexable": true,
+  "alt": "/metodologia/"
+ },
+ {
+  "path": "/en/my-plan/",
+  "lang": "en",
+  "key": "saved",
+  "indexable": false,
+  "alt": "/mi-plan/"
+ },
+ {
+  "path": "/en/corrections/",
+  "lang": "en",
+  "key": "fixes",
+  "indexable": false,
+  "alt": "/correcciones/"
+ },
+ {
+  "path": "/en/404.html",
+  "lang": "en",
+  "key": "404",
+  "indexable": false,
+  "alt": null
+ },
+ {
+  "path": "/en/places/aoyama-joaquin/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/aoyama-joaquin/"
+ },
+ {
+  "path": "/en/places/kaisen-centro/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/kaisen-centro/"
+ },
+ {
+  "path": "/en/places/kyoto-valladolid/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/kyoto-valladolid/"
+ },
+ {
+  "path": "/en/places/raices/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/raices/"
+ },
+ {
+  "path": "/en/places/filippas-sueca/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/filippas-sueca/"
+ },
+ {
+  "path": "/en/places/km0/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/km0/"
+ },
+ {
+  "path": "/en/places/hundred/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/hundred/"
+ },
+ {
+  "path": "/en/places/soul-valencia/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/soul-valencia/"
+ },
+ {
+  "path": "/en/places/tasty-carmen/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/tasty-carmen/"
+ },
+ {
+  "path": "/en/places/beak-cabanyal/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/beak-cabanyal/"
+ },
+ {
+  "path": "/en/places/lambrus-caballeros/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/lambrus-caballeros/"
+ },
+ {
+  "path": "/en/places/eter-artes/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/eter-artes/"
+ },
+ {
+  "path": "/en/places/hankook-alfafar/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/hankook-alfafar/"
+ },
+ {
+  "path": "/en/places/baret-tofona/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/baret-tofona/"
+ },
+ {
+  "path": "/en/places/brosquil/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/brosquil/"
+ },
+ {
+  "path": "/en/places/ricardo/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/ricardo/"
+ },
+ {
+  "path": "/en/places/malkebien/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/malkebien/"
+ },
+ {
+  "path": "/en/places/la-salita/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/la-salita/"
+ },
+ {
+  "path": "/en/places/riff/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/riff/"
+ },
+ {
+  "path": "/en/places/cassalla/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/cassalla/"
+ },
+ {
+  "path": "/en/places/cremaet/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/cremaet/"
+ },
+ {
+  "path": "/en/places/pascuala/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/pascuala/"
+ },
+ {
+  "path": "/en/places/fernandet/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/fernandet/"
+ },
+ {
+  "path": "/en/places/blanqueries/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/blanqueries/"
+ },
+ {
+  "path": "/en/places/rentaora/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/rentaora/"
+ },
+ {
+  "path": "/en/places/kuzina/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/kuzina/"
+ },
+ {
+  "path": "/en/places/veneta-brodadors/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/veneta-brodadors/"
+ },
+ {
+  "path": "/en/places/central/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/central/"
+ },
+ {
+  "path": "/en/places/romana-centro/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/romana-centro/"
+ },
+ {
+  "path": "/en/places/linaje/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/linaje/"
+ },
+ {
+  "path": "/en/places/veneta-ribera/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/veneta-ribera/"
+ },
+ {
+  "path": "/en/places/canalla/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/canalla/"
+ },
+ {
+  "path": "/en/places/nozomi/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/nozomi/"
+ },
+ {
+  "path": "/en/places/antigua/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/antigua/"
+ },
+ {
+  "path": "/en/places/bluebell/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/bluebell/"
+ },
+ {
+  "path": "/en/places/hippolatte/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/hippolatte/"
+ },
+ {
+  "path": "/en/places/habitual/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/habitual/"
+ },
+ {
+  "path": "/en/places/bali/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/bali/"
+ },
+ {
+  "path": "/en/places/romana-costa/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/romana-costa/"
+ },
+ {
+  "path": "/en/places/daniel/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/daniel/"
+ },
+ {
+  "path": "/en/places/principal/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/principal/"
+ },
+ {
+  "path": "/en/places/komori/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/komori/"
+ },
+ {
+  "path": "/en/places/petit/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/petit/"
+ },
+ {
+  "path": "/en/places/negri/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/negri/"
+ },
+ {
+  "path": "/en/places/ola/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/ola/"
+ },
+ {
+  "path": "/en/places/sariers/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/sariers/"
+ },
+ {
+  "path": "/en/places/montana/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/montana/"
+ },
+ {
+  "path": "/en/places/anyora/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/anyora/"
+ },
+ {
+  "path": "/en/places/sastreria/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/sastreria/"
+ },
+ {
+  "path": "/en/places/gelatica/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/gelatica/"
+ },
+ {
+  "path": "/en/places/carmela/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/carmela/"
+ },
+ {
+  "path": "/en/places/pepica/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/pepica/"
+ },
+ {
+  "path": "/en/places/veneta-mar/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/veneta-mar/"
+ },
+ {
+  "path": "/en/places/gato/",
+  "lang": "en",
+  "key": "place",
+  "indexable": false,
+  "alt": "/locales/gato/"
+ },
+ {
+  "path": "/en/areas/carmen/",
+  "lang": "en",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/zonas/carmen/"
+ },
+ {
+  "path": "/en/areas/mercat/",
+  "lang": "en",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/zonas/mercat/"
+ },
+ {
+  "path": "/en/areas/ruzafa/",
+  "lang": "en",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/zonas/ruzafa/"
+ },
+ {
+  "path": "/en/areas/eixample/",
+  "lang": "en",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/zonas/eixample/"
+ },
+ {
+  "path": "/en/areas/mestalla/",
+  "lang": "en",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/zonas/mestalla/"
+ },
+ {
+  "path": "/en/areas/benimaclet/",
+  "lang": "en",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/zonas/benimaclet/"
+ },
+ {
+  "path": "/en/areas/cabanyal/",
+  "lang": "en",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/zonas/cabanyal/"
+ },
+ {
+  "path": "/en/areas/malvarrosa/",
+  "lang": "en",
+  "key": "zone",
+  "indexable": false,
+  "alt": "/zonas/malvarrosa/"
+ },
+ {
+  "path": "/en/best-rice-restaurants-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/mejores-arroces-valencia/"
+ },
+ {
+  "path": "/en/best-sushi-buffets-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/mejores-buffets-sushi-valencia/"
+ },
+ {
+  "path": "/en/korean-bbq-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/barbacoa-coreana-valencia/"
+ },
+ {
+  "path": "/en/best-pizza-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/mejores-pizzerias-valencia/"
+ },
+ {
+  "path": "/en/best-burgers-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/mejores-hamburguesas-valencia/"
+ },
+ {
+  "path": "/en/date-night-restaurants-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/restaurantes-cita-valencia/"
+ },
+ {
+  "path": "/en/valencia-neighbourhood-restaurants/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/restaurantes-barrios-valencia/"
+ },
+ {
+  "path": "/en/fine-dining-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/restaurantes-alta-cocina-valencia/"
+ },
+ {
+  "path": "/en/esmorzar-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/esmorzar-valencia/"
+ },
+ {
+  "path": "/en/restaurants-near-valencia-beach/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/restaurantes-playa-valencia/"
+ },
+ {
+  "path": "/en/valencia-food-guide/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/guia-gastronomica-valencia/"
+ },
+ {
+  "path": "/en/ice-cream-horchata-coffee-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/heladerias-horchaterias-cafes-valencia/"
+ },
+ {
+  "path": "/en/tapas-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/tapas-bravas-valencia/"
+ },
+ {
+  "path": "/en/asian-restaurants-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/restaurantes-asiaticos-valencia/"
+ },
+ {
+  "path": "/en/cheap-eats-valencia/",
+  "lang": "en",
+  "key": "category",
+  "indexable": false,
+  "alt": "/comer-barato-valencia/"
+ },
+ {
+  "path": "/en/routes/cabanyal-lunch-stroll-ice-cream/",
+  "lang": "en",
+  "key": "route",
+  "indexable": false,
+  "alt": "/rutas/cabanyal-comida-paseo-helado/"
+ },
+ {
+  "path": "/en/routes/colon-lunch-and-horchata/",
+  "lang": "en",
+  "key": "route",
+  "indexable": false,
+  "alt": "/rutas/colon-comida-y-horchata/"
+ },
+ {
+  "path": "/en/routes/cabanyal-sastreria-stroll-ice-cream/",
+  "lang": "en",
+  "key": "route",
+  "indexable": false,
+  "alt": "/rutas/cabanyal-sastreria-paseo-helado/"
+ }
+]
