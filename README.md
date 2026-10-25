@@ -25,7 +25,7 @@ La CI (`.github/workflows/check.yml`) ejecuta build, pruebas y accesibilidad en 
 |---|---|
 | `data/places/*.json` | Locales por lote de investigación. Datos compartidos entre idiomas; textos en `text.es` / `text.en`. |
 | `data/categories.json` | Páginas por intención (arroces, sushi, pizzas, burgers, citas, barrios, alta cocina, esmorzar, playa, barbacoa coreana, visitantes). |
-| `data/routes.json` | Rutas. Solo se genera página para las que tienen todas las paradas con horario documentado. |
+| `data/routes.json` | Rutas. Solo se genera página para las que tienen todas las paradas esenciales con horario documentado (hoy R06, R09 y R10). |
 | `data/festivos.json` | Festivos de Valencia ciudad 2026 (comunes y locales), con fuentes. |
 | `data/funding.json` | Estado económico versionado. La declaración pública se deriva de aquí. |
 | `src/lib/` | Lógica compartida por build, pruebas y navegador: precio, horarios, recomendador, rutas, financiación. |

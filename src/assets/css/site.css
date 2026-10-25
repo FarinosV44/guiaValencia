@@ -233,7 +233,7 @@ select, input[type="time"], input[type="number"], input[type="text"], input[type
 .routecheck { background: var(--papel); border: 2px solid var(--tinta); border-radius: var(--radio); padding: 1.2rem; }
 #routeresult { margin-top: 1rem; }
 .v-ambas td:last-child { color: var(--menta-hondo); font-weight: 700; }
-.v-solo_quedarse td:last-child, .v-restaurante_cerrado td:last-child { color: var(--rosa); font-weight: 700; }
+.v-solo_quedarse td:last-child, .v-postre_cierra_antes td:last-child, .v-restaurante_cerrado td:last-child { color: var(--rosa); font-weight: 700; }
 .pendlist { list-style: none; padding: 0; display: grid; gap: .7rem; }
 .pendlist li { display: grid; gap: .15rem; padding: .8rem 1rem; border: 2px dashed var(--linea); border-radius: var(--radio); }
 

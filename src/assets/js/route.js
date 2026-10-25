@@ -28,7 +28,8 @@ function update() {
     lines.push(`<p><strong>${e(ui.routeVerdicts.ambas)}</strong></p>`);
   }
   const c = res.cost;
-  lines.push(`<p class="num">${e(ui.receiptPartial)} ${e(ui.receiptGroup(c.party))}: ${money(c.knownTotal, lang)} (${money(c.perPersonKnown, lang)} ${e(ui.receiptPerPerson)}). ${e(ui.receiptNotFull)}</p>`);
+  const fmt = (x) => (x == null ? ui.unknownMark : money(x, lang));
+  lines.push(`<p class="num">${e(ui.receiptPartial)} ${e(ui.receiptGroup(c.party))}: ${fmt(c.knownTotal)} (${fmt(c.perPersonKnown)} ${e(ui.receiptPerPerson)}). ${e(ui.receiptNotFull)}</p>`);
   out.innerHTML = lines.join('');
 }
 

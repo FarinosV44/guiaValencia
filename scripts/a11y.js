@@ -11,7 +11,7 @@ const PORT = 4175;
 const base = `http://127.0.0.1:${PORT}`;
 const PAGES = [
   '/', '/en/', '/estoy-por-aqui/?zona=cabanyal&dia=sat&hora=13:30', '/en/im-around-here/?antojo=asiatico&presupuesto=30', '/estoy-por-aqui/?antojo=asiatico&gusto=pescado&gusto=mucha_hambre&sinmovil=1',
-  '/locales/anyora/', '/en/places/la-salita/', '/locales/petit/', '/rutas/cabanyal-comida-paseo-helado/', '/en/routes/cabanyal-lunch-stroll-ice-cream/',
+  '/locales/anyora/', '/en/places/la-salita/', '/locales/petit/', '/rutas/cabanyal-comida-paseo-helado/', '/en/routes/cabanyal-lunch-stroll-ice-cream/', '/rutas/colon-comida-y-horchata/', '/en/routes/cabanyal-sastreria-stroll-ice-cream/',
   '/comer-con-ninos-valencia/', '/mejores-buffets-sushi-valencia/', '/en/esmorzar-valencia/', '/restaurantes-playa-valencia/', '/invitanos/', '/como-nos-financiamos/', '/zonas/ruzafa/', '/en/korean-bbq-valencia/',
 ];
 const VIEWPORTS = { movil: { width: 360, height: 780 }, escritorio: { width: 1366, height: 900 } };
@@ -83,7 +83,7 @@ try {
     // Ruta: lunes → heladería cerrada; sábado con estimaciones → llegada calculada.
     await page.goto(base + '/rutas/cabanyal-comida-paseo-helado/', { waitUntil: 'networkidle' });
     await page.selectOption('#r-dia', 'mon');
-    if (!(await page.textContent('#routeresult')).includes('heladería cierra ese día')) failures.push(`[${vpName}] ruta: lunes no avisa del cierre`);
+    if (!(await page.textContent('#routeresult')).includes('parada dulce cierra ese día')) failures.push(`[${vpName}] ruta: lunes no avisa del cierre`);
     await page.selectOption('#r-dia', 'sat');
     await page.fill('#r-estancia', '90');
     await page.fill('#r-paseo', '15');

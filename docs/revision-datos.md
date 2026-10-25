@@ -4,7 +4,7 @@ Generada el 2026-10-25 con `npm run revision`. Detecta qué falta para publicar 
 
 Orden: primero los locales usados en rutas y categorías, y dentro de ellos los que tienen más pendientes de horario y precio.
 
-Resumen: 55 fichas, 0 con datos caducados, 45 con horario sin confirmar, parcial o contradictorio, 27 sin precio verificable.
+Resumen: 55 fichas, 0 con datos caducados, 42 con horario sin confirmar, parcial o contradictorio, 27 sin precio verificable.
 
 ## La Pepica (`pepica`)
 
@@ -167,23 +167,6 @@ Consultado: 2026-10-24 (1 d). Aparece en: ruta R04, ruta R05.
 - [ ] Falta saber: bebida, pan, café, suplementos
 - [ ] Sin visita propia
 
-## Casa Montaña (`montana`)
-
-Consultado: 2026-10-24 (1 d). Aparece en: ruta R10, categoría playa.
-
-- [ ] Horario sin confirmar
-- [ ] Falta saber: bebida, suplementos
-- [ ] Sin visita propia
-
-## Central Bar (`central`)
-
-Consultado: 2026-10-24 (1 d). Aparece en: ruta R03, categoría visitantes.
-
-- [ ] Horario sin confirmar
-- [ ] Falta saber: bebida, postre, café, suplementos
-- [ ] Sin muestra de reseñas de Google
-- [ ] Sin visita propia
-
 ## Filippa’s (`filippas-sueca`)
 
 Consultado: 2026-10-24 (1 d). Aparece en: categoría pizzas, categoría visitantes.
@@ -235,6 +218,14 @@ Consultado: 2026-10-24 (1 d). Aparece en: categoría arroces, categoría playa.
 - [ ] Falta saber: bebida, pan, postre, café, suplementos
 - [ ] Sin visita propia
 
+## Central Bar (`central`)
+
+Consultado: 2026-10-24 (1 d). Aparece en: ruta R03, categoría visitantes.
+
+- [ ] Falta saber: bebida, postre, café, suplementos
+- [ ] Sin muestra de reseñas de Google
+- [ ] Sin visita propia
+
 ## Antigua Lechería (`antigua`)
 
 Consultado: 2026-10-24 (1 d). Aparece en: ruta R04.
@@ -255,22 +246,11 @@ Consultado: 2026-10-24 (1 d). Aparece en: categoría hamburguesas.
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
 
-## Daniel Mercado de Colón (`daniel`)
-
-Consultado: 2026-10-24 (1 d). Aparece en: ruta R06.
-
-- [ ] Horario contradictorio entre fuentes
-- [ ] Apertura en festivos sin dato
-- [ ] Sin precio verificable
-- [ ] Falta saber: bebida, pan, postre, café, suplementos
-- [ ] Sin muestra de reseñas de Google
-- [ ] Sin visita propia
-
 ## Els Sariers (`sariers`)
 
 Consultado: 2026-10-24 (1 d). Aparece en: ruta R08.
 
-- [ ] Horario contradictorio entre fuentes
+- [ ] Horario parcial (faltan horas o días)
 - [ ] Apertura en festivos sin dato
 - [ ] Sin precio verificable
 - [ ] Falta saber: bebida, pan, postre, café, suplementos
@@ -359,16 +339,6 @@ Consultado: 2026-10-24 (1 d). Aparece en: ruta R02.
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
 
-## La Romana Joaquín Costa (`romana-costa`)
-
-Consultado: 2026-10-24 (1 d). Aparece en: ruta R06.
-
-- [ ] Horario sin confirmar
-- [ ] Sin precio verificable
-- [ ] Falta saber: bebida, pan, postre, café, suplementos
-- [ ] Sin muestra de reseñas de Google
-- [ ] Sin visita propia
-
 ## La Romana San Vicente (`romana-centro`)
 
 Consultado: 2026-10-24 (1 d). Aparece en: ruta R03.
@@ -423,6 +393,24 @@ Consultado: 2026-10-24 (1 d). Aparece en: ruta R01.
 ## Bluebell Coffee (`bluebell`)
 
 Consultado: 2026-10-24 (1 d). Aparece en: ruta R04.
+
+- [ ] Apertura en festivos sin dato
+- [ ] Sin precio verificable
+- [ ] Falta saber: bebida, pan, postre, café, suplementos
+- [ ] Sin muestra de reseñas de Google
+- [ ] Sin visita propia
+
+## Casa Montaña (`montana`)
+
+Consultado: 2026-10-24 (1 d). Aparece en: categoría playa.
+
+- [ ] Horario sin confirmar
+- [ ] Falta saber: bebida, suplementos
+- [ ] Sin visita propia
+
+## Daniel Mercado de Colón (`daniel`)
+
+Consultado: 2026-10-24 (1 d). Aparece en: ruta R06.
 
 - [ ] Apertura en festivos sin dato
 - [ ] Sin precio verificable
@@ -492,15 +480,6 @@ Consultado: 2026-10-24 (1 d). Aparece en: ruta R07.
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
 
-## La Sastrería (`sastreria`)
-
-Consultado: 2026-10-24 (1 d). Aparece en: ruta R10.
-
-- [ ] Horario sin confirmar
-- [ ] Falta saber: bebida, pan, postre, café, suplementos
-- [ ] Sin muestra de reseñas de Google
-- [ ] Sin visita propia
-
 ## Petit Niu (`petit`)
 
 Consultado: 2026-10-24 (1 d). Aparece en: ruta R07.
@@ -525,6 +504,25 @@ Consultado: 2026-10-24 (1 d). Aparece en: ruta R12.
 - [ ] Infantil: sin_tv desconocido
 - [ ] Infantil: carrito desconocido
 - [ ] Infantil: trona desconocido
+- [ ] Sin muestra de reseñas de Google
+- [ ] Sin visita propia
+
+## La Sastrería (`sastreria`)
+
+Consultado: 2026-10-24 (1 d). Aparece en: ruta R10.
+
+- [ ] Apertura en festivos sin dato
+- [ ] Falta saber: bebida, pan, postre, café, suplementos
+- [ ] Sin muestra de reseñas de Google
+- [ ] Sin visita propia
+
+## La Romana Joaquín Costa (`romana-costa`)
+
+Consultado: 2026-10-24 (1 d).
+
+- [ ] Horario sin confirmar
+- [ ] Sin precio verificable
+- [ ] Falta saber: bebida, pan, postre, café, suplementos
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
 

@@ -478,20 +478,21 @@ function routePage(ctx, lang, r) {
   const out = checkRoute(r, byId, { day: 'sat', arrival: '13:30', dessert: 'out' });
 
   const stops = r.stops.map((s, i) => {
-    if (s.kind === 'walk') return `<li class="stop stop--walk"><h3>${e(ui.routeWalkStep)}</h3><p>${e(t(s.text, lang))}</p><p><a href="${e(r.maps_walk)}" rel="nofollow noopener">${e(ui.routeOpenMaps)}</a></p></li>`;
+    if (s.kind === 'walk') return `<li class="stop stop--walk"><h3>${e(ui.routeWalkStep)}</h3><p>${e(t(s.text, lang))}</p>${r.maps_walk ? `<p><a href="${e(r.maps_walk)}" rel="nofollow noopener">${e(ui.routeOpenMaps)}</a></p>` : ''}</li>`;
     const p = byId[s.place];
     return `<li class="stop"><h3><a href="${PATHS.place[lang](p.id)}">${e(p.name)}</a>${s.optional ? ` <span class="badge">${e(ui.routeOptional)}</span>` : ''}</h3><p>${e(p.text[lang].order)}</p></li>`;
   }).join('');
 
   const costBlock = (res, label) => `<div class="receipt receipt--small"><p class="rc__title">${e(label)}</p>
     <table class="rc__lines"><tbody>
-      <tr><td>${e(rest.name)}: ${e(lang === 'es' ? 'pedido de ejemplo' : 'sample order')}</td><td class="num">${m(res.cost.base)}</td></tr>
+      <tr${res.cost.base == null ? ' class="is-open"' : ''}><td>${e(rest.name)}: ${e(ui.routeBaseFrom[res.cost.baseFrom](res.cost.party))}${res.cost.baseThirdParty ? ' *' : ''}</td><td class="num">${res.cost.base == null ? ui.unknownMark : m(res.cost.base)}</td></tr>
       <tr${res.cost.dessertKnown ? '' : ' class="is-open"'}><td>${e(res.cost.dessert === 'stay' ? t(r.dessert_options.stay.label, lang) : t(r.dessert_options.out.label, lang))}</td><td class="num">${res.cost.dessertKnown ? m(res.cost.dessertCost) : ui.unknownMark}</td></tr>
       <tr class="is-open"><td>${e(ui.components.bebida)}</td><td class="num">${ui.unknownMark}</td></tr>
       <tr class="is-open"><td>${e(ui.components.pan)}</td><td class="num">${ui.unknownMark}</td></tr>
     </tbody></table>
-    <div class="rc__total"><span>${e(ui.receiptPartial)} ${e(ui.receiptGroup(res.cost.party))}</span><strong class="num">${m(res.cost.knownTotal)}</strong></div>
-    <div class="rc__pp"><span>${e(ui.receiptPerPerson)}</span><span class="num">${m(res.cost.perPersonKnown)}</span></div>
+    <div class="rc__total"><span>${e(ui.receiptPartial)} ${e(ui.receiptGroup(res.cost.party))}</span><strong class="num">${res.cost.knownTotal == null ? ui.unknownMark : m(res.cost.knownTotal)}</strong></div>
+    <div class="rc__pp"><span>${e(ui.receiptPerPerson)}</span><span class="num">${res.cost.perPersonKnown == null ? ui.unknownMark : m(res.cost.perPersonKnown)}</span></div>
+    ${res.cost.baseThirdParty ? `<p class="rc__note">* ${e(ui.receiptThirdParty)}</p>` : ''}
   </div>`;
 
   const body = `
@@ -515,18 +516,18 @@ function routePage(ctx, lang, r) {
       <div class="field"><label for="r-estancia">${e(ui.routeStay)}</label><input id="r-estancia" name="estancia" type="number" min="15" max="300" step="5" inputmode="numeric"></div>
       <div class="field"><label for="r-paseo">${e(ui.routeWalk)}</label><input id="r-paseo" name="paseo" type="number" min="0" max="120" step="1" inputmode="numeric"></div>
       <fieldset class="field field--wide"><legend>${e(ui.routeDessert)}</legend>
-        <label class="check"><input type="radio" name="postre" value="out" checked> <span>${e(ui.routeDessertOut)}</span></label>
-        <label class="check"><input type="radio" name="postre" value="stay"> <span>${e(ui.routeDessertStay)}</span></label>
+        <label class="check"><input type="radio" name="postre" value="out" checked> <span>${e(t(r.dessert_options.out.label, lang))}</span></label>
+        <label class="check"><input type="radio" name="postre" value="stay"> <span>${e(t(r.dessert_options.stay.label, lang))}</span></label>
       </fieldset>
     </form>
     <div id="routeresult" aria-live="polite">
-      <p>${e(ui.routeLastSeated(out.lastSeated))}</p>
+      ${out.lastSeated ? `<p>${e(ui.routeLastSeated(out.lastSeated))}</p>` : `<p>${e(ui.routeWarnings.postre_cerrado_ese_dia)}</p>`}
       <p class="small">${e(ui.routeWarnings.sin_estimacion_paseo)}</p>
     </div>
   </section>
 
   <section class="block"><h2>${e(ui.routeCostTitle)}</h2><p>${e(ui.routeCostNote)}</p>
-    <div class="tickets">${costBlock(out, ui.routeDessertOut)}${costBlock(stay, ui.routeDessertStay)}</div>
+    <div class="tickets">${costBlock(out, t(r.dessert_options.out.label, lang))}${costBlock(stay, t(r.dessert_options.stay.label, lang))}</div>
   </section>
 </div>`;
   const page = pageBase('route', lang, PATHS.route[lang](r.slug[lang]), PATHS.route[other(lang)](r.slug[other(lang)]), { indexable: false, draft: true });

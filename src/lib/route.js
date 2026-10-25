@@ -18,7 +18,12 @@ export function dayTable(route, placesById) {
     if (!restOpen) verdict = r === undefined ? 'restaurante_desconocido' : 'restaurante_cerrado';
     else if (!sweet) verdict = 'solo_restaurante';
     else if (!sweetOpen) verdict = s === undefined ? 'postre_desconocido' : 'solo_quedarse';
-    else verdict = 'ambas';
+    else {
+      // Solo hay ruta si el restaurante abre antes de la última hora útil para sentarse en la parada dulce.
+      const firstOpen = Math.min(...r.map(([a]) => toMinutes(a)));
+      const last = toMinutes(lastSeatedArrival(sweet, day));
+      verdict = firstOpen < last ? 'ambas' : 'postre_cierra_antes';
+    }
     return { day, rest: r, sweet: s, verdict };
   });
 }
@@ -57,27 +62,37 @@ export function checkRoute(route, placesById, { day, arrival, stayMin = null, wa
   }
 
   // Coste: el pedido base del restaurante + UN postre (dentro o fuera), nunca los dos.
-  const base = exampleTotal(rest.price.example);
-  const party = rest.price.example?.party ?? 2;
+  // Sin pedido de ejemplo se usa la base documentada por persona × comensales; sin base, el coste queda desconocido.
+  const party = rest.price.example?.party ?? route.base_order?.party ?? 2;
+  let base = exampleTotal(rest.price.example);
+  let baseFrom = 'ejemplo';
+  if (base == null && rest.price.per_adult_base != null) {
+    base = rest.price.per_adult_base * party;
+    baseFrom = 'base_por_persona';
+  }
+  if (base == null) baseFrom = 'desconocido';
   let dessertCost = null;
   let dessertKnown = false;
   if (dessert === 'stay') {
     const opt = route.dessert_options.stay;
-    dessertCost = opt.amount * dessertQty;
-    dessertKnown = true;
+    dessertKnown = opt.amount != null;
+    dessertCost = dessertKnown ? opt.amount * dessertQty : null;
   } else if (dessert === 'out') {
     dessertKnown = route.dessert_options.out.amount != null;
     dessertCost = dessertKnown ? route.dessert_options.out.amount * dessertQty : null;
   }
+  const known = base == null ? null : base + (dessertKnown ? dessertCost : 0);
   result.cost = {
     base,
+    baseFrom,
+    baseThirdParty: (rest.price.lines || []).some((l) => l.third_party),
     party,
     dessert,
     dessertCost,
     dessertKnown,
-    knownTotal: base + (dessertKnown ? dessertCost : 0),
-    perPersonKnown: (base + (dessertKnown ? dessertCost : 0)) / party,
-    pending: ['bebida', 'pan', ...(dessertKnown ? [] : ['postre_fuera'])],
+    knownTotal: known,
+    perPersonKnown: known == null ? null : known / party,
+    pending: ['bebida', 'pan', ...(dessertKnown ? [] : [dessert === 'stay' ? 'postre_dentro' : 'postre_fuera'])],
     complete: false,
   };
   return result;

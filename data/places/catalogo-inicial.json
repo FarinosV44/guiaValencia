@@ -73,7 +73,7 @@
         "note": { "es": "Carta consultable; revisar vigencia.", "en": "Menu online; check it is current." },
         "source": "https://www.larentaora.com/carta/"
       },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.larentaora.com/contacto/"},
       "sources": ["https://www.larentaora.com/", "https://www.larentaora.com/carta/"]
     },
     {
@@ -136,7 +136,7 @@
         }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa actual pendiente.", "en": "Current prices pending." } },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.venetagelato.com/"},
       "sources": ["https://www.venetagelato.com/", "https://valenciasecreta.com/helados-valencia/"]
     },
     {
@@ -147,18 +147,18 @@
         "es": {
           "offer": "Bocadillos y tapas dentro del Mercado Central.",
           "fits": "Almorzar ajustado o comer tapas en plan de mercado y mediodía.",
-          "not_for": "Una cena: no tenemos horario confirmado para ello.",
+          "not_for": "Una cena: la cocina cierra a las 15:00 (15:30 viernes y sábado).",
           "order": "Dos usos distintos: el bocadillo Camarena para almorzar o el menú de tapas para comer. No cuestan lo mismo.",
           "may_disappoint": "Sin críticas documentadas en nuestra muestra (reseñas de Google pendientes).",
-          "before": "Confirma el servicio del mercado ese día."
+          "before": "Domingos y festivos cerrado."
         },
         "en": {
           "offer": "Sandwiches and tapas inside the Central Market.",
           "fits": "A cheap mid-morning bite or a tapas lunch as part of a market visit.",
-          "not_for": "Dinner: we have no confirmed evening hours.",
+          "not_for": "Dinner: the kitchen closes at 15:00 (15:30 on Friday and Saturday).",
           "order": "Two different uses: the Camarena sandwich for esmorzar, or the tapas menu for lunch. They do not cost the same.",
           "may_disappoint": "No criticism documented in our sample (Google reviews pending).",
-          "before": "Check the market is open that day."
+          "before": "Closed on Sundays and public holidays."
         }
       },
       "price": {
@@ -172,7 +172,7 @@
         "includes": { "bebida": "aparte", "pan": "no_aplica", "postre": "aparte", "cafe": "aparte", "suplementos": "desconocido" },
         "source": "https://m.centralbar.es/platos"
       },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "documentado", "kitchen": true, "holidays": "cerrado", "checked_on": "2026-10-25", "weekly": {"mon": [["09:00", "15:00"]], "tue": [["09:00", "15:00"]], "wed": [["09:00", "15:00"]], "thu": [["09:00", "15:00"]], "fri": [["09:00", "15:30"]], "sat": [["09:00", "15:30"]], "sun": []}, "note": {"es": "Horario de cocina oficial; domingos y festivos cerrado.", "en": "Official kitchen hours; closed Sundays and public holidays."}, "source": "https://m.centralbar.es/horario"},
       "sources": ["https://m.centralbar.es/platos", "https://m.centralbar.es/copia-de-platos"]
     },
     {
@@ -237,7 +237,7 @@
         "en": { "offer": "Italian gelato.", "fits": "A sweet stop after eating around Sant Francesc or at Linaje.", "not_for": "Confusing it with the Brodadors branch.", "order": "No flavour documented for this branch.", "may_disappoint": "Not tasted by us; reviews not checked.", "before": "Check that day's hours; prices pending." }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa actual pendiente.", "en": "Current prices pending." } },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.venetagelato.com/"},
       "sources": ["https://www.venetagelato.com/"]
     },
     {
@@ -275,7 +275,7 @@
         "includes": { "bebida": "aparte", "pan": "desconocido", "postre": "incluido", "cafe": "desconocido", "suplementos": "desconocido" },
         "source": "https://www.canallabistro.com/carta/"
       },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.canallabistro.com/en/contact-us/"},
       "sources": ["https://www.canallabistro.com/carta/", "https://www.canallabistro.com/"]
     },
     {
@@ -335,7 +335,7 @@
         }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa y sabores del día pendientes.", "en": "Prices and flavours of the day pending." } },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://antigualecheria.com/contacto"},
       "evidence_awards": [ { "label": { "es": "Solete Guía Repsol (ficha consultada)", "en": "Guía Repsol 'Solete' (listing checked)" }, "url": "https://www.guiarepsol.com/es/fichas/solete/antigua-lecheria-335606/", "year": null } ],
       "sources": ["https://www.guiarepsol.com/es/fichas/solete/antigua-lecheria-335606/", "https://antigualecheria.com/"]
     },
@@ -481,11 +481,11 @@
       "scope": "valencia", "zone": "eixample", "address": "Jorge Juan, 19, Mercado de Colón",
       "cravings": ["dulce", "valenciano"], "tags": ["visitante"],
       "text": {
-        "es": { "offer": "Horchata y fartons.", "fits": "Una parada valenciana para después de comer o merendar; quizá no hace falta otra cafetería.", "not_for": "Cerrar una cena: las fuentes secundarias discrepan en el horario.", "order": "Horchata con fartons.", "may_disappoint": "Sin cata propia ni reseñas revisadas.", "before": "Tarifa actual y horario pendientes." },
-        "en": { "offer": "Horchata (tiger-nut drink) and fartons.", "fits": "A Valencian stop after lunch or for a mid-afternoon snack; you may not need a separate café.", "not_for": "Ending a dinner: secondary sources disagree on hours.", "order": "Horchata with fartons.", "may_disappoint": "Not tasted by us; reviews not checked.", "before": "Current prices and hours pending." }
+        "es": { "offer": "Horchata y fartons.", "fits": "Una parada valenciana para después de comer o merendar; quizá no hace falta otra cafetería.", "not_for": "Cerrar una cena tardía: cierra a las 22:00 según el Mercado de Colón.", "order": "Horchata con fartons.", "may_disappoint": "Sin cata propia ni reseñas revisadas.", "before": "Tarifa pendiente. El horario lo publica el Mercado de Colón, no la propia horchatería." },
+        "en": { "offer": "Horchata (tiger-nut drink) and fartons.", "fits": "A Valencian stop after lunch or for a mid-afternoon snack; you may not need a separate café.", "not_for": "Ending a late dinner: it closes at 22:00 according to Mercado de Colón.", "order": "Horchata with fartons.", "may_disappoint": "Not tasted by us; reviews not checked.", "before": "Prices pending. Hours are published by Mercado de Colón, not by the shop itself." }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa actual pendiente.", "en": "Current prices pending." } },
-      "hours": { "status": "contradictorio", "note": { "es": "Fuentes secundarias discrepan.", "en": "Secondary sources disagree." } },
+      "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"mon": [["10:00", "22:00"]], "tue": [["10:00", "22:00"]], "wed": [["10:00", "22:00"]], "thu": [["10:00", "22:00"]], "fri": [["10:00", "22:00"]], "sat": [["10:00", "22:00"]], "sun": [["10:00", "22:00"]]}, "note": {"es": "Horario publicado por el Mercado de Colón en la ficha de la horchatería; la web propia no lo detalla.", "en": "Hours published by Mercado de Colón on the shop’s page; the shop’s own website does not give them."}, "source": "https://mercadocolon.es/comercio/horchateria-daniel/"},
       "sources": ["https://mercadocolon.es/tipo-comercio/horchaterias/"]
     },
     {
@@ -576,11 +576,11 @@
       "scope": "valencia", "zone": "benimaclet", "address": "Sarcet, 6",
       "cravings": ["dulce", "valenciano"], "tags": ["visitante"],
       "text": {
-        "es": { "offer": "Horchata líquida, mixta o granizada, fartons, granizados y helados.", "fits": "Un final valenciano para un paseo por Benimaclet.", "not_for": "Pedir horchata y helado por obligación: elige uno.", "order": "Horchata con fartons, o helado; no los dos por sistema.", "may_disappoint": "Sin cata propia ni reseñas revisadas.", "before": "Horario distinto según fuentes y temporada; no confundas la dirección con el municipio de Alboraia." },
-        "en": { "offer": "Horchata (plain, mixed or slushy), fartons, granitas and ice cream.", "fits": "A Valencian finish to a walk around Benimaclet.", "not_for": "Ordering both horchata and ice cream out of duty: pick one.", "order": "Horchata with fartons, or ice cream; not both by default.", "may_disappoint": "Not tasted by us; reviews not checked.", "before": "Hours differ by source and season; do not confuse the address with the town of Alboraia." }
+        "es": { "offer": "Horchata líquida, mixta o granizada, fartons, granizados y helados.", "fits": "Un final valenciano para un paseo por Benimaclet.", "not_for": "Pedir horchata y helado por obligación: elige uno.", "order": "Horchata con fartons, o helado; no los dos por sistema.", "may_disappoint": "Sin cata propia ni reseñas revisadas.", "before": "Su web da dos horarios distintos; usamos el aviso de febrero de 2026 (de lunes a jueves solo tardes). No confundas la dirección con el municipio de Alboraia." },
+        "en": { "offer": "Horchata (plain, mixed or slushy), fartons, granitas and ice cream.", "fits": "A Valencian finish to a walk around Benimaclet.", "not_for": "Ordering both horchata and ice cream out of duty: pick one.", "order": "Horchata with fartons, or ice cream; not both by default.", "may_disappoint": "Not tasted by us; reviews not checked.", "before": "Its website gives two different timetables; we use the February 2026 notice (Monday to Thursday afternoons only). Do not confuse the address with the town of Alboraia." }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa pendiente.", "en": "Prices pending." } },
-      "hours": { "status": "contradictorio" },
+      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"mon": [["16:00", "21:00"]], "tue": [["16:00", "21:00"]], "wed": [["16:00", "21:00"]], "thu": [["16:00", "21:00"]], "fri": [["11:00", "21:00"]], "sat": [["11:00", "22:00"]], "sun": [["11:00", "22:00"]]}, "note": {"es": "Según su aviso «Nous horaris» del 23/02/2026; la barra lateral de su web muestra otro horario y no se indica temporada. Confirmar en verano.", "en": "From its ‘Nous horaris’ notice of 23/02/2026; the website sidebar shows different hours and no season is stated. Confirm in summer."}, "source": "https://horchateriaelssariers.es/category/horchateria-els-sariers/"},
       "sources": ["https://horchateriaelssariers.es/", "https://chufadevalencia.org/empresas/orxateria-els-sariers/"]
     },
     {
@@ -614,7 +614,7 @@
         "includes": { "bebida": "desconocido", "pan": "incluido", "postre": "incluido", "cafe": "incluido", "suplementos": "desconocido" },
         "source": "https://www.emilianobodega.com/producto/bono-1836/"
       },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.emilianobodega.com/en/contact/"},
       "sources": ["https://www.emilianobodega.com/producto/bono-1836/"]
     },
     {
@@ -672,7 +672,7 @@
         "includes": { "bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" },
         "source": "https://lasastreriavalencia.com/home/"
       },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"mon": [["19:30", "24:30"]], "tue": [["19:30", "24:30"]], "wed": [["19:30", "24:30"]], "thu": [["13:00", "17:00"], ["19:30", "24:30"]], "fri": [["13:00", "17:00"], ["19:30", "24:30"]], "sat": [["13:00", "17:00"], ["19:30", "24:30"]], "sun": [["13:00", "17:00"], ["19:30", "24:30"]]}, "note": {"es": "Horario de su web: lunes a miércoles solo cenas; de jueves a domingo, comidas y cenas.", "en": "Hours from its website: Monday to Wednesday dinner only; Thursday to Sunday lunch and dinner."}, "source": "https://lasastreriavalencia.com/en/"},
       "sources": ["https://lasastreriavalencia.com/home/", "https://www.visitvalencia.com/que-hacer-valencia/gastronomia/restaurantes-valencia/sastreria"]
     },
     {
@@ -784,7 +784,7 @@
         "en": { "offer": "Gelato on the seafront promenade.", "fits": "The most compact pairing with La Pepica: same promenade.", "not_for": "Confusing it with the Ribera branch.", "order": "No flavour documented for this branch.", "may_disappoint": "Not tasted by us; reviews not checked.", "before": "Seasonal hours not confirmed; prices and extras pending." }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa y suplementos pendientes.", "en": "Prices and extras pending." } },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.venetagelato.com/"},
       "sources": ["https://www.venetagelato.com/"]
     },
     {

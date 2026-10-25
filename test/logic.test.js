@@ -254,3 +254,40 @@ test('postre: quedarse si está incluido, elegir uno si hay opción dentro y fue
   assert.equal(dessertVerdict(data.byId['baret-tofona'], P).kind, 'sin_dato', 'no inventamos heladería en Castellar');
   assert.equal(dessertVerdict(data.byId.gelatica, P), null, 'una heladería no recibe veredicto de restaurante');
 });
+
+test('R10: La Sastrería de noche (L–X) no encaja con Gelática; de jueves a domingo sí', () => {
+  const r = data.routes.find((x) => x.id === 'R10');
+  const t = Object.fromEntries(dayTable(r, data.byId).map((x) => [x.day, x.verdict]));
+  assert.equal(t.mon, 'solo_quedarse', 'Gelática cierra lunes');
+  assert.equal(t.wed, 'postre_cierra_antes', 'La Sastrería abre a las 19:30 y Gelática cierra a las 18:00');
+  assert.equal(t.thu, 'ambas');
+  assert.equal(t.sun, 'ambas');
+  const res = checkRoute(r, data.byId, { day: 'sat', arrival: '13:30', dessert: 'out' });
+  assert.equal(res.cost.baseFrom, 'ejemplo');
+  assert.equal(res.cost.knownTotal, 88, 'menú Bordado 44 € × 2, sin postre fuera sumado como cero');
+  assert.ok(res.cost.pending.includes('postre_fuera'));
+});
+
+test('R06: Habitual + Daniel; domingo cerrado; base de terceros marcada', () => {
+  const r = data.routes.find((x) => x.id === 'R06');
+  const t = Object.fromEntries(dayTable(r, data.byId).map((x) => [x.day, x.verdict]));
+  assert.equal(t.sun, 'restaurante_cerrado');
+  assert.equal(t.tue, 'ambas');
+  const res = checkRoute(r, data.byId, { day: 'tue', arrival: '14:00', stayMin: 75, walkMin: 2, dessert: 'out' });
+  assert.equal(res.sweetStatus.state, 'abierto');
+  assert.equal(res.cost.baseThirdParty, true, 'el menú de 38 € es de Repsol');
+  assert.equal(res.cost.baseFrom, 'base_por_persona', 'Habitual no tiene pedido de ejemplo: base × 2');
+  assert.equal(res.cost.knownTotal, 76);
+  const stay = checkRoute(r, data.byId, { day: 'tue', arrival: '14:00', dessert: 'stay' });
+  assert.equal(stay.cost.dessertKnown, false, 'postre de Habitual sin precio: no se suma como cero');
+});
+
+test('horarios verificados el 25/10/2026: fuente y fecha registradas', () => {
+  for (const id of ['central', 'sastreria', 'daniel', 'sariers']) {
+    assert.equal(data.byId[id].hours.checked_on, '2026-10-25', id);
+    assert.ok(data.byId[id].hours.source, id);
+  }
+  assert.equal(statusAt(data.byId.central.hours, 'sun', '11:00').state, 'cerrado');
+  assert.equal(statusAt(data.byId.central.hours, 'mon', '11:00', { holiday: true }).state, 'cerrado', 'festivos cerrado');
+  for (const id of ['canalla', 'antigua', 'montana', 'veneta-mar']) assert.equal(data.byId[id].hours.status, 'desconocido', id);
+});
