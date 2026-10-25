@@ -312,3 +312,11 @@ select, input[type="time"], input[type="number"], input[type="text"], input[type
 .rv--pro { border-left-color: var(--menta-hondo); }
 .rv--con { border-left-color: var(--rosa); }
 .rv__tag { display: block; font-size: .8rem; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; color: var(--tinta); opacity: .85; }
+
+/* Etiquetas francas */
+.tag { display: inline-block; font-size: .78rem; font-weight: 700; padding: .12rem .55rem; border-radius: 999px; border: 2px solid currentColor; line-height: 1.3; }
+.tag--pro { color: var(--menta-hondo); background: #e6f3ec; }
+.tag--con { color: var(--rosa); background: #fbe3e9; }
+.tag--neutral { color: var(--naranja-hondo); background: #fff0dd; }
+.labels { margin: 1rem 0; }
+.labels ul { list-style: none; padding: 0; display: grid; gap: .5rem; }

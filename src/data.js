@@ -82,9 +82,17 @@ export function loadData() {
   const festivos = readJson(join(DATA, 'festivos.json'));
   const reviews = readJson(join(DATA, 'reviews.json'));
   for (const p of places) p.reviews = reviews.places[p.id] || null;
+  const labels = readJson(join(DATA, 'labels.json'));
+  const buildDate = process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
+  for (const p of places) {
+    const all = labels.assigned[p.id] || [];
+    p.labelsAll = all;
+    // Una etiqueta caducada deja de mostrarse: vuelve a la cola de revisión, no a la ficha.
+    p.labels = all.filter((l) => l.expires >= buildDate).map((l) => ({ ...l, def: labels.definitions[l.label] }));
+  }
   const byId = Object.fromEntries(places.map((p) => [p.id, p]));
   const zoneById = Object.fromEntries(zones.map((z) => [z.id, z]));
-  return { places, byId, zones, zoneById, routes, funding, categories, festivos, reviews, root: ROOT };
+  return { places, byId, zones, zoneById, routes, funding, categories, festivos, reviews, labels, buildDate, root: ROOT };
 }
 
 // Validación estructural: falla el build si los datos rompen reglas editoriales comprobables.
@@ -119,6 +127,14 @@ export function validate(data) {
       if (!data.reviews.sources[pt.src]) errors.push(`Reseñas ${id}: fuente desconocida ${pt.src}`);
       if (!['+', '-'].includes(pt.tone)) errors.push(`Reseñas ${id}: tono inválido`);
       if (!pt.es || !pt.en) errors.push(`Reseñas ${id}: falta texto ES o EN`);
+    }
+  }
+  for (const [id, list] of Object.entries(data.labels?.assigned || {})) {
+    if (!data.byId[id]) errors.push(`Etiquetas: local inexistente ${id}`);
+    for (const l of list) {
+      if (!data.labels.definitions[l.label]) errors.push(`Etiquetas ${id}: etiqueta desconocida ${l.label}`);
+      if (!l.source || !l.since || !l.expires || !l.why?.es || !l.why?.en) errors.push(`Etiquetas ${id}: falta fuente, fecha, caducidad o motivo`);
+      if (['caro_justifica', 'volveria_para', 'no_compensa', 'carta_repetitiva'].includes(l.label) && !data.byId[id]?.own_visit) errors.push(`Etiquetas ${id}: ${l.label} exige visita propia o doble revisión`);
     }
   }
   for (const c of data.categories) {

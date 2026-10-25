@@ -43,7 +43,12 @@ export function reviewQueue(data, today) {
       }
       if (!p.address) items.push(['ficha', 'Sucursal o dirección sin identificar']);
       if (p.candidate_only) items.push(['ficha', 'Candidato: falta decidir si se recomienda']);
-      if (!p.reviews_sample) items.push(['ficha', 'Sin muestra de reseñas de Google']);
+      if (!p.reviews) items.push(['ficha', 'Sin lectura de reseñas']);
+      for (const l of p.labelsAll || []) {
+        const left = daysBetween(today, l.expires);
+        if (left < 0) items.push(['etiqueta', `Etiqueta «${l.label}» caducada el ${l.expires}: revisar o retirar`]);
+        else if (left <= 7) items.push(['etiqueta', `Etiqueta «${l.label}» caduca el ${l.expires}`]);
+      }
       if (!p.own_visit) items.push(['ficha', 'Sin visita propia']);
 
       const stale = [];

@@ -139,6 +139,17 @@ export function kidsBlock(place, lang, { full = false } = {}) {
   return `${rows ? `<table class="kids"><tbody>${rows}</tbody></table>` : ''}${extra.join('')}`;
 }
 
+// ——— Etiquetas francas ———
+export function labelChips(place, lang) {
+  if (!place.labels?.length) return '';
+  return place.labels.map((l) => `<span class="tag tag--${l.def.tone}">${e(l.def.name[lang])}</span>`).join('');
+}
+export function labelsBlock(place, lang) {
+  if (!place.labels?.length) return '';
+  const ui = UI[lang];
+  return `<section class="labels"><h2>${e(ui.labelsTitle)}</h2><ul>${place.labels.map((l) => `<li><span class="tag tag--${l.def.tone}">${e(l.def.name[lang])}</span> ${e(l.why[lang])} <span class="small">(<a href="${e(l.source)}" rel="nofollow noopener">${e(new URL(l.source).hostname.replace(/^www\./, ''))}</a>, ${e(ui.labelsUntil(dateLabel(l.expires, lang)))})</span></li>`).join('')}</ul></section>`;
+}
+
 // ——— Lo que cuentan las reseñas ———
 export function reviewsBlock(place, ctx, lang) {
   const r = place.reviews;
@@ -193,7 +204,7 @@ export function placeCard(place, ctx, lang, { headingLevel = 3, showZone = true 
       <p class="ticket__meta">${e(typeLabel(place, lang))}${showZone && place.zone ? `, ${e(zoneName(place, ctx, lang))}` : ''}</p>
     </div>
   </div>
-  <div class="ticket__badges">${evidenceBadge(place, ctx, lang)}${scopeBadge(place, lang)}${place.branch_pending ? `<span class="badge badge--warn">${e(lang === 'es' ? 'Varias sucursales' : 'Several branches')}</span>` : ''}${place.candidate_only ? `<span class="badge badge--warn">${e(lang === 'es' ? 'Solo para curiosos' : 'For the curious')}</span>` : ''}</div>
+  <div class="ticket__badges">${evidenceBadge(place, ctx, lang)}${scopeBadge(place, lang)}${place.branch_pending ? `<span class="badge badge--warn">${e(lang === 'es' ? 'Varias sucursales' : 'Several branches')}</span>` : ''}${place.candidate_only ? `<span class="badge badge--warn">${e(lang === 'es' ? 'Solo para curiosos' : 'For the curious')}</span>` : ''}${labelChips(place, lang)}</div>
   <p class="ticket__fits">${e(tx.fits)}</p>
   <p class="ticket__catch"><strong>${e(ui.catch)}:</strong> ${e(tx.not_for)}</p>
   ${priceLine ? `<p class="ticket__price"><span class="num">${e(priceLine)}</span></p>` : ''}

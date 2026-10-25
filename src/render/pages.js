@@ -7,7 +7,7 @@ import { alternativesFor } from '../lib/alternatives.js';
 import { dessertVerdict } from '../lib/dessert.js';
 import { UI, PATHS, SITE } from '../i18n.js';
 import { icon, CRAVING_ICON } from '../icons.js';
-import { receipt, hoursBlock, kidsBlock, evidenceBlock, reviewsBlock, placeCard, compareTable, typeLabel, zoneName, scopeBadge, evidenceBadge } from './components.js';
+import { receipt, hoursBlock, kidsBlock, evidenceBlock, reviewsBlock, labelsBlock, labelChips, placeCard, compareTable, typeLabel, zoneName, scopeBadge, evidenceBadge } from './components.js';
 
 const LANGS = ['es', 'en'];
 const PRINT_DATE = '2026-10-24';
@@ -251,6 +251,7 @@ export function clientCatalog(ctx, lang) {
       cravings: p.cravings, tags: p.tags, likes: p.likes || [], candidate_only: !!p.candidate_only, reviews_sample: p.reviews_sample || 0,
       price: p.price, hours: p.hours, kids: p.kids,
       text: { fits: p.text[lang].fits, not_for: p.text[lang].not_for, may_disappoint: p.text[lang].may_disappoint, reviews: p.reviews ? p.reviews.verdict[lang] : '' },
+      labels: (p.labels || []).map((l) => ({ name: l.def.name[lang], tone: l.def.tone })),
       url: PATHS.place[lang](p.id), maps: p.maps.search,
     })),
   };
@@ -282,7 +283,7 @@ function placePage(ctx, lang, p) {
   <header class="place__head">
     <h1 class="pagetitle">${e(p.name)}</h1>
     <p class="place__meta">${e(typeLabel(p, lang))}${zone ? `, ${e(t(zone.name, lang))}` : ''}</p>
-    <div class="ticket__badges">${evidenceBadge(p, ctx, lang)}${scopeBadge(p, lang)}</div>
+    <div class="ticket__badges">${evidenceBadge(p, ctx, lang)}${scopeBadge(p, lang)}${labelChips(p, lang)}</div>
     ${p.zone_note ? `<p class="small">${e(t(p.zone_note, lang))}</p>` : ''}
     <p class="printrow" hidden><button type="button" class="btn btn--ghost" data-print>${e(ui.printPlan)}</button></p><p class="printnote">${e(ui.printNote(dateLabel(PRINT_DATE, lang)))}</p>
   </header>
@@ -291,6 +292,8 @@ function placePage(ctx, lang, p) {
     <div class="verdict__item verdict__item--yes"><h2>${e(ui.fits)}</h2><p>${e(tx.fits)}</p></div>
     <div class="verdict__item verdict__item--no"><h2>${e(ui.notFor)}</h2><p>${e(tx.not_for)}</p></div>
   </div>
+
+  ${labelsBlock(p, lang)}
 
   <div class="place__grid">
     <div class="place__main">
@@ -640,6 +643,7 @@ function methodPage(ctx, lang) {
   <section class="block"><h2>${es ? 'Cuatro tipos de evidencia, siempre separados' : 'Four kinds of evidence, always kept apart'}</h2><dl class="glossary">${kinds.map(([k, v]) => `<dt>${e(v)}</dt><dd>${e(defs[k])}</dd>`).join('')}</dl></section>
   <section class="block"><h2>${es ? 'Cómo explicamos un precio' : 'How we explain a price'}</h2><ul>${priceRules.map((x) => `<li>${e(x)}</li>`).join('')}</ul></section>
   <section class="block"><h2>${es ? 'Cómo ordenamos las recomendaciones' : 'How we order recommendations'}</h2><ul>${rankRules.map((x) => `<li>${e(x)}</li>`).join('')}</ul><p class="small">${e(ui.rulesVersion)}: ${RULES_VERSION}</p></section>
+  <section class="block"><h2>${es ? 'Etiquetas francas' : 'Frank labels'}</h2><p>${es ? 'Cada etiqueta lleva motivo, fuente y fecha de revisión. Caduca sola: si no la revisamos a tiempo, desaparece de la ficha. Ninguna se compra.' : 'Every label carries a reason, a source and a review date. It expires on its own: if we don’t review it in time, it disappears from the card. None can be bought.'}</p><dl class="glossary">${Object.values(ctx.data.labels.definitions).map((d) => `<dt><span class="tag tag--${d.tone}">${e(d.name[lang])}</span></dt><dd>${e(d.def[lang])} <span class="small">${e(d.evidence[lang])}</span></dd>`).join('')}</dl></section>
   <section class="block"><h2>${es ? 'Lo que nunca inventamos' : 'What we never invent'}</h2><ul>${neverList.map((x) => `<li>${e(x)}</li>`).join('')}</ul></section>
   <section class="block"><h2>${es ? 'Valencia ciudad y excursiones' : 'Valencia city and day trips'}</h2><p>${es ? 'Los locales del área metropolitana o de excursión (como Fernandet, en Sueca, o Hankook, en Alfafar) llevan su etiqueta y no aparecen en el selector salvo que lo pidas.' : 'Venues in the metro area or on a day trip (such as Fernandet in Sueca, or Hankook in Alfafar) carry their label and are left out of the picker unless you ask for them.'}</p></section>
 </div>`;

@@ -106,3 +106,20 @@ test('reseñas: cada punto tiene fuente conocida, tono y texto en ES y EN', () =
     }
   }
 });
+
+test('etiquetas francas: definidas, con motivo, fuente y caducidad; las de visita no se asignan sin visita', () => {
+  for (const [id, list] of Object.entries(data.labels.assigned)) {
+    for (const l of list) {
+      assert.ok(data.labels.definitions[l.label], `${id}: ${l.label}`);
+      assert.ok(l.expires > l.since, `${id}: caducidad`);
+      assert.ok(/^https:\/\//.test(l.source), `${id}: fuente`);
+      assert.ok(!['caro_justifica', 'volveria_para', 'no_compensa', 'carta_repetitiva'].includes(l.label), `${id}: exige visita`);
+    }
+  }
+});
+
+test('una etiqueta caducada deja de mostrarse', async () => {
+  const { execFileSync } = await import('node:child_process');
+  const out = execFileSync('node', ['-e', "import('./src/data.js').then(({loadData})=>{const d=loadData();console.log(d.byId['aoyama-joaquin'].labels.length)})"], { env: { ...process.env, BUILD_DATE: '2027-06-01' }, cwd: data.root }).toString().trim();
+  assert.equal(out, '0');
+});

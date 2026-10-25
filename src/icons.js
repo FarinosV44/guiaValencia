@@ -25,6 +25,7 @@ export const ICONS = {
   nino: S('<circle cx="24" cy="12" r="5" fill="var(--naranja)"/><path d="M24 17v12M24 29l-6 10M24 29l6 10M24 21l-9-5M24 21l9 3"/><circle cx="38" cy="38" r="4" fill="var(--menta)"/>'),
   pin: S('<path d="M24 42s13-12 13-22a13 13 0 0 0-26 0c0 10 13 22 13 22z" fill="var(--naranja)"/><circle cx="24" cy="20" r="5" fill="var(--crema)"/>'),
   ruta: S('<circle cx="10" cy="36" r="4" fill="var(--naranja)"/><circle cx="38" cy="12" r="4" fill="var(--menta)"/><path d="M14 36c10 0 6-10 14-12s6-8 6-8" stroke-dasharray="3 4"/>'),
+  moneda: S('<circle cx="24" cy="24" r="15" fill="var(--naranja)"/><circle cx="24" cy="24" r="10" fill="none" stroke="var(--crema)"/><path d="M27 19c-1-1.5-2.5-2-4-2-3 0-5 2.5-5 7s2 7 5 7c1.5 0 3-.5 4-2M16 22h8M16 26h8" stroke="var(--crema)"/>'),
   ticket: S('<path d="M12 6h24v36l-4-3-4 3-4-3-4 3-4-3-4 3z" fill="var(--crema)"/><path d="M17 15h14M17 21h14M17 27h8"/>'),
 };
 

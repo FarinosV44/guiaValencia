@@ -74,6 +74,7 @@ function pickHtml(pick) {
     <span class="pick__slot">${e(ui.slots[pick.slot])}</span>
     <h3><a href="${p.url}">${e(p.name)}</a></h3>
     <p class="ticket__meta">${e(p.type)}${p.zone ? ', ' + e(catalog.zones[p.zone]) : ''}</p>
+    ${(p.labels || []).length ? `<p>${p.labels.map((l) => `<span class="tag tag--${e(l.tone)}">${e(l.name)}</span>`).join(' ')}</p>` : ''}
     <p>${e(p.text.fits)}</p>
     ${p.text.reviews ? `<p class="small"><strong>${e(ui.reviewsTitle)}:</strong> ${e(p.text.reviews)}</p>` : ''}
     ${reasons.length ? `<p><strong>${e(ui.why)}:</strong></p><ul>${reasons.map((x) => `<li>${e(x)}</li>`).join('')}</ul>` : ''}
