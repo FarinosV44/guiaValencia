@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { escapeHtml as e, money, t, DAYS, DAY_NAMES, clock, dateLabel } from '../lib/format.js';
 import { summarize, BANDS } from '../lib/price.js';
 import { statement, isFunded } from '../lib/funding.js';
@@ -202,7 +204,8 @@ function selectorPage(ctx, lang) {
 <div class="wrap">
   <h1 class="pagetitle">${e(ui.selectorH1)}</h1>
   <p class="lead">${e(ui.selectorLead)}</p>
-  <form id="nl" class="nlform" hidden>
+  <noscript><style>#nl{display:none}</style></noscript>
+  <form id="nl" class="nlform">
     <label for="f-frase">${e(ui.nlLabel)}</label>
     <div class="nlrow"><input id="f-frase" name="frase" type="text" autocomplete="off" maxlength="300" placeholder="${e(ui.nlPlaceholder)}"><button type="submit" class="btn">${e(ui.nlSubmit)}</button></div>
     <p class="small">${e(ui.nlHint)}</p>
@@ -288,6 +291,7 @@ function placePage(ctx, lang, p) {
 <article class="wrap place">
   <header class="place__head">
     <h1 class="pagetitle">${e(p.name)}</h1>
+    ${p.closed ? `<p class="notice">${e(lang === 'es' ? `Este local ha cerrado (${dateLabel(p.closed, lang)}). Lo dejamos como referencia; ya no lo recomendamos.` : `This venue has closed (${dateLabel(p.closed, lang)}). We keep the card for reference; we no longer recommend it.`)}</p>` : ''}
     <p class="place__meta">${e(typeLabel(p, lang))}${zone ? `, ${e(t(zone.name, lang))}` : ''}</p>
     <div class="ticket__badges">${evidenceBadge(p, ctx, lang)}${scopeBadge(p, lang)}${labelChips(p, lang)}</div>
     ${p.zone_note ? `<p class="small">${e(t(p.zone_note, lang))}</p>` : ''}
@@ -321,6 +325,7 @@ function placePage(ctx, lang, p) {
         <p><a class="btn" href="${e(p.maps.search)}" rel="nofollow noopener">${icon('pin')}<span>${e(ui.maps)}</span></a></p>
         ${p.maps.walk && p.scope === 'valencia' ? `<p><a href="${e(p.maps.walk)}" rel="nofollow noopener">${e(ui.mapsWalk)}</a></p>` : ''}
         <p class="small">${e(ui.mapsNote)}</p>
+        <p class="small"><a href="${PATHS.fixes[lang]}?local=${e(p.id)}">${e(ui.fixLink)}</a></p>
       </div>
     </aside>
   </div>
@@ -453,10 +458,15 @@ function familiesPage(ctx, lang) {
 }
 
 // ——— Rutas ———
+// Una ruta completa se bloquea sola si una de sus paradas cierra (#28): vuelve a «Más ideas» hasta revisarla.
+const routePlaces = (r) => r.places || r.stops.filter((s) => s.kind === 'place').map((s) => s.place);
+export function routeLive(ctx, r) {
+  return r.status === 'ejemplo_completo' && routePlaces(r).every((id) => !ctx.data.byId[id]?.closed);
+}
 function routesIndex(ctx, lang) {
   const ui = UI[lang];
-  const complete = ctx.data.routes.filter((r) => r.status === 'ejemplo_completo');
-  const pending = ctx.data.routes.filter((r) => r.status !== 'ejemplo_completo');
+  const complete = ctx.data.routes.filter((r) => routeLive(ctx, r));
+  const pending = ctx.data.routes.filter((r) => !routeLive(ctx, r));
   const body = `
 <div class="wrap">
   <h1 class="pagetitle">${e(ui.routesH1)}</h1>
@@ -465,7 +475,7 @@ function routesIndex(ctx, lang) {
   ${complete.map((r) => `<article class="teaser"><h3><a href="${PATHS.route[lang](r.slug[lang])}">${e(t(r.title, lang))}</a></h3><p>${e(t(r.summary, lang))}</p></article>`).join('')}
   </section>
   <section class="block"><h2>${e(ui.routePending)}</h2><p>${e(ui.routePendingNote)}</p>
-  <ul class="pendlist">${pending.map((r) => `<li><strong>${e(t(r.title, lang))}</strong><span>${r.places.map((id) => `<a href="${PATHS.place[lang](id)}">${e(ctx.data.byId[id].name)}</a>`).join(', ')}</span><span>${e(t(r.tip, lang))}</span></li>`).join('')}</ul></section>
+  <ul class="pendlist">${pending.map((r) => `<li><strong>${e(t(r.title, lang))}</strong><span>${routePlaces(r).map((id) => `<a href="${PATHS.place[lang](id)}">${e(ctx.data.byId[id].name)}</a>`).join(', ')}</span><span>${e(t(r.tip || r.summary, lang))}</span></li>`).join('')}</ul></section>
 </div>`;
   const page = pageBase('routes', lang, PATHS.routes[lang], PATHS.routes[other(lang)], { indexable: false, draft: true });
   page.title = lang === 'es' ? 'Rutas para comer y pasear en Valencia, con horarios comprobados' : 'Eat-and-stroll routes in Valencia, with checked opening hours';
@@ -688,6 +698,38 @@ function savedPage(ctx, lang) {
   return page;
 }
 
+// ——— Correcciones y registro de cambios (#22) ———
+function fixesPage(ctx, lang) {
+  const ui = UI[lang];
+  const F = ui.fixFields;
+  const log = JSON.parse(readFileSync(join(ctx.data.root, 'data/changelog.json'), 'utf8')).entries;
+  const opts = [...ctx.data.places].sort((a, b) => a.name.localeCompare(b.name, 'es')).map((p) => `<option value="${e(p.id)}">${e(p.name)}</option>`).join('');
+  const body = `
+<div class="wrap prose">
+  <h1 class="pagetitle">${e(ui.fixH1)}</h1>
+  <p class="lead">${e(ui.fixLead)}</p>
+  <p class="notice notice--pending">${e(ui.fixChannel)}</p>
+  <form id="fixform" class="inviteform" novalidate>
+    <div class="field field--wide"><label for="x-place">${e(F.place)}</label><select id="x-place" name="place">${opts}</select></div>
+    <div class="field field--wide"><label for="x-what">${e(F.what)}</label><textarea id="x-what" name="what" rows="4" required aria-describedby="err-what"></textarea><p class="err" id="err-what"></p></div>
+    <div class="field field--wide"><label for="x-source">${e(F.source)}</label><input id="x-source" name="source" type="url" inputmode="url"></div>
+    <fieldset class="field field--wide"><legend>${e(F.who)}</legend>${Object.entries(ui.fixWho).map(([k, v], i) => `<label class="check"><input type="radio" name="who" value="${k}"${i === 0 ? ' checked' : ''}> <span>${e(v)}</span></label>`).join('')}</fieldset>
+    <div class="field field--wide"><label for="x-email">${e(F.email)}</label><input id="x-email" name="email" type="email" autocomplete="email" aria-describedby="err-email"><p class="err" id="err-email"></p></div>
+    <button class="btn" type="submit">${e(ui.fixSubmit)}</button>
+  </form>
+  <div id="fixout" aria-live="polite"></div>
+  <section class="block"><h2>${e(ui.fixLog)}</h2><p class="small">${e(ui.fixLogLead)}</p><ul>${log.map((x) => `<li><strong>${e(dateLabel(x.date, lang))}</strong>: ${e(x[lang])}</li>`).join('')}</ul></section>
+</div>`;
+  const page = pageBase('fixes', lang, PATHS.fixes[lang], PATHS.fixes[other(lang)], { indexable: false, draft: false });
+  page.title = ui.fixH1;
+  page.description = ui.fixLead.slice(0, 158);
+  page.body = body;
+  page.crumbs = [{ name: ui.fixH1, path: page.path }];
+  page.keepQuery = true;
+  page.scripts = [`<script type="module" src="/assets/js/fixes.js"></script>`];
+  return page;
+}
+
 function notFoundPage(ctx, lang) {
   const ui = UI[lang];
   const page = pageBase('404', lang, lang === 'es' ? '/404.html' : '/en/404.html', null, { indexable: false, draft: false });
@@ -700,11 +742,11 @@ function notFoundPage(ctx, lang) {
 export function allPages(ctx) {
   const pages = [];
   for (const lang of LANGS) {
-    pages.push(homePage(ctx, lang), selectorPage(ctx, lang), familiesPage(ctx, lang), routesIndex(ctx, lang), fundingPage(ctx, lang), invitePage(ctx, lang), methodPage(ctx, lang), savedPage(ctx, lang), notFoundPage(ctx, lang));
+    pages.push(homePage(ctx, lang), selectorPage(ctx, lang), familiesPage(ctx, lang), routesIndex(ctx, lang), fundingPage(ctx, lang), invitePage(ctx, lang), methodPage(ctx, lang), savedPage(ctx, lang), fixesPage(ctx, lang), notFoundPage(ctx, lang));
     for (const p of ctx.data.places) pages.push(placePage(ctx, lang, p));
     for (const z of zonePagesList(ctx)) pages.push(zonePage(ctx, lang, z));
     for (const c of ctx.data.categories) pages.push(categoryPage(ctx, lang, c));
-    for (const r of ctx.data.routes.filter((x) => x.status === 'ejemplo_completo')) pages.push(routePage(ctx, lang, r));
+    for (const r of ctx.data.routes.filter((x) => routeLive(ctx, x))) pages.push(routePage(ctx, lang, r));
   }
   return pages;
 }

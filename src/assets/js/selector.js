@@ -6,7 +6,7 @@ import { summarize } from './lib/price.js';
 import { money, escapeHtml as e, clock } from './lib/format.js';
 import { statusAt } from './lib/hours.js';
 import { dayOfDate, holidayInfo } from './lib/calendar.js';
-import { copyLink } from './site.js';
+import { copyLink, track } from './site.js';
 import { parsePlan } from './lib/parse.js';
 
 const catalog = JSON.parse(document.getElementById('catalog').textContent);
@@ -48,6 +48,7 @@ function formQuery() {
     craving: v('antojo'), plan: v('plan'),
     noScreens: fd.get('sinpantallas') === '1', noPhone: fd.get('sinmovil') === '1', includeOutside: fd.get('fuera') === '1',
     likes: fd.getAll('gusto'),
+    today: new Date().toISOString().slice(0, 10),
   };
 }
 
@@ -159,6 +160,7 @@ function render(res, q) {
       res.suggestions.length ? `<p><strong>${e(ui.suggestionsTitle)}:</strong></p><div class="sugg">${res.suggestions.map((s) => `<button type="button" data-sugg="${s}">${e(ui.suggestions[s])}</button>`).join('')}</div>` : ''
     }</section>`);
   }
+  if (res.picks.length) parts.push(`<div class="feedback"><p>${e(ui.fbQuestion)}</p><button type="button" class="btn btn--ghost" data-fb="si">${e(ui.fbYes)}</button> <button type="button" class="btn btn--ghost" data-fb="no">${e(ui.fbNo)}</button><p class="small" role="status" data-fb-status></p></div>`);
   parts.push(`<p><button type="button" class="btn btn--ghost" data-copy-search>${e(ui.searchShare)}</button> <span class="small" role="status" data-copy-status></span></p>`);
   parts.push('<section class="block" id="compare" aria-live="polite"></section>');
   out.innerHTML = parts.join('');
@@ -173,6 +175,7 @@ function run(focus) {
   for (const id of [...selected]) if (!shown.has(id)) selected.delete(id);
   render(res, q);
   writeUrl();
+  track('recomendar', { zona: q.zone, antojo: q.craving, con: q.company, plan: q.plan, presupuesto: q.budget });
   if (focus) document.getElementById('results-title')?.focus();
 }
 
@@ -192,7 +195,15 @@ out.addEventListener('change', (ev) => {
 });
 
 out.addEventListener('click', (ev) => {
+  const fb = ev.target.closest('[data-fb]');
+  if (fb) {
+    track('encaja', { respuesta: fb.dataset.fb });
+    out.querySelector('[data-fb-status]').textContent = ui.fbThanks;
+    for (const b of out.querySelectorAll('[data-fb]')) b.disabled = true;
+    return;
+  }
   if (ev.target.closest('[data-copy-search]')) {
+    track('compartir_busqueda');
     copyLink(location.href, out.querySelector('[data-copy-status]'), ui.savedCopied);
     return;
   }
@@ -223,7 +234,6 @@ form.elements.fecha.addEventListener('change', () => {
 const nl = document.getElementById('nl');
 const nlOut = document.getElementById('nl-out');
 if (nl) {
-  nl.hidden = false;
   const fieldLabel = (k) => ({ zona: ui.fZone, dia: ui.fDay, hora: ui.fTime, con: ui.fCompany, presupuesto: ui.fBudget, antojo: ui.fCraving, plan: ui.fPlan, sinpantallas: ui.fNoScreens, sinmovil: ui.fNoPhone, fuera: ui.fOutside }[k] || k);
   const valueLabel = (k, v) => {
     const el = form.elements[k];

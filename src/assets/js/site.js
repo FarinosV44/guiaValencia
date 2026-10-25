@@ -55,3 +55,22 @@ export async function copyLink(url, statusEl, msg) {
   }
   if (statusEl) statusEl.textContent = msg;
 }
+
+// 6) Medición de decisiones útiles (#27), privada por diseño (#25):
+//    - Solo eventos con valores de una lista cerrada (zona, antojo, compañía, plan, tramo de presupuesto, id de local).
+//    - Nunca texto libre, coordenadas, edades ni identificadores de persona. Sin cookies.
+//    - Sin proveedor configurado (data/site.json → metrics_endpoint = null) no se envía nada.
+const ENDPOINT = document.querySelector('script[data-metrics]')?.dataset.metrics || '';
+const ALLOWED = new Set(['zona', 'antojo', 'con', 'plan', 'presupuesto', 'local', 'ruta', 'respuesta', 'lang', 'pagina']);
+export function track(event, props = {}) {
+  if (!ENDPOINT) return;
+  const clean = { e: String(event).slice(0, 40), lang: document.documentElement.lang, pagina: location.pathname };
+  for (const [k, v] of Object.entries(props)) if (ALLOWED.has(k) && v != null && /^[a-z0-9_-]{1,40}$/i.test(String(v))) clean[k] = String(v);
+  try { navigator.sendBeacon(ENDPOINT, JSON.stringify(clean)); } catch {}
+}
+document.addEventListener('click', (ev) => {
+  const a = ev.target.closest('a[href*="google.com/maps"]');
+  if (a) track('maps', { local: location.pathname.split('/').filter(Boolean).pop() });
+  const s = ev.target.closest('[data-save]');
+  if (s) track('guardar', { local: s.dataset.save });
+});

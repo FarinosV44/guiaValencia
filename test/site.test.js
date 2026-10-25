@@ -140,3 +140,11 @@ test('ninguna página deja huecos de «no sabemos» (pendiente, sin confirmar, �
     assert.ok(!gaps.test(line), `${key}: ${line}`);
   }
 });
+
+// Proveedor de rutas o mapas caído: nada depende de un script externo; Maps es solo un enlace.
+test('sin scripts de terceros: la guía funciona aunque falle cualquier proveedor externo', () => {
+  for (const p of pages) {
+    const ext = [...html[p.path].matchAll(/<script[^>]+src="(https?:)?\/\/[^"]+"/g)];
+    assert.equal(ext.length, 0, `${p.path} carga scripts externos`);
+  }
+});

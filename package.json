@@ -2,7 +2,7 @@
   "name": "donde-comer-valencia",
   "version": "0.1.0",
   "private": true,
-  "description": "Dónde comer en Valencia: guía gastronómica independiente ES/EN (generador estático, sin publicar).",
+  "description": "D\u00f3nde comer en Valencia: gu\u00eda gastron\u00f3mica independiente ES/EN (generador est\u00e1tico, sin publicar).",
   "type": "module",
   "engines": {
     "node": ">=20"
@@ -14,7 +14,8 @@
     "check": "npm run build && npm test && npm run a11y",
     "a11y": "node scripts/a11y.js",
     "screenshots": "node scripts/screenshots.js",
-    "revision": "node scripts/revision.js"
+    "revision": "node scripts/revision.js",
+    "perf": "node scripts/perf.js"
   },
   "devDependencies": {
     "axe-core": "^4.14.0",

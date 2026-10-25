@@ -291,3 +291,31 @@ test('horarios verificados el 25/10/2026: fuente y fecha registradas', () => {
   assert.equal(statusAt(data.byId.central.hours, 'mon', '11:00', { holiday: true }).state, 'cerrado', 'festivos cerrado');
   for (const id of ['canalla', 'antigua', 'montana', 'veneta-mar']) assert.equal(data.byId[id].hours.status, 'desconocido', id);
 });
+
+// ——— #26: errores de ubicación, cierre excepcional, fuente obsoleta, proveedor de rutas caído ———
+test('ubicación errónea: zona inexistente no inventa resultados y propone buscar en cualquier zona', () => {
+  const res = recommend(P, { zone: 'no-existe', likes: [] });
+  assert.equal(res.picks.length, 0);
+  assert.ok(res.suggestions.includes('quitar_zona'));
+});
+
+test('fuente obsoleta: un juego sin pantallas comprobado hace más de 60 días deja de cumplir el requisito duro', () => {
+  const q = { noScreens: true, company: 'nino_activo', likes: [] };
+  const fresh = recommend(P, { ...q, today: '2026-10-30' });
+  const stale = recommend(P, { ...q, today: '2027-02-01' });
+  assert.ok(fresh.picks.length > 0);
+  assert.equal(stale.picks.length, 0, 'todo pasa a «también pueden servir»');
+  assert.ok(stale.pending.length >= fresh.picks.length);
+});
+
+test('cierre definitivo: el local sale de recomendaciones y bloquea sus rutas completas', async () => {
+  const { routeLive } = await import('../src/render/pages.js');
+  const closed = P.map((p) => (p.id === 'gelatica' ? { ...p, closed: '2026-11-01' } : p));
+  const byId = Object.fromEntries(closed.map((p) => [p.id, p]));
+  const ctx = { data: { ...data, places: closed, byId } };
+  const r09 = data.routes.find((r) => r.id === 'R09');
+  assert.equal(routeLive({ data }, r09), true);
+  assert.equal(routeLive(ctx, r09), false);
+  const anyora = closed.map((p) => (p.id === 'anyora' ? { ...p, closed: '2026-11-01' } : p));
+  assert.ok(!recommend(anyora, { zone: 'cabanyal', likes: [] }).picks.some((x) => x.place.id === 'anyora'));
+});

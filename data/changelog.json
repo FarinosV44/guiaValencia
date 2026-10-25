@@ -1,0 +1,11 @@
+{
+ "_note": "Registro público de cambios editoriales (#22). Se añade una entrada por corrección o lote; nunca se borran. Las correcciones de usuarios y restaurantes se revisan antes de aplicarse.",
+ "entries": [
+  { "date": "2026-10-25", "es": "Nueva sección «Lo que cuentan las reseñas» en 47 fichas, con la plataforma de cada opinión.", "en": "New “What reviews say” section on 47 venue cards, with the platform for each opinion." },
+  { "date": "2026-10-25", "es": "Véneta: las opiniones de la tienda de Ribera estaban asignadas a Brodadors; corregido.", "en": "Véneta: reviews of the Ribera shop had been attributed to Brodadors; corrected." },
+  { "date": "2026-10-25", "es": "Goisushi Gran Vía sale del catálogo: no encontramos nada útil que contar de él.", "en": "Goisushi Gran Vía removed from the catalogue: we found nothing useful to say about it." },
+  { "date": "2026-10-25", "es": "Etiquetas francas con motivo, fuente y caducidad en siete locales.", "en": "Frank labels with reason, source and expiry on seven venues." },
+  { "date": "2026-10-25", "es": "Horarios y precios verificados en webs oficiales para 16 locales.", "en": "Opening hours and prices checked on official websites for 16 venues." },
+  { "date": "2026-10-24", "es": "El Baret de la Tòfona es el de Ador 47 (Castellar), no La Tòfona de Comte d’Altea 9: separados datos y críticas.", "en": "El Baret de la Tòfona is the one at Ador 47 (Castellar), not La Tòfona at Comte d’Altea 9: data and reviews kept apart." }
+ ]
+}

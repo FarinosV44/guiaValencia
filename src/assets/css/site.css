@@ -268,7 +268,7 @@ select, input[type="time"], input[type="number"], input[type="text"], input[type
 .notice--pending { border-left-color: var(--naranja-hondo); }
 .inviteform { display: grid; gap: 1rem; margin-top: 1.5rem; }
 .err { color: var(--rosa); font-weight: 700; font-size: .9rem; margin: 0; min-height: 0; }
-#inviteout pre { white-space: pre-wrap; background: var(--papel); padding: 1rem; border: 2px dashed var(--tinta); border-radius: var(--radio); font-family: var(--mono); font-size: .875rem; }
+#inviteout pre, #fixout pre { white-space: pre-wrap; background: var(--papel); padding: 1rem; border: 2px dashed var(--tinta); border-radius: var(--radio); font-family: var(--mono); font-size: .875rem; }
 
 /* Pie */
 .foot { background: var(--tinta); color: var(--crema); margin-top: 3rem; padding-block: 2rem; font-size: .92rem; }
@@ -331,3 +331,5 @@ select, input[type="time"], input[type="number"], input[type="text"], input[type
 .nlchips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
 .nlchips li { display: inline-flex; align-items: center; gap: .3rem; background: #fff0dd; border: 2px solid var(--naranja-hondo); border-radius: 999px; padding: .1rem .2rem .1rem .7rem; }
 .chipx { border: 0; background: none; font-size: 1.1rem; line-height: 1; cursor: pointer; min-width: 32px; min-height: 32px; color: var(--tinta); }
+.feedback { margin: 1rem 0; padding: .8rem 1rem; border: 2px dashed var(--linea); border-radius: var(--radio); }
+.feedback p { margin: 0 0 .5rem; }

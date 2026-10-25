@@ -7,16 +7,21 @@
 import { statusAt, isClosed } from './hours.js';
 import { budgetFit, summarize } from './price.js';
 
-export const RULES_VERSION = '2026-10-25.1';
+export const RULES_VERSION = '2026-10-25.2';
+
+// Un servicio familiar comprobado hace más de 60 días deja de contar como requisito duro cumplido (#28).
+export const KIDS_MAX_AGE_DAYS = 60;
+const ageDays = (from, to) => Math.round((Date.parse(to) - Date.parse(from)) / 86400000);
 
 const SCREEN_FREE_OK = new Set(['declarado', 'contrastado']);
 
 export function isEatingVenue(p) {
-  return (p.role || []).includes('comer') && !p.candidate_only && !!p.address;
+  return (p.role || []).includes('comer') && !p.candidate_only && !!p.address && !p.closed;
 }
 
-export function screenFreeState(p) {
+export function screenFreeState(p, today) {
   const v = p.kids?.juego_sin_pantallas || 'desconocido';
+  if (today && p.checked_on && ageDays(p.checked_on, today) > KIDS_MAX_AGE_DAYS) return 'caducado';
   return SCREEN_FREE_OK.has(v) ? 'confirmado_declarado' : v;
 }
 
@@ -69,7 +74,7 @@ function evaluate(p, q) {
   }
   const budgetPending = budget.state === 'desconocido';
 
-  const screen = screenFreeState(p);
+  const screen = screenFreeState(p, q.today);
   let screenPending = false;
   if (q.noScreens) {
     if (screen === 'confirmado_declarado') {

@@ -110,11 +110,12 @@ ${page.body}
     </div>
     <div>
       <p><a href="${PATHS.method[lang]}">${e(ui.methodH1)}</a></p>
+      <p><a href="${PATHS.fixes[lang]}">${e(ui.fixH1)}</a></p>
       <p class="foot__muted">${e(ui.footerLegal)}</p>
     </div>
   </div>
 </footer>
-<script type="module" src="/assets/js/site.js"></script>
+<script type="module" src="/assets/js/site.js" data-metrics="${e(ctx.data.site?.metrics_endpoint || '')}"></script>
 ${(page.scripts || []).map((s) => s).join('\n')}
 </body>
 </html>

@@ -83,6 +83,7 @@ export function loadData() {
   const reviews = readJson(join(DATA, 'reviews.json'));
   for (const p of places) p.reviews = reviews.places[p.id] || null;
   const labels = readJson(join(DATA, 'labels.json'));
+  const site = readJson(join(DATA, 'site.json'));
   const buildDate = process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
   for (const p of places) {
     const all = labels.assigned[p.id] || [];
@@ -92,7 +93,7 @@ export function loadData() {
   }
   const byId = Object.fromEntries(places.map((p) => [p.id, p]));
   const zoneById = Object.fromEntries(zones.map((z) => [z.id, z]));
-  return { places, byId, zones, zoneById, routes, funding, categories, festivos, reviews, labels, buildDate, root: ROOT };
+  return { places, byId, zones, zoneById, routes, funding, categories, festivos, reviews, labels, site, buildDate, root: ROOT };
 }
 
 // Validación estructural: falla el build si los datos rompen reglas editoriales comprobables.
