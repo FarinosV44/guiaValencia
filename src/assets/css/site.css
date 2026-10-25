@@ -320,3 +320,5 @@ select, input[type="time"], input[type="number"], input[type="text"], input[type
 .tag--neutral { color: var(--naranja-hondo); background: #fff0dd; }
 .labels { margin: 1rem 0; }
 .labels ul { list-style: none; padding: 0; display: grid; gap: .5rem; }
+.savedlist { list-style: none; padding: 0; }
+.linkbtn { background: none; border: 0; padding: 0; color: inherit; text-decoration: underline; text-decoration-color: var(--naranja); cursor: pointer; font: inherit; }

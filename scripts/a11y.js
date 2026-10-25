@@ -13,6 +13,7 @@ const PAGES = [
   '/', '/en/', '/estoy-por-aqui/?zona=cabanyal&dia=sat&hora=13:30', '/en/im-around-here/?antojo=asiatico&presupuesto=30', '/estoy-por-aqui/?antojo=asiatico&gusto=pescado&gusto=mucha_hambre&sinmovil=1',
   '/locales/anyora/', '/en/places/la-salita/', '/locales/petit/', '/rutas/cabanyal-comida-paseo-helado/', '/en/routes/cabanyal-lunch-stroll-ice-cream/', '/rutas/colon-comida-y-horchata/', '/en/routes/cabanyal-sastreria-stroll-ice-cream/',
   '/comer-con-ninos-valencia/', '/mejores-buffets-sushi-valencia/', '/en/esmorzar-valencia/', '/restaurantes-playa-valencia/', '/invitanos/', '/como-nos-financiamos/', '/zonas/ruzafa/', '/en/korean-bbq-valencia/',
+  '/locales/bali/', '/mi-plan/?l=kuzina,anyora', '/en/my-plan/', '/heladerias-horchaterias-cafes-valencia/', '/en/cheap-eats-valencia/', '/metodologia/', '/tapas-bravas-valencia/', '/en/asian-restaurants-valencia/',
 ];
 const VIEWPORTS = { movil: { width: 360, height: 780 }, escritorio: { width: 1366, height: 900 } };
 

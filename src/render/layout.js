@@ -55,6 +55,7 @@ export function layout(page, ctx) {
     [PATHS.families[lang], ui.navFamilies, 'families'],
     [PATHS.routes[lang], ui.navRoutes, 'routes'],
     [PATHS.funding[lang], ui.navFunding, 'funding'],
+    [PATHS.saved[lang], ui.navSaved, 'saved'],
   ]
     .map(([href, label, key]) => `<li><a href="${href}"${page.navKey === key ? ' aria-current="page"' : ''}>${e(label)}</a></li>`)
     .join('');

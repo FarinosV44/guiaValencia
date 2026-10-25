@@ -285,7 +285,7 @@ function placePage(ctx, lang, p) {
     <p class="place__meta">${e(typeLabel(p, lang))}${zone ? `, ${e(t(zone.name, lang))}` : ''}</p>
     <div class="ticket__badges">${evidenceBadge(p, ctx, lang)}${scopeBadge(p, lang)}${labelChips(p, lang)}</div>
     ${p.zone_note ? `<p class="small">${e(t(p.zone_note, lang))}</p>` : ''}
-    <p class="printrow" hidden><button type="button" class="btn btn--ghost" data-print>${e(ui.printPlan)}</button></p><p class="printnote">${e(ui.printNote(dateLabel(PRINT_DATE, lang)))}</p>
+    <p class="printrow" hidden><button type="button" class="btn btn--ghost" data-save="${e(p.id)}" data-checked="${e(p.checked_on)}" data-label="${e(ui.saveBtn)}" data-label-saved="${e(ui.savedBtn)}" aria-pressed="false">${e(ui.saveBtn)}</button> <button type="button" class="btn btn--ghost" data-print>${e(ui.printPlan)}</button></p><p class="printnote">${e(ui.printNote(dateLabel(PRINT_DATE, lang)))}</p>
   </header>
 
   <div class="verdict">
@@ -655,6 +655,33 @@ function methodPage(ctx, lang) {
   return page;
 }
 
+// ——— Mi plan (guardar y compartir sin registro, #24) ———
+function savedPage(ctx, lang) {
+  const ui = UI[lang];
+  const catalog = Object.fromEntries(ctx.data.places.map((p) => [p.id, { name: p.name, url: PATHS.place[lang](p.id), type: typeLabel(p, lang), zone: zoneName(p, ctx, lang), fits: p.text[lang].fits, checked: p.checked_on, maps: p.maps.search }]));
+  const body = `
+<div class="wrap prose">
+  <h1 class="pagetitle">${e(ui.savedH1)}</h1>
+  <p class="lead">${e(ui.savedLead)}</p>
+  <noscript><p>${e(ui.savedNoJs)}</p></noscript>
+  <div id="saved" aria-live="polite"></div>
+  <p class="printrow" hidden><button type="button" class="btn btn--ghost" data-print>${e(ui.printPlan)}</button></p>
+</div>`;
+  const page = pageBase('saved', lang, PATHS.saved[lang], PATHS.saved[other(lang)], { indexable: false, draft: false });
+  page.title = ui.savedH1;
+  page.description = ui.savedLead;
+  page.body = body;
+  page.crumbs = [{ name: ui.savedH1, path: page.path }];
+  page.navKey = 'saved';
+  page.keepQuery = true;
+  page.scripts = [
+    `<script type="application/json" id="saved-catalog">${JSON.stringify(catalog).replace(/</g, '\\u003c')}</script>`,
+    `<script type="application/json" id="saved-ui">${JSON.stringify({ lang, empty: ui.savedEmpty, shared: ui.savedShared, keep: ui.savedKeep, remove: ui.savedRemove, share: ui.savedShare, copied: ui.savedCopied, changed: ui.savedChanged, maps: ui.maps }).replace(/</g, '\\u003c')}</script>`,
+    `<script type="module" src="/assets/js/saved.js"></script>`,
+  ];
+  return page;
+}
+
 function notFoundPage(ctx, lang) {
   const ui = UI[lang];
   const page = pageBase('404', lang, lang === 'es' ? '/404.html' : '/en/404.html', null, { indexable: false, draft: false });
@@ -667,7 +694,7 @@ function notFoundPage(ctx, lang) {
 export function allPages(ctx) {
   const pages = [];
   for (const lang of LANGS) {
-    pages.push(homePage(ctx, lang), selectorPage(ctx, lang), familiesPage(ctx, lang), routesIndex(ctx, lang), fundingPage(ctx, lang), invitePage(ctx, lang), methodPage(ctx, lang), notFoundPage(ctx, lang));
+    pages.push(homePage(ctx, lang), selectorPage(ctx, lang), familiesPage(ctx, lang), routesIndex(ctx, lang), fundingPage(ctx, lang), invitePage(ctx, lang), methodPage(ctx, lang), savedPage(ctx, lang), notFoundPage(ctx, lang));
     for (const p of ctx.data.places) pages.push(placePage(ctx, lang, p));
     for (const z of zonePagesList(ctx)) pages.push(zonePage(ctx, lang, z));
     for (const c of ctx.data.categories) pages.push(categoryPage(ctx, lang, c));

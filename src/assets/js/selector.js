@@ -6,6 +6,7 @@ import { summarize } from './lib/price.js';
 import { money, escapeHtml as e, clock } from './lib/format.js';
 import { statusAt } from './lib/hours.js';
 import { dayOfDate, holidayInfo } from './lib/calendar.js';
+import { copyLink } from './site.js';
 
 const catalog = JSON.parse(document.getElementById('catalog').textContent);
 const lang = catalog.lang;
@@ -157,6 +158,7 @@ function render(res, q) {
       res.suggestions.length ? `<p><strong>${e(ui.suggestionsTitle)}:</strong></p><div class="sugg">${res.suggestions.map((s) => `<button type="button" data-sugg="${s}">${e(ui.suggestions[s])}</button>`).join('')}</div>` : ''
     }</section>`);
   }
+  parts.push(`<p><button type="button" class="btn btn--ghost" data-copy-search>${e(ui.searchShare)}</button> <span class="small" role="status" data-copy-status></span></p>`);
   parts.push('<section class="block" id="compare" aria-live="polite"></section>');
   out.innerHTML = parts.join('');
   renderCompare();
@@ -189,6 +191,10 @@ out.addEventListener('change', (ev) => {
 });
 
 out.addEventListener('click', (ev) => {
+  if (ev.target.closest('[data-copy-search]')) {
+    copyLink(location.href, out.querySelector('[data-copy-status]'), ui.savedCopied);
+    return;
+  }
   const b = ev.target.closest('button[data-sugg]');
   if (!b) return;
   const s = b.dataset.sugg;
