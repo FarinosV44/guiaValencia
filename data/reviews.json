@@ -11,7 +11,9 @@
   "tripadvisor": "TripAdvisor",
   "michelin": "Guía Michelin",
   "mapstr": "Mapstr",
-  "prensa": "prensa"
+  "prensa": "prensa",
+  "spinach": "Spinach",
+  "spottedbylocals": "Spotted by Locals"
  },
  "places": {
   "canalla": {
@@ -978,22 +980,22 @@
   },
   "veneta-brodadors": {
    "verdict": {
-    "es": "Gelato premiado de textura fina y poco empalagoso; algo caro.",
-    "en": "Award-winning gelato, smooth and not too sweet; a bit pricey."
+    "es": "Gelato premiado de buena textura; ojo a los suplementos de algunos sabores el fin de semana.",
+    "en": "Award-winning gelato with good texture; watch out for weekend surcharges on some flavours."
    },
    "points": [
     {
      "aspect": "cocina",
      "tone": "+",
-     "es": "Buena textura y poco empalagoso; pistacho y avellana, elogiados.",
-     "en": "Good texture and not too sweet; pistachio and hazelnut praised.",
+     "es": "Buena textura y poco empalagoso.",
+     "en": "Good texture and not too sweet.",
      "src": "wanderlog"
     },
     {
      "aspect": "precio",
      "tone": "-",
-     "es": "Algo caro.",
-     "en": "A bit pricey.",
+     "es": "Algo caro, y algunos sabores llevan suplemento el fin de semana.",
+     "en": "A bit pricey, and some flavours carry a weekend surcharge.",
      "src": "wanderlog"
     },
     {
@@ -1248,6 +1250,229 @@
      "tone": "+",
      "es": "La prensa lo resume como «un bar muy bar».",
      "en": "The press sums it up as “a very bar-like bar”.",
+     "src": "prensa"
+    }
+   ]
+  },
+  "antigua": {
+   "verdict": {
+    "es": "Helado de obrador con muchas opciones veganas y trato que sabe lo que vende; para llevar y comerlo en la plaza.",
+    "en": "House-made ice cream with lots of vegan flavours and staff who know their stuff; take it away and eat it in the square."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Avellana, lemon pie, chocolate negro y limón con albahaca, entre los más nombrados; muchas opciones veganas.",
+     "en": "Hazelnut, lemon pie, dark chocolate and lemon-basil are among the most mentioned; lots of vegan flavours.",
+     "src": "spinach"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Dueños y personal cercanos y expertos, también con lo vegano.",
+     "en": "Owners and staff friendly and expert, vegan options included.",
+     "src": "spinach"
+    },
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Asequible para lo que es.",
+     "en": "Affordable for what it is.",
+     "src": "spottedbylocals"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "En invierno hay menos sabores veganos.",
+     "en": "Fewer vegan flavours in winter.",
+     "src": "spinach"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "-",
+     "es": "Poco sitio para sentarse: mejor para llevar.",
+     "en": "Little seating: better as takeaway.",
+     "src": "spottedbylocals"
+    }
+   ]
+  },
+  "veneta-ribera": {
+   "verdict": {
+    "es": "El Véneta con sitio arriba para sentarse; pistacho y avellana, lo más celebrado.",
+    "en": "The Véneta with seating upstairs; pistachio and hazelnut are the favourites."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Pistacho y avellana destacan; buena textura y poco empalagoso.",
+     "en": "Pistachio and hazelnut stand out; good texture, not too sweet.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Sitio acogedor arriba para sentarse.",
+     "en": "A cosy seating area upstairs.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "precio",
+     "tone": "-",
+     "es": "Hay quien lo encuentra caro.",
+     "en": "Some find it expensive.",
+     "src": "wanderlog"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "Algún comentario de trato seco.",
+     "en": "Some comments about curt staff.",
+     "src": "wanderlog"
+    }
+   ]
+  },
+  "sastreria": {
+   "verdict": {
+    "es": "La cocina convence más que la sala: producto local muy bien tratado en un espacio más frío que acogedor.",
+    "en": "The food convinces more than the room: local produce handled very well in a space that feels cool rather than cosy."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Lo más elogiado: gambas, croquetas, anchoas y platos sabrosos de producto local.",
+     "en": "The most praised: prawns, croquettes, anchovies and tasty dishes built on local produce.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "El personal de barra, muy valorado; buscaron mesa a un grupo.",
+     "en": "Bar staff highly rated; they found a table for a group.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "-",
+     "es": "Hay quien ve la sala fría o austera.",
+     "en": "Some find the room cold or austere.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "Algún comentario de servicio correcto pero poco cálido y de vajilla desportillada.",
+     "en": "Some comments about correct but not warm service, and chipped crockery.",
+     "src": "gastroranking"
+    }
+   ]
+  },
+  "pascuala": {
+   "verdict": {
+    "es": "Bocadillos enormes a buen precio en una bodega de toda la vida; id temprano y con paciencia.",
+    "en": "Huge sandwiches at a fair price in an old-school bodega; go early and be patient."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Bocadillos enormes y sabrosos: medio basta; la tortilla y el cremaet, elogiados.",
+     "en": "Huge, tasty sandwiches: a half is plenty; the tortilla and the cremaet are praised.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Precio modesto para la ración.",
+     "en": "Modest prices for the portion.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "reserva",
+     "tone": "-",
+     "es": "Se llena rápido y hay esperas largas.",
+     "en": "It fills up fast and waits are long.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "-",
+     "es": "Servicio lento en hora punta y algún trato seco.",
+     "en": "Slow service at peak times and some curt staff.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "Hay quien ve demasiado pan o nota que ha bajado el nivel.",
+     "en": "Some find too much bread or feel standards have slipped.",
+     "src": "gastroranking"
+    }
+   ]
+  },
+  "lambrus-caballeros": {
+   "verdict": {
+    "es": "Pasta y postres a buen precio en un callejón con terraza; mejor a la carta que el menú degustación.",
+    "en": "Good-value pasta and desserts in an alley with a terrace; better à la carte than the tasting menu."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Buena pasta y buenos postres.",
+     "en": "Good pasta and good desserts.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "+",
+     "es": "Acogedor, con terraza en un callejón.",
+     "en": "Cosy, with a terrace in a small alley.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "precio",
+     "tone": "+",
+     "es": "Precio justo.",
+     "en": "Fair prices.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "cocina",
+     "tone": "-",
+     "es": "El menú degustación no compensa, según algunas reseñas.",
+     "en": "The tasting menu isn’t worth it, according to some reviews.",
+     "src": "gastroranking"
+    },
+    {
+     "aspect": "ambiente",
+     "tone": "-",
+     "es": "Sala algo oscura.",
+     "en": "The room is a bit dark.",
+     "src": "gastroranking"
+    }
+   ]
+  },
+  "komori": {
+   "verdict": {
+    "es": "La crítica gastronómica destaca el nigiri con guiño valenciano y una sala que funciona como un reloj.",
+    "en": "Food critics highlight the nigiri with a Valencian twist and a room that runs like clockwork."
+   },
+   "points": [
+    {
+     "aspect": "cocina",
+     "tone": "+",
+     "es": "Nigiris japoneses con producto mediterráneo, como el de anguila.",
+     "en": "Japanese nigiri with Mediterranean produce, such as the eel one.",
+     "src": "prensa"
+    },
+    {
+     "aspect": "servicio",
+     "tone": "+",
+     "es": "Jefe de sala ejemplar y servicio preciso.",
+     "en": "An exemplary head waiter and precise service.",
      "src": "prensa"
     }
    ]

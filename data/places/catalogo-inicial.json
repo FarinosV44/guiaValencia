@@ -69,7 +69,7 @@
       "text": {"es": {"offer": "Gelato italiano premiado, a un paso de la Catedral.", "fits": "Una parada dulce compacta hacia la Catedral y la plaza de la Virgen.", "not_for": "Quien odia las colas: en hora punta las hay.", "order": "Galleta de la abuela, la que la hizo famosa; Pistacchio Paradise o naranja de Sicilia si buscáis algo menos dulce.", "may_disappoint": "Las reseñas la ven algo cara y el trato a veces seco. Los premios (mejor helado de España y de Europa en el Gelato Festival) no garantizan que cada sabor os guste.", "before": "Pedid probar antes de elegir. Si hay cola, Véneta Ribera tiene sitio para sentarse arriba."}, "en": {"offer": "Award-winning Italian gelato, a step from the Cathedral.", "fits": "A compact sweet stop on the way to the Cathedral and Plaza de la Virgen.", "not_for": "Anyone who hates queues: there are some at peak times.", "order": "Galleta de la abuela (grandma’s biscuit), the flavour that made its name; Pistacchio Paradise or Sicilian orange if you want something less sweet.", "may_disappoint": "Reviews find it a bit pricey and the service sometimes curt. The awards (best gelato in Spain and Europe at the Gelato Festival) don’t guarantee you’ll like every flavour.", "before": "Ask to taste before choosing. If there is a queue, Véneta Ribera has seating upstairs."}},
       "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.venetagelato.com/"},
-      "sources": ["https://www.venetagelato.com/", "https://valenciasecreta.com/helados-valencia/", "https://wanderlog.com/place/details/1522465", "https://www.valenciabonita.es/2024/06/20/mejor-helado-de-espana-2024/"]
+      "sources": ["https://www.venetagelato.com/", "https://valenciasecreta.com/helados-valencia/", "https://www.valenciabonita.es/2024/06/20/mejor-helado-de-espana-2024/", "https://wanderlog.com/place/details/1142403"]
     },
     {
       "id": "central", "name": "Central Bar", "type": "bar", "role": ["comer"],
@@ -157,7 +157,7 @@
       "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://antigualecheria.com/contacto"},
       "evidence_awards": [ { "label": { "es": "Solete Guía Repsol (ficha consultada)", "en": "Guía Repsol 'Solete' (listing checked)" }, "url": "https://www.guiarepsol.com/es/fichas/solete/antigua-lecheria-335606/", "year": null } ],
-      "sources": ["https://www.guiarepsol.com/es/fichas/solete/antigua-lecheria-335606/", "https://antigualecheria.com/", "https://intravel.net/valencia/restaurants-cafes/antigua-lecheria"]
+      "sources": ["https://www.guiarepsol.com/es/fichas/solete/antigua-lecheria-335606/", "https://antigualecheria.com/", "https://intravel.net/valencia/restaurants-cafes/antigua-lecheria", "https://spinach.guide/venues/antigua-lecheria-valencia-49653/"]
     },
     {
       "id": "bluebell", "name": "Bluebell Coffee", "type": "cafeteria", "role": ["cafe"],
@@ -326,7 +326,7 @@
         "source": "https://lasastreriavalencia.com/home/"
       },
       "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"mon": [["19:30", "24:30"]], "tue": [["19:30", "24:30"]], "wed": [["19:30", "24:30"]], "thu": [["13:00", "17:00"], ["19:30", "24:30"]], "fri": [["13:00", "17:00"], ["19:30", "24:30"]], "sat": [["13:00", "17:00"], ["19:30", "24:30"]], "sun": [["13:00", "17:00"], ["19:30", "24:30"]]}, "note": {"es": "Horario de su web: lunes a miércoles solo cenas; de jueves a domingo, comidas y cenas.", "en": "Hours from its website: Monday to Wednesday dinner only; Thursday to Sunday lunch and dinner."}, "source": "https://lasastreriavalencia.com/en/"},
-      "sources": ["https://lasastreriavalencia.com/home/", "https://www.visitvalencia.com/que-hacer-valencia/gastronomia/restaurantes-valencia/sastreria", "https://visitvalencia.com/en/what-to-do-valencia/gastronomy/where-to-eat-restaurant-valencia/sastreria"]
+      "sources": ["https://lasastreriavalencia.com/home/", "https://www.visitvalencia.com/que-hacer-valencia/gastronomia/restaurantes-valencia/sastreria", "https://visitvalencia.com/en/what-to-do-valencia/gastronomy/where-to-eat-restaurant-valencia/sastreria", "https://gastroranking.es/r/la-sastreria-6_211946/"]
     },
     {
       "id": "gelatica", "name": "Gelática Ice Concept", "type": "heladería-pastelería", "role": ["postre"],
@@ -384,7 +384,7 @@
       "text": {"es": {"offer": "Gelato en el paseo marítimo.", "fits": "Helado en el paseo marítimo, en el mismo paseo que La Pepica.", "not_for": "Confundirla con la sucursal de Ribera.", "order": "Los clásicos de Véneta: galleta de la abuela, pistacho o naranja de Sicilia.", "may_disappoint": "Algo cara para una bola, como toda la casa según las reseñas.", "before": "Fuera de temporada el horario cambia: si vais tarde, llamad."}, "en": {"offer": "Gelato on the seafront promenade.", "fits": "Ice cream on the seafront promenade, the same one as La Pepica.", "not_for": "Confusing it with the Ribera branch.", "order": "The Véneta classics: grandma’s biscuit, pistachio or Sicilian orange.", "may_disappoint": "A bit pricey for a scoop, like the whole chain according to reviews.", "before": "Out of season the hours change: if you are going late, call."}},
       "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.venetagelato.com/"},
-      "sources": ["https://www.venetagelato.com/", "https://wanderlog.com/place/details/1522465"]
+      "sources": ["https://www.venetagelato.com/"]
     },
     {
       "id": "gato", "name": "Gato Blanco", "type": "restaurante familiar", "role": ["comer", "juego"],

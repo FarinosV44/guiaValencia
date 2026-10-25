@@ -163,7 +163,7 @@
         "source": "https://lambrusqueria.com/wp-content/uploads/2025/12/LAMBRUSQUERIA-CARTA-CABALLEROS-WEB.pdf"
       },
       "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "La web del grupo indica «cerrado domingo noche, lunes y martes» sin decir a qué local se refiere; no lo aplicamos a Caballeros hasta confirmarlo.", "en": "The group’s website says ‘closed Sunday evening, Mondays and Tuesdays’ without saying which branch; we don’t apply it to Caballeros until confirmed."}, "source": "https://lambrusqueria.com/reservation/"},
-      "sources": ["https://lambrusqueria.com/wp-content/uploads/2025/12/LAMBRUSQUERIA-CARTA-CABALLEROS-WEB.pdf", "https://lambrusqueria.com/"]
+      "sources": ["https://lambrusqueria.com/wp-content/uploads/2025/12/LAMBRUSQUERIA-CARTA-CABALLEROS-WEB.pdf", "https://lambrusqueria.com/", "https://gastroranking.es/r/lambrusqueria-2_184891/"]
     },
     {
       "id": "eter-artes", "name": "Éter Artes y Ciencias", "type": "barbacoa coreana a la carta", "role": ["comer"],
