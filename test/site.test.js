@@ -124,3 +124,19 @@ test('Fernandet se presenta como excursión fuera de la ciudad', () => {
   assert.match(html['/locales/fernandet/'], /badge--away">Excursión/);
   assert.match(html['/en/places/fernandet/'], /badge--away">Day trip/);
 });
+
+// Esto es una guía: lo que no sabemos no se dice, pero tampoco se deja como hueco.
+test('ninguna página deja huecos de «no sabemos» (pendiente, sin confirmar, ¿?…)', () => {
+  const gaps = /¿\?|\bpendientes?\b|sin confirmar|desconocid|sin dato|no verificad|sin verificar|por confirmar|por verificar|no sabemos|sin cata|sin reseñas|reseñas revisadas|no documentad|sin documentar|sin precio|not confirmed|unconfirmed|\bpending\b|unknown|no data|not verified|to be confirmed|we don’t know|not documented|no documented/i;
+  const textOf = (h) => h.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ');
+  for (const p of pages) {
+    const m = textOf(html[p.path]).match(gaps);
+    assert.ok(!m, `${p.path}: «${m && m[0]}»`);
+  }
+  // También los textos que el selector pinta en el navegador.
+  const ui = readFileSync(join(DIST, 'assets/js/i18n.js'), 'utf8');
+  for (const key of ['pendingTitle', 'pendingLead', 'continuationNone', 'kidsNoInfo']) {
+    const line = ui.split('\n').filter((l) => l.includes(key + ':')).join(' ');
+    assert.ok(!gaps.test(line), `${key}: ${line}`);
+  }
+});

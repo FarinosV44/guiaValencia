@@ -46,9 +46,11 @@ export function receipt(place, lang) {
     if (p.example.note) rows.push(`<p class="rc__note">${e(t(p.example.note, lang))}</p>`);
   }
 
+  // Solo enseñamos lo que sabemos: un concepto sin dato no ocupa fila.
   const compRows = COMPONENTS.map((k) => {
     const st = s.components.find((c) => c.key === k).status;
-    const open = ['aparte', 'obligatoria_aparte', 'desconocido'].includes(st);
+    if (st === 'desconocido' || !ui.includes[st]) return '';
+    const open = ['aparte', 'obligatoria_aparte'].includes(st);
     return `<tr class="${open ? 'is-open' : ''}"><td>${e(ui.components[k])}</td><td class="num">${e(ui.includes[st])}</td></tr>`;
   }).join('');
 
@@ -75,15 +77,16 @@ export function receipt(place, lang) {
   if (p.kids_cost) extra.push(`<p><strong>${e(ui.receiptKids)}:</strong> ${e(t(p.kids_cost, lang))}</p>`);
   if (p.note) extra.push(`<p class="rc__note">${e(t(p.note, lang))}</p>`);
 
-  const empty = s.label === 'sin_precio' ? `<p class="rc__empty">${e(ui.receiptNoPrice)}</p>` : '';
-  const warn = !s.complete && s.label !== 'sin_precio' ? `<p class="rc__warn">${e(ui.receiptNotFull)}</p>` : '';
+  // Sin precio publicado no hay cuenta que explicar: la ficha guía con el resto.
+  if (s.label === 'sin_precio' && !(p.lines || []).length && !p.minimum && !p.kids_cost) return '';
+  const warn = s.exampleTotal != null || s.base != null ? `<p class="rc__warn">${e(ui.receiptNotFull)}</p>` : '';
   const src = p.source ? `<p class="rc__src"><a href="${e(p.source)}" rel="nofollow noopener">${e(new URL(p.source).hostname.replace(/^www\./, ''))}</a>, ${e(dateLabel(place.checked_on, lang))}</p>` : '';
 
   return `<section class="receipt" aria-label="${e(ui.receiptTitle)}">
 <h2 class="rc__title">${e(ui.receiptTitle)}</h2>
-${empty}${rows.join('')}
+${rows.join('')}
 ${total}
-<table class="rc__comp"><tbody>${compRows}</tbody></table>
+${compRows ? `<table class="rc__comp"><tbody>${compRows}</tbody></table>` : ''}
 ${warn}
 ${lines}
 ${extra.join('')}
@@ -95,14 +98,15 @@ ${src}
 export function hoursBlock(place, lang) {
   const ui = UI[lang];
   const h = place.hours || { status: 'desconocido' };
-  const status = `<p class="hours__status hours__status--${h.status}">${e(ui.hoursStatus[h.status] || ui.hoursStatus.desconocido)}</p>`;
+  const known = h.weekly && Object.keys(h.weekly).length;
+  if (!known && !h.service && h.status !== 'contradictorio' && (!h.note || h.status === 'desconocido')) return '';
+  const status = ui.hoursStatus[h.status] ? `<p class="hours__status hours__status--${h.status}">${e(ui.hoursStatus[h.status])}</p>` : '';
   let table = '';
   if (h.weekly) {
-    table = `<table class="hours"><tbody>${DAYS.map((d) => {
+    table = `<table class="hours"><tbody>${DAYS.filter((d) => h.weekly[d] !== undefined).map((d) => {
       const v = h.weekly[d];
       let txt;
-      if (v === undefined) txt = `<span class="unk">${e(ui.unknownDay)}</span>`;
-      else if (Array.isArray(v) && v.length === 0) txt = e(ui.closed);
+      if (Array.isArray(v) && v.length === 0) txt = e(ui.closed);
       else if (Array.isArray(v)) txt = v.map(([a, b]) => `${clock(a)}–${clock(b)}`).join(', ');
       else txt = e(ui.slotsOnly(v.slots.map((x) => ui.slotNames[x]).join(' + ')));
       return `<tr><th scope="row">${e(DAY_NAMES[lang][d])}</th><td>${txt}</td></tr>`;
@@ -110,7 +114,7 @@ export function hoursBlock(place, lang) {
   }
   if (h.service) table += `<p>${e(ui.serviceHours)}: ${h.service.map(([a, b]) => `${clock(a)}–${clock(b)}`).join(', ')}</p>`;
   const src = h.source ? `<p class="small">${e(ui.hoursSource)}: <a href="${e(h.source)}" rel="nofollow noopener">${e(new URL(h.source).hostname.replace(/^www\./, ''))}</a>${h.checked_on ? `, ${e(dateLabel(h.checked_on, lang))}` : ''}</p>` : '';
-  const hol = h.holidays === 'cerrado' ? `<p class="small">${e(ui.holidaysClosed)}</p>` : h.status !== 'desconocido' ? `<p class="small">${e(ui.holidaysUnknown)}</p>` : '';
+  const hol = h.holidays === 'cerrado' ? `<p class="small">${e(ui.holidaysClosed)}</p>` : '';
   const kitchen = h.kitchen && !h.note ? `<p class="small">${e(ui.kitchenHours)}</p>` : '';
   const note = h.note ? `<p class="small">${e(t(h.note, lang))}</p>` : '';
   return `${status}${table}${kitchen}${note}${hol}${src}`;
@@ -123,16 +127,16 @@ export function kidsBlock(place, lang, { full = false } = {}) {
   const ui = UI[lang];
   const k = place.kids || {};
   const known = KID_ATTRS.filter((a) => k[a] && k[a] !== 'desconocido');
-  if (!full && known.length === 0 && !k.edades && !k.acompanamiento) return `<p>${e(ui.kidsNoInfo)}</p>`;
-  const rows = KID_ATTRS.map((a) => {
-    const v = k[a] || 'desconocido';
+  if (known.length === 0 && !k.edades && !k.acompanamiento && !place.price?.kids_cost) return '';
+  const rows = known.map((a) => {
+    const v = k[a];
     return `<tr><th scope="row">${e(ui.kidsAttrs[a])}</th><td><span class="kv kv--${v}">${e(ui.kidsValues[v])}</span></td></tr>`;
   }).join('');
   const extra = [];
   if (k.edades) extra.push(`<p><strong>${e(ui.kidsAges)}:</strong> ${e(t(k.edades, lang))}</p>`);
   if (k.acompanamiento) extra.push(`<p><strong>${e(ui.kidsCompany)}:</strong> ${e(t(k.acompanamiento, lang))}</p>`);
   if (place.price?.kids_cost) extra.push(`<p><strong>${e(ui.kidsCost)}:</strong> ${e(t(place.price.kids_cost, lang))}</p>`);
-  return `<table class="kids"><tbody>${rows}</tbody></table>${extra.join('')}`;
+  return `${rows ? `<table class="kids"><tbody>${rows}</tbody></table>` : ''}${extra.join('')}`;
 }
 
 // ——— Evidencias ———
@@ -142,7 +146,6 @@ export function evidenceBlock(place, ctx, lang) {
   for (const ev of place.evidence) groups[ev.kind].push(ev);
   const out = [];
   out.push(`<p class="disclosure">${e(ui.disclosureDocumental)}</p>`);
-  if (!groups.visita_propia.length) out.push(`<p>${e(ui.evidenceNoVisit)}</p>`);
   out.push('<dl class="evidence">');
   if (groups.documental.length) {
     out.push(`<dt>${e(ui.evidenceKinds.documental)}</dt><dd><ul>${groups.documental.map((x) => `<li><a href="${e(x.url)}" rel="nofollow noopener">${e(x.domain)}</a></li>`).join('')}</ul><span class="small">${e(ui.checked)} ${e(dateLabel(place.checked_on, lang))}</span></dd>`);
@@ -166,7 +169,7 @@ export function placeCard(place, ctx, lang, { headingLevel = 3, showZone = true 
   let priceLine;
   if (s.exampleTotal != null) priceLine = `${m(s.perPerson)} ${ui.receiptPerPerson}, ${ui.receiptPartial.toLowerCase()}`;
   else if (s.base != null) priceLine = `${m(s.base)} ${ui.receiptPerPerson}, ${lang === 'es' ? 'base' : 'base price'}`;
-  else priceLine = ui.bands.pendiente;
+  else priceLine = '';
   const hTag = `h${headingLevel}`;
   const href = PATHS.place[lang](place.id);
   const icoName = CRAVING_ICON[(place.cravings || [])[0]] || 'pin';
@@ -178,10 +181,10 @@ export function placeCard(place, ctx, lang, { headingLevel = 3, showZone = true 
       <p class="ticket__meta">${e(typeLabel(place, lang))}${showZone && place.zone ? `, ${e(zoneName(place, ctx, lang))}` : ''}</p>
     </div>
   </div>
-  <div class="ticket__badges">${evidenceBadge(place, ctx, lang)}${scopeBadge(place, lang)}${place.branch_pending ? `<span class="badge badge--warn">${e(lang === 'es' ? 'Sucursal por confirmar' : 'Branch to confirm')}</span>` : ''}${place.candidate_only ? `<span class="badge badge--warn">${e(lang === 'es' ? 'Candidato, sin recomendar' : 'Candidate, not recommended')}</span>` : ''}</div>
+  <div class="ticket__badges">${evidenceBadge(place, ctx, lang)}${scopeBadge(place, lang)}${place.branch_pending ? `<span class="badge badge--warn">${e(lang === 'es' ? 'Varias sucursales' : 'Several branches')}</span>` : ''}${place.candidate_only ? `<span class="badge badge--warn">${e(lang === 'es' ? 'Solo para curiosos' : 'For the curious')}</span>` : ''}</div>
   <p class="ticket__fits">${e(tx.fits)}</p>
   <p class="ticket__catch"><strong>${e(ui.catch)}:</strong> ${e(tx.not_for)}</p>
-  <p class="ticket__price"><span class="num">${e(priceLine)}</span></p>
+  ${priceLine ? `<p class="ticket__price"><span class="num">${e(priceLine)}</span></p>` : ''}
 </article>`;
 }
 
@@ -192,7 +195,7 @@ export function compareTable(places, ctx, lang) {
   const rows = places.map((p) => {
     const s = summarize(p.price);
     const comp = (k) => ui.includes[s.components.find((x) => x.key === k).status];
-    return `<tr><th scope="row"><a href="${PATHS.place[lang](p.id)}">${e(p.name)}</a></th><td class="num">${s.base != null ? m(s.base) : ui.unknownMark}</td><td>${e(comp('bebida'))}</td><td>${e(comp('postre'))}</td><td>${e(ui.hoursStatus[p.hours?.status || 'desconocido'])}</td></tr>`;
+    return `<tr><th scope="row"><a href="${PATHS.place[lang](p.id)}">${e(p.name)}</a></th><td class="num">${s.base != null ? m(s.base) : ui.unknownMark}</td><td>${e(comp('bebida'))}</td><td>${e(comp('postre'))}</td><td>${e(ui.hoursStatus[p.hours?.status] || ui.unknownMark)}</td></tr>`;
   }).join('');
   return `<div class="compare" role="region" aria-label="${e(ui.compareTitle)}" tabindex="0"><table><caption>${e(ui.compareTitle)}</caption><thead><tr><th scope="col">${e(c.name)}</th><th scope="col">${e(c.base)}</th><th scope="col">${e(c.drink)}</th><th scope="col">${e(c.dessert)}</th><th scope="col">${e(c.hours)}</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 }

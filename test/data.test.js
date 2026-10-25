@@ -53,7 +53,7 @@ test('premios con año o pendiente explícito; Gastroadictos es premio al grupo'
 test('Fernandet no promete esmorzar matinal', () => {
   const f = data.byId.fernandet;
   for (const [, v] of Object.entries(f.hours.weekly)) for (const [open] of v) assert.ok(open >= '13:00');
-  assert.match(f.text.es.not_for, /no confirma esmorzar/);
+  assert.match(f.text.es.not_for, /no para esmorzar/);
 });
 
 test('la declaración «nadie nos paga» cambia sola al registrar financiación', () => {

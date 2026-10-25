@@ -32,7 +32,7 @@ export function reviewQueue(data, today) {
       if (!s.baseConfirmed) items.push(['precio', 'Precio publicado por terceros: ratificar con el local']);
       if (s.openComponents.length) items.push(['precio', `Falta saber: ${s.openComponents.map((k) => LABEL[k]).join(', ')}`]);
       if (s.compulsoryUnknown.length) items.push(['precio', `Consumo obligatorio sin importe: ${s.compulsoryUnknown.map((k) => LABEL[k]).join(', ')}`]);
-      if (p.price?.kids_cost && /contradict/i.test(p.price.kids_cost.es)) items.push(['infantil', 'Coste infantil contradictorio']);
+      if (p.price?.kids_cost && /contradict|cifras distintas/i.test(p.price.kids_cost.es)) items.push(['infantil', 'Coste infantil contradictorio']);
 
       const familyRelevant = (p.tags || []).some((t) => t === 'familia_bebe' || t === 'nino_activo') || p.kids?.espacio_juego;
       if (familyRelevant) {

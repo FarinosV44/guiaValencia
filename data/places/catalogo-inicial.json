@@ -6,24 +6,7 @@
       "scope": "valencia", "zone": "carmen", "address": "Blanqueries, 12",
       "cravings": ["mediterranea", "valenciano"], "tags": ["pareja", "sobremesa", "visitante"], "likes": ["cita_tranquila"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Menús de temporada.",
-          "fits": "Comer con calma y conversar; buen candidato a buena relación calidad-precio si vas al menú.",
-          "not_for": "Dar libertad de movimiento a un niño activo: nada indica espacio para ello.",
-          "order": "El menú ejecutivo de mediodía laborable es el punto de partida documentado más ajustado.",
-          "may_disappoint": "Si esperas una estrella Michelin: aparece en la guía Michelin, pero la fuente consultada no acredita estrella (una reseña lo confunde).",
-          "before": "Ya incluye postre: no hace falta un segundo dulce. Acceso con carrito: una reseña y una guía discrepan sobre escalones."
-        },
-        "en": {
-          "offer": "Seasonal set menus.",
-          "fits": "A calm meal with conversation; a good value candidate if you take the set menu.",
-          "not_for": "Giving an active child room to move: nothing suggests space for it.",
-          "order": "The weekday lunch set menu is the most affordable documented starting point.",
-          "may_disappoint": "If you expect a Michelin star: it is listed in the Michelin Guide, but the source we checked shows no star (one review gets this wrong).",
-          "before": "Dessert is already included, so no need for a second sweet stop. Pushchair access: a review and a guide disagree about steps."
-        }
-      },
+      "text": {"es": {"offer": "Menús de temporada.", "fits": "Comer con calma y conversar; buen candidato a buena relación calidad-precio si vas al menú.", "not_for": "Dar libertad de movimiento a un niño activo: nada indica espacio para ello.", "order": "El menú ejecutivo de mediodía entre semana: es la forma más ajustada de conocer la casa.", "may_disappoint": "Si esperas una estrella Michelin: aparece en la guía Michelin, pero la fuente consultada no acredita estrella (una reseña lo confunde).", "before": "Ya incluye postre: no hace falta un segundo dulce. Con carrito, preguntad por los escalones al reservar."}, "en": {"offer": "Seasonal set menus.", "fits": "A calm meal with conversation; a good value candidate if you take the set menu.", "not_for": "Giving an active child room to move: nothing suggests space for it.", "order": "The weekday lunch set menu: the most affordable way to get to know the place.", "may_disappoint": "If you expect a Michelin star: it is listed in the Michelin Guide, but the source we checked shows no star (one review gets this wrong).", "before": "Dessert is already included: no need for a second sweet. With a pushchair, ask about steps when you book."}},
       "price": {
         "per_adult_base": 27, "base_overrides": {"sat": 32, "festivo": 32},
         "basis": { "es": "menú ejecutivo de lunes a viernes", "en": "weekday set lunch (Mon–Fri)" },
@@ -37,7 +20,7 @@
         "note": { "es": "IVA incluido según la web.", "en": "VAT included according to the website." },
         "source": "https://restauranteblanqueries.com/"
       },
-      "hours": { "status": "parcial", "weekly": { "mon": {"slots": ["comida", "cena"]}, "tue": {"slots": ["comida", "cena"]}, "wed": {"slots": ["comida", "cena"]}, "thu": {"slots": ["comida", "cena"]}, "fri": {"slots": ["comida", "cena"]}, "sat": {"slots": ["comida", "cena"]} }, "note": { "es": "Lunes a sábado, comida y cena; horas exactas y festivos por confirmar.", "en": "Monday to Saturday, lunch and dinner; exact times and holidays to be confirmed." } },
+      "hours": {"status": "parcial", "weekly": {"mon": {"slots": ["comida", "cena"]}, "tue": {"slots": ["comida", "cena"]}, "wed": {"slots": ["comida", "cena"]}, "thu": {"slots": ["comida", "cena"]}, "fri": {"slots": ["comida", "cena"]}, "sat": {"slots": ["comida", "cena"]}}, "note": {"es": "Lunes a sábado, comida y cena.", "en": "Monday to Saturday, lunch and dinner."}},
       "kids": { "carrito": "contradictorio" },
       "sources": ["https://restauranteblanqueries.com/", "https://guide.michelin.com/es/es/comunidad-valenciana/valencia/restaurante/blanqueries"]
     },
@@ -45,24 +28,7 @@
       "id": "rentaora", "name": "La Rentaora", "type": "taberna", "role": ["comer"],
       "scope": "valencia", "zone": "carmen", "address": "Plaça de Mossén Sorell, 11",
       "cravings": ["tapas"], "tags": ["amigos", "rapido", "visitante"],
-      "text": {
-        "es": {
-          "offer": "Tapas, embutidos, quesos y vino.",
-          "fits": "Picar algo y seguir paseando por El Carmen.",
-          "not_for": "Una cena completa con hambre de verdad: es picoteo.",
-          "order": "Sin pedido documentado por reseñas; la carta publica, por ejemplo, provolone.",
-          "may_disappoint": "No hemos verificado tamaños ni una cuenta final: no la llamamos chollo.",
-          "before": "Horario pendiente de confirmar."
-        },
-        "en": {
-          "offer": "Tapas, cured meats, cheese and wine.",
-          "fits": "A snack before carrying on through El Carmen.",
-          "not_for": "A full dinner when you are properly hungry: this is grazing.",
-          "order": "No review-based order documented; the menu lists, for example, provolone.",
-          "may_disappoint": "We have not checked portion sizes or a final bill, so we do not call it a bargain.",
-          "before": "Opening hours still to be confirmed."
-        }
-      },
+      "text": {"es": {"offer": "Tapas, embutidos, quesos y vino.", "fits": "Picar algo y seguir paseando por El Carmen.", "not_for": "Una cena completa con hambre de verdad: es picoteo.", "order": "Queso de cabra con chutney y nueces, brie al horno con mermelada, embutido y, para cerrar, el brownie caliente. Con vino: la carta es de las que se elogian.", "may_disappoint": "Son raciones de picoteo: con mucha hambre la cuenta crece rápido (una reseña habla de unos 36 € por cinco tapas y tres vinos).", "before": "Se llena: reservad a horas punta. Tiene opciones sin gluten."}, "en": {"offer": "Tapas, cured meats, cheese and wine.", "fits": "A snack before carrying on through El Carmen.", "not_for": "A full dinner when you are properly hungry: this is grazing.", "order": "Goat’s cheese with chutney and walnuts, baked brie with jam, cured sausage and, to finish, the warm brownie. With wine: the list is one people praise.", "may_disappoint": "These are snacking portions: with a big appetite the bill grows fast (one review mentions about €36 for five tapas and three wines).", "before": "It fills up: book at busy times. There are gluten-free options."}},
       "price": {
         "per_adult_base": null,
         "lines": [
@@ -74,30 +40,13 @@
         "source": "https://www.larentaora.com/carta/"
       },
       "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.larentaora.com/contacto/"},
-      "sources": ["https://www.larentaora.com/", "https://www.larentaora.com/carta/"]
+      "sources": ["https://www.larentaora.com/", "https://www.larentaora.com/carta/", "https://wanderlog.com/place/details/1598266"]
     },
     {
       "id": "kuzina", "name": "Kuzina", "type": "restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "carmen", "address": "Conde de Almodóvar, 4",
       "cravings": ["nuevo", "griega"], "tags": ["pareja", "amigos", "descubrimiento"],
-      "text": {
-        "es": {
-          "offer": "Cocina griega para compartir.",
-          "fits": "Quien busca algo distinto sin acabar en un buffet asiático.",
-          "not_for": "Improvisar sin confirmar: su propia web da horarios contradictorios.",
-          "order": "Para dos: feta en filo y dos moussakas. El baklava tiene identidad para valorarlo frente a salir a por helado.",
-          "may_disappoint": "Sin críticas documentadas en nuestra muestra (no revisamos reseñas de Google aquí); sus testimonios seleccionados no cuentan como auditoría.",
-          "before": "Confirma horario y reserva."
-        },
-        "en": {
-          "offer": "Greek sharing plates.",
-          "fits": "Anyone after something different without ending up at an Asian buffet.",
-          "not_for": "Turning up unannounced: its own website gives contradictory hours.",
-          "order": "For two: feta in filo and two moussakas. The baklava is worth weighing against going out for ice cream.",
-          "may_disappoint": "No criticism documented in our sample (we did not review Google here); its hand-picked testimonials are not an audit.",
-          "before": "Confirm opening hours and book."
-        }
-      },
+      "text": {"es": {"offer": "Cocina griega para compartir.", "fits": "Quien busca algo distinto sin acabar en un buffet asiático.", "not_for": "Improvisar: la sala es pequeña y se llena; reservad.", "order": "Mezze para empezar (spanakopita, dolmades, taramosalata), moussaka (también vegetariana) y baklava, que tiene identidad para quedarse al postre.", "may_disappoint": "Hay quien lo encuentra caro para lo que es (menús de 35 y 48 € sin bebida), y la espera de los principales se hace larga.", "before": "Reservad; a mediodía la terraza da al sol. Lo llevan Alkis y Lydia, que antes estaban en la calle Salvador: algunos listados aún dan la dirección vieja."}, "en": {"offer": "Greek sharing plates.", "fits": "Anyone after something different without ending up at an Asian buffet.", "not_for": "Turning up on a whim: the room is small and fills up; book.", "order": "Mezze to start (spanakopita, dolmades, taramosalata), moussaka (there is a vegetarian one) and baklava, distinctive enough to stay for dessert.", "may_disappoint": "Some find it pricey for what it is (set menus at €35 and €48 without drinks), and the wait for mains drags.", "before": "Book; at lunchtime the terrace gets the sun. It is run by Alkis and Lydia, who used to be on Calle Salvador: some listings still give the old address."}},
       "price": {
         "per_adult_base": 25.5,
         "basis": { "es": "feta + dos moussakas para dos", "en": "feta + two moussakas for two" },
@@ -110,57 +59,23 @@
         "includes": { "bebida": "aparte", "pan": "desconocido", "postre": "aparte", "cafe": "aparte", "suplementos": "desconocido" },
         "source": "https://www.kuzinavlc.com/restaurantes-valencia-centro"
       },
-      "hours": { "status": "contradictorio", "note": { "es": "Horarios contradictorios dentro de la propia web.", "en": "Contradictory hours on its own website." } },
-      "sources": ["https://www.kuzinavlc.com/restaurantes-valencia-centro", "https://www.kuzinavlc.com/reservar"]
+      "hours": {"status": "contradictorio", "note": {"es": "Su web da horarios distintos según la página: llamad antes de ir.", "en": "Its website gives different hours on different pages: call before you go."}},
+      "sources": ["https://www.kuzinavlc.com/restaurantes-valencia-centro", "https://www.kuzinavlc.com/reservar", "https://gastroranking.es/r/kuzina_116483/", "https://valenciaplaza.com/kuzina"]
     },
     {
       "id": "veneta-brodadors", "name": "Véneta Brodadors", "type": "heladeria", "role": ["postre"],
       "scope": "valencia", "zone": "carmen", "address": "Brodadors, 8",
       "cravings": ["dulce"], "tags": ["pareja", "visitante"],
-      "text": {
-        "es": {
-          "offer": "Gelato italiano; la galleta de la abuela como pista editorial.",
-          "fits": "Una parada dulce compacta hacia la Catedral y la plaza de la Virgen.",
-          "not_for": "Cerrar una cena tarde sin confirmar el horario.",
-          "order": "Galleta de la abuela, como pista documental (Valencia Secreta, 2024), no como sabor catado por nosotros.",
-          "may_disappoint": "Los premios históricos no garantizan que todos los sabores gusten; la disponibilidad del sabor no está confirmada.",
-          "before": "Precio y horario actuales pendientes; las cifras del artículo de 2024 no son tarifa actual."
-        },
-        "en": {
-          "offer": "Italian gelato; the 'galleta de la abuela' (grandma's biscuit) flavour as an editorial lead.",
-          "fits": "A compact sweet stop on the way to the Cathedral and Plaza de la Virgen.",
-          "not_for": "Ending a late dinner without checking the opening hours.",
-          "order": "Grandma's biscuit, as a documentary lead (Valencia Secreta, 2024), not a flavour we tasted.",
-          "may_disappoint": "Past awards do not guarantee you will like every flavour; availability is not confirmed.",
-          "before": "Current prices and hours pending; figures from the 2024 article are not today's prices."
-        }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa actual pendiente.", "en": "Current prices pending." } },
+      "text": {"es": {"offer": "Gelato italiano premiado, a un paso de la Catedral.", "fits": "Una parada dulce compacta hacia la Catedral y la plaza de la Virgen.", "not_for": "Quien odia las colas: en hora punta las hay.", "order": "Galleta de la abuela, la que la hizo famosa; Pistacchio Paradise o naranja de Sicilia si buscáis algo menos dulce.", "may_disappoint": "Las reseñas la ven algo cara y el trato a veces seco. Los premios (mejor helado de España y de Europa en el Gelato Festival) no garantizan que cada sabor os guste.", "before": "Pedid probar antes de elegir. Si hay cola, Véneta Ribera tiene sitio para sentarse arriba."}, "en": {"offer": "Award-winning Italian gelato, a step from the Cathedral.", "fits": "A compact sweet stop on the way to the Cathedral and Plaza de la Virgen.", "not_for": "Anyone who hates queues: there are some at peak times.", "order": "Galleta de la abuela (grandma’s biscuit), the flavour that made its name; Pistacchio Paradise or Sicilian orange if you want something less sweet.", "may_disappoint": "Reviews find it a bit pricey and the service sometimes curt. The awards (best gelato in Spain and Europe at the Gelato Festival) don’t guarantee you’ll like every flavour.", "before": "Ask to taste before choosing. If there is a queue, Véneta Ribera has seating upstairs."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.venetagelato.com/"},
-      "sources": ["https://www.venetagelato.com/", "https://valenciasecreta.com/helados-valencia/"]
+      "sources": ["https://www.venetagelato.com/", "https://valenciasecreta.com/helados-valencia/", "https://wanderlog.com/place/details/1522465", "https://www.valenciabonita.es/2024/06/20/mejor-helado-de-espana-2024/"]
     },
     {
       "id": "central", "name": "Central Bar", "type": "bar", "role": ["comer"],
       "scope": "valencia", "zone": "mercat", "address": "Mercado Central, Plaça de la Ciutat de Bruges",
       "cravings": ["tapas", "esmorzar", "valenciano"], "tags": ["visitante", "rapido", "amigos"],
-      "text": {
-        "es": {
-          "offer": "Bocadillos y tapas dentro del Mercado Central.",
-          "fits": "Almorzar ajustado o comer tapas en plan de mercado y mediodía.",
-          "not_for": "Una cena: la cocina cierra a las 15:00 (15:30 viernes y sábado).",
-          "order": "Dos usos distintos: el bocadillo Camarena para almorzar o el menú de tapas para comer. No cuestan lo mismo.",
-          "may_disappoint": "Sin críticas documentadas en nuestra muestra (reseñas de Google pendientes).",
-          "before": "Domingos y festivos cerrado."
-        },
-        "en": {
-          "offer": "Sandwiches and tapas inside the Central Market.",
-          "fits": "A cheap mid-morning bite or a tapas lunch as part of a market visit.",
-          "not_for": "Dinner: the kitchen closes at 15:00 (15:30 on Friday and Saturday).",
-          "order": "Two different uses: the Camarena sandwich for esmorzar, or the tapas menu for lunch. They do not cost the same.",
-          "may_disappoint": "No criticism documented in our sample (Google reviews pending).",
-          "before": "Closed on Sundays and public holidays."
-        }
-      },
+      "text": {"es": {"offer": "Bocadillos y tapas dentro del Mercado Central.", "fits": "Almorzar ajustado o comer tapas en plan de mercado y mediodía.", "not_for": "Una cena: la cocina cierra a las 15:00 (15:30 viernes y sábado).", "order": "Dos planes distintos: el bocadillo Camarena para almorzar, o bravas, buñuelos de bacalao y ensaladilla para comer de tapas. No cuestan lo mismo.", "may_disappoint": "Las reseñas lo ven caro para ser mercado, el trato es correcto pero frío y no hay almuerzo tradicional: es el bocadillo de Camarena, no el esmorzar de barrio.", "before": "Domingos y festivos cerrado. Llegad antes de las 11:00 para tener sitio en barra; el sábado, mejor reservar."}, "en": {"offer": "Sandwiches and tapas inside the Central Market.", "fits": "A cheap mid-morning bite or a tapas lunch as part of a market visit.", "not_for": "Dinner: the kitchen closes at 15:00 (15:30 on Friday and Saturday).", "order": "Two different plans: the Camarena sandwich for esmorzar, or bravas, salt-cod fritters and ensaladilla for a tapas lunch. They don’t cost the same.", "may_disappoint": "Reviews find it pricey for a market bar, the service correct but cool, and there is no traditional esmorzar: it is Camarena’s sandwich, not the neighbourhood breakfast.", "before": "Closed on Sundays and public holidays. Arrive before 11:00 to get a seat at the bar; on Saturdays, better to book."}},
       "price": {
         "per_adult_base": 7.5,
         "basis": { "es": "un bocadillo Camarena (almuerzo, sin bebida)", "en": "one Camarena sandwich (no drink)" },
@@ -173,72 +88,35 @@
         "source": "https://m.centralbar.es/platos"
       },
       "hours": {"status": "documentado", "kitchen": true, "holidays": "cerrado", "checked_on": "2026-10-25", "weekly": {"mon": [["09:00", "15:00"]], "tue": [["09:00", "15:00"]], "wed": [["09:00", "15:00"]], "thu": [["09:00", "15:00"]], "fri": [["09:00", "15:30"]], "sat": [["09:00", "15:30"]], "sun": []}, "note": {"es": "Horario de cocina oficial; domingos y festivos cerrado.", "en": "Official kitchen hours; closed Sundays and public holidays."}, "source": "https://m.centralbar.es/horario"},
-      "sources": ["https://m.centralbar.es/platos", "https://m.centralbar.es/copia-de-platos"]
+      "sources": ["https://m.centralbar.es/platos", "https://m.centralbar.es/copia-de-platos", "https://gastroranking.es/r/central-bar_24/"]
     },
     {
       "id": "romana-centro", "name": "La Romana San Vicente", "type": "heladeria", "role": ["postre"],
       "scope": "valencia", "zone": "mercat", "address": "Sant Vicent Màrtir, 8",
       "cravings": ["dulce"], "tags": ["visitante"],
-      "text": {
-        "es": {
-          "offer": "Gelato; catálogo de pistacho y cremas italianas.",
-          "fits": "Una alternativa dulce a pie en el centro.",
-          "not_for": "Quien espera encontrar todo el catálogo de la cadena: elige en la vitrina.",
-          "order": "Sabor de vitrina; no prometemos sabores concretos.",
-          "may_disappoint": "Ser cadena no implica mala calidad; tampoco lo contrario. Sin cata propia.",
-          "before": "Tarifa y horario de esta sucursal pendientes."
-        },
-        "en": {
-          "offer": "Gelato; pistachio and Italian creams in the range.",
-          "fits": "A walkable sweet option in the centre.",
-          "not_for": "Anyone expecting the chain's full range: choose from what is in the cabinet.",
-          "order": "Whatever is in the cabinet; we do not promise specific flavours.",
-          "may_disappoint": "Being a chain does not mean poor quality, nor the opposite. Not tasted by us.",
-          "before": "Prices and hours for this branch pending."
-        }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa de esta sucursal pendiente.", "en": "Prices for this branch pending." } },
+      "text": {"es": {"offer": "Gelato; catálogo de pistacho y cremas italianas.", "fits": "Una alternativa dulce a pie en el centro.", "not_for": "Quien espera encontrar todo el catálogo de la cadena: elige en la vitrina.", "order": "Pistacho, café solo o limón, y mirad el sabor del mes. Dejan probar: pedidlo.", "may_disappoint": "Colas largas y alguna queja de que las bolas han menguado. Ser cadena no la hace peor ni mejor.", "before": "Id fuera de hora punta. Sin colorantes artificiales y con varias opciones veganas."}, "en": {"offer": "Gelato; pistachio and Italian creams in the range.", "fits": "A walkable sweet option in the centre.", "not_for": "Anyone expecting the chain's full range: choose from what is in the cabinet.", "order": "Pistachio, black coffee or lemon, and look out for the flavour of the month. They let you taste: ask.", "may_disappoint": "Long queues and the odd complaint that scoops have shrunk. Being a chain makes it neither worse nor better.", "before": "Go outside peak times. No artificial colours, and several vegan options."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": { "status": "desconocido" },
-      "sources": ["https://www.gelateriaromana.com/52-punto-de-venta-valencia.php", "https://www.gelateriaromana.com/es/cat0_6657-los-sabores-de-la-tradicion.php"]
+      "sources": ["https://www.gelateriaromana.com/52-punto-de-venta-valencia.php", "https://www.gelateriaromana.com/es/cat0_6657-los-sabores-de-la-tradicion.php", "https://wanderlog.com/place/details/1558541"]
     },
     {
       "id": "linaje", "name": "Linaje", "type": "restaurante familiar", "role": ["comer", "juego"],
       "scope": "valencia", "zone": "mercat", "address": "Convent de Santa Clara, 13",
       "cravings": ["mediterranea", "arroz"], "tags": ["familia_bebe", "nino_activo", "visitante"],
-      "text": {
-        "es": {
-          "offer": "Cocina mediterránea, arroces y sala infantil.",
-          "fits": "Familias en el centro que quieren comer y que el niño juegue en el propio local.",
-          "not_for": "Dar por supervisado todo el día: las monitoras están declaradas solo en fin de semana.",
-          "order": "Sin pedido documentado; precio completo pendiente.",
-          "may_disappoint": "No sabemos si la sala tiene pantallas ni si se ve desde la mesa.",
-          "before": "Confirma edades, horario y coste de monitoras, visibilidad y pantallas."
-        },
-        "en": {
-          "offer": "Mediterranean food, rice dishes and a children's room.",
-          "fits": "Families in the centre who want to eat while the child plays on site.",
-          "not_for": "Assuming supervision all day: staff for children are only declared at weekends.",
-          "order": "No order documented; full price pending.",
-          "may_disappoint": "We do not know whether the room has screens or can be seen from the table.",
-          "before": "Check ages, hours and cost of the childcare staff, visibility and screens."
-        }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": { "bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" }, "kids_cost": { "es": "Posibles costes de juego pendientes.", "en": "Possible play charges pending." } },
-      "hours": { "status": "parcial", "weekly": { "mon": [["11:30", "24:00"]], "tue": [["11:30", "24:00"]], "wed": [["11:30", "24:00"]], "thu": [["11:30", "24:00"]], "fri": [["11:30", "24:00"]], "sat": [["11:30", "24:00"]], "sun": [["11:30", "24:00"]] }, "note": { "es": "Horario del local publicado; el de cocina está pendiente.", "en": "Published venue hours; kitchen hours pending." } },
-      "kids": { "espacio_juego": "declarado", "monitores": "declarado", "juego_sin_pantallas": "desconocido", "edades": { "es": "Pendiente", "en": "Pending" }, "acompanamiento": { "es": "Monitoras declaradas en fin de semana", "en": "Childcare staff declared at weekends" } },
-      "sources": ["https://www.grupogomez.es/linaje/"]
+      "text": {"es": {"offer": "Cocina mediterránea, arroces y sala infantil.", "fits": "Familias en el centro que quieren comer y que el niño juegue en el propio local.", "not_for": "Dar por supervisado todo el día: las monitoras están declaradas solo en fin de semana.", "order": "Arroz valenciano o carne y pescado a la brasa del horno Josper, lo que define esta casa del Grupo Gómez.", "may_disappoint": "Es un local grande (unas 180 plazas), no un rincón tranquilo; y ver la sala infantil desde la mesa depende de dónde os sienten.", "before": "Las monitoras están solo el fin de semana. Al reservar, pedid mesa cerca de la sala infantil y preguntad edades y coste."}, "en": {"offer": "Mediterranean food, rice dishes and a children's room.", "fits": "Families in the centre who want to eat while the child plays on site.", "not_for": "Assuming supervision all day: staff for children are only declared at weekends.", "order": "Valencian rice or meat and fish from the Josper charcoal oven, the signature of this Grupo Gómez restaurant.", "may_disappoint": "It is a big place (about 180 seats), not a quiet corner; and whether you can see the children’s room from your table depends on where you sit.", "before": "Childcare staff are there at weekends only. When you book, ask for a table near the children’s room and check ages and cost."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {"bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido"}},
+      "hours": {"status": "parcial", "weekly": {"mon": [["11:30", "24:00"]], "tue": [["11:30", "24:00"]], "wed": [["11:30", "24:00"]], "thu": [["11:30", "24:00"]], "fri": [["11:30", "24:00"]], "sat": [["11:30", "24:00"]], "sun": [["11:30", "24:00"]]}},
+      "kids": {"espacio_juego": "declarado", "monitores": "declarado", "juego_sin_pantallas": "desconocido", "acompanamiento": {"es": "Monitoras declaradas en fin de semana", "en": "Childcare staff declared at weekends"}},
+      "sources": ["https://www.grupogomez.es/linaje/", "https://www.visitvalencia.com/en/node/90490"]
     },
     {
       "id": "veneta-ribera", "name": "Véneta Ribera", "type": "heladeria", "role": ["postre"],
       "scope": "valencia", "zone": "mercat", "address": "Ribera, 7",
       "cravings": ["dulce"], "tags": [],
-      "text": {
-        "es": { "offer": "Gelato italiano.", "fits": "Un dulce tras comer por Sant Francesc o en Linaje.", "not_for": "Confundirla con la sucursal de Brodadors.", "order": "Sin sabor documentado para esta sucursal.", "may_disappoint": "Sin cata propia ni reseñas revisadas.", "before": "Confirma el horario del día; tarifa pendiente." },
-        "en": { "offer": "Italian gelato.", "fits": "A sweet stop after eating around Sant Francesc or at Linaje.", "not_for": "Confusing it with the Brodadors branch.", "order": "No flavour documented for this branch.", "may_disappoint": "Not tasted by us; reviews not checked.", "before": "Check that day's hours; prices pending." }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa actual pendiente.", "en": "Current prices pending." } },
+      "text": {"es": {"offer": "Gelato italiano.", "fits": "Un helado con sitio para sentarse tras comer por Sant Francesc o en Linaje.", "not_for": "Confundirla con la sucursal de Brodadors.", "order": "Los clásicos de Véneta: galleta de la abuela, pistacho o naranja de Sicilia.", "may_disappoint": "Algo cara para una bola, como toda la casa según las reseñas.", "before": "Tiene sitio arriba: mejor que Brodadors si queréis parar un rato."}, "en": {"offer": "Italian gelato.", "fits": "Ice cream with somewhere to sit after lunch around Sant Francesc or at Linaje.", "not_for": "Confusing it with the Brodadors branch.", "order": "The Véneta classics: grandma’s biscuit, pistachio or Sicilian orange.", "may_disappoint": "A bit pricey for a scoop, like the whole chain according to reviews.", "before": "There is seating upstairs: better than Brodadors if you want to stop for a while."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.venetagelato.com/"},
-      "sources": ["https://www.venetagelato.com/"]
+      "sources": ["https://www.venetagelato.com/", "https://wanderlog.com/place/details/1522465"]
     },
     {
       "id": "canalla", "name": "Canalla Bistro", "type": "restaurante", "role": ["comer"],
@@ -283,32 +161,8 @@
       "scope": "valencia", "zone": "ruzafa", "address": "Pere III el Gran, 11",
       "cravings": ["asiatico", "japones"], "tags": ["pareja", "ocasion"], "likes": ["pescado"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Cocina japonesa, sushi y barra.",
-          "fits": "Un plan japonés con presupuesto alto y reserva.",
-          "not_for": "Dos personas con 40 € para todo, o una cena improvisada.",
-          "order": "El omakase es la referencia publicada por Repsol; inclusiones actuales por confirmar.",
-          "may_disappoint": "Una reseña de 1★ (hace 4 meses) es de alguien que no consiguió mesa: avisa de no improvisar, no puntúa el sushi.",
-          "before": "Reserva y horario a contrastar con el local. Ninguna zona de juego verificada."
-        },
-        "en": {
-          "offer": "Japanese cooking, sushi and counter seating.",
-          "fits": "A higher-budget Japanese plan with a booking.",
-          "not_for": "Two people with €40 for everything, or a spur-of-the-moment dinner.",
-          "order": "The omakase is the reference price published by Repsol; current inclusions to be confirmed.",
-          "may_disappoint": "A 1★ review (4 months ago) comes from someone who could not get a table: a warning not to improvise, not a verdict on the sushi.",
-          "before": "Check booking and hours with the venue. No play area verified."
-        }
-      },
-      "price": {
-        "per_adult_base": 70, "base_confirmed": false,
-        "basis": { "es": "omakase según Guía Repsol (por confirmar)", "en": "omakase per Guía Repsol (to be confirmed)" },
-        "lines": [ { "label": { "es": "Omakase (publicado por Repsol)", "en": "Omakase (published by Repsol)" }, "amount": 70, "unit": "persona", "third_party": true } ],
-        "example": { "party": 2, "items": [ { "label": { "es": "Omakase", "en": "Omakase" }, "qty": 2, "amount": 70 } ] },
-        "includes": { "bebida": "desconocido", "pan": "no_aplica", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" },
-        "source": "https://www.guiarepsol.com/es/fichas/restaurante/nozomi-sushi-bar-8888/"
-      },
+      "text": {"es": {"offer": "Cocina japonesa, sushi y barra.", "fits": "Un plan japonés con presupuesto alto y reserva.", "not_for": "Dos personas con 40 € para todo, o una cena improvisada.", "order": "El omakase: es lo que destaca Repsol y la mejor forma de ver la barra trabajar.", "may_disappoint": "Una reseña de 1★ (hace 4 meses) es de alguien que no consiguió mesa: avisa de no improvisar, no puntúa el sushi.", "before": "Reservad con tiempo: alguna reseña es de quien llegó sin reserva y se quedó fuera. No hay zona de juego."}, "en": {"offer": "Japanese cooking, sushi and counter seating.", "fits": "A higher-budget Japanese plan with a booking.", "not_for": "Two people with €40 for everything, or a spur-of-the-moment dinner.", "order": "The omakase: it is what Repsol highlights and the best way to watch the counter at work.", "may_disappoint": "A 1★ review (4 months ago) comes from someone who could not get a table: a warning not to improvise, not a verdict on the sushi.", "before": "Book well ahead: one review comes from someone who turned up without a booking and didn’t get in. There is no play area."}},
+      "price": {"per_adult_base": 70, "base_confirmed": false, "basis": {"es": "omakase según Guía Repsol", "en": "omakase per Guía Repsol"}, "lines": [{"label": {"es": "Omakase (publicado por Repsol)", "en": "Omakase (published by Repsol)"}, "amount": 70, "unit": "persona", "third_party": true}], "example": {"party": 2, "items": [{"label": {"es": "Omakase", "en": "Omakase"}, "qty": 2, "amount": 70}]}, "includes": {"bebida": "desconocido", "pan": "no_aplica", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido"}, "source": "https://www.guiarepsol.com/es/fichas/restaurante/nozomi-sushi-bar-8888/"},
       "hours": { "status": "desconocido" },
       "sources": ["https://guide.michelin.com/es/es/comunidad-valenciana/valencia/restaurante/nozomi-sushi-bar", "https://www.guiarepsol.com/es/fichas/restaurante/nozomi-sushi-bar-8888/"]
     },
@@ -316,139 +170,48 @@
       "id": "antigua", "name": "Antigua Lechería", "type": "heladeria", "role": ["postre"],
       "scope": "valencia", "zone": "ruzafa", "address": "Plaça del Doctor Landete, 7",
       "cravings": ["dulce", "valenciano"], "tags": ["visitante"],
-      "text": {
-        "es": {
-          "offer": "Leche merengada; referencias de manzana, canela y nueces, y mascarpone con pistacho.",
-          "fits": "Una parada dulce propia de Ruzafa, con referencia independiente de Repsol.",
-          "not_for": "Cerrar una cena tarde: no podemos afirmar horario nocturno.",
-          "order": "Leche merengada como pista documental; sabores del día pendientes.",
-          "may_disappoint": "Sin cata propia. La web oficial dio error de acceso al consultarla.",
-          "before": "Tarifa, sabores y horario pendientes."
-        },
-        "en": {
-          "offer": "Leche merengada (iced meringue milk); apple-cinnamon-walnut and mascarpone-pistachio as references.",
-          "fits": "A sweet stop with a Ruzafa identity and an independent Repsol mention.",
-          "not_for": "Ending a late dinner: we cannot confirm evening hours.",
-          "order": "Leche merengada as a documentary lead; flavours of the day pending.",
-          "may_disappoint": "Not tasted by us. The official website returned an error when we checked.",
-          "before": "Prices, flavours and hours pending."
-        }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa y sabores del día pendientes.", "en": "Prices and flavours of the day pending." } },
+      "text": {"es": {"offer": "Helado artesano de sabores con ocurrencia; leche merengada, manzana con canela y nueces, mascarpone con pistacho.", "fits": "Una parada dulce muy de Ruzafa, con helado casero de sabores con ocurrencia; Repsol la recomienda.", "not_for": "Quien quiere el helado de siempre: aquí se viene a por sabores con ocurrencia.", "order": "Leche merengada, la de la casa; y si están, manzana con canela y nueces o mascarpone con pistacho.", "may_disappoint": "Los sabores rotan: el que os recomendaron puede no estar ese día. Preguntad y probad.", "before": "Los lunes cierra. Entrada sin escalones, buena para carritos; también para llevar."}, "en": {"offer": "Artisan ice cream in inventive flavours; leche merengada, apple with cinnamon and walnuts, mascarpone with pistachio.", "fits": "A very Ruzafa sweet stop, with homemade ice cream in inventive flavours; Repsol recommends it.", "not_for": "Anyone who wants the usual ice cream: people come here for the inventive flavours.", "order": "Leche merengada, the house flavour; and if they have them, apple with cinnamon and walnuts or mascarpone with pistachio.", "may_disappoint": "Flavours rotate: the one you were told about may not be on that day. Ask and taste.", "before": "Closed on Mondays. Step-free entrance, good for pushchairs; takeaway too."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://antigualecheria.com/contacto"},
       "evidence_awards": [ { "label": { "es": "Solete Guía Repsol (ficha consultada)", "en": "Guía Repsol 'Solete' (listing checked)" }, "url": "https://www.guiarepsol.com/es/fichas/solete/antigua-lecheria-335606/", "year": null } ],
-      "sources": ["https://www.guiarepsol.com/es/fichas/solete/antigua-lecheria-335606/", "https://antigualecheria.com/"]
+      "sources": ["https://www.guiarepsol.com/es/fichas/solete/antigua-lecheria-335606/", "https://antigualecheria.com/", "https://intravel.net/valencia/restaurants-cafes/antigua-lecheria"]
     },
     {
       "id": "bluebell", "name": "Bluebell Coffee", "type": "cafeteria", "role": ["cafe"],
       "scope": "valencia", "zone": "ruzafa", "address": "Buenos Aires, 3",
       "cravings": ["cafe"], "tags": [],
-      "text": {
-        "es": {
-          "offer": "Café de especialidad de tostadoras propias.",
-          "fits": "Café de mañana o tras una comida temprana.",
-          "not_for": "Un café después de cenar: según su web cierra a las 16 h.",
-          "order": "Sin bebida concreta documentada; precio por bebida pendiente.",
-          "may_disappoint": "Algunos agregadores anuncian cierre más tarde: manda el horario oficial.",
-          "before": "No hay zona infantil comprobada."
-        },
-        "en": {
-          "offer": "Speciality coffee from its own roasters.",
-          "fits": "Morning coffee or after an early lunch.",
-          "not_for": "Coffee after dinner: its website says it closes at 16:00.",
-          "order": "No specific drink documented; price per drink pending.",
-          "may_disappoint": "Some aggregators list later closing; we go by the official hours.",
-          "before": "No children's area verified."
-        }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Precio por bebida pendiente.", "en": "Price per drink pending." } },
+      "text": {"es": {"offer": "Café de especialidad de tostadoras propias.", "fits": "Café de mañana o tras una comida temprana.", "not_for": "Un café después de cenar: según su web cierra a las 16 h.", "order": "Un filtrado (V60) de su propio tueste o un cold brew; para comer, tostada de aguacate o tortitas de manzana.", "may_disappoint": "Las reseñas la ven cara y lenta cuando se llena, y la entrada se comparte con un hostal. Algunos agregadores anuncian otro horario: manda el de su web.", "before": "Brunch el fin de semana y patio para sentarse. En hora punta pueden limitar los portátiles."}, "en": {"offer": "Speciality coffee from its own roasters.", "fits": "Morning coffee or after an early lunch.", "not_for": "Coffee after dinner: its website says it closes at 16:00.", "order": "A pour-over (V60) of their own roast or a cold brew; to eat, avocado toast or apple pancakes.", "may_disappoint": "Reviews find it pricey and slow when busy, and the entrance is shared with a hostel. Some aggregators list other hours: the website’s are the ones that count.", "before": "Weekend brunch and a courtyard to sit in. At peak times they may restrict laptops."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": { "status": "documentado", "weekly": { "mon": [["09:00", "16:00"]], "tue": [["09:00", "16:00"]], "wed": [["09:00", "16:00"]], "thu": [["09:00", "16:00"]], "fri": [["09:00", "16:00"]], "sat": [["09:00", "16:00"]], "sun": [["09:00", "16:00"]] }, "source": "https://bluebellcoffeeco.com/espacio/" },
-      "sources": ["https://bluebellcoffeeco.com/espacio/"]
+      "sources": ["https://bluebellcoffeeco.com/espacio/", "https://wanderlog.com/place/details/472016/bluebell-coffee-roasters"]
     },
     {
       "id": "hippolatte", "name": "Hippolatte", "type": "cafetería con juegos", "role": ["cafe", "juego"],
       "scope": "valencia", "zone": "ruzafa", "address": "Centelles, 42",
       "cravings": ["cafe"], "tags": ["nino_activo"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Café, snacks, parque de bolas y rocódromo.",
-          "fits": "Un niño de 3 a 5 años con ganas de moverse; el valor está en el juego, no en el café.",
-          "not_for": "Quien busca calma o tiene un bebé sin confirmar aforo y edades.",
-          "order": "Plan de juego con café; no lo vendemos como cafetería gastronómica.",
-          "may_disappoint": "Un resumen de Google muestra una queja de precio y trato cuyo texto completo no leímos. El dato de 5 €/niño viene de una reseña de hace 8 meses: no es tarifa vigente.",
-          "before": "Pregunta sesiones, edades, aforo, cumpleaños, pantallas y precio actual; la web tiene diferencias de horario entre verano y contacto."
-        },
-        "en": {
-          "offer": "Coffee, snacks, a ball pit and a climbing wall.",
-          "fits": "A 3–5-year-old who needs to move; the value is the play, not the coffee.",
-          "not_for": "Anyone after calm, or with a baby, until capacity and ages are confirmed.",
-          "order": "A play plan with coffee; we do not sell it as a food destination.",
-          "may_disappoint": "A Google summary shows a complaint about price and treatment whose full text we did not read. The €5 per child figure comes from an 8-month-old review, not current pricing.",
-          "before": "Ask about sessions, ages, capacity, birthday parties, screens and current prices; the website gives different summer and contact-page hours."
-        }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "kids_cost": { "es": "Desconocido. Una reseña antigua cita 5 €/niño: no es tarifa vigente.", "en": "Unknown. An old review mentions €5 per child: not current pricing." } },
-      "hours": { "status": "parcial", "weekly": { "mon": [["16:00", "20:00"]], "tue": [["16:00", "20:00"]], "wed": [["16:00", "20:00"]], "thu": [["10:00", "13:00"], ["16:00", "20:00"]], "fri": [["10:00", "13:00"], ["16:00", "20:00"]], "sat": [["10:00", "13:00"], ["16:00", "20:00"]], "sun": [["10:00", "13:00"], ["16:00", "20:00"]] }, "note": { "es": "Horario de la página de contacto; confirma temporada.", "en": "Hours from the contact page; check the season." }, "source": "https://hippolatte.com/contacto/" },
-      "kids": { "espacio_juego": "declarado", "juego_sin_pantallas": "declarado", "politica_sin_pantallas": "desconocido", "sin_tv": "desconocido", "edades": { "es": "Sin edades oficiales; una reseña cuenta experiencia con niños de 3 y 5 años", "en": "No official ages; one review describes children aged 3 and 5" } },
+      "text": {"es": {"offer": "Café, snacks, parque de bolas y rocódromo.", "fits": "Un niño de 3 a 5 años con ganas de moverse; el valor está en el juego, no en el café.", "not_for": "Quien busca calma, o va con un bebé muy pequeño: está pensada para niños de 3 a 5 años que se mueven.", "order": "Plan de juego con café; no lo vendemos como cafetería gastronómica.", "may_disappoint": "Alguna reseña se queja de precio y trato. El plan es el juego: el café es secundario.", "before": "Preguntad sesiones, edades, aforo y precio al reservar; en verano cambia el horario."}, "en": {"offer": "Coffee, snacks, a ball pit and a climbing wall.", "fits": "A 3–5-year-old who needs to move; the value is the play, not the coffee.", "not_for": "Anyone after calm, or with a very young baby: it is designed for 3-to-5-year-olds who need to move.", "order": "A play plan with coffee; we do not sell it as a food destination.", "may_disappoint": "One review complains about price and service. The plan is the play: coffee comes second.", "before": "Ask about sessions, ages, capacity and price when you book; hours change in summer."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}, "kids_cost": {"es": "Una reseña de hace meses cita 5 € por niño: preguntad la tarifa al reservar.", "en": "A review from some months ago mentions €5 per child: ask for the price when you book."}},
+      "hours": {"status": "parcial", "weekly": {"mon": [["16:00", "20:00"]], "tue": [["16:00", "20:00"]], "wed": [["16:00", "20:00"]], "thu": [["10:00", "13:00"], ["16:00", "20:00"]], "fri": [["10:00", "13:00"], ["16:00", "20:00"]], "sat": [["10:00", "13:00"], ["16:00", "20:00"]], "sun": [["10:00", "13:00"], ["16:00", "20:00"]]}, "note": {"es": "Horario de su página de contacto; en verano cambia.", "en": "Hours from its contact page; they change in summer."}, "source": "https://hippolatte.com/contacto/"},
+      "kids": {"espacio_juego": "declarado", "juego_sin_pantallas": "declarado", "politica_sin_pantallas": "desconocido", "sin_tv": "desconocido", "edades": {"es": "Pensada para niños de unos 3 a 5 años, según las reseñas", "en": "Suits children of about 3 to 5, according to reviews"}},
       "sources": ["https://hippolatte.com/", "https://hippolatte.com/contacto/"]
     },
     {
       "id": "habitual", "name": "Habitual", "type": "restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "eixample", "address": "Jorge Juan, 19, planta inferior Mercado de Colón",
       "cravings": ["mediterranea"], "tags": ["pareja", "familia_bebe", "visitante"],
-      "text": {
-        "es": {
-          "offer": "Cocina mediterránea de producto y verduras.",
-          "fits": "Un plan compacto: comer y tomar horchata en el mismo Mercado de Colón.",
-          "not_for": "El domingo: la web oficial lo da cerrado aunque Michelin muestre domingo.",
-          "order": "Sin pedido documentado por reseñas; el menú publicado por Repsol es la referencia por confirmar.",
-          "may_disappoint": "No tiene menú infantil según su web (adapta platos). Sin juegos verificados.",
-          "before": "Confirma ascensor o acceso a la planta inferior si vas con carrito."
-        },
-        "en": {
-          "offer": "Mediterranean cooking focused on produce and vegetables.",
-          "fits": "A compact plan: lunch and horchata in the same Mercado de Colón.",
-          "not_for": "Sundays: the official website says closed, although Michelin shows Sunday hours.",
-          "order": "No review-based order; the menu price published by Repsol is a reference to confirm.",
-          "may_disappoint": "No children's menu according to its website (it adapts dishes). No play area verified.",
-          "before": "Check lift or access to the lower floor if you have a pushchair."
-        }
-      },
-      "price": {
-        "per_adult_base": 38, "base_confirmed": false,
-        "basis": { "es": "menú según Guía Repsol (por confirmar)", "en": "set menu per Guía Repsol (to be confirmed)" },
-        "lines": [ { "label": { "es": "Menú (publicado por Repsol)", "en": "Set menu (published by Repsol)" }, "amount": 38, "unit": "persona", "third_party": true } ],
-        "includes": { "bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" },
-        "source": "https://www.guiarepsol.com/es/fichas/restaurante/habitual-9373/"
-      },
+      "text": {"es": {"offer": "Cocina mediterránea de producto y verduras.", "fits": "Un plan compacto: comer y tomar horchata en el mismo Mercado de Colón.", "not_for": "El domingo: la web oficial lo da cerrado aunque Michelin muestre domingo.", "order": "El menú largo recoge platos conocidos de Camarena; la guía Michelin cita el tartar de vaca gallega con espuma de yema, la tatin de tomate ecológico y los huevos fritos con bogavante y sobrasada.", "may_disappoint": "No hay menú infantil (adaptan platos), y viernes y sábado se llena: reservad.", "before": "Está en la planta baja del Mercado de Colón; con carrito, preguntad por el ascensor. Entre semana a mediodía es más tranquilo."}, "en": {"offer": "Mediterranean cooking focused on produce and vegetables.", "fits": "A compact plan: lunch and horchata in the same Mercado de Colón.", "not_for": "Sundays: the official website says closed, although Michelin shows Sunday hours.", "order": "The long menu brings together well-known Camarena dishes; the Michelin Guide mentions the Galician beef tartare with egg-yolk foam, the organic tomato tatin and fried eggs with lobster and sobrasada.", "may_disappoint": "There is no children’s menu (they adapt dishes), and Fridays and Saturdays fill up: book.", "before": "It is on the lower floor of the Mercado de Colón; with a pushchair, ask about the lift. Weekday lunchtimes are quieter."}},
+      "price": {"per_adult_base": 38, "base_confirmed": false, "basis": {"es": "menú según Guía Repsol", "en": "set menu per Guía Repsol"}, "lines": [{"label": {"es": "Menú (publicado por Repsol)", "en": "Set menu (published by Repsol)"}, "amount": 38, "unit": "persona", "third_party": true}], "includes": {"bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido"}, "source": "https://www.guiarepsol.com/es/fichas/restaurante/habitual-9373/"},
       "hours": { "status": "documentado", "kitchen": true, "weekly": { "mon": [["13:30", "15:30"], ["20:00", "22:30"]], "tue": [["13:30", "15:30"], ["20:00", "22:30"]], "wed": [["13:30", "15:30"], ["20:00", "22:30"]], "thu": [["13:30", "15:30"], ["20:00", "22:30"]], "fri": [["13:30", "15:30"], ["20:00", "22:30"]], "sat": [["13:30", "15:30"], ["20:00", "22:30"]], "sun": [] }, "note": { "es": "Horario oficial de cocina.", "en": "Official kitchen hours." }, "source": "https://www.habitual.es/" },
       "kids": { "trona": "terceros", "cambiador": "terceros", "juego_sin_pantallas": "desconocido", "carrito": "desconocido" },
-      "sources": ["https://www.habitual.es/", "https://www.guiarepsol.com/es/fichas/restaurante/habitual-9373/"]
+      "sources": ["https://www.habitual.es/", "https://www.guiarepsol.com/es/fichas/restaurante/habitual-9373/", "https://guide.michelin.com/en/comunidad-valenciana/valencia/restaurant/habitual"]
     },
     {
       "id": "bali", "name": "Voltereta Bali", "type": "restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "eixample", "address": "Gran Via del Marqués del Túria, 59",
       "cravings": ["nuevo", "asiatico"], "tags": ["pareja", "amigos", "visitante"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Ambientación inmersiva y cocina fusión.",
-          "fits": "Ir por el escenario puede tener sentido al precio del menú de mediodía.",
-          "not_for": "Una sobremesa larga sin confirmar antes la duración de la mesa.",
-          "order": "El menú de mediodía laborable; una reseña valora más entrantes y sushi que los principales.",
-          "may_disappoint": "Una reseña favorable cuenta sorpresa por un límite de mesa de 1,5 h (el local respondió). No sabemos si es política vigente. «Solo postureo» sería una lectura injusta de la muestra.",
-          "before": "No extrapoles opiniones de otras sucursales Voltereta."
-        },
-        "en": {
-          "offer": "Immersive décor and fusion cooking.",
-          "fits": "Going for the setting can make sense at the weekday lunch menu price.",
-          "not_for": "A long lingering meal without first checking the table time.",
-          "order": "The weekday lunch menu; one review rates starters and sushi above the mains.",
-          "may_disappoint": "A positive review mentions surprise at a 1.5-hour table limit (the venue replied). We do not know if it is current policy. 'All style, no substance' would be an unfair reading of the sample.",
-          "before": "Do not borrow reviews from other Voltereta branches."
-        }
-      },
+      "text": {"es": {"offer": "Ambientación inmersiva y cocina fusión.", "fits": "Ir por el escenario puede tener sentido al precio del menú de mediodía.", "not_for": "Una sobremesa larga: alguna reseña cuenta un límite de mesa de hora y media.", "order": "El menú de mediodía laborable; una reseña valora más entrantes y sushi que los principales.", "may_disappoint": "Según las reseñas, los principales convencen menos que los entrantes y el sushi. Llamarlo «solo postureo» sería injusto, pero se paga el escenario.", "before": "No extrapoles opiniones de otras sucursales Voltereta."}, "en": {"offer": "Immersive décor and fusion cooking.", "fits": "Going for the setting can make sense at the weekday lunch menu price.", "not_for": "A long, lingering lunch: one review mentions a 90-minute table limit.", "order": "The weekday lunch menu; one review rates starters and sushi above the mains.", "may_disappoint": "According to reviews, the mains convince less than the starters and sushi. Calling it “all show” would be unfair, but you are paying for the set.", "before": "Do not borrow reviews from other Voltereta branches."}},
       "price": {
         "per_adult_base": 16.9, "base_overrides": {"sat": null, "sun": null, "festivo": null},
         "basis": { "es": "menú mediodía laborable no festivo", "en": "weekday lunch menu (not holidays)" },
@@ -468,74 +231,45 @@
       "id": "romana-costa", "name": "La Romana Joaquín Costa", "type": "heladeria", "role": ["postre"],
       "scope": "valencia", "zone": "eixample", "address": "Joaquín Costa, 2",
       "cravings": ["dulce"], "tags": [],
-      "text": {
-        "es": { "offer": "Gelato italiano y cremas.", "fits": "Una salida dulce cerca del eje Gran Vía / Joaquín Costa.", "not_for": "Un final nocturno sin confirmar horario.", "order": "Sabor de vitrina; nada documentado para esta sucursal.", "may_disappoint": "Sin cata propia ni reseñas revisadas.", "before": "Precio y horario de sucursal pendientes." },
-        "en": { "offer": "Italian gelato and creams.", "fits": "A sweet stop near Gran Vía / Joaquín Costa.", "not_for": "A late-night finish without checking hours.", "order": "Whatever is in the cabinet; nothing documented for this branch.", "may_disappoint": "Not tasted by us; reviews not checked.", "before": "Branch prices and hours pending." }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Precio de sucursal pendiente.", "en": "Branch prices pending." } },
+      "text": {"es": {"offer": "Gelato italiano y cremas.", "fits": "Una salida dulce cerca del eje Gran Vía / Joaquín Costa.", "not_for": "Quien no soporta colas en hora punta.", "order": "Pistacho, café solo o limón, y el sabor del mes; podéis probar antes.", "may_disappoint": "Colas y alguna queja de bolas más pequeñas que antes.", "before": "Tiene sitio para sentarse: buena para parar con calma. Varias opciones veganas."}, "en": {"offer": "Italian gelato and creams.", "fits": "A sweet stop near Gran Vía / Joaquín Costa.", "not_for": "Anyone who can’t stand peak-time queues.", "order": "Pistachio, black coffee or lemon, and the flavour of the month; you can taste first.", "may_disappoint": "Queues and the odd complaint about smaller scoops than before.", "before": "It has seating: good for a proper stop. Several vegan options."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": { "status": "desconocido" },
-      "sources": ["https://www.gelateriaromana.com/48-punto-de-venta-valencia.php/57-punto-de-venta-roma.php"]
+      "sources": ["https://www.gelateriaromana.com/48-punto-de-venta-valencia.php/57-punto-de-venta-roma.php", "https://wanderlog.com/place/details/1482199"]
     },
     {
       "id": "daniel", "name": "Daniel Mercado de Colón", "type": "horchateria", "role": ["postre"],
       "scope": "valencia", "zone": "eixample", "address": "Jorge Juan, 19, Mercado de Colón",
       "cravings": ["dulce", "valenciano"], "tags": ["visitante"],
-      "text": {
-        "es": { "offer": "Horchata y fartons.", "fits": "Una parada valenciana para después de comer o merendar; quizá no hace falta otra cafetería.", "not_for": "Cerrar una cena tardía: cierra a las 22:00 según el Mercado de Colón.", "order": "Horchata con fartons.", "may_disappoint": "Sin cata propia ni reseñas revisadas.", "before": "Tarifa pendiente. El horario lo publica el Mercado de Colón, no la propia horchatería." },
-        "en": { "offer": "Horchata (tiger-nut drink) and fartons.", "fits": "A Valencian stop after lunch or for a mid-afternoon snack; you may not need a separate café.", "not_for": "Ending a late dinner: it closes at 22:00 according to Mercado de Colón.", "order": "Horchata with fartons.", "may_disappoint": "Not tasted by us; reviews not checked.", "before": "Prices pending. Hours are published by Mercado de Colón, not by the shop itself." }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa actual pendiente.", "en": "Current prices pending." } },
+      "text": {"es": {"offer": "Horchata y fartons.", "fits": "Una parada valenciana después de comer o para merendar: horchata con fartons sin salir del Mercado de Colón.", "not_for": "Cerrar una cena tardía: cierra a las 22:00 según el Mercado de Colón.", "order": "Horchata con fartons (los hay rellenos de chocolate y sin gluten); para un capricho más, el flotador, horchata con helado.", "may_disappoint": "El fin de semana hay cola para mesa; alguna reseña habla de más de media hora.", "before": "Si hay cola, pedid para llevar. Cierra a las 22:00, según el Mercado de Colón."}, "en": {"offer": "Horchata (tiger-nut drink) and fartons.", "fits": "A Valencian stop after lunch or for an afternoon snack: horchata and fartons without leaving the Mercado de Colón.", "not_for": "Ending a late dinner: it closes at 22:00 according to Mercado de Colón.", "order": "Horchata with fartons (there are chocolate-filled and gluten-free ones); for an extra treat, the flotador, horchata with ice cream.", "may_disappoint": "At weekends there is a queue for tables; one review mentions more than half an hour.", "before": "If there is a queue, get it to take away. It closes at 22:00, according to the Mercado de Colón."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"mon": [["10:00", "22:00"]], "tue": [["10:00", "22:00"]], "wed": [["10:00", "22:00"]], "thu": [["10:00", "22:00"]], "fri": [["10:00", "22:00"]], "sat": [["10:00", "22:00"]], "sun": [["10:00", "22:00"]]}, "note": {"es": "Horario publicado por el Mercado de Colón en la ficha de la horchatería; la web propia no lo detalla.", "en": "Hours published by Mercado de Colón on the shop’s page; the shop’s own website does not give them."}, "source": "https://mercadocolon.es/comercio/horchateria-daniel/"},
-      "sources": ["https://mercadocolon.es/tipo-comercio/horchaterias/"]
+      "sources": ["https://mercadocolon.es/tipo-comercio/horchaterias/", "https://gastroranking.es/r/horchateria-daniel-2_46647/"]
     },
     {
       "id": "principal", "name": "La Principal", "type": "restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "mestalla", "address": "Polo y Peyrolón, 5",
       "cravings": ["mediterranea", "arroz", "tapas"], "tags": ["amigos", "pareja"],
-      "text": {
-        "es": { "offer": "Barra, cocina de mercado y arroces.", "fits": "Producto y barra en la zona de Mestalla.", "not_for": "Comer barato: no hay base para llamarlo así.", "order": "Arroz por ración con mínimo de dos: a banda 16 €, paella valenciana por encargo 17 €. Pregunta el precio de lo que esté fuera de carta.", "may_disappoint": "Sin críticas documentadas en nuestra muestra (reseñas pendientes).", "before": "No confundas el cierre de cocina con el de sala." },
-        "en": { "offer": "Counter, market cooking and rice dishes.", "fits": "Produce and counter dining around Mestalla.", "not_for": "A cheap meal: there is no basis to call it that.", "order": "Rice per portion, minimum two: arroz a banda €16, paella valenciana to pre-order €17. Ask the price of off-menu specials.", "may_disappoint": "No criticism documented in our sample (reviews pending).", "before": "Do not confuse kitchen closing time with dining-room closing time." }
-      },
+      "text": {"es": {"offer": "Barra, cocina de mercado y arroces.", "fits": "Producto y barra en la zona de Mestalla.", "not_for": "Comer barato: no hay base para llamarlo así.", "order": "Arroz por ración con mínimo de dos: a banda 16 €, paella valenciana por encargo 17 €. Pregunta el precio de lo que esté fuera de carta.", "may_disappoint": "No es barata: la guía Macarfi la sitúa en torno a 60 € por persona sin bebida.", "before": "Tiene reservados, buenos para grupos y cenas de empresa: reservad. No confundáis el cierre de cocina con el de sala."}, "en": {"offer": "Counter, market cooking and rice dishes.", "fits": "Produce and counter dining around Mestalla.", "not_for": "A cheap meal: there is no basis to call it that.", "order": "Rice per portion, minimum two: arroz a banda €16, paella valenciana to pre-order €17. Ask the price of off-menu specials.", "may_disappoint": "It isn’t cheap: the Macarfi guide puts it at around €60 per person without drinks.", "before": "It has private rooms, good for groups and work dinners: book. Don’t confuse kitchen closing time with the dining room’s."}},
       "price": {"per_adult_base": null, "lines": [{"label": {"es": "Arroz a banda (por ración, mínimo 2)", "en": "Arroz a banda (per portion, min. 2)"}, "amount": 16, "unit": "racion"}, {"label": {"es": "Arroz negro con chipirones (por ración, mínimo 2)", "en": "Black rice with baby squid (per portion, min. 2)"}, "amount": 16, "unit": "racion"}, {"label": {"es": "Paella valenciana, solo por encargo (por ración, mínimo 2)", "en": "Paella valenciana, pre-order only (per portion, min. 2)"}, "amount": 17, "unit": "racion"}, {"label": {"es": "Arroz caldoso de bogavante (por ración, mínimo 2)", "en": "Lobster soupy rice (per portion, min. 2)"}, "amount": 23, "unit": "racion"}, {"label": {"es": "Croqueta de jamón ibérico", "en": "Iberian ham croquette"}, "amount": 2.8, "unit": "plato"}, {"label": {"es": "Plato del día (L–V)", "en": "Dish of the day (Mon–Fri)"}, "amount_range": [11, 14], "unit": "plato"}], "example": {"party": 2, "items": [{"label": {"es": "Paella valenciana (por encargo)", "en": "Paella valenciana (pre-order)"}, "qty": 2, "amount": 17}], "note": {"es": "Solo el arroz: sin entrantes, pan ni bebidas.", "en": "Rice only: no starters, bread or drinks."}}, "includes": {"bebida": "aparte", "pan": "desconocido", "postre": "aparte", "cafe": "aparte", "suplementos": "desconocido"}, "minimum": {"es": "Arroces: precio por ración y mínimo 2 raciones. La paella valenciana, solo por encargo.", "en": "Rice dishes: price per portion, minimum two portions. Paella valenciana only to pre-order."}, "note": {"es": "Precios de la carta QR de su web.", "en": "Prices from the QR menu on its website."}, "source": "https://www.laprincipalrestaurante.es/carta-qr/"},
       "hours": { "holidays": "cerrado", "status": "documentado", "weekly": { "mon": [["13:30", "16:00"], ["20:45", "24:30"]], "tue": [["13:30", "16:00"]], "wed": [["13:30", "16:00"]], "thu": [["13:30", "16:00"], ["20:45", "24:30"]], "fri": [["13:30", "16:00"], ["20:45", "24:30"]], "sat": [["13:30", "16:00"], ["20:45", "24:30"]], "sun": [] }, "note": { "es": "Martes y miércoles noche cerrado; domingos y festivos cerrado.", "en": "Closed Tuesday and Wednesday evenings, Sundays and holidays." }, "source": "https://www.laprincipalrestaurante.es/" },
-      "sources": ["https://www.laprincipalrestaurante.es/"]
+      "sources": ["https://www.laprincipalrestaurante.es/", "https://mapstr.com/place/NCSSK2mScAg"]
     },
     {
       "id": "komori", "name": "Komori", "type": "restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "mestalla", "address": "General Gil Dolz s/n, Hotel The Westin Valencia",
       "cravings": ["asiatico", "japones"], "tags": ["pareja", "ocasion"], "likes": ["pescado"],
-      "text": {
-        "es": { "offer": "Cocina japonesa con producto mediterráneo.", "fits": "Una alternativa especial al asiático informal.", "not_for": "Calcular presupuesto: no hay precio actual documentado.", "order": "Sin pedido documentado; no reutilizamos menús de guías de 2015.", "may_disappoint": "Sin críticas documentadas en nuestra muestra (reseñas pendientes).", "before": "Confirma acceso desde el hotel y el menú actual. Sin juegos verificados." },
-        "en": { "offer": "Japanese cooking with Mediterranean produce.", "fits": "A special-occasion alternative to casual Asian food.", "not_for": "Budgeting: no current price is documented.", "order": "No order documented; we do not reuse menus from 2015 guides.", "may_disappoint": "No criticism documented in our sample (reviews pending).", "before": "Check access through the hotel and the current menu. No play area verified." }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": { "bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" }, "note": { "es": "Precio pendiente.", "en": "Price pending." } },
-      "hours": { "holidays": "cerrado", "status": "documentado", "weekly": { "mon": [["14:00", "16:00"], ["20:30", "23:00"]], "tue": [["14:00", "16:00"], ["20:30", "23:00"]], "wed": [["14:00", "16:00"], ["20:30", "23:00"]], "thu": [["14:00", "16:00"], ["20:30", "23:00"]], "fri": [["14:00", "16:00"], ["20:30", "23:00"]], "sat": [["14:00", "16:00"], ["20:30", "23:00"]], "sun": [] }, "note": { "es": "Horario publicado; domingos y festivos cerrado. Confirmar.", "en": "Published hours; closed Sundays and holidays. Confirm." }, "source": "https://restaurantekomori.com/" },
-      "sources": ["https://restaurantekomori.com/"]
+      "text": {"es": {"offer": "Cocina japonesa con producto mediterráneo.", "fits": "Una alternativa especial al asiático informal.", "not_for": "Una comida rápida o barata: es japonés de hotel con soles Repsol en su historial, y se paga.", "order": "Sentaos en barra y pedid nigiris; en su carta han destacado el de anguila y el esgarraet de gindara, con guiño valenciano.", "may_disappoint": "Está dentro del Westin: ambiente de hotel, no de barra de barrio.", "before": "Entrada por el hotel Westin (General Gil Dolz). Reservad, y pedid barra si queréis verlos trabajar."}, "en": {"offer": "Japanese cooking with Mediterranean produce.", "fits": "A special-occasion alternative to casual Asian food.", "not_for": "A quick or cheap meal: it is a hotel Japanese restaurant with Repsol Suns in its history, and you pay for it.", "order": "Sit at the counter and order nigiri; the eel one and the esgarraet with gindara, a Valencian nod, have been highlights of its menu.", "may_disappoint": "It is inside the Westin: hotel atmosphere, not a neighbourhood counter.", "before": "Enter through the Westin hotel (General Gil Dolz). Book, and ask for the counter if you want to watch them work."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {"bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido"}},
+      "hours": {"holidays": "cerrado", "status": "documentado", "weekly": {"mon": [["14:00", "16:00"], ["20:30", "23:00"]], "tue": [["14:00", "16:00"], ["20:30", "23:00"]], "wed": [["14:00", "16:00"], ["20:30", "23:00"]], "thu": [["14:00", "16:00"], ["20:30", "23:00"]], "fri": [["14:00", "16:00"], ["20:30", "23:00"]], "sat": [["14:00", "16:00"], ["20:30", "23:00"]], "sun": []}, "note": {"es": "Domingos y festivos cerrado.", "en": "Closed on Sundays and public holidays."}, "source": "https://restaurantekomori.com/"},
+      "sources": ["https://restaurantekomori.com/", "https://valenciaplaza.com/komori-restaurante-japones-valencia"]
     },
     {
       "id": "petit", "name": "Petit Niu", "type": "cafetería-restaurante con juegos", "role": ["comer", "juego"],
       "scope": "valencia", "zone": "mestalla", "address": "Amadeu de Savoia, 15",
       "cravings": ["cafe"], "tags": ["familia_bebe", "nino_activo"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Comida y café con juego de madera, sensorial y libros.",
-          "fits": "Familias con niños de 0 a 6 años que necesitan jugar sin pantallas, como plan principal de comida y juego.",
-          "not_for": "Después de una cena: cierra pronto. Tampoco dejar al niño solo: el acompañamiento adulto es obligatorio.",
-          "order": "Comida sencilla dentro del plan de juego; carta no documentada.",
-          "may_disappoint": "Sus propias páginas se contradicen en pases y suplementos. La ficha tenía 12 opiniones totales: un 5,0 inicial no acredita constancia.",
-          "before": "No calcules el coste familiar hasta aclarar entrada, adultos extra y ampliaciones de tiempo."
-        },
-        "en": {
-          "offer": "Food and coffee with wooden, sensory and book-based play.",
-          "fits": "Families with children aged 0–6 who need screen-free play, as the main lunch-and-play plan.",
-          "not_for": "After dinner: it closes early. Nor for leaving the child alone: an adult must stay with them.",
-          "order": "Simple food as part of the play plan; menu not documented.",
-          "may_disappoint": "Its own pages contradict each other on passes and supplements. The listing had 12 reviews in total: an early 5.0 does not prove consistency.",
-          "before": "Do not budget the family visit until entry, extra adults and time extensions are clarified."
-        }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "kids_cost": { "es": "Contradictorio: una página publica 20 € en hora punta por 1 peque + adulto; otra, 7 € fuera de hora punta y una opción ligada a consumo.", "en": "Contradictory: one page lists €20 at peak time for 1 child + adult; another €7 off-peak and an option tied to spending." } },
+      "text": {"es": {"offer": "Comida y café con juego de madera, sensorial y libros.", "fits": "Familias con niños de 0 a 6 años que necesitan jugar sin pantallas, como plan principal de comida y juego.", "not_for": "Después de una cena: cierra pronto. Tampoco dejar al niño solo: el acompañamiento adulto es obligatorio.", "order": "Comida sencilla al servicio del juego: venid a jugar y comed algo, no al revés.", "may_disappoint": "Sus propias páginas no coinciden en pases y suplementos: preguntad el precio al reservar.", "before": "Llamad antes para saber qué incluye la entrada, cuántos adultos entran y cuánto cuesta ampliar el tiempo."}, "en": {"offer": "Food and coffee with wooden, sensory and book-based play.", "fits": "Families with children aged 0–6 who need screen-free play, as the main lunch-and-play plan.", "not_for": "After dinner: it closes early. Nor for leaving the child alone: an adult must stay with them.", "order": "Simple food in service of the play: come to play and eat something, not the other way round.", "may_disappoint": "Its own pages disagree on passes and supplements: ask for the price when you book.", "before": "Call ahead to find out what entry includes, how many adults can come in and what extra time costs."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}, "kids_cost": {"es": "Sus páginas dan cifras distintas (20 € en hora punta por niño y adulto, 7 € fuera de hora punta): preguntad al reservar.", "en": "Its pages give different figures (€20 at peak time for a child and adult, €7 off-peak): ask when you book."}},
       "hours": { "status": "documentado", "weekly": { "mon": [], "tue": [], "wed": [["10:00", "20:00"]], "thu": [["10:00", "20:00"]], "fri": [["10:00", "20:00"]], "sat": [["10:00", "17:30"]], "sun": [["10:00", "17:30"]] }, "note": { "es": "Según su web.", "en": "According to its website." }, "source": "https://www.petitniu.com/como-funciona" },
       "kids": { "espacio_juego": "declarado", "juego_sin_pantallas": "declarado", "politica_sin_pantallas": "desconocido", "sin_tv": "desconocido", "edades": { "es": "0–6 años", "en": "Ages 0–6" }, "acompanamiento": { "es": "Adulto acompañante obligatorio; la terraza no permite dejar al niño dentro solo", "en": "An accompanying adult is required; the terrace does not allow leaving the child inside alone" }, "coste": "contradictorio" },
       "sources": ["https://www.petitniu.com/como-funciona", "https://www.petitniu.com/ven-a-jugar"]
@@ -544,43 +278,28 @@
       "id": "negri", "name": "La Negri", "type": "bar restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "benimaclet", "address": "Albocàsser, 27",
       "cravings": ["nuevo", "tapas"], "tags": ["amigos", "descubrimiento"],
-      "text": {
-        "es": { "offer": "Carta viajera, tapas y raíces mixtas.", "fits": "Descubrir cocina fuera del eje turístico.", "not_for": "Lunes y martes: cerrado según su web.", "order": "Menú de mediodía (precio de Repsol por confirmar).", "may_disappoint": "Sin críticas documentadas en nuestra muestra (reseñas pendientes).", "before": "Confirma precio actual y bebidas: el precio de una guía no es garantía." },
-        "en": { "offer": "A well-travelled menu, tapas and mixed roots.", "fits": "Discovering food away from the tourist trail.", "not_for": "Mondays and Tuesdays: closed according to its website.", "order": "The set lunch (Repsol price to be confirmed).", "may_disappoint": "No criticism documented in our sample (reviews pending).", "before": "Confirm the current price and drinks: a guide's price is not a guarantee." }
-      },
-      "price": {
-        "per_adult_base": 15, "base_confirmed": false,
-        "basis": { "es": "menú según Guía Repsol (por confirmar)", "en": "set menu per Guía Repsol (to be confirmed)" },
-        "lines": [ { "label": { "es": "Menú (publicado por Repsol)", "en": "Set menu (published by Repsol)" }, "amount": 15, "unit": "persona", "third_party": true } ],
-        "includes": { "bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" },
-        "source": "https://www.guiarepsol.com/es/fichas/solete/la-negri-328475/"
-      },
-      "hours": { "status": "parcial", "weekly": { "mon": [], "tue": [], "wed": {"slots": ["comida", "cena"]}, "thu": {"slots": ["comida", "cena"]}, "fri": {"slots": ["comida", "cena"]}, "sat": {"slots": ["comida", "cena"]}, "sun": {"slots": ["comida"]} }, "note": { "es": "Días oficiales sin horas exactas.", "en": "Official days without exact times." }, "source": "https://barlanegri.es/" },
-      "sources": ["https://barlanegri.es/", "https://www.guiarepsol.com/es/fichas/solete/la-negri-328475/"]
+      "text": {"es": {"offer": "Carta viajera, tapas y raíces mixtas.", "fits": "Descubrir cocina fuera del eje turístico.", "not_for": "Lunes y martes: cerrado según su web.", "order": "El menú de mediodía de entre semana; y la tarta de queso, lo más nombrado de la casa.", "may_disappoint": "Se llena: sin reserva es lotería. Lunes y martes cierra.", "before": "Reservad. Terraza y tronas. Mirad el precio del menú en su web: el de las guías envejece rápido."}, "en": {"offer": "A well-travelled menu, tapas and mixed roots.", "fits": "Discovering food away from the tourist trail.", "not_for": "Mondays and Tuesdays: closed according to its website.", "order": "The weekday lunch menu; and the cheesecake, the house’s best-known dish.", "may_disappoint": "It fills up: without a booking it is a lottery. Closed Monday and Tuesday.", "before": "Book. Terrace and high chairs. Check the menu price on their website: guide prices age fast."}},
+      "price": {"per_adult_base": 15, "base_confirmed": false, "basis": {"es": "menú según Guía Repsol", "en": "set menu per Guía Repsol"}, "lines": [{"label": {"es": "Menú (publicado por Repsol)", "en": "Set menu (published by Repsol)"}, "amount": 15, "unit": "persona", "third_party": true}], "includes": {"bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido"}, "source": "https://www.guiarepsol.com/es/fichas/solete/la-negri-328475/"},
+      "hours": {"status": "parcial", "weekly": {"mon": [], "tue": [], "wed": {"slots": ["comida", "cena"]}, "thu": {"slots": ["comida", "cena"]}, "fri": {"slots": ["comida", "cena"]}, "sat": {"slots": ["comida", "cena"]}, "sun": {"slots": ["comida"]}}, "note": {"es": "Días de apertura según su web.", "en": "Opening days according to its website."}, "source": "https://barlanegri.es/"},
+      "sources": ["https://barlanegri.es/", "https://www.guiarepsol.com/es/fichas/solete/la-negri-328475/", "https://intravel.net/valencia/restaurants-cafes/la-negri"]
     },
     {
       "id": "ola", "name": "La Ola Fresca", "type": "delicafé", "role": ["comer", "cafe"],
       "scope": "valencia", "zone": "benimaclet", "address": "Músic Magenti, 11",
       "cravings": ["cafe", "nuevo"], "tags": ["familia_bebe"],
-      "text": {
-        "es": { "offer": "Brunch, tartas y propuestas internacionales.", "fits": "Un plan diurno de barrio: café o comida sencilla.", "not_for": "Completar una cena tardía.", "order": "Sin pedido documentado; el brunch a 10 € de una página sin fecha no se da por actual.", "may_disappoint": "Los libros infantiles que cita una asociación del barrio no equivalen a una ludoteca.", "before": "Los horarios de varias fuentes se contradicen." },
-        "en": { "offer": "Brunch, cakes and international dishes.", "fits": "A daytime neighbourhood plan: coffee or a simple meal.", "not_for": "Rounding off a late dinner.", "order": "No order documented; the €10 brunch on an undated page is not treated as current.", "may_disappoint": "The children's books mentioned by a local association are not a play centre.", "before": "Hours from different sources contradict each other." }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Precio pendiente.", "en": "Price pending." } },
+      "text": {"es": {"offer": "Brunch, tartas y propuestas internacionales.", "fits": "Un plan diurno de barrio: desayuno, brunch o comida sencilla en un local acogedor; las reseñas destacan el trato y el café.", "not_for": "Completar una cena tardía.", "order": "Desayuno o brunch con huevos, buen café o té, y alguna tarta.", "may_disappoint": "Los libros infantiles que cita una asociación del barrio no equivalen a una ludoteca.", "before": "Se llena: reservad. Tiene terraza y ambiente familiar."}, "en": {"offer": "Brunch, cakes and international dishes.", "fits": "A daytime neighbourhood plan: breakfast, brunch or a simple lunch in a cosy room; reviews highlight the service and the coffee.", "not_for": "Rounding off a late dinner.", "order": "Breakfast or brunch with eggs, good coffee or tea, and a slice of cake.", "may_disappoint": "The children's books mentioned by a local association are not a play centre.", "before": "It fills up: book. There is a terrace and a family feel."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": { "status": "contradictorio" },
       "kids": { "juego_sin_pantallas": "terceros", "espacio_juego": "desconocido", "edades": null },
-      "sources": ["https://laolafresca.com/", "https://benimacletentra.org/portfolio-item/la-ola-fresca/"]
+      "sources": ["https://laolafresca.com/", "https://benimacletentra.org/portfolio-item/la-ola-fresca/", "https://gastroranking.es/r/la-ola-fresca_68945/"]
     },
     {
       "id": "sariers", "name": "Els Sariers", "type": "horchatería-heladería", "role": ["postre"],
       "scope": "valencia", "zone": "benimaclet", "address": "Sarcet, 6",
       "cravings": ["dulce", "valenciano"], "tags": ["visitante"],
-      "text": {
-        "es": { "offer": "Horchata líquida, mixta o granizada, fartons, granizados y helados.", "fits": "Un final valenciano para un paseo por Benimaclet.", "not_for": "Pedir horchata y helado por obligación: elige uno.", "order": "Horchata con fartons, o helado; no los dos por sistema.", "may_disappoint": "Sin cata propia ni reseñas revisadas.", "before": "Su web da dos horarios distintos; usamos el aviso de febrero de 2026 (de lunes a jueves solo tardes). No confundas la dirección con el municipio de Alboraia." },
-        "en": { "offer": "Horchata (plain, mixed or slushy), fartons, granitas and ice cream.", "fits": "A Valencian finish to a walk around Benimaclet.", "not_for": "Ordering both horchata and ice cream out of duty: pick one.", "order": "Horchata with fartons, or ice cream; not both by default.", "may_disappoint": "Not tasted by us; reviews not checked.", "before": "Its website gives two different timetables; we use the February 2026 notice (Monday to Thursday afternoons only). Do not confuse the address with the town of Alboraia." }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa pendiente.", "en": "Prices pending." } },
-      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"mon": [["16:00", "21:00"]], "tue": [["16:00", "21:00"]], "wed": [["16:00", "21:00"]], "thu": [["16:00", "21:00"]], "fri": [["11:00", "21:00"]], "sat": [["11:00", "22:00"]], "sun": [["11:00", "22:00"]]}, "note": {"es": "Según su aviso «Nous horaris» del 23/02/2026; la barra lateral de su web muestra otro horario y no se indica temporada. Confirmar en verano.", "en": "From its ‘Nous horaris’ notice of 23/02/2026; the website sidebar shows different hours and no season is stated. Confirm in summer."}, "source": "https://horchateriaelssariers.es/category/horchateria-els-sariers/"},
+      "text": {"es": {"offer": "Horchata líquida, mixta o granizada, fartons, granizados y helados.", "fits": "Un final valenciano para un paseo por Benimaclet.", "not_for": "Pedir horchata y helado por obligación: elige uno.", "order": "Horchata con fartons, o helado; no los dos por sistema.", "may_disappoint": "De lunes a jueves solo abre por la tarde (aviso de febrero de 2026): no la dejéis para mediodía entre semana.", "before": "Está en Benimaclet (Sarcet 6), no en el municipio de Alboraia, aunque la calle apunte hacia allí."}, "en": {"offer": "Horchata (plain, mixed or slushy), fartons, granitas and ice cream.", "fits": "A Valencian finish to a walk around Benimaclet.", "not_for": "Ordering both horchata and ice cream out of duty: pick one.", "order": "Horchata with fartons, or ice cream; not both by default.", "may_disappoint": "Monday to Thursday it only opens in the afternoon (February 2026 notice): don’t plan it for a weekday lunchtime.", "before": "It is in Benimaclet (Sarcet 6), not in the town of Alboraia, even if the street points that way."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
+      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"mon": [["16:00", "21:00"]], "tue": [["16:00", "21:00"]], "wed": [["16:00", "21:00"]], "thu": [["16:00", "21:00"]], "fri": [["11:00", "21:00"]], "sat": [["11:00", "22:00"]], "sun": [["11:00", "22:00"]]}, "note": {"es": "Según su aviso «Nous horaris» del 23/02/2026. En verano, llamad.", "en": "According to its ‘Nous horaris’ notice of 23/02/2026. In summer, call."}, "source": "https://horchateriaelssariers.es/category/horchateria-els-sariers/"},
       "sources": ["https://horchateriaelssariers.es/", "https://chufadevalencia.org/empresas/orxateria-els-sariers/"]
     },
     {
@@ -588,24 +307,7 @@
       "scope": "valencia", "zone": "cabanyal", "address": "Josep Benlliure, 69",
       "cravings": ["tapas", "valenciano"], "tags": ["pareja", "amigos", "visitante", "sobremesa"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Bodega con tapas, brandada y vinos.",
-          "fits": "Bodega y tapas con contexto, sabiendo qué pedir.",
-          "not_for": "Llegar tarde esperando sobremesa: una reseña cuenta prisas al llegar tarde.",
-          "order": "La brandada es el plato más elogiado en la muestra.",
-          "may_disappoint": "Dentro de reseñas de 5★ aparecen reparos al valor de otros platos y de la carne.",
-          "before": "Reserva. El bono no es precio medio."
-        },
-        "en": {
-          "offer": "Old bodega with tapas, brandada (salt-cod purée) and wines.",
-          "fits": "Bodega and tapas with history, if you know what to order.",
-          "not_for": "Arriving late and expecting to linger: one review mentions being rushed after arriving late.",
-          "order": "The brandada is the most praised dish in our sample.",
-          "may_disappoint": "Even 5★ reviews raise doubts about the value of other dishes and the meat.",
-          "before": "Book ahead. The voucher is not an average price."
-        }
-      },
+      "text": {"es": {"offer": "Bodega con tapas, brandada y vinos.", "fits": "Bodega y tapas con contexto, sabiendo qué pedir.", "not_for": "Llegar tarde esperando sobremesa: una reseña cuenta prisas al llegar tarde.", "order": "La brandada, el plato más elogiado en las reseñas; y algo de su bodega para acompañar.", "may_disappoint": "Dentro de reseñas de 5★ aparecen reparos al valor de otros platos y de la carne.", "before": "Reserva. El bono no es precio medio."}, "en": {"offer": "Old bodega with tapas, brandada (salt-cod purée) and wines.", "fits": "Bodega and tapas with history, if you know what to order.", "not_for": "Arriving late and expecting to linger: one review mentions being rushed after arriving late.", "order": "The brandada, the dish reviews praise most; and something from its cellar to go with it.", "may_disappoint": "Even 5★ reviews raise doubts about the value of other dishes and the meat.", "before": "Book ahead. The voucher is not an average price."}},
       "price": {
         "per_adult_base": 50,
         "basis": { "es": "bono 1836+ (no es precio medio)", "en": "'1836+' voucher (not an average price)" },
@@ -622,37 +324,8 @@
       "scope": "valencia", "zone": "cabanyal", "address": "Vicent Gallart, 15",
       "cravings": ["tapas", "valenciano"], "tags": ["pareja", "amigos", "visitante"], "likes": ["pescado"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Guisos y cocina marinera valenciana.",
-          "fits": "Comer cocina valenciana con razones culinarias, no solo por la decoración.",
-          "not_for": "El domingo: la cocina cierra según su web.",
-          "order": "Para compartir: callos, boquerones y sepia. De postre, el helado de cremaet tiene identidad valenciana. Las reseñas mencionan berenjena con queso.",
-          "may_disappoint": "Las tres reseñas visibles son favorables y no hay muestra crítica o reciente suficiente para hablar de regularidad.",
-          "before": "El helado de cremaet se propone por carta, no porque lo hayan validado reseñas; confirma alcohol y alérgenos."
-        },
-        "en": {
-          "offer": "Stews and Valencian seafood cooking.",
-          "fits": "Valencian food chosen for culinary reasons, not just the décor.",
-          "not_for": "Sundays: the kitchen is closed according to its website.",
-          "order": "To share: tripe (callos), anchovies (boquerones) and cuttlefish (sepia). For dessert, the cremaet ice cream has Valencian character. Reviews mention aubergine with cheese.",
-          "may_disappoint": "The three visible reviews are positive and there is not enough critical or recent material to judge consistency.",
-          "before": "The cremaet ice cream is suggested from the menu, not because reviews validated it; check alcohol and allergens."
-        }
-      },
-      "price": {
-        "per_adult_base": 19.5,
-        "basis": { "es": "callos + boquerones + sepia para dos", "en": "tripe + anchovies + cuttlefish for two" },
-        "lines": [
-          { "label": { "es": "Callos", "en": "Tripe (callos)" }, "amount": 12, "unit": "plato" },
-          { "label": { "es": "Boquerones", "en": "Anchovies (boquerones)" }, "amount": 11, "unit": "plato" },
-          { "label": { "es": "Sepia", "en": "Cuttlefish (sepia)" }, "amount": 16, "unit": "plato" },
-          { "label": { "es": "Helado de cremaet", "en": "Cremaet ice cream" }, "amount": 6, "unit": "postre" }
-        ],
-        "example": { "party": 2, "items": [ { "label": { "es": "Callos", "en": "Tripe" }, "qty": 1, "amount": 12 }, { "label": { "es": "Boquerones", "en": "Anchovies" }, "qty": 1, "amount": 11 }, { "label": { "es": "Sepia", "en": "Cuttlefish" }, "qty": 1, "amount": 16 } ], "note": { "es": "No sabemos si basta para dos con hambre.", "en": "We do not know if this is enough for two hungry people." } },
-        "includes": { "bebida": "aparte", "pan": "desconocido", "postre": "aparte", "cafe": "aparte", "suplementos": "desconocido" },
-        "source": "https://anyora.es/la-carta/carta-entera/"
-      },
+      "text": {"es": {"offer": "Guisos y cocina marinera valenciana.", "fits": "Comer cocina valenciana con razones culinarias, no solo por la decoración.", "not_for": "El domingo: la cocina cierra según su web.", "order": "Para compartir: callos, boquerones y sepia. De postre, el helado de cremaet tiene identidad valenciana. Las reseñas mencionan berenjena con queso.", "may_disappoint": "Las reseñas visibles son todas buenas, pero pocas para hablar de constancia. Venid por los guisos, no por la decoración.", "before": "El helado de cremaet se propone por carta, no porque lo hayan validado reseñas; confirma alcohol y alérgenos."}, "en": {"offer": "Stews and Valencian seafood cooking.", "fits": "Valencian food chosen for culinary reasons, not just the décor.", "not_for": "Sundays: the kitchen is closed according to its website.", "order": "To share: tripe (callos), anchovies (boquerones) and cuttlefish (sepia). For dessert, the cremaet ice cream has Valencian character. Reviews mention aubergine with cheese.", "may_disappoint": "The visible reviews are all positive, but too few to speak of consistency. Come for the stews, not the décor.", "before": "The cremaet ice cream is suggested from the menu, not because reviews validated it; check alcohol and allergens."}},
+      "price": {"per_adult_base": 19.5, "basis": {"es": "callos + boquerones + sepia para dos", "en": "tripe + anchovies + cuttlefish for two"}, "lines": [{"label": {"es": "Callos", "en": "Tripe (callos)"}, "amount": 12, "unit": "plato"}, {"label": {"es": "Boquerones", "en": "Anchovies (boquerones)"}, "amount": 11, "unit": "plato"}, {"label": {"es": "Sepia", "en": "Cuttlefish (sepia)"}, "amount": 16, "unit": "plato"}, {"label": {"es": "Helado de cremaet", "en": "Cremaet ice cream"}, "amount": 6, "unit": "postre"}], "example": {"party": 2, "items": [{"label": {"es": "Callos", "en": "Tripe"}, "qty": 1, "amount": 12}, {"label": {"es": "Boquerones", "en": "Anchovies"}, "qty": 1, "amount": 11}, {"label": {"es": "Sepia", "en": "Cuttlefish"}, "qty": 1, "amount": 16}]}, "includes": {"bebida": "aparte", "pan": "desconocido", "postre": "aparte", "cafe": "aparte", "suplementos": "desconocido"}, "source": "https://anyora.es/la-carta/carta-entera/"},
       "hours": { "status": "documentado", "kitchen": true, "weekly": { "mon": [["13:00", "23:00"]], "tue": [["13:00", "23:00"]], "wed": [["13:00", "23:00"]], "thu": [["13:00", "23:00"]], "fri": [["13:00", "23:30"]], "sat": [["13:00", "23:30"]], "sun": [] }, "note": { "es": "Horario de cocina según su web.", "en": "Kitchen hours according to its website." }, "source": "https://anyora.es/" },
       "sources": ["https://anyora.es/", "https://anyora.es/la-carta/carta-entera/"]
     },
@@ -660,10 +333,7 @@
       "id": "sastreria", "name": "La Sastrería", "type": "restaurante", "role": ["comer"],
       "scope": "valencia", "zone": "cabanyal", "address": "Josep Benlliure, 42 y 44b",
       "cravings": ["mediterranea"], "tags": ["pareja", "visitante"], "likes": ["pescado"],
-      "text": {
-        "es": { "offer": "Cocina de mar en un local de fuerte diseño.", "fits": "Comida y espacio visual a la vez.", "not_for": "Quien solo quiere el precio más bajo: el menú publicado es de 44 €.", "order": "Menú Bordado (inclusiones por confirmar).", "may_disappoint": "Sin críticas documentadas en nuestra muestra. Ser fotogénico no implica comer mal.", "before": "No reutilices el precio turístico de 30 € como coste actual." },
-        "en": { "offer": "Seafood cooking in a strongly designed space.", "fits": "Food and a striking room at the same time.", "not_for": "Anyone after the lowest price: the published menu is €44.", "order": "The 'Bordado' menu (inclusions to be confirmed).", "may_disappoint": "No criticism documented in our sample. Being photogenic does not mean the food is poor.", "before": "Do not reuse the €30 tourist-site price as the current cost." }
-      },
+      "text": {"es": {"offer": "Cocina de mar en un local de fuerte diseño.", "fits": "Comida y espacio visual a la vez.", "not_for": "Quien solo quiere el precio más bajo: el menú publicado es de 44 €.", "order": "Gamba roja apenas marcada, navajas y pescado del día a la brasa; o el Menú Bordado si queréis recorrer la casa.", "may_disappoint": "Barra y restaurante son dos espacios distintos, y la entrada del restaurante está a la vuelta: decid cuál queréis al reservar.", "before": "El precio de 30 € de guías antiguas ya no vale: el menú publicado es de 44 €."}, "en": {"offer": "Seafood cooking in a strongly designed space.", "fits": "Food and a striking room at the same time.", "not_for": "Anyone after the lowest price: the published menu is €44.", "order": "Lightly seared red prawn, razor clams and the catch of the day over embers; or the Menú Bordado if you want a tour of the kitchen.", "may_disappoint": "The bar and the restaurant are two separate spaces, and the restaurant entrance is round the corner: say which you want when you book.", "before": "The €30 price in old guides no longer applies: the published menu is €44."}},
       "price": {
         "per_adult_base": 44,
         "basis": { "es": "menú Bordado", "en": "'Bordado' menu" },
@@ -673,32 +343,15 @@
         "source": "https://lasastreriavalencia.com/home/"
       },
       "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"mon": [["19:30", "24:30"]], "tue": [["19:30", "24:30"]], "wed": [["19:30", "24:30"]], "thu": [["13:00", "17:00"], ["19:30", "24:30"]], "fri": [["13:00", "17:00"], ["19:30", "24:30"]], "sat": [["13:00", "17:00"], ["19:30", "24:30"]], "sun": [["13:00", "17:00"], ["19:30", "24:30"]]}, "note": {"es": "Horario de su web: lunes a miércoles solo cenas; de jueves a domingo, comidas y cenas.", "en": "Hours from its website: Monday to Wednesday dinner only; Thursday to Sunday lunch and dinner."}, "source": "https://lasastreriavalencia.com/en/"},
-      "sources": ["https://lasastreriavalencia.com/home/", "https://www.visitvalencia.com/que-hacer-valencia/gastronomia/restaurantes-valencia/sastreria"]
+      "sources": ["https://lasastreriavalencia.com/home/", "https://www.visitvalencia.com/que-hacer-valencia/gastronomia/restaurantes-valencia/sastreria", "https://visitvalencia.com/en/what-to-do-valencia/gastronomy/where-to-eat-restaurant-valencia/sastreria"]
     },
     {
       "id": "gelatica", "name": "Gelática Ice Concept", "type": "heladería-pastelería", "role": ["postre"],
       "scope": "valencia", "zone": "cabanyal", "address": "Remunta, 11",
       "cravings": ["dulce"], "tags": ["visitante", "pareja"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Helados, brownie y bollería; pistas de pistacho, cítricos y tartas heladas.",
-          "fits": "Una parada dulce con motivos concretos, mejor después de comer o por la tarde.",
-          "not_for": "Después de cenar: cierra temprano y la última media hora es solo para llevar.",
-          "order": "Las reseñas citan chocolate con turrón, sorbete de limón, pistacho y brownie. No es necesario ir solo a por una bola.",
-          "may_disappoint": "Sin críticas en la muestra visible (3 reseñas de 5★). Los sabores citados no tienen por qué estar ese día.",
-          "before": "Tarifa pendiente."
-        },
-        "en": {
-          "offer": "Ice cream, brownies and pastries; pistachio, citrus and ice-cream cakes as leads.",
-          "fits": "A sweet stop with concrete reasons, best after lunch or in the afternoon.",
-          "not_for": "After dinner: it closes early and the last half hour is takeaway only.",
-          "order": "Reviews mention chocolate with turrón, lemon sorbet, pistachio and brownie. A single scoop is not the only reason to go.",
-          "may_disappoint": "No criticism in the visible sample (three 5★ reviews). Flavours mentioned may not be available that day.",
-          "before": "Prices pending."
-        }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa pendiente.", "en": "Prices pending." } },
+      "text": {"es": {"offer": "Helados, brownie y bollería; destacan pistacho, cítricos y tartas heladas.", "fits": "Una parada dulce con motivos concretos, mejor después de comer o por la tarde.", "not_for": "Después de cenar: cierra temprano y la última media hora es solo para llevar.", "order": "Las reseñas citan chocolate con turrón, sorbete de limón, pistacho y brownie. No es necesario ir solo a por una bola.", "may_disappoint": "Los sabores rotan: el que os recomendaron puede no estar ese día.", "before": "Cierra temprano y la última media hora es solo para llevar: venid por la tarde."}, "en": {"offer": "Ice cream, brownies and pastries; pistachio, citrus and ice-cream cakes stand out.", "fits": "A sweet stop with concrete reasons, best after lunch or in the afternoon.", "not_for": "After dinner: it closes early and the last half hour is takeaway only.", "order": "Reviews mention chocolate with turrón, lemon sorbet, pistachio and brownie. A single scoop is not the only reason to go.", "may_disappoint": "Flavours rotate: the one you were told about may not be on that day.", "before": "It closes early and the last half hour is takeaway only: come in the afternoon."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": { "status": "documentado", "weekly": { "mon": [], "tue": [], "wed": [["08:30", "18:00"]], "thu": [["08:30", "18:00"]], "fri": [["08:30", "18:00"]], "sat": [["09:00", "19:30"]], "sun": [["09:00", "19:30"]] }, "takeaway_only_last_min": 30, "note": { "es": "Últimos 30 minutos solo para llevar.", "en": "Last 30 minutes takeaway only." }, "source": "https://www.gelaticaice.com/" },
       "sources": ["https://www.gelaticaice.com/"]
     },
@@ -707,24 +360,7 @@
       "scope": "valencia", "zone": "malvarrosa", "address": "Isabel de Villena, 155",
       "cravings": ["arroz", "valenciano"], "tags": ["visitante", "ocasion", "sobremesa"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Arroces a leña.",
-          "fits": "Un plan de arroz con presupuesto alto conocido.",
-          "not_for": "Comer barato, o improvisar una valenciana: va por encargo con 24 h.",
-          "order": "El arroz y el producto justifican la visita según la muestra; no cada parte es imprescindible.",
-          "may_disappoint": "Una reseña encontró corriente el postre. Otra objeta la carta QR.",
-          "before": "Si vas sin pantallas, pide carta impresa: no sabemos si la hay."
-        },
-        "en": {
-          "offer": "Wood-fired rice dishes.",
-          "fits": "A rice plan with a known, high budget.",
-          "not_for": "A cheap meal, or an impromptu paella valenciana: it needs ordering 24 hours ahead.",
-          "order": "Rice and produce justify the visit in our sample; not every course is essential.",
-          "may_disappoint": "One review found the dessert ordinary. Another objects to the QR-code menu.",
-          "before": "If you want to avoid screens, ask for a printed menu: we do not know whether there is one."
-        }
-      },
+      "text": {"es": {"offer": "Arroces a leña.", "fits": "Un plan de arroz con presupuesto alto conocido.", "not_for": "Comer barato, o improvisar una valenciana: va por encargo con 24 h.", "order": "Arroz a leña: es lo que justifica la visita, según las reseñas. Con los entrantes, pedid con mesura.", "may_disappoint": "Una reseña encontró corriente el postre. Otra objeta la carta QR.", "before": "Si queréis comer sin pantallas, pedid carta impresa al llegar."}, "en": {"offer": "Wood-fired rice dishes.", "fits": "A rice plan with a known, high budget.", "not_for": "A cheap meal, or an impromptu paella valenciana: it needs ordering 24 hours ahead.", "order": "Wood-fired rice: it is what justifies the visit, according to reviews. Go easy on the starters.", "may_disappoint": "One review found the dessert ordinary. Another objects to the QR-code menu.", "before": "If you want a screen-free meal, ask for a printed menu when you arrive."}},
       "price": {
         "per_adult_base": 50,
         "basis": { "es": "gasto mínimo de reserva por persona", "en": "minimum spend per person when booking" },
@@ -746,24 +382,7 @@
       "scope": "valencia", "zone": "malvarrosa", "address": "Passeig de Neptú, 6",
       "cravings": ["arroz", "valenciano"], "tags": ["visitante", "amigos"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Arroces y terraza junto al paseo marítimo.",
-          "fits": "Arroz, paseo y helado en el mismo paseo de Neptuno.",
-          "not_for": "Prisas: el propio local avisa de 40–45 minutos mínimos para el arroz, más en horas punta.",
-          "order": "Arroz (mínimo 2 raciones). La muestra recoge experiencias distintas con la valenciana y el arroz de verduras.",
-          "may_disappoint": "Dos reseñas de 3★ (3–4 meses): el ambiente y la atención salen mejor que la comida en alguna. No lo extrapolamos a todos los arroces.",
-          "before": "Con niño inquieto, cuenta la espera del arroz."
-        },
-        "en": {
-          "offer": "Rice dishes and a terrace on the seafront promenade.",
-          "fits": "Rice, a stroll and ice cream along the same Neptuno promenade.",
-          "not_for": "Anyone in a hurry: the venue itself warns of at least 40–45 minutes for rice, longer at peak times.",
-          "order": "Rice (minimum two portions). Our sample includes mixed experiences with paella valenciana and the vegetable rice.",
-          "may_disappoint": "Two 3★ reviews (3–4 months old): in one, the atmosphere and service came out better than the food. We do not extend that to every rice dish.",
-          "before": "With a restless child, factor in the wait for the rice."
-        }
-      },
+      "text": {"es": {"offer": "Arroces y terraza junto al paseo marítimo.", "fits": "Arroz, paseo y helado en el mismo paseo de Neptuno.", "not_for": "Prisas: el propio local avisa de 40–45 minutos mínimos para el arroz, más en horas punta.", "order": "Arroz (mínimo 2 raciones). Las opiniones sobre la valenciana y el de verduras van y vienen: si dudáis, preguntad cuál sale mejor ese día.", "may_disappoint": "Dos reseñas de 3★ (3–4 meses): el ambiente y la atención salen mejor que la comida en alguna. No lo extrapolamos a todos los arroces.", "before": "Con niño inquieto, cuenta la espera del arroz."}, "en": {"offer": "Rice dishes and a terrace on the seafront promenade.", "fits": "Rice, a stroll and ice cream along the same Neptuno promenade.", "not_for": "Anyone in a hurry: the venue itself warns of at least 40–45 minutes for rice, longer at peak times.", "order": "Rice (minimum two portions). Opinions on the paella valenciana and the vegetable rice are mixed: if in doubt, ask which is best that day.", "may_disappoint": "Two 3★ reviews (3–4 months old): in one, the atmosphere and service came out better than the food. We do not extend that to every rice dish.", "before": "With a restless child, factor in the wait for the rice."}},
       "price": {
         "per_adult_base": 30,
         "basis": { "es": "consumo mínimo por persona al reservar", "en": "minimum spend per person when booking" },
@@ -779,36 +398,16 @@
       "id": "veneta-mar", "name": "Véneta Neptuno", "type": "heladeria", "role": ["postre"],
       "scope": "valencia", "zone": "malvarrosa", "address": "Passeig de Neptú, 14",
       "cravings": ["dulce"], "tags": ["visitante"],
-      "text": {
-        "es": { "offer": "Gelato en el paseo marítimo.", "fits": "La pareja más compacta con La Pepica: están en el mismo paseo.", "not_for": "Confundirla con la sucursal de Ribera.", "order": "Sin sabor documentado para esta sucursal.", "may_disappoint": "Sin cata propia ni reseñas revisadas.", "before": "Horario estacional sin confirmar; tarifa y suplementos pendientes." },
-        "en": { "offer": "Gelato on the seafront promenade.", "fits": "The most compact pairing with La Pepica: same promenade.", "not_for": "Confusing it with the Ribera branch.", "order": "No flavour documented for this branch.", "may_disappoint": "Not tasted by us; reviews not checked.", "before": "Seasonal hours not confirmed; prices and extras pending." }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Tarifa y suplementos pendientes.", "en": "Prices and extras pending." } },
+      "text": {"es": {"offer": "Gelato en el paseo marítimo.", "fits": "La pareja más compacta con La Pepica: están en el mismo paseo.", "not_for": "Confundirla con la sucursal de Ribera.", "order": "Los clásicos de Véneta: galleta de la abuela, pistacho o naranja de Sicilia.", "may_disappoint": "Algo cara para una bola, como toda la casa según las reseñas.", "before": "Fuera de temporada el horario cambia: si vais tarde, llamad."}, "en": {"offer": "Gelato on the seafront promenade.", "fits": "The most compact pairing with La Pepica: same promenade.", "not_for": "Confusing it with the Ribera branch.", "order": "The Véneta classics: grandma’s biscuit, pistachio or Sicilian orange.", "may_disappoint": "A bit pricey for a scoop, like the whole chain according to reviews.", "before": "Out of season the hours change: if you are going late, call."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web oficial no publica horario (comprobado el 25/10/2026).", "en": "Its official website does not publish opening hours (checked on 25/10/2026)."}, "source": "https://www.venetagelato.com/"},
-      "sources": ["https://www.venetagelato.com/"]
+      "sources": ["https://www.venetagelato.com/", "https://wanderlog.com/place/details/1522465"]
     },
     {
       "id": "gato", "name": "Gato Blanco", "type": "restaurante familiar", "role": ["comer", "juego"],
       "scope": "valencia", "zone": "zaidia", "address": "Lleida, 14, bajo derecha",
       "cravings": ["mediterranea"], "tags": ["familia_bebe", "nino_activo"],
-      "text": {
-        "es": {
-          "offer": "Cocina declarada sin gluten, zona infantil y juegos de mesa.",
-          "fits": "Comer y jugar en el mismo local, sin otro desplazamiento ni otra consumición.",
-          "not_for": "Lunes y martes: cerrado.",
-          "order": "Menú del día publicado; revisa bebidas y días.",
-          "may_disappoint": "Que veas o no la zona de juegos depende de la mesa. No sabemos si hay televisión.",
-          "before": "El local declara cocina sin gluten: confirma necesidades y alérgenos. Pide mesa con vista a los juegos."
-        },
-        "en": {
-          "offer": "Self-declared gluten-free kitchen, children's area and board games.",
-          "fits": "Eating and playing in the same place, with no extra trip or extra bill.",
-          "not_for": "Mondays and Tuesdays: closed.",
-          "order": "The published menu of the day; check drinks and days.",
-          "may_disappoint": "Whether you can see the play area depends on your table. We do not know whether there is a TV.",
-          "before": "The venue declares a gluten-free kitchen: confirm your needs and allergens. Ask for a table overlooking the play area."
-        }
-      },
+      "text": {"es": {"offer": "Cocina declarada sin gluten, zona infantil y juegos de mesa.", "fits": "Comer y jugar en el mismo local, sin otro desplazamiento ni otra consumición.", "not_for": "Lunes y martes: cerrado.", "order": "Menú del día publicado; revisa bebidas y días.", "may_disappoint": "Ver la zona de juegos desde la mesa depende de dónde os sienten: pedidla al reservar.", "before": "El local declara cocina sin gluten: confirma necesidades y alérgenos. Pide mesa con vista a los juegos."}, "en": {"offer": "Self-declared gluten-free kitchen, children's area and board games.", "fits": "Eating and playing in the same place, with no extra trip or extra bill.", "not_for": "Mondays and Tuesdays: closed.", "order": "The published menu of the day; check drinks and days.", "may_disappoint": "Whether you can see the play area from your table depends on where you sit: ask for it when you book.", "before": "The venue declares a gluten-free kitchen: confirm your needs and allergens. Ask for a table overlooking the play area."}},
       "price": {
         "per_adult_base": 15.5,
         "basis": { "es": "menú del día", "en": "menu of the day" },

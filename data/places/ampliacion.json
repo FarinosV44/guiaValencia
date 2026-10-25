@@ -6,38 +6,8 @@
       "scope": "valencia", "zone": "eixample", "address": "Joaquín Costa, 3",
       "cravings": ["asiatico", "japones", "buffet"], "tags": ["amigos", "pareja", "familia_bebe"], "likes": ["pescado", "mucha_hambre"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Buffet japonés con condiciones explícitas a mediodía.",
-          "fits": "Comparar valor a mediodía; quien viene más por pescado que por salsas.",
-          "not_for": "Quien come poco: compara antes con un japonés a la carta.",
-          "order": "Una primera tanda pequeña: pieza sencilla, pieza con salsa y un caliente. Una reseña menciona pescado sin necesidad de muchas salsas.",
-          "may_disappoint": "Una reseña de 4★ (hace un año) relata explicación insuficiente del QR, pedidos retrasados y retirada de cubiertos antes de servir lo pendiente. Una incidencia no demuestra práctica habitual.",
-          "before": "Bebida mínima aparte, café aparte, 2 € por plato no consumido. El postre está incluido: no hace falta salir a por otro."
-        },
-        "en": {
-          "offer": "Japanese buffet with clearly stated lunchtime conditions.",
-          "fits": "Comparing lunchtime value; diners who want fish more than sauces.",
-          "not_for": "Light eaters: compare with an à la carte Japanese restaurant first.",
-          "order": "A small first round: one plain piece, one with sauce and one hot dish. A review mentions fish that does not need much sauce.",
-          "may_disappoint": "A 4★ review (a year ago) describes a poor QR explanation, delayed orders and cutlery cleared before pending dishes arrived. One incident does not prove a habit.",
-          "before": "Minimum drink extra, coffee extra, €2 per uneaten dish. Dessert is included, so no need to go out for another."
-        }
-      },
-      "price": {
-        "per_adult_base": 18, "base_overrides": {"sat": null, "sun": null, "festivo": null},
-        "basis": { "es": "buffet de adulto (menú de día)", "en": "adult buffet (day menu)" },
-        "lines": [
-          { "label": { "es": "Adulto, menú de día", "en": "Adult, day menu" }, "amount": 18, "unit": "persona" },
-          { "label": { "es": "Niño 3–5 años", "en": "Child aged 3–5" }, "amount": 8, "unit": "nino" },
-          { "label": { "es": "Niño 6–10 años", "en": "Child aged 6–10" }, "amount": 12, "unit": "nino" },
-          { "label": { "es": "Penalización por plato no consumido", "en": "Charge per uneaten dish" }, "amount": 2, "unit": "plato" }
-        ],
-        "example": { "party": 2, "items": [ { "label": { "es": "Adulto, menú de día", "en": "Adult, day menu" }, "qty": 2, "amount": 18 } ], "note": { "es": "Más dos bebidas obligatorias de precio pendiente.", "en": "Plus two compulsory drinks, price pending." } },
-        "includes": { "bebida": "obligatoria_aparte", "pan": "no_aplica", "postre": "incluido", "cafe": "aparte", "suplementos": "desconocido" },
-        "kids_cost": { "es": "Niño 3–5: 8 €; 6–10: 12 € (PDF del menú de día).", "en": "Child 3–5: €8; 6–10: €12 (day-menu PDF)." },
-        "source": "https://www.aoyama.es/web/aoyama1/menu_day2.pdf"
-      },
+      "text": {"es": {"offer": "Buffet japonés con condiciones explícitas a mediodía.", "fits": "Comparar valor a mediodía; quien viene más por pescado que por salsas.", "not_for": "Quien come poco: compara antes con un japonés a la carta.", "order": "Una primera tanda pequeña: pieza sencilla, pieza con salsa y un caliente. Una reseña menciona pescado sin necesidad de muchas salsas.", "may_disappoint": "Alguna reseña se queja de que el pedido por QR se explica poco y de que, en hora punta, recogen la mesa con platos aún por llegar. Pedid en tandas cortas y pronto.", "before": "Bebida mínima aparte, café aparte, 2 € por plato no consumido. El postre está incluido: no hace falta salir a por otro."}, "en": {"offer": "Japanese buffet with clearly stated lunchtime conditions.", "fits": "Comparing lunchtime value; diners who want fish more than sauces.", "not_for": "Light eaters: compare with an à la carte Japanese restaurant first.", "order": "A small first round: one plain piece, one with sauce and one hot dish. A review mentions fish that does not need much sauce.", "may_disappoint": "One review complains that QR ordering is barely explained and that, at peak times, the table gets cleared with dishes still to come. Order early, in short rounds.", "before": "Minimum drink extra, coffee extra, €2 per uneaten dish. Dessert is included, so no need to go out for another."}},
+      "price": {"per_adult_base": 18, "base_overrides": {"sat": null, "sun": null, "festivo": null}, "basis": {"es": "buffet de adulto (menú de día)", "en": "adult buffet (day menu)"}, "lines": [{"label": {"es": "Adulto, menú de día", "en": "Adult, day menu"}, "amount": 18, "unit": "persona"}, {"label": {"es": "Niño 3–5 años", "en": "Child aged 3–5"}, "amount": 8, "unit": "nino"}, {"label": {"es": "Niño 6–10 años", "en": "Child aged 6–10"}, "amount": 12, "unit": "nino"}, {"label": {"es": "Penalización por plato no consumido", "en": "Charge per uneaten dish"}, "amount": 2, "unit": "plato"}], "example": {"party": 2, "items": [{"label": {"es": "Adulto, menú de día", "en": "Adult, day menu"}, "qty": 2, "amount": 18}], "note": {"es": "Más dos bebidas obligatorias, aparte.", "en": "Plus two compulsory drinks, extra."}}, "includes": {"bebida": "obligatoria_aparte", "pan": "no_aplica", "postre": "incluido", "cafe": "aparte", "suplementos": "desconocido"}, "kids_cost": {"es": "Niño 3–5: 8 €; 6–10: 12 € (PDF del menú de día).", "en": "Child 3–5: €8; 6–10: €12 (day-menu PDF)."}, "source": "https://www.aoyama.es/web/aoyama1/menu_day2.pdf"},
       "hours": { "status": "desconocido", "note": { "es": "Confirmar calendario del menú de día.", "en": "Confirm which days the day menu applies." } },
       "kids": { "pedir_sin_movil": "desconocido", "juego_sin_pantallas": "desconocido" },
       "sources": ["https://www.aoyama.es/web/aoyama1/menu_day2.pdf"]
@@ -47,24 +17,7 @@
       "scope": "valencia", "zone": "xativa", "address": "Xàtiva, 12",
       "cravings": ["asiatico", "japones", "buffet"], "tags": ["amigos"], "likes": ["salsas", "mucha_hambre"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Buffet de sushi con tarifas por franja.",
-          "fits": "Quien disfruta la fusión con salsas y viene con hambre.",
-          "not_for": "Quien evita el queso crema y las salsas.",
-          "order": "Mirad qué añade el cambio de franja antes de ir de noche o en fin de semana.",
-          "may_disappoint": "Una reseña de 3★ (hace 8 meses) reconoce valor pero critica prisa inicial y queso crema en varias piezas: preferencia relatada, no fallo universal.",
-          "before": "Bebida obligatoria aparte. Hay PDFs antiguos con otras tarifas; su «top 1» es autopromoción, no nuestro ranking."
-        },
-        "en": {
-          "offer": "Sushi buffet with prices by time slot.",
-          "fits": "Hungry diners who enjoy fusion with sauces.",
-          "not_for": "Anyone avoiding cream cheese and sauces.",
-          "order": "Check what the pricier evening or weekend slot adds before choosing it.",
-          "may_disappoint": "A 3★ review (8 months ago) acknowledges value but criticises an initial rush and cream cheese in several pieces: a stated preference, not a universal fault.",
-          "before": "Compulsory drink extra. Older PDFs show other prices; its 'number one' claim is self-promotion, not our ranking."
-        }
-      },
+      "text": {"es": {"offer": "Buffet de sushi con tarifas por franja.", "fits": "Quien disfruta la fusión con salsas y viene con hambre.", "not_for": "Quien evita el queso crema y las salsas.", "order": "Mirad qué añade la tarifa de noche o de fin de semana antes de pagarla; si lo vuestro es el sushi con salsas, aquí hay mucho donde elegir.", "may_disappoint": "Una reseña de 3★ reconoce el valor pero critica las prisas al empezar y el queso crema en muchas piezas: si no os va, pedid piezas sin él.", "before": "Bebida obligatoria aparte. Hay PDFs antiguos con otras tarifas; su «top 1» es autopromoción, no nuestro ranking."}, "en": {"offer": "Sushi buffet with prices by time slot.", "fits": "Hungry diners who enjoy fusion with sauces.", "not_for": "Anyone avoiding cream cheese and sauces.", "order": "Check what the evening or weekend rate adds before paying it; if sauced sushi is your thing, there is plenty to choose from.", "may_disappoint": "A 3★ review credits the value but criticises the rush at the start and the cream cheese in many pieces: if that isn’t your thing, ask for pieces without it.", "before": "Compulsory drink extra. Older PDFs show other prices; its 'number one' claim is self-promotion, not our ranking."}},
       "price": {
         "per_adult_base": 20.5, "base_overrides": {"sat": 28.5, "sun": 28.5, "festivo": 28.5},
         "basis": { "es": "mediodía laborable", "en": "weekday lunch" },
@@ -85,49 +38,18 @@
       "id": "kyoto-valladolid", "name": "Kyoto Valladolid", "type": "buffet de sushi", "role": ["comer"],
       "scope": "valencia", "zone": "benimaclet", "address": "Avenida Valladolid, 5",
       "cravings": ["asiatico", "japones", "buffet"], "tags": ["amigos"], "likes": ["mucha_hambre"],
-      "text": {
-        "es": { "offer": "Buffet de sushi con modalidades A, B y C.", "fits": "Comparar modalidades antes que cantidad.", "not_for": "Recomendarlo por barato: aún no hay cifra contrastada.", "order": "Comprueba qué especialidades entran en tu modalidad: una foto no lo demuestra.", "may_disappoint": "Sin reseñas revisadas para esta sucursal.", "before": "La tarifa depende del local; no extrapoles especialidades al básico." },
-        "en": { "offer": "Sushi buffet with A, B and C tiers.", "fits": "Comparing tiers rather than quantity.", "not_for": "Recommending it as cheap: there is no confirmed figure yet.", "order": "Check which specialities your tier includes: a photo does not prove it.", "may_disappoint": "No reviews checked for this branch.", "before": "Prices vary by branch; do not assume the basic tier includes the specialities." }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": { "bebida": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" }, "note": { "es": "Tarifa de esta sucursal pendiente.", "en": "Prices for this branch pending." } },
-      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"mon": [["13:15", "16:15"], ["20:30", "23:45"]], "tue": [["13:15", "16:15"], ["20:30", "23:45"]], "wed": [["13:15", "16:15"], ["20:30", "23:45"]], "thu": [["13:15", "16:15"], ["20:30", "23:45"]], "fri": [["13:15", "16:15"], ["20:30", "23:45"]], "sat": [["13:15", "16:15"], ["20:30", "23:45"]], "sun": [["13:15", "16:15"], ["20:30", "23:45"]]}, "note": {"es": "Horario común publicado para todas las sucursales Kyoto, no específico de esta. La modalidad A es solo de mediodía de lunes a viernes.", "en": "Shared hours published for all Kyoto branches, not specific to this one. Tier A is weekday lunch only."}, "source": "https://kyoto-franquicia.com/"},
-      "sources": ["https://kyoto-franquicia.com/"]
+      "text": {"es": {"offer": "Buffet de sushi con modalidades A, B y C.", "fits": "Comidas de grupo o familia con hambre y ganas de variedad: las reseñas destacan producto fresco, mucha elección y que al repetir no se espera.", "not_for": "Una cena tranquila para dos: es un buffet grande, de grupos y celebraciones.", "order": "Elegid modalidad (A, B o C) mirando qué especialidades entran en cada una, y empezad por el sushi y el salmón, lo que más nombran las reseñas.", "may_disappoint": "Las salas de tatami salen caras para una familia, y alguna reseña cita un suplemento de 3 € por persona al reservar.", "before": "Reservad, y preguntad al hacerlo por el suplemento y por las salas de tatami. Las especialidades de la tarifa alta no entran en la básica."}, "en": {"offer": "Sushi buffet with A, B and C tiers.", "fits": "Hungry group or family meals that want variety: reviews highlight fresh food, lots of choice and no waiting when you reorder.", "not_for": "A quiet dinner for two: it is a big buffet built for groups and get-togethers.", "order": "Pick a tier (A, B or C) by checking which specialities each includes, and start with the sushi and salmon, the dishes reviews mention most.", "may_disappoint": "The tatami rooms work out expensive for a family, and one review mentions a €3-per-person booking supplement.", "before": "Book, and ask about the supplement and the tatami rooms when you do. The top tier’s specialities are not in the basic one."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {"bebida": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido"}},
+      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"mon": [["13:15", "16:15"], ["20:30", "23:45"]], "tue": [["13:15", "16:15"], ["20:30", "23:45"]], "wed": [["13:15", "16:15"], ["20:30", "23:45"]], "thu": [["13:15", "16:15"], ["20:30", "23:45"]], "fri": [["13:15", "16:15"], ["20:30", "23:45"]], "sat": [["13:15", "16:15"], ["20:30", "23:45"]], "sun": [["13:15", "16:15"], ["20:30", "23:45"]]}, "note": {"es": "Horario común publicado para todas las sucursales Kyoto. La modalidad A es solo de mediodía, de lunes a viernes.", "en": "Common hours published for all Kyoto branches. Tier A is weekday lunchtime only."}, "source": "https://kyoto-franquicia.com/"},
+      "sources": ["https://kyoto-franquicia.com/", "https://gastroranking.es/r/restaurante-kyoto_62541/"]
     },
-    {
-      "id": "goisushi-granvia", "name": "Goisushi Gran Via", "type": "buffet de sushi", "role": ["comer"],
-      "scope": "valencia", "zone": "eixample", "address": "Gran Via Marqués del Túria, 43",
-      "cravings": ["asiatico", "japones", "buffet"], "tags": [], "likes": ["mucha_hambre"],
-      "text": {
-        "es": { "offer": "Buffet de sushi (confirmado por su página).", "fits": "Candidato pendiente de precio verificable.", "not_for": "Decidir por precio: la carta consultada no cargó imágenes.", "order": "Sin pedido documentado.", "may_disappoint": "Sin reseñas revisadas. No le asignamos una ganga imaginaria para completar la tabla.", "before": "No lo confundas con Kaisen." },
-        "en": { "offer": "Sushi buffet (confirmed on its page).", "fits": "A candidate pending verifiable prices.", "not_for": "Choosing on price: the menu we checked did not load its images.", "order": "No order documented.", "may_disappoint": "No reviews checked. We will not invent a bargain to fill the table.", "before": "Do not confuse it with Kaisen." }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Precios y condiciones pendientes.", "en": "Prices and conditions pending." } },
-      "hours": { "status": "desconocido" },
-      "sources": ["https://kaisushiexperience.com/restaurante/vlc-granvia/"]
-    },
+    
     {
       "id": "raices", "name": "Raíces", "type": "pizzería", "role": ["comer"],
       "scope": "valencia", "zone": "carmen", "address": "Bailía, 2",
       "cravings": ["pizza"], "tags": ["pareja", "amigos", "visitante"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Carta concentrada en pizza, por la Seu.",
-          "fits": "Un plan pequeño (hasta cuatro) con ganas de pizza contemporánea.",
-          "not_for": "Necesitar hora de asiento garantizada: no reserva.",
-          "order": "Una Margherita para comparar masa y cocción; las reseñas describen borde aireado y equilibrio de ingredientes.",
-          "may_disappoint": "Tres reseñas positivas, dos de ellas de hace 2–3 años: no prueban superioridad actual ni hablan de los postres.",
-          "before": "No reserva y admite grupos de hasta cuatro. Sus testimonios seleccionados no sustituyen reseñas independientes."
-        },
-        "en": {
-          "offer": "A pizza-focused menu near the Cathedral.",
-          "fits": "A small group (up to four) in the mood for contemporary pizza.",
-          "not_for": "Needing a guaranteed seating time: no bookings.",
-          "order": "A Margherita to judge dough and bake; reviews describe an airy crust and balanced toppings.",
-          "may_disappoint": "Three positive reviews, two of them 2–3 years old: they do not prove it is better today, and say nothing about desserts.",
-          "before": "No bookings; groups of up to four. Its hand-picked testimonials do not replace independent reviews."
-        }
-      },
+      "text": {"es": {"offer": "Carta concentrada en pizza, por la Seu.", "fits": "Un plan pequeño (hasta cuatro) con ganas de pizza contemporánea.", "not_for": "Necesitar hora de asiento garantizada: no reserva.", "order": "Una Margherita para comparar masa y cocción; las reseñas describen borde aireado y equilibrio de ingredientes.", "may_disappoint": "Las reseñas hablan de la masa, no de los postres: venid a por la pizza, no a por el final dulce.", "before": "No reserva y admite grupos de hasta cuatro: llegad pronto o asumid la espera."}, "en": {"offer": "A pizza-focused menu near the Cathedral.", "fits": "A small group (up to four) in the mood for contemporary pizza.", "not_for": "Needing a guaranteed seating time: no bookings.", "order": "A Margherita to judge dough and bake; reviews describe an airy crust and balanced toppings.", "may_disappoint": "Reviews talk about the dough, not the desserts: come for the pizza, not for a sweet finish.", "before": "No bookings and groups of up to four: arrive early or accept the wait."}},
       "price": {
         "per_adult_base": 19,
         "basis": { "es": "pedido ilustrativo: pizza + refresco + medio tiramisú", "en": "sample order: pizza + soft drink + half a tiramisu" },
@@ -140,7 +62,7 @@
         "includes": { "bebida": "en_ejemplo", "pan": "no_aplica", "postre": "en_ejemplo", "cafe": "aparte", "suplementos": "desconocido" },
         "source": "https://raicespizza.com/"
       },
-      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web no se pudo leer el 25/10/2026 (redirección en bucle): horario sin verificar.", "en": "Its website could not be read on 25/10/2026 (redirect loop): hours unverified."}, "source": "https://raicespizza.com/"},
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "source": "https://raicespizza.com/"},
       "sources": ["https://raicespizza.com/"]
     },
     {
@@ -148,24 +70,7 @@
       "scope": "valencia", "zone": "ruzafa", "address": "Sueca, 45",
       "cravings": ["pizza"], "tags": ["amigos", "pareja", "visitante"],
       "reviews_sample": 3,
-      "text": {
-        "es": {
-          "offer": "Pizza napolitana y otros platos en Ruzafa.",
-          "fits": "Una mesa con antojos diferentes: pizza y pasta.",
-          "not_for": "Celiaquía sin confirmar protocolo: tener opciones sin gluten no lo certifica.",
-          "order": "Marinara o Margherita según la carta de sala.",
-          "may_disappoint": "Una reseña de 4★ describe centro fino y borde grueso y pide más opciones veganas. Vegetariano no es vegano.",
-          "before": "Usa la carta de sala: el catálogo de pedido online muestra otros importes."
-        },
-        "en": {
-          "offer": "Neapolitan pizza and other dishes in Ruzafa.",
-          "fits": "A table with different cravings: pizza and pasta.",
-          "not_for": "Coeliacs without confirming the protocol: gluten-free options do not certify it.",
-          "order": "Marinara or Margherita from the dining-room menu.",
-          "may_disappoint": "A 4★ review describes a thin centre and thick crust and asks for more vegan options. Vegetarian is not vegan.",
-          "before": "Use the dining-room menu: the online delivery catalogue shows different prices."
-        }
-      },
+      "text": {"es": {"offer": "Pizza napolitana y otros platos en Ruzafa.", "fits": "Una mesa con antojos diferentes: pizza y pasta.", "not_for": "Celiacos estrictos: tener opciones sin gluten no es lo mismo que cocina sin trazas. Preguntad su protocolo antes.", "order": "Marinara o Margherita según la carta de sala.", "may_disappoint": "Una reseña de 4★ describe centro fino y borde grueso y pide más opciones veganas. Vegetariano no es vegano.", "before": "Usa la carta de sala: el catálogo de pedido online muestra otros importes."}, "en": {"offer": "Neapolitan pizza and other dishes in Ruzafa.", "fits": "A table with different cravings: pizza and pasta.", "not_for": "Strict coeliacs: having gluten-free options is not the same as a trace-free kitchen. Ask about their protocol first.", "order": "Marinara or Margherita from the dining-room menu.", "may_disappoint": "A 4★ review describes a thin centre and thick crust and asks for more vegan options. Vegetarian is not vegan.", "before": "Use the dining-room menu: the online delivery catalogue shows different prices."}},
       "price": {
         "per_adult_base": 11.5,
         "basis": { "es": "una Margherita (sala), sin bebida", "en": "one Margherita (dining room), no drink" },
@@ -183,10 +88,7 @@
       "id": "km0", "name": "Pizzería Km0", "type": "pizzería", "role": ["comer"],
       "scope": "valencia", "zone": "benimaclet", "address": "Emilio Baró, 82",
       "cravings": ["pizza", "vegano"], "tags": ["amigos", "descubrimiento"], "likes": ["vegano"],
-      "text": {
-        "es": { "offer": "Masa italiana con ingredientes locales y de temporada; sección vegana amplia.", "fits": "Explorar producto local y alternativas veganas en Benimaclet.", "not_for": "Comparar totales sin reconfirmar la carta de temporada.", "order": "Una Margherita para comparar; luego alguna de temporada.", "may_disappoint": "Sin reseñas revisadas. La estacionalidad importa más que colgarle «auténtica».", "before": "La carta de mesa es «Invierno 2026»: confirma vigencia." },
-        "en": { "offer": "Italian dough with local, seasonal ingredients; a large vegan section.", "fits": "Exploring local produce and vegan options in Benimaclet.", "not_for": "Comparing totals without re-checking the seasonal menu.", "order": "A Margherita for comparison, then a seasonal one.", "may_disappoint": "No reviews checked. Seasonality matters more than calling it 'authentic'.", "before": "The table menu is 'Winter 2026': check it is still current." }
-      },
+      "text": {"es": {"offer": "Masa italiana con ingredientes locales y de temporada; sección vegana amplia.", "fits": "Pizza napolitana de masa de 48 horas con producto local, y la mejor sección vegana de nuestra lista, en Benimaclet.", "not_for": "Quien solo quiere la Margherita de siempre: aquí lo interesante son las de temporada.", "order": "Una Margherita para medir la masa y, después, una de temporada o de las de pistacho, que son las que más nombran las reseñas.", "may_disappoint": "Pocas mesas: sin reserva es fácil quedarse fuera.", "before": "Reservad. Cena todos los días y comida solo el fin de semana; también para llevar. La carta cambia por temporada."}, "en": {"offer": "Italian dough with local, seasonal ingredients; a large vegan section.", "fits": "Neapolitan pizza on 48-hour dough with local produce, and the best vegan section on our list, in Benimaclet.", "not_for": "Anyone who only wants the usual Margherita: the seasonal pizzas are the point here.", "order": "A Margherita to judge the dough, then a seasonal one or one of the pistachio pizzas, the ones reviews mention most.", "may_disappoint": "Few tables: without a booking it is easy to miss out.", "before": "Book. Dinner every day, lunch only at weekends; takeaway too. The menu changes with the season."}},
       "price": {
         "per_adult_base": 10.5,
         "basis": { "es": "una Margherita (carta Invierno 2026), sin bebida", "en": "one Margherita (Winter 2026 menu), no drink" },
@@ -195,42 +97,33 @@
         "source": "https://www.pizzeriakm0.com/carta"
       },
       "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"mon": [["19:30", "23:00"]], "tue": [["19:30", "23:00"]], "wed": [["19:30", "23:00"]], "thu": [["19:30", "23:00"]], "fri": [["19:30", "23:30"]], "sat": [["13:00", "16:00"], ["19:30", "23:30"]], "sun": [["13:00", "16:00"], ["19:30", "23:00"]]}, "note": {"es": "De lunes a viernes solo cenas; sábado y domingo también comidas.", "en": "Monday to Friday dinner only; Saturday and Sunday lunch as well."}, "source": "https://www.pizzeriakm0.com/contactos"},
-      "sources": ["https://www.pizzeriakm0.com/carta"]
+      "sources": ["https://www.pizzeriakm0.com/carta", "https://wanderlog.com/place/details/8851346/pizzeria-km0"]
     },
     {
       "id": "hundred", "name": "Hundred Burgers", "type": "hamburguesería", "role": ["comer"],
       "scope": "valencia", "zone": "mercat", "address": "Sant Vicent Màrtir, 44", "address_source": "https://www.visitvalencia.com/que-hacer-valencia/gastronomia/restaurantes-valencia/Hundred-Burgers",
       "cravings": ["burger"], "tags": [],
-      "text": {
-        "es": { "offer": "Hamburguesas con aval externo.", "fits": "Investigar una burger reconocida por una guía especializada.", "not_for": "Planificar con horario: no está publicado en la web de la cadena.", "order": "Sin precio legible en la carta consultada; no reciclamos el de 2024.", "may_disappoint": "Un premio refleja la valoración de ese equipo, no que todos vayamos a preferirla ni que todas las sucursales sirvan igual.", "before": "Dirección según Visit Valencia (Sant Vicent Màrtir 44); la web de la cadena no la muestra. Es un premio de Burgerdudes, no de Michelin." },
-        "en": { "offer": "Burgers with outside recognition.", "fits": "Looking into a burger ranked by a specialist guide.", "not_for": "Planning around opening hours: the chain’s website doesn’t publish them.", "order": "No legible prices on the menu we checked; we do not recycle 2024 prices.", "may_disappoint": "An award reflects that team's view, not that everyone will prefer it or that every branch is consistent.", "before": "Address per Visit Valencia (Sant Vicent Màrtir 44); the chain’s website doesn’t show it. The award is from Burgerdudes, not Michelin." }
-      },
+      "text": {"es": {"offer": "Hamburguesas con aval externo.", "fits": "Quien quiere probar la hamburguesa que Burgerdudes ha elegido la mejor del mundo: tiene 100 plazas y mucha demanda.", "not_for": "Quien busca una hamburguesería escondida y tranquila: es la más famosa de la ciudad.", "order": "La Satisfaction (bacon crujiente y mayonesa ahumada) o la Loser (cebolla caramelizada y gochujang). Ternera gallega madurada y pan hecho en casa.", "may_disappoint": "Un premio refleja el gusto de ese jurado, no el vuestro. En TripAdvisor hay quejas sueltas (nuggets secos, trato seco, sin postres veganos) y a algún bloguero le parece sobrevalorada.", "before": "Reservad en su web. Está en Sant Vicent Màrtir 44, con acceso sin escalones. Burgerdudes no es Michelin, pero en hamburguesas es la referencia."}, "en": {"offer": "Burgers with outside recognition.", "fits": "Anyone who wants to try the burger Burgerdudes named the world’s best: 100 seats and plenty of demand.", "not_for": "Anyone after a quiet, hidden burger joint: this is the most famous one in town.", "order": "The Satisfaction (crispy bacon, smoked mayo) or the Loser (caramelised onion, gochujang). Dry-aged Galician beef and buns baked in-house.", "may_disappoint": "An award reflects that jury’s taste, not yours. TripAdvisor has one-off complaints (dry nuggets, curt service, no vegan desserts) and one blogger finds it overrated.", "before": "Book on their website. It is at Sant Vicent Màrtir 44, with step-free access. Burgerdudes is not Michelin, but for burgers it is the benchmark."}},
       "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Carta sin importes legibles.", "en": "Menu without legible prices." } },
       "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "La web de la cadena carga con JavaScript y no muestra horario; no usamos el de agregadores.", "en": "The chain’s website loads with JavaScript and shows no hours; we don’t use aggregator hours."}, "source": "https://hundredburgers.com/carta"},
       "evidence_awards": [ { "label": { "es": "Burgerdudes 2026: 1.º en su lista", "en": "Burgerdudes 2026: no. 1 on its list" }, "url": "https://www.burgerdudes.se/news/the-worlds-best-burgers-2026/", "year": 2026 } ],
-      "sources": ["https://hundredburgers.com/carta"]
+      "sources": ["https://hundredburgers.com/carta", "https://gastroranking.es/r/hundred-san-vicente-44_206874/"]
     },
     {
       "id": "soul-valencia", "name": "Soul Coffee Beer", "type": "hamburguesería", "role": ["comer"],
       "scope": "valencia", "zone": null, "address": null, "branch_pending": true,
       "cravings": ["burger"], "tags": [],
-      "text": {
-        "es": { "offer": "Hamburguesas; la carta distingue doble de 240 g de opciones de 200 g.", "fits": "Quien quiere comparar estilos con una referencia externa.", "not_for": "Seguir el paseo con un café por el nombre: es hamburguesería.", "order": "Precio de mesa y guarnición pendientes.", "may_disappoint": "El peso anunciado no es una medición cocinada.", "before": "Confirma la dirección exacta en Valencia; no la confundas con Paiporta." },
-        "en": { "offer": "Burgers; the menu separates a 240 g double from 200 g options.", "fits": "Comparing styles with an outside reference.", "not_for": "A coffee stop because of the name: it is a burger restaurant.", "order": "Table prices and sides pending.", "may_disappoint": "The stated weight is not a cooked measurement.", "before": "Confirm the exact Valencia address; do not confuse it with Paiporta." }
-      },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Precio de mesa pendiente.", "en": "Table price pending." } },
+      "text": {"es": {"offer": "Hamburguesas; la carta distingue doble de 240 g de opciones de 200 g.", "fits": "Quien persigue hamburguesas de lista: Soul ha entrado en el top 10 mundial de Burgerdudes.", "not_for": "Seguir el paseo con un café por el nombre: es hamburguesería.", "order": "La Notorius, la más nombrada, y guardad sitio: las reseñas elogian mucho los postres.", "may_disappoint": "Decoración sencilla, y alguna reseña recibió la hamburguesa tibia. El peso de la carta es en crudo.", "before": "El local de referencia está en Paiporta (C/ San Pascual 12), a las afueras: id a tiro hecho y reservad el fin de semana."}, "en": {"offer": "Burgers; the menu separates a 240 g double from 200 g options.", "fits": "Burger-list chasers: Soul has made Burgerdudes’ world top 10.", "not_for": "A coffee stop because of the name: it is a burger restaurant.", "order": "The Notorius, the one everyone mentions, and save room: reviews rave about the desserts.", "may_disappoint": "Plain décor, and one review got a lukewarm burger. The menu weight is raw weight.", "before": "The flagship is in Paiporta (C/ San Pascual 12), just outside the city: go on purpose and book at weekends."}},
+      "price": {"per_adult_base": null, "lines": [], "includes": {}},
       "hours": { "status": "desconocido" },
       "evidence_awards": [ { "label": { "es": "Burgerdudes 2026: 10.º en su lista", "en": "Burgerdudes 2026: no. 10 on its list" }, "url": "https://www.burgerdudes.se/news/the-worlds-best-burgers-2026/", "year": 2026 } ],
-      "sources": ["https://soulcoffeebeer.com/carta/"]
+      "sources": ["https://soulcoffeebeer.com/carta/", "https://gastroranking.es/r/soul-coffee-beer_96542/"]
     },
     {
       "id": "tasty-carmen", "name": "Tasty El Carmen", "type": "hamburguesería", "role": ["comer"],
       "scope": "valencia", "zone": "carmen", "address": "Corona, 7",
       "cravings": ["burger"], "tags": ["amigos", "pareja", "rapido"],
-      "text": {
-        "es": { "offer": "Smash burger con precio de burger + patatas explícito.", "fits": "Un plan informal por El Carmen.", "not_for": "Una ludoteca: tener menú infantil no lo convierte en una.", "order": "Classic con patatas; algunos productos son exclusivos de este local.", "may_disappoint": "Sin reseñas revisadas ni cata propia.", "before": "Suma bebidas (su web no publica precio) y confirma mesa. Hay otro local en Patraix con el mismo horario publicado. Su página de reservas mostraba contenido ajeno al restaurante: reserva por teléfono." },
-        "en": { "offer": "Smash burgers with an explicit burger-plus-fries price.", "fits": "A casual plan around El Carmen.", "not_for": "A play area: a children's menu does not make it one.", "order": "The Classic with fries; some items are exclusive to this branch.", "may_disappoint": "No reviews checked, not tasted by us.", "before": "Add drinks (its website lists no price) and confirm a table. There is another branch in Patraix with the same published hours. Its booking page showed content unrelated to the restaurant: book by phone." }
-      },
+      "text": {"es": {"offer": "Smash burger con precio de burger + patatas explícito.", "fits": "Smash burger informal y barata por El Carmen: las reseñas la ponen entre las mejores smash de Valencia.", "not_for": "Una ludoteca: tener menú infantil no lo convierte en una.", "order": "La Valhalla (ultrasmash), la que más elogian; o la Classic con patatas si vais a lo seguro. El bacon crujiente sale bien parado.", "may_disappoint": "En pedidos online hay quejas de lentitud, errores y reembolsos lentos, y a alguien la tarta de dulce de leche le pareció seca. Mejor en mesa y a por la burger.", "before": "Local pequeño: reservad por teléfono (su página de reservas mostraba contenido ajeno al restaurante). Bebidas aparte. Hay otro local en Patraix."}, "en": {"offer": "Smash burgers with an explicit burger-plus-fries price.", "fits": "A cheap, casual smash burger in El Carmen: reviews rank it among the best smash burgers in Valencia.", "not_for": "A play area: a children's menu does not make it one.", "order": "The Valhalla (ultrasmash), the one most praised; or the Classic with fries if you want to play safe. The crispy bacon gets good notices.", "may_disappoint": "Online orders draw complaints about slowness, mistakes and slow refunds, and one diner found the dulce de leche cheesecake dry. Better eaten in, and for the burger.", "before": "Small place: book by phone (its booking page was showing content unrelated to the restaurant). Drinks extra. There is another branch in Patraix."}},
       "price": {
         "per_adult_base": 12.5,
         "basis": { "es": "Classic con patatas, sin bebida", "en": "Classic with fries, no drink" },
@@ -239,43 +132,23 @@
         "includes": { "bebida": "aparte", "pan": "no_aplica", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" },
         "source": "https://tastyamericanburger.com/carta/"
       },
-      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"mon": [], "tue": [], "wed": [["20:00", "23:00"]], "thu": [["20:00", "23:00"]], "fri": [["13:30", "15:30"], ["20:00", "23:00"]], "sat": [["13:30", "15:30"], ["20:00", "23:00"]], "sun": [["13:30", "15:30"], ["20:00", "23:00"]]}, "note": {"es": "Horario único publicado para sus dos locales (El Carmen y Patraix), sin distinguir sucursal.", "en": "A single timetable published for both branches (El Carmen and Patraix), not branch-specific."}, "source": "https://tastyamericanburger.com/"},
-      "sources": ["https://tastyamericanburger.com/carta/"]
+      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"mon": [], "tue": [], "wed": [["20:00", "23:00"]], "thu": [["20:00", "23:00"]], "fri": [["13:30", "15:30"], ["20:00", "23:00"]], "sat": [["13:30", "15:30"], ["20:00", "23:00"]], "sun": [["13:30", "15:30"], ["20:00", "23:00"]]}, "note": {"es": "Mismo horario publicado para sus dos locales (El Carmen y Patraix).", "en": "Same hours published for both branches (El Carmen and Patraix)."}, "source": "https://tastyamericanburger.com/"},
+      "sources": ["https://tastyamericanburger.com/carta/", "https://gastroranking.es/r/tasty-american-burger-2_242462/", "https://wanderlog.com/place/details/1260123/tasty-american-burger"]
     },
     {
       "id": "beak-cabanyal", "name": "Beak & Trotter", "type": "hamburguesería", "role": ["comer"],
       "scope": "valencia", "zone": "cabanyal", "address": "La Reina, 148",
       "cravings": ["burger"], "tags": [],
-      "text": {
-        "es": { "offer": "Hamburguesas en el Cabanyal.", "fits": "Candidato adicional pendiente de tarifa de sala.", "not_for": "Un ranking económico: falta fijar tarifa de mesa.", "order": "Sin pedido documentado.", "may_disappoint": "Sin reseñas revisadas.", "before": "La web señala La Reina 148; el aviso legal conserva domicilio en Conde Altea. No uses el domicilio fiscal para la ruta." },
-        "en": { "offer": "Burgers in Cabanyal.", "fits": "An extra candidate pending dining-room prices.", "not_for": "A budget ranking: table prices are not fixed yet.", "order": "No order documented.", "may_disappoint": "No reviews checked.", "before": "The website gives La Reina 148; its legal notice still lists Conde Altea. Do not route to the registered office." }
-      },
+      "text": {"es": {"offer": "Barbacoa ahumada y hamburguesas para compartir.", "fits": "Amigos con hambre que quieren compartir costilla y hamburguesas con sabor a humo; las reseñas destacan raciones generosas y un personal que recomienda bien.", "not_for": "Una cena íntima: sala pequeña y casi siempre llena.", "order": "Costilla de ternera (short rib) y la Big Smoke o la doble cheeseburger. Las reseñas insisten: pedid las patatas.", "may_disappoint": "Las raciones son grandes: pedid de menos y ampliad. Sin reserva, es fácil quedarse fuera.", "before": "Su web los sitúa en La Reina 148 (Cabanyal); algunos listados aún muestran el antiguo local de Conde de Altea, ya cerrado. Reservad."}, "en": {"offer": "Smoked barbecue and burgers for sharing.", "fits": "Hungry friends who want to share ribs and smoky burgers; reviews highlight generous portions and staff who give good recommendations.", "not_for": "An intimate dinner: a small room that is nearly always full.", "order": "Beef short rib and the Big Smoke or the double cheeseburger. Reviews insist: order the fries.", "may_disappoint": "Portions are big: under-order and add more. Without a booking, it is easy to miss out.", "before": "Their website puts them at La Reina 148 (Cabanyal); some listings still show the old Conde de Altea premises, now closed. Book."}},
       "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "El catálogo de pedido externo no prueba la tarifa de sala.", "en": "The external ordering catalogue does not prove dining-room prices." } },
       "hours": { "status": "desconocido" },
-      "sources": ["https://beakandtrotter.com/"]
+      "sources": ["https://beakandtrotter.com/", "https://gastroranking.es/r/beak-trotter-bbq-beer-shack_171797/"]
     },
     {
       "id": "lambrus-caballeros", "name": "La Lambrusquería Caballeros", "type": "restaurante italiano", "role": ["comer"],
       "scope": "valencia", "zone": "carmen", "address": "Caballeros, 27",
       "cravings": ["italiano", "pizza"], "tags": ["pareja"],
-      "text": {
-        "es": {
-          "offer": "Cocina italiana para compartir en El Carmen.",
-          "fits": "Una cita con un pedido concreto y un presupuesto entendible.",
-          "not_for": "Una «cita completa por menos de 50 €» con entrante: el ejemplo deja poco margen para bebidas.",
-          "order": "Scamorza para compartir, dos Trofie al Ragù y un tiramisú compartido. O dos principales sin entrante si el presupuesto manda.",
-          "may_disappoint": "Sin reseñas revisadas ni comprobación de ruido o intimidad de la mesa.",
-          "before": "La carta actual sustituye al PDF antiguo que aún sale en búsquedas. El menú de día no es oferta de cena."
-        },
-        "en": {
-          "offer": "Italian sharing food in El Carmen.",
-          "fits": "A date with a concrete order and an understandable bill.",
-          "not_for": "A 'full date under €50' with a starter: the example leaves little room for drinks.",
-          "order": "Scamorza to share, two Trofie al Ragù and a shared tiramisu. Or two mains without a starter if budget rules.",
-          "may_disappoint": "No reviews checked; noise and table privacy not verified.",
-          "before": "The current menu replaces the old PDF that still appears in search. The lunch menu is not a dinner offer."
-        }
-      },
+      "text": {"es": {"offer": "Cocina italiana para compartir en El Carmen.", "fits": "Una cita con un pedido concreto y un presupuesto entendible.", "not_for": "Una «cita completa por menos de 50 €» con entrante: el ejemplo deja poco margen para bebidas.", "order": "Scamorza para compartir, dos Trofie al Ragù y un tiramisú compartido. O dos principales sin entrante si el presupuesto manda.", "may_disappoint": "El menú del día es de mediodía: de noche toca carta, y la cuenta sube en cuanto entra el vino.", "before": "En buscadores aún aparece un PDF antiguo: la carta buena es la de su web."}, "en": {"offer": "Italian sharing food in El Carmen.", "fits": "A date with a concrete order and an understandable bill.", "not_for": "A 'full date under €50' with a starter: the example leaves little room for drinks.", "order": "Scamorza to share, two Trofie al Ragù and a shared tiramisu. Or two mains without a starter if budget rules.", "may_disappoint": "The set menu is lunch only: at night it is à la carte, and the bill climbs as soon as the wine arrives.", "before": "Search engines still show an old PDF: the right menu is the one on their website."}},
       "price": {
         "per_adult_base": 22.38,
         "basis": { "es": "pedido de ejemplo para dos (44,75 €), sin pan ni bebidas", "en": "sample order for two (€44.75), no bread or drinks" },
@@ -296,10 +169,7 @@
       "id": "eter-artes", "name": "Éter Artes y Ciencias", "type": "barbacoa coreana a la carta", "role": ["comer"],
       "scope": "valencia", "zone": "ciencias", "address": null, "branch_pending": true,
       "cravings": ["asiatico", "coreano"], "tags": ["amigos", "pareja"],
-      "text": {
-        "es": { "offer": "Adaptación de barbacoa coreana por raciones, con acompañamientos.", "fits": "Probar una preparación concreta sin pagar acceso ilimitado.", "not_for": "Una cena ilimitada: es a la carta. Tampoco para hablar de algo serio vigilando una panceta.", "order": "Bulgogi o panceta por ración; el número de raciones adecuado está por validar.", "may_disappoint": "Sin reseñas revisadas ni visita.", "before": "Confirma dirección exacta, raciones y bebidas." },
-        "en": { "offer": "Korean barbecue adaptation by the portion, with side dishes.", "fits": "Trying a specific preparation without paying for unlimited access.", "not_for": "An all-you-can-eat dinner: it is à la carte. Nor a serious conversation while minding the pork belly.", "order": "Bulgogi or pork belly by the portion; the right number of portions is still to be checked.", "may_disappoint": "No reviews checked, no visit.", "before": "Confirm the exact address, portions and drinks." }
-      },
+      "text": {"es": {"offer": "Adaptación de barbacoa coreana por raciones, con acompañamientos.", "fits": "Probar una preparación concreta sin pagar acceso ilimitado.", "not_for": "Una cena ilimitada: es a la carta. Tampoco para hablar de algo serio vigilando una panceta.", "order": "Bulgogi o panceta por ración, más los acompañamientos: empezad con pocas raciones y pedid más sobre la marcha.", "may_disappoint": "Al ser por ración, con mucha hambre la cuenta sube rápido: si queréis comer sin mirar, el buffet coreano es otro plan.", "before": "Éter tiene más de un local: este es el de Artes y Ciencias; mirad la dirección en su web antes de salir. Bebidas aparte."}, "en": {"offer": "Korean barbecue adaptation by the portion, with side dishes.", "fits": "Trying a specific preparation without paying for unlimited access.", "not_for": "An all-you-can-eat dinner: it is à la carte. Nor a serious conversation while minding the pork belly.", "order": "Bulgogi or pork belly by the portion, plus the side dishes: start with a few portions and order more as you go.", "may_disappoint": "As it is by the portion, a big appetite pushes the bill up fast: if you want to eat without counting, the Korean buffet is a different plan.", "before": "Éter has more than one venue: this is the Arts and Sciences one; check the address on their website before setting off. Drinks extra."}},
       "price": {
         "per_adult_base": 16,
         "basis": { "es": "una ración de carne por persona (orientativo)", "en": "one meat portion per person (indicative)" },
@@ -318,25 +188,8 @@
       "id": "hankook-alfafar", "name": "Hankook Alfafar", "type": "buffet de barbacoa coreana", "role": ["comer"],
       "scope": "area_metropolitana", "zone": "alfafar", "address": "Alcalde José Puertes, 26", "city": "Alfafar",
       "cravings": ["asiatico", "coreano", "buffet"], "tags": ["amigos"], "likes": ["mucha_hambre"],
-      "text": {
-        "es": { "offer": "Buffet con parrilla y sushi, fuera de Valencia ciudad.", "fits": "Grupos a los que divierte cocinar por tandas y probar varias carnes.", "not_for": "Quien come poco o quiere una preparación concreta: el ilimitado aporta poco.", "order": "Decide base o premium sabiendo que la base cobra suplementos premium.", "may_disappoint": "Sin reseñas revisadas. Tener tarifa infantil no demuestra que encaje con un niño que se levanta.", "before": "Bebida y postre aparte; franja infantil por altura por confirmar. No uses tarifas de Barcelona." },
-        "en": { "offer": "Grill-and-sushi buffet, outside Valencia city.", "fits": "Groups who enjoy cooking in rounds and trying several meats.", "not_for": "Light eaters, or anyone wanting one specific dish: unlimited access adds little.", "order": "Choose basic or premium knowing the basic tier charges premium supplements.", "may_disappoint": "No reviews checked. A children's rate does not prove it suits a child who keeps getting up.", "before": "Drinks and dessert extra; child pricing by height to be confirmed. Do not use Barcelona prices." }
-      },
-      "price": {
-        "per_adult_base": 18.9, "base_overrides": {"sat": 26.9, "sun": 26.9, "festivo": 26.9},
-        "basis": { "es": "base, mediodía laborable", "en": "basic tier, weekday lunch" },
-        "lines": [
-          { "label": { "es": "Mediodía L–V, base", "en": "Weekday lunch, basic" }, "amount": 18.9, "unit": "persona" },
-          { "label": { "es": "Mediodía L–V, premium", "en": "Weekday lunch, premium" }, "amount": 22.9, "unit": "persona" },
-          { "label": { "es": "Noche L–J, base", "en": "Mon–Thu evening, basic" }, "amount": 24.9, "unit": "persona" },
-          { "label": { "es": "Noche L–J, premium", "en": "Mon–Thu evening, premium" }, "amount": 29.9, "unit": "persona" },
-          { "label": { "es": "Fin de semana, festivo y viernes noche, base", "en": "Weekend, holiday and Friday evening, basic" }, "amount": 26.9, "unit": "persona" },
-          { "label": { "es": "Fin de semana, festivo y viernes noche, premium", "en": "Weekend, holiday and Friday evening, premium" }, "amount": 31.9, "unit": "persona" }
-        ],
-        "includes": { "bebida": "aparte", "pan": "no_aplica", "postre": "aparte", "cafe": "desconocido", "suplementos": "aparte" },
-        "kids_cost": { "es": "Franja infantil por altura; límites exactos por confirmar.", "en": "Child pricing by height; exact limits to be confirmed." },
-        "source": "https://hankookbbq.es/alfafar"
-      },
+      "text": {"es": {"offer": "Buffet con parrilla y sushi, fuera de Valencia ciudad.", "fits": "Grupos a los que divierte cocinar por tandas y probar varias carnes.", "not_for": "Quien come poco o quiere una preparación concreta: el ilimitado aporta poco.", "order": "Decide base o premium sabiendo que la base cobra suplementos premium.", "may_disappoint": "Tener tarifa infantil no lo convierte en sitio para un niño que se levanta: es parrilla en mesa, con fuego y tandas.", "before": "Bebida y postre aparte. La tarifa infantil va por altura: preguntadla al reservar. Hay Hankook en Barcelona: sus precios no valen aquí."}, "en": {"offer": "Grill-and-sushi buffet, outside Valencia city.", "fits": "Groups who enjoy cooking in rounds and trying several meats.", "not_for": "Light eaters, or anyone wanting one specific dish: unlimited access adds little.", "order": "Choose basic or premium knowing the basic tier charges premium supplements.", "may_disappoint": "A children’s price does not make it right for a child who keeps getting up: it is tabletop grilling, with flames and rounds.", "before": "Drinks and dessert extra. The children’s price goes by height: ask when you book. There is a Hankook in Barcelona: its prices do not apply here."}},
+      "price": {"per_adult_base": 18.9, "base_overrides": {"sat": 26.9, "sun": 26.9, "festivo": 26.9}, "basis": {"es": "base, mediodía laborable", "en": "basic tier, weekday lunch"}, "lines": [{"label": {"es": "Mediodía L–V, base", "en": "Weekday lunch, basic"}, "amount": 18.9, "unit": "persona"}, {"label": {"es": "Mediodía L–V, premium", "en": "Weekday lunch, premium"}, "amount": 22.9, "unit": "persona"}, {"label": {"es": "Noche L–J, base", "en": "Mon–Thu evening, basic"}, "amount": 24.9, "unit": "persona"}, {"label": {"es": "Noche L–J, premium", "en": "Mon–Thu evening, premium"}, "amount": 29.9, "unit": "persona"}, {"label": {"es": "Fin de semana, festivo y viernes noche, base", "en": "Weekend, holiday and Friday evening, basic"}, "amount": 26.9, "unit": "persona"}, {"label": {"es": "Fin de semana, festivo y viernes noche, premium", "en": "Weekend, holiday and Friday evening, premium"}, "amount": 31.9, "unit": "persona"}], "includes": {"bebida": "aparte", "pan": "no_aplica", "postre": "aparte", "cafe": "desconocido", "suplementos": "aparte"}, "kids_cost": {"es": "Tarifa infantil por altura: preguntad los tramos al reservar.", "en": "Children’s price goes by height: ask for the bands when you book."}, "source": "https://hankookbbq.es/alfafar"},
       "hours": { "status": "desconocido" },
       "sources": ["https://hankookbbq.es/alfafar"]
     }

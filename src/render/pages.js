@@ -178,7 +178,7 @@ function heroReceipt(p, lang) {
   const s = summarize(p.price);
   const m = (x) => money(x, lang);
   const items = p.price.example.items.map((it) => `<tr><td>${e(t(it.label, lang))}</td><td class="num">${m(it.amount * it.qty)}</td></tr>`).join('');
-  const unknowns = s.openComponents.map((k) => `<tr class="is-open"><td>${e(ui.components[k])}</td><td class="num">${ui.unknownMark}</td></tr>`).join('');
+  const unknowns = '';
   return `<div class="receipt receipt--hero" aria-hidden="false">
   <p class="rc__title">${e(p.name)}</p>
   <p class="rc__sub">${e(ui.receiptExample(p.price.example.party))}</p>
@@ -274,9 +274,8 @@ function placePage(ctx, lang, p) {
     else if (dv.kind === 'elige') dvText = D.elige(e(t(dv.line.label, lang)), e(lineAmt(dv.line)), sweetLinks(dv.sweet));
     else if (dv.kind === 'aqui') dvText = e(D.aqui(t(dv.line.label, lang), lineAmt(dv.line)));
     else if (dv.kind === 'fuera') dvText = D.fuera(sweetLinks(dv.sweet));
-    else dvText = e(D.sin_dato);
   }
-  const dvBlock = dv ? `<section class="dessert dessert--${dv.kind}"><h2>${e(ui.dessertTitle)}</h2><p>${dvText}</p>${dv.sweet.length && dv.kind !== 'quedate' ? `<p class="small">${e(ui.dessert.hours)}</p>` : ''}</section>` : '';
+  const dvBlock = dv && dvText ? `<section class="dessert dessert--${dv.kind}"><h2>${e(ui.dessertTitle)}</h2><p>${dvText}</p>${dv.sweet.length && dv.kind !== 'quedate' ? `<p class="small">${e(ui.dessert.hours)}</p>` : ''}</section>` : '';
 
   const body = `
 <article class="wrap place">
@@ -300,8 +299,8 @@ function placePage(ctx, lang, p) {
       <section><h2>${e(ui.before)}</h2><p>${e(tx.before)}</p></section>
       <section><h2>${e(ui.offer)}</h2><p>${e(tx.offer)}</p></section>
       ${dvBlock}
-      <section><h2>${e(ui.hours)}</h2>${hoursBlock(p, lang)}</section>
-      <section><h2>${e(ui.kids)}</h2>${kidsBlock(p, lang)}</section>
+      ${(() => { const h = hoursBlock(p, lang); return h ? `<section><h2>${e(ui.hours)}</h2>${h}</section>` : ''; })()}
+      ${(() => { const k = kidsBlock(p, lang); return k ? `<section><h2>${e(ui.kids)}</h2>${k}</section>` : ''; })()}
       <section><h2>${e(ui.evidence)}</h2>${evidenceBlock(p, ctx, lang)}</section>
     </div>
     <aside class="place__side">
@@ -456,7 +455,7 @@ function routesIndex(ctx, lang) {
   ${complete.map((r) => `<article class="teaser"><h3><a href="${PATHS.route[lang](r.slug[lang])}">${e(t(r.title, lang))}</a></h3><p>${e(t(r.summary, lang))}</p></article>`).join('')}
   </section>
   <section class="block"><h2>${e(ui.routePending)}</h2><p>${e(ui.routePendingNote)}</p>
-  <ul class="pendlist">${pending.map((r) => `<li><strong>${e(t(r.title, lang))}</strong><span>${r.places.map((id) => `<a href="${PATHS.place[lang](id)}">${e(ctx.data.byId[id].name)}</a>`).join(', ')}</span><span class="small">${e(t(r.pending, lang))}</span></li>`).join('')}</ul></section>
+  <ul class="pendlist">${pending.map((r) => `<li><strong>${e(t(r.title, lang))}</strong><span>${r.places.map((id) => `<a href="${PATHS.place[lang](id)}">${e(ctx.data.byId[id].name)}</a>`).join(', ')}</span><span>${e(t(r.tip, lang))}</span></li>`).join('')}</ul></section>
 </div>`;
   const page = pageBase('routes', lang, PATHS.routes[lang], PATHS.routes[other(lang)], { indexable: false, draft: true });
   page.title = lang === 'es' ? 'Rutas para comer y pasear en Valencia, con horarios comprobados' : 'Eat-and-stroll routes in Valencia, with checked opening hours';
@@ -488,11 +487,10 @@ function routePage(ctx, lang, r) {
     <table class="rc__lines"><tbody>
       <tr${res.cost.base == null ? ' class="is-open"' : ''}><td>${e(rest.name)}: ${e(ui.routeBaseFrom[res.cost.baseFrom](res.cost.party))}${res.cost.baseThirdParty ? ' *' : ''}</td><td class="num">${res.cost.base == null ? ui.unknownMark : m(res.cost.base)}</td></tr>
       <tr${res.cost.dessertKnown ? '' : ' class="is-open"'}><td>${e(res.cost.dessert === 'stay' ? t(r.dessert_options.stay.label, lang) : t(r.dessert_options.out.label, lang))}</td><td class="num">${res.cost.dessertKnown ? m(res.cost.dessertCost) : ui.unknownMark}</td></tr>
-      <tr class="is-open"><td>${e(ui.components.bebida)}</td><td class="num">${ui.unknownMark}</td></tr>
-      <tr class="is-open"><td>${e(ui.components.pan)}</td><td class="num">${ui.unknownMark}</td></tr>
     </tbody></table>
     <div class="rc__total"><span>${e(ui.receiptPartial)} ${e(ui.receiptGroup(res.cost.party))}</span><strong class="num">${res.cost.knownTotal == null ? ui.unknownMark : m(res.cost.knownTotal)}</strong></div>
     <div class="rc__pp"><span>${e(ui.receiptPerPerson)}</span><span class="num">${res.cost.perPersonKnown == null ? ui.unknownMark : m(res.cost.perPersonKnown)}</span></div>
+    <p class="rc__note">${e(ui.routeDrinksNote)}</p>
     ${res.cost.baseThirdParty ? `<p class="rc__note">* ${e(ui.receiptThirdParty)}</p>` : ''}
   </div>`;
 
@@ -630,11 +628,11 @@ function methodPage(ctx, lang) {
     ? ['Visitas, catas o fotos de restaurantes que no hemos hecho.', 'Puntuaciones de sabor sacadas de reseñas.', 'Precios, horarios o servicios infantiles que no constan.', 'Minutos andando: el trayecto lo calcula Maps.', 'Valoraciones con estrellas en datos estructurados.', 'Críticas para parecer independientes.']
     : ['Visits, tastings or restaurant photos we haven’t done.', 'Taste scores derived from reviews.', 'Prices, hours or children’s facilities that aren’t documented.', 'Walking times: Maps calculates the route.', 'Star ratings in structured data.', 'Criticism made up to look independent.'];
   const priceRules = es
-    ? ['Mostramos precio por persona y total del grupo.', 'Separamos bebida, pan, postre, café, suplementos, mínimos de raciones y costes infantiles.', 'Lo que no sabemos aparece como ¿? y el total se llama «suma parcial».', 'Solo llamamos «total completo» a una cuenta sin conceptos desconocidos.']
-    : ['We show price per person and the total for the group.', 'We separate drinks, bread, dessert, coffee, supplements, minimum portions and children’s costs.', 'What we don’t know shows as ¿? and the total is called a “partial total”.', 'We only call it a “full total” when nothing in the bill is unknown.'];
+    ? ['Mostramos precio por persona y total del grupo.', 'Separamos bebida, pan, postre, café, suplementos, mínimos de raciones y costes infantiles.', 'Solo enseñamos lo que el local publica o lo que cuentan las reseñas; lo que no consta no ocupa sitio en la ficha.', 'Si faltan conceptos por sumar, el total se llama «suma parcial», nunca «total completo».']
+    : ['We show price per person and the total for the group.', 'We separate drinks, bread, dessert, coffee, supplements, minimum portions and children’s costs.', 'We only show what the venue publishes or what reviews report; anything not on record takes up no space on the card.', 'If items are left to add, the total is called a “partial total”, never a “full total”.'];
   const rankRules = es
-    ? ['Primero se descartan incompatibilidades conocidas: zona, cerrado a la hora de llegada, base por encima del presupuesto, fuera de la ciudad.', '«Sin pantallas» es un requisito duro: lo no confirmado se muestra aparte como pendiente.', 'Después se ordena por encaje con el antojo, la compañía y el plan, y se penaliza lo desconocido.', 'Pago, invitación o comisión no forman parte de la fórmula.']
-    : ['First we rule out known incompatibilities: area, closed at arrival time, base price above budget, outside the city.', '“No screens” is a hard requirement: anything unconfirmed is shown separately as pending.', 'Then we order by fit with the craving, company and plan, and penalise unknowns.', 'Payment, hosting or commission are not part of the formula.'];
+    ? ['Primero se descartan incompatibilidades conocidas: zona, cerrado a la hora de llegada, base por encima del presupuesto, fuera de la ciudad.', '«Sin pantallas» es un requisito duro: los sitios que no lo anuncian salen aparte, con el consejo de preguntarlo.', 'Después se ordena por encaje con el antojo, la compañía y el plan; un sitio del que sabemos más pesa más.', 'Pago, invitación o comisión no forman parte de la fórmula.']
+    : ['First we rule out known incompatibilities: area, closed at arrival time, base price above budget, outside the city.', '“No screens” is a hard requirement: places that don’t advertise it are listed separately, with a tip to ask.', 'Then we order by fit with the craving, company and plan; a place we know more about weighs more.', 'Payment, hosting or commission are not part of the formula.'];
   const body = `
 <div class="wrap prose">
   <h1 class="pagetitle">${e(ui.methodH1)}</h1>

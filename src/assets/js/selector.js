@@ -63,7 +63,7 @@ function priceLine(place) {
   const s = summarize(place.price);
   if (s.exampleTotal != null) return `${m(s.perPerson)} ${ui.receiptPerPerson} (${ui.receiptPartial.toLowerCase()}, ${ui.receiptGroup(s.exampleParty)}: ${m(s.exampleTotal)})`;
   if (s.base != null) return `${m(s.base)} ${ui.receiptPerPerson} (${lang === 'es' ? 'base' : 'base price'})`;
-  return ui.bands.pendiente;
+  return '';
 }
 
 function pickHtml(pick) {
@@ -77,7 +77,7 @@ function pickHtml(pick) {
     <p>${e(p.text.fits)}</p>
     ${reasons.length ? `<p><strong>${e(ui.why)}:</strong></p><ul>${reasons.map((x) => `<li>${e(x)}</li>`).join('')}</ul>` : ''}
     <p class="pick__catch"><strong>${e(ui.catch)}:</strong> ${e(p.text.not_for)}${limits.length ? ' ' + e(limits.join(' ')) : ''}</p>
-    <p class="num small">${e(priceLine(p))}</p>
+    ${priceLine(p) ? `<p class="num small">${e(priceLine(p))}</p>` : ''}
     <p class="pick__actions"><a href="${p.url}">${e(ui.seeCard)}</a><a href="${e(p.maps)}" rel="nofollow noopener">${e(ui.maps)}</a></p>
     ${compareBox(p)}
   </article>`;
@@ -93,7 +93,7 @@ function hoursCell(p) {
     const st = statusAt(p.hours, q.day, q.time, { holiday: !!q.holiday });
     return ui.hoursStates[st.state] + (st.closes ? ` (${clock(st.closes)})` : '');
   }
-  return ui.hoursStatus[p.hours?.status || 'desconocido'];
+  return ui.hoursStatus[p.hours?.status] || ui.unknownMark;
 }
 
 function renderCompare() {
@@ -140,8 +140,8 @@ function render(res, q) {
   if (res.picks.length) {
     const cont = continuation(catalog.places, res.picks[0], q);
     const sweet = cont.options.slice(0, 3);
-    parts.push(`<section class="block"><h3>${e(ui.continuationTitle)}</h3>${cont.dessertIncluded ? `<p>${e(ui.continuationIncluded)}</p>` : ''}${
-      sweet.length ? `<ul>${sweet.map((o) => `<li><a href="${o.place.url}">${e(o.place.name)}</a>: ${e(o.place.text.fits)}</li>`).join('')}</ul><p class="small">${e(ui.continuationHoursNote)}</p>` : `<p>${e(ui.continuationNone)}</p>`
+    if (cont.dessertIncluded || sweet.length) parts.push(`<section class="block"><h3>${e(ui.continuationTitle)}</h3>${cont.dessertIncluded ? `<p>${e(ui.continuationIncluded)}</p>` : ''}${
+      sweet.length ? `<ul>${sweet.map((o) => `<li><a href="${o.place.url}">${e(o.place.name)}</a>: ${e(o.place.text.fits)}</li>`).join('')}</ul><p class="small">${e(ui.continuationHoursNote)}</p>` : ''
     }</section>`);
   }
 

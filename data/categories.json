@@ -15,7 +15,7 @@
       "sections": [
         {
           "heading": { "es": "Selección inicial", "en": "Starting shortlist" },
-          "body": { "es": ["Orden documental por encaje, no podio de sabor. Ninguno está catado por nosotros."], "en": ["Ordered by documented fit, not a taste podium. We have not eaten at any of them."] },
+          "body": { "es": ["Ordenados por el plan al que mejor sirven, no por un podio de sabor."], "en": ["Ordered by the plan each one suits best, not by a taste podium."] },
           "places": ["brosquil", "baret-tofona", "carmela", "pepica"]
         },
         {
@@ -38,8 +38,8 @@
         {
           "heading": { "es": "Postre y plan", "en": "Dessert and what comes next" },
           "body": {
-            "es": ["En Castellar no inventamos una heladería vecina para completar la ruta: quedarse al postre puede ser la continuación más sensata. En la playa, La Pepica y Véneta Neptuno comparten paseo, pero el horario de la heladería está sin confirmar."],
-            "en": ["In Castellar we will not invent a nearby ice-cream shop to complete the route: staying for dessert may be the sensible next step. At the beach, La Pepica and Véneta Neptuno share a promenade, but the ice-cream shop’s hours are unconfirmed."]
+            "es": ["En Castellar, el postre de la casa es la continuación más sensata: no hay que coger el coche para buscar un helado. En la playa, La Pepica y Véneta Neptuno comparten paseo marítimo: arroz frente al mar y helado de vuelta."],
+            "en": ["In Castellar, the house dessert is the sensible next step: no need to drive off in search of ice cream. At the beach, La Pepica and Véneta Neptuno share the promenade: rice by the sea, ice cream on the way back."]
           }
         }
       ],
@@ -64,8 +64,8 @@
       "sections": [
         {
           "heading": { "es": "Selección inicial por plan", "en": "Starting shortlist by plan" },
-          "body": { "es": ["Orden documental, no ranking de cata. El «top 1» que se atribuye algún local es autopromoción."], "en": ["Documentary order, not a tasting ranking. A venue calling itself ‘number one’ is self-promotion."] },
-          "places": ["aoyama-joaquin", "kaisen-centro", "kyoto-valladolid", "goisushi-granvia"],
+          "body": { "es": ["Ordenados por plan, no por ranking de cata. El «top 1» que se atribuye algún local es autopromoción."], "en": ["Ordered by plan, not by a tasting ranking. A venue calling itself ‘number one’ is self-promotion."] },
+          "places": ["aoyama-joaquin", "kaisen-centro", "kyoto-valladolid"],
           "compare": true
         },
         {
@@ -83,8 +83,8 @@
         {
           "heading": { "es": "Pantallas, niños y sobremesa", "en": "Screens, children and lingering" },
           "body": {
-            "es": ["En las reseñas visibles aparecen pedidos por QR o tablet. «Sin pantallas para los niños» puede permitir que pida un adulto; «sin usar el móvil en la mesa» necesita alternativa en papel o del personal, aún por confirmar. Un menú infantil no es un espacio de juego. Y no recomendamos sobremesa larga sin comprobar el límite de mesa."],
-            "en": ["Visible reviews mention ordering by QR code or tablet. ‘No screens for the children’ may still let an adult order; ‘no phone at the table’ needs a paper or staff alternative, still to be confirmed. A children’s menu is not a play area. And we don’t recommend lingering without checking the table time limit."]
+            "es": ["En las reseñas aparecen pedidos por QR o tablet. Si queréis comer sin pantallas en la mesa, pedid al llegar que os tome nota el personal. Un menú infantil no es un espacio de juego. Y en buffet hay límite de mesa: no es sitio para sobremesa larga."],
+            "en": ["Reviews mention ordering by QR code or tablet. If you want a screen-free table, ask staff to take your order when you arrive. A children’s menu is not a play area. And buffets have a table time limit: this is not the place for a long lingering lunch."]
           }
         }
       ],
@@ -92,8 +92,7 @@
       "sources": [
         { "label": "Aoyama (PDF menú de día)", "url": "https://www.aoyama.es/web/aoyama1/menu_day2.pdf" },
         { "label": "Kaisen Centro", "url": "https://kaisenexperience.com/nkaisen-experience-centro-valencia/" },
-        { "label": "Kyoto", "url": "https://kyoto-franquicia.com/" },
-        { "label": "Goisushi Gran Via", "url": "https://kaisushiexperience.com/restaurante/vlc-granvia/" }
+        { "label": "Kyoto", "url": "https://kyoto-franquicia.com/" }
       ]
     },
     {
@@ -148,7 +147,7 @@
       "sections": [
         {
           "heading": { "es": "Elige la diferencia que te importa", "en": "Pick the difference that matters to you" },
-          "body": { "es": ["Si pesa más una carta centrada y sois hasta cuatro, empezaría por Raíces. Para gustos mezclados en Ruzafa, por Filippa’s. Para opciones veganas y producto local en Benimaclet, por Km0. Orden por encaje documental: el podio de la mejor masa exige comerlas en condiciones comparables."], "en": ["If a focused menu matters most and you are up to four, start with Raíces. For mixed tastes in Ruzafa, Filippa’s. For vegan options and local produce in Benimaclet, Km0. Ordered by documented fit: a podium for the best dough requires eating them under comparable conditions."] },
+          "body": { "es": ["Si pesa más una carta centrada y sois hasta cuatro, empezaría por Raíces. Para gustos mezclados en Ruzafa, por Filippa’s. Para opciones veganas y producto local en Benimaclet, por Km0. El podio de la mejor masa lo dejamos para cuando las comamos en condiciones comparables."], "en": ["If a focused menu matters most and you are up to four, start with Raíces. For mixed tastes in Ruzafa, Filippa’s. For vegan options and local produce in Benimaclet, Km0. We’ll leave the best-dough podium for when we’ve eaten them under comparable conditions."] },
           "places": ["raices", "filippas-sueca", "km0"],
           "compare": true
         },
@@ -180,7 +179,7 @@
       "sections": [
         {
           "heading": { "es": "Un orden inicial con razones", "en": "A starting order, with reasons" },
-          "body": { "es": ["Premio externo, prueba propia y encaje del plan son tres cosas distintas. Este orden combina la referencia externa (Burgerdudes 2026, no Michelin) con utilidad documental; no es una puntuación de sabor nuestra."], "en": ["An outside award, our own tasting and fit for your plan are three different things. This order combines the outside reference (Burgerdudes 2026, not Michelin) with documentary usefulness; it is not our taste score."] },
+          "body": { "es": ["Premio externo, prueba propia y encaje del plan son tres cosas distintas. Este orden combina la referencia externa (Burgerdudes 2026, no Michelin) con lo que sirve a cada plan; no es una puntuación de sabor nuestra."], "en": ["An outside award, our own tasting and fit for your plan are three different things. This order combines the outside reference (Burgerdudes 2026, not Michelin) with what suits each plan; it is not our taste score."] },
           "places": ["hundred", "soul-valencia", "tasty-carmen", "beak-cabanyal"]
         },
         {
@@ -223,7 +222,7 @@
         },
         {
           "heading": { "es": "El paseo es una opción, no una factura por etapas", "en": "A stroll is an option, not a bill in instalments" },
-          "body": { "es": ["Propuesta por verificar: Lambrusquería Caballeros → paseo por El Carmen → Véneta Brodadors si sigue abierta (horario sin confirmar). O quedarse a compartir el tiramisú ya presupuestado. No sumamos tiramisú, helado y café por inercia editorial."], "en": ["A proposal still to verify: Lambrusquería Caballeros → stroll through El Carmen → Véneta Brodadors if still open (hours unconfirmed). Or stay and share the tiramisu already in the budget. We won’t add tiramisu, ice cream and coffee out of editorial habit."] }
+          "body": { "es": ["Plan de cita: Lambrusquería Caballeros → paseo por El Carmen → Véneta Brodadors para el helado. O quedaos a compartir el tiramisú, que ya entra en la cuenta. Tiramisú, helado y café a la vez es inercia, no plan."], "en": ["Date plan: Lambrusquería Caballeros → stroll through El Carmen → Véneta Brodadors for ice cream. Or stay and share the tiramisu, already in the bill. Tiramisu, ice cream and coffee all at once is habit, not a plan."] }
         }
       ],
       "sources": [ { "label": "La Lambrusquería, carta Caballeros", "url": "https://lambrusqueria.com/wp-content/uploads/2025/12/LAMBRUSQUERIA-CARTA-CABALLEROS-WEB.pdf" } ]
@@ -244,7 +243,7 @@
         { "heading": { "es": "La Petxina / Extramurs", "en": "La Petxina / Extramurs" }, "body": { "es": ["No es periferia lejana ni un secreto recién descubierto; está aquí por su cocina de producto y sus clásicos de barra."], "en": ["Neither remote outskirts nor a newly discovered secret; it is here for its produce-led cooking and counter classics."] }, "places": ["ricardo"] },
         { "heading": { "es": "Torrefiel: siguiente candidatura, no recomendación cerrada", "en": "Torrefiel: next candidate, not a firm recommendation" }, "places": ["malkebien"] },
         { "heading": { "es": "Otros barrios con fichas", "en": "Other neighbourhoods with venue cards" }, "body": { "es": ["Benimaclet y Cabanyal ya tienen fichas documentadas. No creamos páginas vacías para Patraix, Jesús o Benicalap hasta tener selección propia."], "en": ["Benimaclet and Cabanyal already have documented venue cards. We will not create empty pages for Patraix, Jesús or Benicalap until we have our own selection."] }, "zones": ["benimaclet", "cabanyal"] },
-        { "heading": { "es": "Preguntas que merecen el paseo", "en": "Questions worth the trip" }, "body": { "es": ["¿Me compensa desviarme? ¿Puedo ir sin reserva? ¿De verdad hay menú? ¿Cómo vuelvo? Tiempo de traslado, transporte y accesos están por verificar: no inventamos distancias ni plazas de aparcamiento."], "en": ["Is the detour worth it? Can I go without booking? Is there really a set menu? How do I get back? Travel time, transport and access still need checking: we don’t invent distances or parking spaces."] } }
+        { "heading": { "es": "Preguntas que merecen el paseo", "en": "Questions worth the trip" }, "body": { "es": ["¿Me compensa desviarme? Si vais a por un sitio concreto, sí; si solo pasáis cerca, mejor algo de vuestra zona. Reservad, mirad el menú del día en su web y calculad la vuelta en Maps antes de salir."], "en": ["Is the detour worth it? If you are going for one particular place, yes; if you are just passing nearby, pick something in your own area. Book, check the day’s set menu on their website and plan the way back in Maps before you set off."] } }
       ],
       "sources": [
         { "label": "Ojo al Plato: El Baret de la Tòfona", "url": "https://www.ojoalplato.com/cards/restaurant/baret-de-la-t%C3%B2fona/" },
@@ -266,7 +265,7 @@
       },
       "sections": [
         { "heading": { "es": "Lo que justifica ir, para quién no encaja y qué críticas encontramos", "en": "What justifies going, who it doesn’t suit and what criticism we found" }, "places": ["la-salita", "riff"], "compare": true },
-        { "heading": { "es": "Cuándo merece el desembolso", "en": "When the spend is worth it" }, "body": { "es": ["Reserva el formato que te interesa, conoce el coste de bebidas y las condiciones de cancelación y avisa de restricciones antes. Si lo que quieres es arroz abundante y sobremesa flexible, quizá una buena arrocería se ajuste mejor.", "Veredicto provisional: candidatos para una ocasión deliberada; sin visita propia no les asignamos «chollo», «timo» ni superioridad sensorial. Forzar un «pero» por cada estrella sería otro panfleto, solo que enfadado."], "en": ["Book the format you want, know the cost of drinks and the cancellation terms, and flag restrictions in advance. If what you want is plenty of rice and an open-ended lunch, a good rice restaurant may suit you better.", "Provisional verdict: candidates for a deliberate occasion; without our own visit we won’t label them a ‘bargain’, a ‘rip-off’ or sensorially superior. Forcing a ‘but’ for every star would be another pamphlet, just an angry one."] } }
+        { "heading": { "es": "Cuándo merece el desembolso", "en": "When the spend is worth it" }, "body": { "es": ["Reserva el formato que te interesa, conoce el coste de bebidas y las condiciones de cancelación y avisa de restricciones antes. Si lo que quieres es arroz abundante y sobremesa flexible, quizá una buena arrocería se ajuste mejor.", "Para una ocasión elegida con calma, no para improvisar: reservad, id con hambre y sin prisa. «Chollo», «timo» o «el mejor» son etiquetas que solo se ganan comiendo. Forzar un «pero» por cada estrella sería otro panfleto, solo que enfadado."], "en": ["Book the format you want, know the cost of drinks and the cancellation terms, and flag restrictions in advance. If what you want is plenty of rice and an open-ended lunch, a good rice restaurant may suit you better.", "For an occasion chosen with care, not a whim: book, arrive hungry and unhurried. ‘Bargain’, ‘rip-off’ or ‘the best’ are labels you only earn by eating. Forcing a ‘but’ for every star would be another pamphlet, just an angry one."] } }
       ],
       "sources": [
         { "label": "La Salita, menús 2026", "url": "https://www.anarkiagroup.com/menus-la-salita-4" },
@@ -300,11 +299,11 @@
           { "entity": "Pitti (Especial Amstel); Pizcueta 14 y Pensat i Fet entre distinguidos", "year": "2022", "scope": { "es": "Valencia ciudad; no ticket ni recomendación actual automática", "en": "Valencia city; not a current price or automatic recommendation" }, "status": { "es": "Fuente municipal", "en": "City council source" }, "url": "https://www.valencia.es/cas/actualidad/-/content/premios-cacau-d-or" },
           { "entity": "Gastroadictos (grupo de Cassalla y Cremaet)", "year": "2024", "scope": { "es": "Premio al grupo; no dos premios individuales", "en": "Award to the group; not two individual awards" }, "status": { "es": "Comunicado recogido por prensa sectorial", "en": "Press release in trade media" }, "url": "https://www.hosteleriaenvalencia.com/Proveedores?id=10766" },
           { "entity": "Casa Baldo (Especial Amstel)", "year": "2024", "scope": { "es": "Ciudad; premio específico, no campeón universal", "en": "City; a specific award, not universal champion" }, "status": { "es": "Mismo comunicado", "en": "Same press release" }, "url": "https://www.hosteleriaenvalencia.com/Proveedores?id=10766" },
-          { "entity": "Los Abetos (Especial Amstel)", "year": "2025", "scope": { "es": "Torrent, fuera de Valencia ciudad", "en": "Torrent, outside Valencia city" }, "status": { "es": "Noticia; confirmación del organizador pendiente", "en": "News report; organiser confirmation pending" }, "url": "https://www.eldebate.com/espana/comunidad-valenciana/20251122/abetos-alza-premio-cacau-dor-amstel-2025_357970.html" },
-          { "entity": "La Pascuala", "year": { "es": "Histórico (edición exacta pendiente)", "en": "Historic (exact edition pending)" }, "scope": { "es": "Cerca de la playa; no se asigna a 2026", "en": "Near the beach; not attributed to 2026" }, "status": { "es": "Pendiente de fuente primaria", "en": "Primary source pending" }, "url": "https://valenciaplaza.com/guiahedonista/comer3/amstel-homenajea-a-los-mejores-locales-para-almorzar-en-fallas" },
+          { "entity": "Los Abetos (Especial Amstel)", "year": "2025", "scope": { "es": "Torrent, fuera de Valencia ciudad", "en": "Torrent, outside Valencia city" }, "status": { "es": "Según la prensa", "en": "According to the press" }, "url": "https://www.eldebate.com/espana/comunidad-valenciana/20251122/abetos-alza-premio-cacau-dor-amstel-2025_357970.html" },
+          { "entity": "La Pascuala", "year": { "es": "Ediciones anteriores", "en": "Earlier editions" }, "scope": { "es": "Cerca de la playa; no se asigna a 2026", "en": "Near the beach; not attributed to 2026" }, "status": { "es": "Según la prensa", "en": "According to the press" }, "url": "https://valenciaplaza.com/guiahedonista/comer3/amstel-homenajea-a-los-mejores-locales-para-almorzar-en-fallas" },
           { "entity": "Bodega La Aldeana y Fernandet", "year": { "es": "Reportado como 2020", "en": "Reported as 2020" }, "scope": { "es": "Cabanyal y Sueca; confirmar vigencia de servicio", "en": "Cabanyal and Sueca; confirm current service" }, "status": { "es": "Cerrar con archivo del organizador", "en": "To confirm with the organiser’s archive" }, "url": "https://www.hortanoticias.com/bodega-la-aldeana-cacau-dor/" }
         ] },
-        { "heading": { "es": "¿Y Fernandet?", "en": "What about Fernandet?" }, "body": { "es": ["Está en la playa de Sueca, fuera de Valencia ciudad. Su horario actual empieza a las 13:00 de viernes a domingo y no confirma esmorzar matinal: no te mandamos a desayunar allí hasta confirmarlo."], "en": ["It is on Sueca beach, outside Valencia city. Its current hours start at 13:00 Friday to Sunday and do not confirm a morning esmorzar: we won’t send you there for breakfast until that is confirmed."] }, "places": ["fernandet"] }
+        { "heading": { "es": "¿Y Fernandet?", "en": "What about Fernandet?" }, "body": { "es": ["Está en Sueca, fuera de Valencia ciudad, y hoy abre a las 13:00 de viernes a domingo: es plan de arroz, no de esmorzar. Lo dejamos aquí por su historia almorzadora, no para que madruguéis."], "en": ["It is in Sueca, outside Valencia city, and today opens at 13:00 Friday to Sunday: a rice plan, not an esmorzar one. It is here for its esmorzar history, not to get you up early."] }, "places": ["fernandet"] }
       ],
       "sources": [
         { "label": "Bar Cassalla, carta de esmorzar", "url": "https://barcassalla.es/carta/esmorzar/" },
@@ -328,7 +327,7 @@
         { "heading": { "es": "Esmorzar y paseo", "en": "Esmorzar and a stroll" }, "places": ["pascuala"] },
         { "heading": { "es": "Tapas y producto en el Cabanyal", "en": "Tapas and produce in Cabanyal" }, "places": ["montana", "anyora"], "route": "R09" },
         { "heading": { "es": "Arroz junto al paseo", "en": "Rice by the promenade" }, "body": { "es": ["La Pepica y Véneta Neptuno comparten paseo; Casa Carmela es otra opción más al norte, no contigua."], "en": ["La Pepica and Véneta Neptuno share a promenade; Casa Carmela is a separate option further north, not next door."] }, "places": ["pepica", "carmela", "veneta-mar"] },
-        { "heading": { "es": "Excursión: Fernandet, playa de Sueca", "en": "Day trip: Fernandet, Sueca beach" }, "excursion": true, "body": { "es": ["Fuera de Valencia ciudad: excursión con ida y vuelta, no continuación andando desde la Marina. Temporada, cocina abierta, precios, transporte y entrada actual por verificar."], "en": ["Outside Valencia city: a round trip, not a walk on from the Marina. Season, kitchen hours, prices, transport and current entrance still to verify."] }, "places": ["fernandet"] },
+        { "heading": { "es": "Excursión: Fernandet, playa de Sueca", "en": "Day trip: Fernandet, Sueca beach" }, "excursion": true, "body": { "es": ["Fuera de Valencia ciudad: excursión con ida y vuelta, no continuación andando desde la Marina. Reservad y llamad antes en temporada baja."], "en": ["Outside Valencia city: a round trip, not a walk on from the Marina. Book, and call ahead out of season."] }, "places": ["fernandet"] },
         { "heading": { "es": "Con bebé o niño activo", "en": "With a baby or an active child" }, "body": { "es": ["Una terraza no prueba juego ni supervisión. Ninguno de estos locales tiene espacio infantil documentado; consulta la página de familias."], "en": ["A terrace is not proof of play space or supervision. None of these venues has a documented children’s area; see the families page."] } }
       ],
       "related": ["esmorzar", "arroces"],
