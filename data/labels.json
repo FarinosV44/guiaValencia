@@ -132,7 +132,8 @@
     "why": {
      "es": "Buffet de mediodía entre semana a 18 € con postre incluido, frente a los 20,50 € de la tarifa base de Kaisen. Condiciones: bebida obligatoria aparte y 2 € por plato que se deje.",
      "en": "Weekday lunch buffet at €18 with dessert included, against Kaisen’s €20.50 base price. Conditions: compulsory drinks extra and €2 for each plate left."
-    }
+    },
+    "by": "redacción (investigación documental)"
    }
   ],
   "malkebien": [
@@ -144,7 +145,8 @@
     "why": {
      "es": "Las reseñas repiten «buena comida para lo que cuesta»: menú de unos 16 € con primero, segundo, postre, bebida, pan y café.",
      "en": "Reviews keep saying “good food for the price”: a set menu of about €16 with starter, main, dessert, drink, bread and coffee."
-    }
+    },
+    "by": "redacción (investigación documental)"
    }
   ],
   "km0": [
@@ -156,7 +158,8 @@
     "why": {
      "es": "Pizzas desde 10,50 € en carta, y las reseñas destacan producto local y precios justos.",
      "en": "Pizzas from €10.50 on the menu, and reviews highlight local produce and fair prices."
-    }
+    },
+    "by": "redacción (investigación documental)"
    }
   ],
   "daniel": [
@@ -168,7 +171,8 @@
     "why": {
      "es": "Las reseñas destacan buena calidad a precio justo.",
      "en": "Reviews highlight good quality at a fair price."
-    }
+    },
+    "by": "redacción (investigación documental)"
    }
   ],
   "pascuala": [
@@ -180,7 +184,8 @@
     "why": {
      "es": "Almuerzo entero con café a 14 € entre semana, y las reseñas coinciden en que la ración es enorme para lo que cuesta.",
      "en": "A full esmorzar with coffee for €14 on weekdays, and reviews agree the portion is huge for the price."
-    }
+    },
+    "by": "redacción (investigación documental)"
    }
   ],
   "blanqueries": [
@@ -192,7 +197,8 @@
     "why": {
      "es": "El menú ejecutivo de mediodía es lo que más valoran las reseñas y la forma más ajustada de conocer una casa de la guía Michelin.",
      "en": "The weekday lunch menu is what reviews rate most and the most affordable way into a Michelin-listed restaurant."
-    }
+    },
+    "by": "redacción (investigación documental)"
    }
   ],
   "bali": [
@@ -204,7 +210,8 @@
     "why": {
      "es": "La decoración es lo más comentado y los principales convencen menos que los entrantes y el sushi.",
      "en": "The décor is what everyone talks about, and the mains convince less than the starters and sushi."
-    }
+    },
+    "by": "redacción (investigación documental)"
    },
    {
     "label": "mejor_al_menu",
@@ -214,7 +221,8 @@
     "why": {
      "es": "El escenario tiene sentido al precio del menú de mediodía entre semana.",
      "en": "The show makes sense at the weekday lunch menu price."
-    }
+    },
+    "by": "redacción (investigación documental)"
    }
   ]
  }

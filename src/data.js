@@ -134,7 +134,7 @@ export function validate(data) {
     if (!data.byId[id]) errors.push(`Etiquetas: local inexistente ${id}`);
     for (const l of list) {
       if (!data.labels.definitions[l.label]) errors.push(`Etiquetas ${id}: etiqueta desconocida ${l.label}`);
-      if (!l.source || !l.since || !l.expires || !l.why?.es || !l.why?.en) errors.push(`Etiquetas ${id}: falta fuente, fecha, caducidad o motivo`);
+      if (!l.source || !l.since || !l.expires || !l.by || !l.why?.es || !l.why?.en) errors.push(`Etiquetas ${id}: falta fuente, fecha, caducidad, responsable o motivo`);
       if (['caro_justifica', 'volveria_para', 'no_compensa', 'carta_repetitiva'].includes(l.label) && !data.byId[id]?.own_visit) errors.push(`Etiquetas ${id}: ${l.label} exige visita propia o doble revisión`);
     }
   }
