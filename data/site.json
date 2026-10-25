@@ -1,0 +1,4 @@
+{
+ "_note": "Configuración del sitio. metrics_endpoint: URL que recibirá eventos agregados (sendBeacon) cuando el propietario elija proveedor; mientras sea null no se envía nada. Nunca se envía texto libre, coordenadas, edades ni identificadores personales (#25, #27).",
+ "metrics_endpoint": null
+}

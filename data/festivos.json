@@ -1,0 +1,33 @@
+{
+  "_note": "Festivos laborales de Valencia ciudad (#16). Fuente primaria: DOGV 14/11/2025, CVE DOGV-C-2025-46326 (fiestas locales 2026); no admite lectura automática, cotejo manual pendiente. Contrastado el 25/10/2026 con Valencia Secreta y misfestivos.es, que coinciden. El Debate sitúa San Vicente Ferrer el 6 de abril: es un error (6 de abril es Lunes de Pascua). Para municipios fuera de Valencia ciudad (Sueca, Alfafar) solo se conocen los festivos comunes: sus locales quedan desconocidos.",
+  "checked_on": "2026-10-25",
+  "sources": [
+    { "label": "DOGV 14/11/2025, fiestas locales 2026 (pendiente de cotejo manual)", "url": "https://dogv.gva.es/datos/2025/11/14/pdf/2025_46326_es.pdf" },
+    { "label": "Valencia Secreta: calendario laboral 2026", "url": "https://valenciasecreta.com/calendario-laboral-2026/" },
+    { "label": "misfestivos.es: Valencia 2026", "url": "https://www.misfestivos.es/calendario-laboral/valencia-2026.html" }
+  ],
+  "years": {
+    "2026": {
+      "comunes": [
+        { "date": "2026-01-01", "name": { "es": "Año Nuevo", "en": "New Year’s Day" } },
+        { "date": "2026-01-06", "name": { "es": "Epifanía del Señor", "en": "Epiphany" } },
+        { "date": "2026-03-19", "name": { "es": "San José", "en": "Saint Joseph’s Day" } },
+        { "date": "2026-04-03", "name": { "es": "Viernes Santo", "en": "Good Friday" } },
+        { "date": "2026-04-06", "name": { "es": "Lunes de Pascua", "en": "Easter Monday" } },
+        { "date": "2026-05-01", "name": { "es": "Día del Trabajo", "en": "Labour Day" } },
+        { "date": "2026-06-24", "name": { "es": "San Juan", "en": "Saint John’s Day" } },
+        { "date": "2026-08-15", "name": { "es": "Asunción de la Virgen", "en": "Assumption Day" } },
+        { "date": "2026-10-09", "name": { "es": "Día de la Comunitat Valenciana", "en": "Valencian Community Day" } },
+        { "date": "2026-10-12", "name": { "es": "Fiesta Nacional de España", "en": "Spanish National Day" } },
+        { "date": "2026-12-08", "name": { "es": "Inmaculada Concepción", "en": "Immaculate Conception" } },
+        { "date": "2026-12-25", "name": { "es": "Navidad", "en": "Christmas Day" } }
+      ],
+      "locales": {
+        "valencia": [
+          { "date": "2026-01-22", "name": { "es": "San Vicente Mártir", "en": "Saint Vincent Martyr" } },
+          { "date": "2026-04-13", "name": { "es": "San Vicente Ferrer", "en": "Saint Vincent Ferrer" } }
+        ]
+      }
+    }
+  }
+}

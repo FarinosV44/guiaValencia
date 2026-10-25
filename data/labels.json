@@ -1,0 +1,229 @@
+{
+ "_note": "Etiquetas francas (#18). Cada asignación lleva motivo, fuente, fecha y caducidad; una etiqueta caducada deja de mostrarse y entra en la cola de revisión. Ninguna etiqueta se compra ni depende de financiación.",
+ "definitions": {
+  "chollo_condiciones": {
+   "name": {
+    "es": "Chollo con condiciones",
+    "en": "A bargain, with conditions"
+   },
+   "def": {
+    "es": "Precio claramente por debajo de alternativas equivalentes, siempre que se cumplan las condiciones que indicamos (día, franja, extras).",
+    "en": "Clearly cheaper than equivalent alternatives, as long as the conditions we list apply (day, time slot, extras)."
+   },
+   "evidence": {
+    "es": "Precio publicado por el local y comparación con al menos una alternativa equivalente de la guía. Caduca con el precio.",
+    "en": "Price published by the venue and compared with at least one equivalent alternative in the guide. Expires with the price."
+   },
+   "tone": "pro"
+  },
+  "buena_rcp": {
+   "name": {
+    "es": "Buena relación calidad-precio",
+    "en": "Good value"
+   },
+   "def": {
+    "es": "Lo que se come justifica lo que se paga, según reseñas que lo repiten y un precio publicado razonable.",
+    "en": "What you eat justifies what you pay, according to recurring reviews and a reasonable published price."
+   },
+   "evidence": {
+    "es": "Reseñas que lo repiten y precio publicado. Con visita propia pasará a ser criterio nuestro.",
+    "en": "Recurring reviews and a published price. After our own visit it becomes our own judgement."
+   },
+   "tone": "pro"
+  },
+  "mejor_al_menu": {
+   "name": {
+    "es": "Mejor al menú",
+    "en": "Best on the set menu"
+   },
+   "def": {
+    "es": "La forma más sensata de entrar es el menú de mediodía; a la carta, la cuenta y la experiencia cambian.",
+    "en": "The smartest way in is the lunch set menu; à la carte, the bill and the experience change."
+   },
+   "evidence": {
+    "es": "Menú publicado por el local y reseñas que lo valoran.",
+    "en": "Set menu published by the venue and reviews that rate it."
+   },
+   "tone": "pro"
+  },
+  "pagas_escenario": {
+   "name": {
+    "es": "Pagas el escenario",
+    "en": "You pay for the set"
+   },
+   "def": {
+    "es": "El decorado o el lugar son el motivo principal; la cocina acompaña. No significa comer mal.",
+    "en": "The décor or the location is the main reason to go; the food comes along. It doesn’t mean the food is bad."
+   },
+   "evidence": {
+    "es": "Reseñas en las que el espacio destaca claramente por encima de la comida.",
+    "en": "Reviews where the space clearly outshines the food."
+   },
+   "tone": "neutral"
+  },
+  "caro_justifica": {
+   "name": {
+    "es": "Caro, pero lo justifica",
+    "en": "Pricey, but worth it"
+   },
+   "def": {
+    "es": "Precio alto que se explica por producto, técnica o servicio.",
+    "en": "A high price explained by produce, technique or service."
+   },
+   "evidence": {
+    "es": "Solo con visita propia y ticket. Hoy no la asignamos a ningún local.",
+    "en": "Only after our own visit with a receipt. Not assigned to any venue yet."
+   },
+   "tone": "pro"
+  },
+  "no_compensa": {
+   "name": {
+    "es": "No compensa a este precio",
+    "en": "Not worth it at this price"
+   },
+   "def": {
+    "es": "Hay alternativas equivalentes mejores por el mismo dinero, para el plan indicado.",
+    "en": "There are better equivalent alternatives for the same money, for the stated plan."
+   },
+   "evidence": {
+    "es": "Visita propia o comparación documentada y doble revisión. Hoy no la asignamos.",
+    "en": "Our own visit or a documented comparison, and a second review. Not assigned yet."
+   },
+   "tone": "con"
+  },
+  "carta_repetitiva": {
+   "name": {
+    "es": "Carta repetitiva",
+    "en": "Repetitive menu"
+   },
+   "def": {
+    "es": "Muchos platos que son variaciones del mismo producto o salsa.",
+    "en": "Many dishes that are variations on the same ingredient or sauce."
+   },
+   "evidence": {
+    "es": "Revisión de ingredientes y técnicas de la carta, no solo fotos. Hoy no la asignamos.",
+    "en": "A review of the menu’s ingredients and techniques, not just photos. Not assigned yet."
+   },
+   "tone": "con"
+  },
+  "volveria_para": {
+   "name": {
+    "es": "Volvería para…",
+    "en": "Would go back for…"
+   },
+   "def": {
+    "es": "El plato o el plan concreto que justifica repetir.",
+    "en": "The specific dish or plan that justifies going back."
+   },
+   "evidence": {
+    "es": "Solo con visita propia.",
+    "en": "Only after our own visit."
+   },
+   "tone": "pro"
+  }
+ },
+ "assigned": {
+  "aoyama-joaquin": [
+   {
+    "label": "chollo_condiciones",
+    "since": "2026-10-25",
+    "expires": "2026-11-24",
+    "source": "https://www.aoyama.es/web/aoyama1/menu_day2.pdf",
+    "why": {
+     "es": "Buffet de mediodía entre semana a 18 € con postre incluido, frente a los 20,50 € de la tarifa base de Kaisen. Condiciones: bebida obligatoria aparte y 2 € por plato que se deje.",
+     "en": "Weekday lunch buffet at €18 with dessert included, against Kaisen’s €20.50 base price. Conditions: compulsory drinks extra and €2 for each plate left."
+    },
+    "by": "redacción (investigación documental)"
+   }
+  ],
+  "malkebien": [
+   {
+    "label": "buena_rcp",
+    "since": "2026-10-25",
+    "expires": "2026-12-24",
+    "source": "https://gastroranking.es/r/malkebien_46915/",
+    "why": {
+     "es": "Las reseñas repiten «buena comida para lo que cuesta»: menú de unos 16 € con primero, segundo, postre, bebida, pan y café.",
+     "en": "Reviews keep saying “good food for the price”: a set menu of about €16 with starter, main, dessert, drink, bread and coffee."
+    },
+    "by": "redacción (investigación documental)"
+   }
+  ],
+  "km0": [
+   {
+    "label": "buena_rcp",
+    "since": "2026-10-25",
+    "expires": "2026-12-24",
+    "source": "https://wanderlog.com/place/details/8851346/pizzeria-km0",
+    "why": {
+     "es": "Pizzas desde 10,50 € en carta, y las reseñas destacan producto local y precios justos.",
+     "en": "Pizzas from €10.50 on the menu, and reviews highlight local produce and fair prices."
+    },
+    "by": "redacción (investigación documental)"
+   }
+  ],
+  "daniel": [
+   {
+    "label": "buena_rcp",
+    "since": "2026-10-25",
+    "expires": "2026-12-24",
+    "source": "https://gastroranking.es/r/horchateria-daniel-2_46647/",
+    "why": {
+     "es": "Las reseñas destacan buena calidad a precio justo.",
+     "en": "Reviews highlight good quality at a fair price."
+    },
+    "by": "redacción (investigación documental)"
+   }
+  ],
+  "pascuala": [
+   {
+    "label": "buena_rcp",
+    "since": "2026-10-25",
+    "expires": "2026-12-24",
+    "source": "https://gastroranking.es/r/bodega-la-pascuala_47058/",
+    "why": {
+     "es": "Almuerzo entero con café a 14 € entre semana, y las reseñas coinciden en que la ración es enorme para lo que cuesta.",
+     "en": "A full esmorzar with coffee for €14 on weekdays, and reviews agree the portion is huge for the price."
+    },
+    "by": "redacción (investigación documental)"
+   }
+  ],
+  "blanqueries": [
+   {
+    "label": "mejor_al_menu",
+    "since": "2026-10-25",
+    "expires": "2026-11-24",
+    "source": "https://restauranteblanqueries.com/",
+    "why": {
+     "es": "El menú ejecutivo de mediodía es lo que más valoran las reseñas y la forma más ajustada de conocer una casa de la guía Michelin.",
+     "en": "The weekday lunch menu is what reviews rate most and the most affordable way into a Michelin-listed restaurant."
+    },
+    "by": "redacción (investigación documental)"
+   }
+  ],
+  "bali": [
+   {
+    "label": "pagas_escenario",
+    "since": "2026-10-25",
+    "expires": "2026-12-24",
+    "source": "https://www.google.com/maps/search/?api=1&query=Voltereta+Bali+Gran+Via+Marques+del+Turia+59+Valencia",
+    "why": {
+     "es": "La decoración es lo más comentado y los principales convencen menos que los entrantes y el sushi.",
+     "en": "The décor is what everyone talks about, and the mains convince less than the starters and sushi."
+    },
+    "by": "redacción (investigación documental)"
+   },
+   {
+    "label": "mejor_al_menu",
+    "since": "2026-10-25",
+    "expires": "2026-11-24",
+    "source": "https://www.volteretarestaurante.com/es/restaurantes/valencia/bali/carta",
+    "why": {
+     "es": "El escenario tiene sentido al precio del menú de mediodía entre semana.",
+     "en": "The show makes sense at the weekday lunch menu price."
+    },
+    "by": "redacción (investigación documental)"
+   }
+  ]
+ }
+}
