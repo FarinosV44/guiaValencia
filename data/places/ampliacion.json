@@ -90,7 +90,7 @@
         "en": { "offer": "Sushi buffet with A, B and C tiers.", "fits": "Comparing tiers rather than quantity.", "not_for": "Recommending it as cheap: there is no confirmed figure yet.", "order": "Check which specialities your tier includes: a photo does not prove it.", "may_disappoint": "No reviews checked for this branch.", "before": "Prices vary by branch; do not assume the basic tier includes the specialities." }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": { "bebida": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" }, "note": { "es": "Tarifa de esta sucursal pendiente.", "en": "Prices for this branch pending." } },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"mon": [["13:15", "16:15"], ["20:30", "23:45"]], "tue": [["13:15", "16:15"], ["20:30", "23:45"]], "wed": [["13:15", "16:15"], ["20:30", "23:45"]], "thu": [["13:15", "16:15"], ["20:30", "23:45"]], "fri": [["13:15", "16:15"], ["20:30", "23:45"]], "sat": [["13:15", "16:15"], ["20:30", "23:45"]], "sun": [["13:15", "16:15"], ["20:30", "23:45"]]}, "note": {"es": "Horario común publicado para todas las sucursales Kyoto, no específico de esta. La modalidad A es solo de mediodía de lunes a viernes.", "en": "Shared hours published for all Kyoto branches, not specific to this one. Tier A is weekday lunch only."}, "source": "https://kyoto-franquicia.com/"},
       "sources": ["https://kyoto-franquicia.com/"]
     },
     {
@@ -140,7 +140,7 @@
         "includes": { "bebida": "en_ejemplo", "pan": "no_aplica", "postre": "en_ejemplo", "cafe": "aparte", "suplementos": "desconocido" },
         "source": "https://raicespizza.com/"
       },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Su web no se pudo leer el 25/10/2026 (redirección en bucle): horario sin verificar.", "en": "Its website could not be read on 25/10/2026 (redirect loop): hours unverified."}, "source": "https://raicespizza.com/"},
       "sources": ["https://raicespizza.com/"]
     },
     {
@@ -176,7 +176,7 @@
         "includes": { "bebida": "aparte", "pan": "no_aplica", "postre": "aparte", "cafe": "aparte", "suplementos": "desconocido" },
         "source": "https://filippas.buenacarta.com/es"
       },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "Sus dos webs oficiales no publican horario (comprobado el 25/10/2026).", "en": "Neither of its official websites publishes opening hours (checked on 25/10/2026)."}, "source": "https://somosfilippas.com/"},
       "sources": ["https://filippas.buenacarta.com/es", "https://valencia.somosfilippas.com/"]
     },
     {
@@ -194,19 +194,19 @@
         "includes": { "bebida": "aparte", "pan": "no_aplica", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" },
         "source": "https://www.pizzeriakm0.com/carta"
       },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"mon": [["19:30", "23:00"]], "tue": [["19:30", "23:00"]], "wed": [["19:30", "23:00"]], "thu": [["19:30", "23:00"]], "fri": [["19:30", "23:30"]], "sat": [["13:00", "16:00"], ["19:30", "23:30"]], "sun": [["13:00", "16:00"], ["19:30", "23:00"]]}, "note": {"es": "De lunes a viernes solo cenas; sábado y domingo también comidas.", "en": "Monday to Friday dinner only; Saturday and Sunday lunch as well."}, "source": "https://www.pizzeriakm0.com/contactos"},
       "sources": ["https://www.pizzeriakm0.com/carta"]
     },
     {
       "id": "hundred", "name": "Hundred Burgers", "type": "hamburguesería", "role": ["comer"],
-      "scope": "valencia", "zone": null, "address": null, "branch_pending": true,
+      "scope": "valencia", "zone": "mercat", "address": "Sant Vicent Màrtir, 44", "address_source": "https://www.visitvalencia.com/que-hacer-valencia/gastronomia/restaurantes-valencia/Hundred-Burgers",
       "cravings": ["burger"], "tags": [],
       "text": {
-        "es": { "offer": "Hamburguesas con aval externo.", "fits": "Investigar una burger reconocida por una guía especializada.", "not_for": "Planificar una ruta: falta elegir sucursal.", "order": "Sin precio legible en la carta consultada; no reciclamos el de 2024.", "may_disappoint": "Un premio refleja la valoración de ese equipo, no que todos vayamos a preferirla ni que todas las sucursales sirvan igual.", "before": "Elige sucursal. Es un premio de Burgerdudes, no de Michelin." },
-        "en": { "offer": "Burgers with outside recognition.", "fits": "Looking into a burger ranked by a specialist guide.", "not_for": "Planning a route: a branch still needs choosing.", "order": "No legible prices on the menu we checked; we do not recycle 2024 prices.", "may_disappoint": "An award reflects that team's view, not that everyone will prefer it or that every branch is consistent.", "before": "Pick a branch. The award is from Burgerdudes, not Michelin." }
+        "es": { "offer": "Hamburguesas con aval externo.", "fits": "Investigar una burger reconocida por una guía especializada.", "not_for": "Planificar con horario: no está publicado en la web de la cadena.", "order": "Sin precio legible en la carta consultada; no reciclamos el de 2024.", "may_disappoint": "Un premio refleja la valoración de ese equipo, no que todos vayamos a preferirla ni que todas las sucursales sirvan igual.", "before": "Dirección según Visit Valencia (Sant Vicent Màrtir 44); la web de la cadena no la muestra. Es un premio de Burgerdudes, no de Michelin." },
+        "en": { "offer": "Burgers with outside recognition.", "fits": "Looking into a burger ranked by a specialist guide.", "not_for": "Planning around opening hours: the chain’s website doesn’t publish them.", "order": "No legible prices on the menu we checked; we do not recycle 2024 prices.", "may_disappoint": "An award reflects that team's view, not that everyone will prefer it or that every branch is consistent.", "before": "Address per Visit Valencia (Sant Vicent Màrtir 44); the chain’s website doesn’t show it. The award is from Burgerdudes, not Michelin." }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Carta sin importes legibles.", "en": "Menu without legible prices." } },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "La web de la cadena carga con JavaScript y no muestra horario; no usamos el de agregadores.", "en": "The chain’s website loads with JavaScript and shows no hours; we don’t use aggregator hours."}, "source": "https://hundredburgers.com/carta"},
       "evidence_awards": [ { "label": { "es": "Burgerdudes 2026: 1.º en su lista", "en": "Burgerdudes 2026: no. 1 on its list" }, "url": "https://www.burgerdudes.se/news/the-worlds-best-burgers-2026/", "year": 2026 } ],
       "sources": ["https://hundredburgers.com/carta"]
     },
@@ -228,8 +228,8 @@
       "scope": "valencia", "zone": "carmen", "address": "Corona, 7",
       "cravings": ["burger"], "tags": ["amigos", "pareja", "rapido"],
       "text": {
-        "es": { "offer": "Smash burger con precio de burger + patatas explícito.", "fits": "Un plan informal por El Carmen.", "not_for": "Una ludoteca: tener menú infantil no lo convierte en una.", "order": "Classic con patatas; algunos productos son exclusivos de este local.", "may_disappoint": "Sin reseñas revisadas ni cata propia.", "before": "Suma bebidas (precio pendiente) y confirma mesa. Hay otro local en Patraix." },
-        "en": { "offer": "Smash burgers with an explicit burger-plus-fries price.", "fits": "A casual plan around El Carmen.", "not_for": "A play area: a children's menu does not make it one.", "order": "The Classic with fries; some items are exclusive to this branch.", "may_disappoint": "No reviews checked, not tasted by us.", "before": "Add drinks (price pending) and confirm a table. There is another branch in Patraix." }
+        "es": { "offer": "Smash burger con precio de burger + patatas explícito.", "fits": "Un plan informal por El Carmen.", "not_for": "Una ludoteca: tener menú infantil no lo convierte en una.", "order": "Classic con patatas; algunos productos son exclusivos de este local.", "may_disappoint": "Sin reseñas revisadas ni cata propia.", "before": "Suma bebidas (su web no publica precio) y confirma mesa. Hay otro local en Patraix con el mismo horario publicado. Su página de reservas mostraba contenido ajeno al restaurante: reserva por teléfono." },
+        "en": { "offer": "Smash burgers with an explicit burger-plus-fries price.", "fits": "A casual plan around El Carmen.", "not_for": "A play area: a children's menu does not make it one.", "order": "The Classic with fries; some items are exclusive to this branch.", "may_disappoint": "No reviews checked, not tasted by us.", "before": "Add drinks (its website lists no price) and confirm a table. There is another branch in Patraix with the same published hours. Its booking page showed content unrelated to the restaurant: book by phone." }
       },
       "price": {
         "per_adult_base": 12.5,
@@ -239,7 +239,7 @@
         "includes": { "bebida": "aparte", "pan": "no_aplica", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" },
         "source": "https://tastyamericanburger.com/carta/"
       },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"mon": [], "tue": [], "wed": [["20:00", "23:00"]], "thu": [["20:00", "23:00"]], "fri": [["13:30", "15:30"], ["20:00", "23:00"]], "sat": [["13:30", "15:30"], ["20:00", "23:00"]], "sun": [["13:30", "15:30"], ["20:00", "23:00"]]}, "note": {"es": "Horario único publicado para sus dos locales (El Carmen y Patraix), sin distinguir sucursal.", "en": "A single timetable published for both branches (El Carmen and Patraix), not branch-specific."}, "source": "https://tastyamericanburger.com/"},
       "sources": ["https://tastyamericanburger.com/carta/"]
     },
     {
@@ -289,7 +289,7 @@
         "includes": { "bebida": "aparte", "pan": "aparte_conocido", "postre": "en_ejemplo", "cafe": "aparte", "suplementos": "desconocido" },
         "source": "https://lambrusqueria.com/wp-content/uploads/2025/12/LAMBRUSQUERIA-CARTA-CABALLEROS-WEB.pdf"
       },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "desconocido", "checked_on": "2026-10-25", "note": {"es": "La web del grupo indica «cerrado domingo noche, lunes y martes» sin decir a qué local se refiere; no lo aplicamos a Caballeros hasta confirmarlo.", "en": "The group’s website says ‘closed Sunday evening, Mondays and Tuesdays’ without saying which branch; we don’t apply it to Caballeros until confirmed."}, "source": "https://lambrusqueria.com/reservation/"},
       "sources": ["https://lambrusqueria.com/wp-content/uploads/2025/12/LAMBRUSQUERIA-CARTA-CABALLEROS-WEB.pdf", "https://lambrusqueria.com/"]
     },
     {

@@ -4,7 +4,7 @@ Generada el 2026-10-25 con `npm run revision`. Detecta qué falta para publicar 
 
 Orden: primero los locales usados en rutas y categorías, y dentro de ellos los que tienen más pendientes de horario y precio.
 
-Resumen: 55 fichas, 0 con datos caducados, 42 con horario sin confirmar, parcial o contradictorio, 27 sin precio verificable.
+Resumen: 55 fichas, 0 con datos caducados, 36 con horario sin confirmar, parcial o contradictorio, 25 sin precio verificable.
 
 ## La Pepica (`pepica`)
 
@@ -26,7 +26,8 @@ Consultado: 2026-10-24 (1 d). Aparece en: categoría pizzas, categoría citas, c
 
 Consultado: 2026-10-24 (1 d). Aparece en: categoría hamburguesas, categoría citas, categoría visitantes.
 
-- [ ] Horario sin confirmar
+- [ ] Horario parcial (faltan horas o días)
+- [ ] Apertura en festivos sin dato
 - [ ] Falta saber: bebida, postre, café, suplementos
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
@@ -43,7 +44,8 @@ Consultado: 2026-10-24 (1 d). Aparece en: ruta R09, categoría playa, categoría
 
 Consultado: 2026-10-24 (1 d). Aparece en: categoría arroces, categoría barrios.
 
-- [ ] Horario sin confirmar
+- [ ] Horario parcial (faltan horas o días)
+- [ ] Apertura en festivos sin dato
 - [ ] Sin precio verificable
 - [ ] Falta saber: bebida, pan, postre, café, suplementos
 - [ ] Sin visita propia
@@ -71,17 +73,6 @@ Consultado: 2026-10-24 (1 d). Aparece en: categoría arroces, categoría barrios
 - [ ] Falta saber: bebida, pan, postre, café, suplementos
 - [ ] Sin visita propia
 
-## Fernandet (`fernandet`)
-
-Consultado: 2026-10-24 (1 d). Aparece en: categoría esmorzar, categoría playa.
-
-- [ ] Horario parcial (faltan horas o días)
-- [ ] Apertura en festivos sin dato
-- [ ] Sin precio verificable
-- [ ] Falta saber: bebida, pan, postre, café, suplementos
-- [ ] Sin muestra de reseñas de Google
-- [ ] Sin visita propia
-
 ## Kaisen Centro (`kaisen-centro`)
 
 Consultado: 2026-10-24 (1 d). Aparece en: categoría sushi, categoría citas.
@@ -89,26 +80,6 @@ Consultado: 2026-10-24 (1 d). Aparece en: categoría sushi, categoría citas.
 - [ ] Horario sin confirmar
 - [ ] Falta saber: bebida, postre, café, suplementos
 - [ ] Consumo obligatorio sin importe: bebida
-- [ ] Sin visita propia
-
-## La Pascuala (`pascuala`)
-
-Consultado: 2026-10-24 (1 d). Aparece en: categoría esmorzar, categoría playa.
-
-- [ ] Horario contradictorio entre fuentes
-- [ ] Apertura en festivos sin dato
-- [ ] Sin precio verificable
-- [ ] Falta saber: bebida, pan, postre, café, suplementos
-- [ ] Sin muestra de reseñas de Google
-- [ ] Sin visita propia
-
-## RiFF (`riff`)
-
-Consultado: 2026-10-24 (1 d). Aparece en: categoría alta-cocina, categoría visitantes.
-
-- [ ] Horario sin confirmar
-- [ ] Precio publicado por terceros: ratificar con el local
-- [ ] Falta saber: bebida, pan, postre, café, suplementos
 - [ ] Sin visita propia
 
 ## Véneta Brodadors (`veneta-brodadors`)
@@ -131,31 +102,12 @@ Consultado: 2026-10-24 (1 d). Aparece en: ruta R11, categoría playa.
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
 
-## Bar Cassalla (`cassalla`)
-
-Consultado: 2026-10-24 (1 d). Aparece en: categoría esmorzar, categoría visitantes.
-
-- [ ] Horario parcial (faltan horas o días)
-- [ ] Apertura en festivos sin dato
-- [ ] Falta saber: suplementos
-- [ ] Sin muestra de reseñas de Google
-- [ ] Sin visita propia
-
-## Bar Cremaet (`cremaet`)
-
-Consultado: 2026-10-24 (1 d). Aparece en: categoría esmorzar, categoría visitantes.
-
-- [ ] Horario parcial (faltan horas o días)
-- [ ] Apertura en festivos sin dato
-- [ ] Falta saber: bebida, café, suplementos
-- [ ] Sin muestra de reseñas de Google
-- [ ] Sin visita propia
-
 ## Bar Ricardo (`ricardo`)
 
 Consultado: 2026-10-24 (1 d). Aparece en: categoría barrios, categoría visitantes.
 
-- [ ] Horario sin confirmar
+- [ ] Horario parcial (faltan horas o días)
+- [ ] Apertura en festivos sin dato
 - [ ] Falta saber: bebida, pan, postre, café, suplementos
 - [ ] Sin visita propia
 
@@ -165,6 +117,16 @@ Consultado: 2026-10-24 (1 d). Aparece en: ruta R04, ruta R05.
 
 - [ ] Horario sin confirmar
 - [ ] Falta saber: bebida, pan, café, suplementos
+- [ ] Sin visita propia
+
+## Fernandet (`fernandet`)
+
+Consultado: 2026-10-24 (1 d). Aparece en: categoría esmorzar, categoría playa.
+
+- [ ] Apertura en festivos sin dato
+- [ ] Sin precio verificable
+- [ ] Falta saber: bebida, pan, postre, café, suplementos
+- [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
 
 ## Filippa’s (`filippas-sueca`)
@@ -193,20 +155,40 @@ Consultado: 2026-10-24 (1 d). Aparece en: ruta R07, categoría sushi.
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
 
-## La Salita (`la-salita`)
+## La Pascuala (`pascuala`)
+
+Consultado: 2026-10-24 (1 d). Aparece en: categoría esmorzar, categoría playa.
+
+- [ ] Horario parcial (faltan horas o días)
+- [ ] Apertura en festivos sin dato
+- [ ] Falta saber: bebida, suplementos
+- [ ] Sin muestra de reseñas de Google
+- [ ] Sin visita propia
+
+## RiFF (`riff`)
 
 Consultado: 2026-10-24 (1 d). Aparece en: categoría alta-cocina, categoría visitantes.
 
-- [ ] Horario sin confirmar
-- [ ] Falta saber: bebida, pan, café, suplementos
+- [ ] Apertura en festivos sin dato
+- [ ] Precio publicado por terceros: ratificar con el local
+- [ ] Falta saber: bebida, pan, postre, café, suplementos
 - [ ] Sin visita propia
 
-## Pizzería Km0 (`km0`)
+## Bar Cassalla (`cassalla`)
 
-Consultado: 2026-10-24 (1 d). Aparece en: categoría pizzas, categoría visitantes.
+Consultado: 2026-10-24 (1 d). Aparece en: categoría esmorzar, categoría visitantes.
 
-- [ ] Horario sin confirmar
-- [ ] Falta saber: bebida, postre, café, suplementos
+- [ ] Apertura en festivos sin dato
+- [ ] Falta saber: suplementos
+- [ ] Sin muestra de reseñas de Google
+- [ ] Sin visita propia
+
+## Bar Cremaet (`cremaet`)
+
+Consultado: 2026-10-24 (1 d). Aparece en: categoría esmorzar, categoría visitantes.
+
+- [ ] Apertura en festivos sin dato
+- [ ] Falta saber: bebida, café, suplementos
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
 
@@ -222,6 +204,23 @@ Consultado: 2026-10-24 (1 d). Aparece en: categoría arroces, categoría playa.
 
 Consultado: 2026-10-24 (1 d). Aparece en: ruta R03, categoría visitantes.
 
+- [ ] Falta saber: bebida, postre, café, suplementos
+- [ ] Sin muestra de reseñas de Google
+- [ ] Sin visita propia
+
+## La Salita (`la-salita`)
+
+Consultado: 2026-10-24 (1 d). Aparece en: categoría alta-cocina, categoría visitantes.
+
+- [ ] Apertura en festivos sin dato
+- [ ] Falta saber: bebida, pan, café, suplementos
+- [ ] Sin visita propia
+
+## Pizzería Km0 (`km0`)
+
+Consultado: 2026-10-24 (1 d). Aparece en: categoría pizzas, categoría visitantes.
+
+- [ ] Apertura en festivos sin dato
 - [ ] Falta saber: bebida, postre, café, suplementos
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
@@ -288,7 +287,6 @@ Consultado: 2026-10-24 (1 d). Aparece en: categoría hamburguesas.
 - [ ] Horario sin confirmar
 - [ ] Sin precio verificable
 - [ ] Falta saber: bebida, pan, postre, café, suplementos
-- [ ] Sucursal o dirección sin identificar
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
 
@@ -296,7 +294,8 @@ Consultado: 2026-10-24 (1 d). Aparece en: categoría hamburguesas.
 
 Consultado: 2026-10-24 (1 d). Aparece en: categoría sushi.
 
-- [ ] Horario sin confirmar
+- [ ] Horario parcial (faltan horas o días)
+- [ ] Apertura en festivos sin dato
 - [ ] Sin precio verificable
 - [ ] Falta saber: bebida, pan, postre, café, suplementos
 - [ ] Sin muestra de reseñas de Google
@@ -471,15 +470,6 @@ Consultado: 2026-10-24 (1 d). Aparece en: categoría citas.
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
 
-## La Principal (`principal`)
-
-Consultado: 2026-10-24 (1 d). Aparece en: ruta R07.
-
-- [ ] Sin precio verificable
-- [ ] Falta saber: bebida, pan, postre, café, suplementos
-- [ ] Sin muestra de reseñas de Google
-- [ ] Sin visita propia
-
 ## Petit Niu (`petit`)
 
 Consultado: 2026-10-24 (1 d). Aparece en: ruta R07.
@@ -504,6 +494,14 @@ Consultado: 2026-10-24 (1 d). Aparece en: ruta R12.
 - [ ] Infantil: sin_tv desconocido
 - [ ] Infantil: carrito desconocido
 - [ ] Infantil: trona desconocido
+- [ ] Sin muestra de reseñas de Google
+- [ ] Sin visita propia
+
+## La Principal (`principal`)
+
+Consultado: 2026-10-24 (1 d). Aparece en: ruta R07.
+
+- [ ] Falta saber: bebida, pan, postre, café, suplementos
 - [ ] Sin muestra de reseñas de Google
 - [ ] Sin visita propia
 

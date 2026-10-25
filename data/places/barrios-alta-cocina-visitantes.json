@@ -52,7 +52,7 @@
         }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": { "bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" }, "minimum": { "es": "Máximo dos tipos de arroz por mesa.", "en": "Maximum two kinds of rice per table." }, "note": { "es": "Tarifa actual pendiente.", "en": "Current prices pending." } },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"tue": []}, "note": {"es": "Abre de lunes a domingo salvo los martes (descanso del personal); no publica horas.", "en": "Open Monday to Sunday except Tuesdays (staff rest day); no times published."}, "source": "https://restaurantealqueriadelbrosquil.com/en/contact/"},
       "sources": ["https://restaurantealqueriadelbrosquil.com/", "https://restaurantealqueriadelbrosquil.com/en/rices/", "https://restaurantealqueriadelbrosquil.com/en/desserts/", "https://restaurantealqueriadelbrosquil.com/contacto/"]
     },
     {
@@ -91,7 +91,7 @@
         "note": { "es": "Hay PDFs distintos con y sin www; importes del PDF sin www consultado. El marisco va por peso.", "en": "There are different PDFs with and without www; prices from the non-www PDF we checked. Seafood is sold by weight." },
         "source": "https://barricardo.com/cartamesa.pdf"
       },
-      "hours": { "status": "desconocido" },
+      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"tue": [["08:00", "24:00"]], "wed": [["08:00", "24:00"]], "thu": [["08:00", "24:00"]], "fri": [["08:00", "24:00"]], "sat": [["08:00", "24:00"]]}, "note": {"es": "Solo lo publica la carta en PDF (subida en diciembre de 2023): martes a sábado de 8:00 a 24:00, cocina todo el día. Puede estar desactualizado.", "en": "Only published in the PDF menu (uploaded December 2023): Tuesday to Saturday 8:00–24:00, kitchen all day. May be out of date."}, "source": "https://barricardo.com/wp-content/uploads/2023/12/cartamesa.pdf"},
       "evidence_awards": [ { "label": { "es": "Solete Guía Repsol (ficha consultada)", "en": "Guía Repsol 'Solete' (listing checked)" }, "url": "https://www.guiarepsol.com/es/fichas/solete/bar-ricardo-151056/", "year": null } ],
       "sources": ["https://barricardo.com/cartamesa.pdf", "https://www.guiarepsol.com/es/fichas/solete/bar-ricardo-151056/"]
     },
@@ -104,7 +104,7 @@
         "en": { "offer": "Mediterranean cooking in Torrefiel.", "fits": "The next neighbourhood candidate, not a firm recommendation.", "not_for": "Dinner: its page advertises dinners but the hours table ends at 17:00.", "order": "Current menu and prices pending.", "may_disappoint": "No reviews checked, no visit.", "before": "We will resolve the hours contradiction before suggesting any evening plan." }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Carta y precio pendientes.", "en": "Menu and prices pending." } },
-      "hours": { "status": "contradictorio", "note": { "es": "Texto con cenas frente a tabla que cierra a las 17:00.", "en": "Text mentions dinners; hours table closes at 17:00." } },
+      "hours": {"status": "contradictorio", "checked_on": "2026-10-25", "weekly": {"mon": [["08:00", "17:00"]], "tue": [["08:00", "17:00"]], "wed": [["08:00", "17:00"]], "thu": [["08:00", "17:00"]], "fri": [["08:00", "17:00"]], "sat": [["14:00", "17:00"]], "sun": [["14:00", "17:00"]]}, "note": {"es": "La tabla cierra a las 17:00 todos los días, pero el texto de la página habla de cenas.", "en": "The hours table closes at 17:00 every day, but the page text mentions dinners."}, "source": "https://restaurante-malkebien.eatbu.com/?lang=es"},
       "sources": ["https://restaurante-malkebien.eatbu.com/?lang=es"]
     },
     {
@@ -130,20 +130,8 @@
           "before": "Drinks extra; pairing not included. Durations are the restaurant's own estimates."
         }
       },
-      "price": {
-        "per_adult_base": 128.7,
-        "basis": { "es": "menú Gaia, sin bebida", "en": "Gaia menu, no drinks" },
-        "lines": [
-          { "label": { "es": "Gaia (≈1 h 30 min)", "en": "Gaia (≈1 h 30 min)" }, "amount": 128.7, "unit": "persona" },
-          { "label": { "es": "Ondina (≈2 h 30 min)", "en": "Ondina (≈2 h 30 min)" }, "amount": 152.7, "unit": "persona" },
-          { "label": { "es": "Cloris", "en": "Cloris" }, "amount": 152.7, "unit": "persona" },
-          { "label": { "es": "La Salita (≈3 h)", "en": "La Salita (≈3 h)" }, "amount": 190.7, "unit": "persona" }
-        ],
-        "example": { "party": 2, "items": [ { "label": { "es": "Gaia", "en": "Gaia" }, "qty": 2, "amount": 128.7 } ], "note": { "es": "Para dos: 257,40 / 305,40 / 381,40 € de menú según formato, bebida aparte.", "en": "For two: €257.40 / €305.40 / €381.40 of menu depending on format, drinks extra." } },
-        "includes": { "bebida": "aparte", "pan": "desconocido", "postre": "incluido", "cafe": "desconocido", "suplementos": "desconocido" },
-        "source": "https://www.anarkiagroup.com/menus-la-salita-4"
-      },
-      "hours": { "status": "desconocido" },
+      "price": {"per_adult_base": 128.7, "basis": {"es": "menú Gaia, sin bebida", "en": "Gaia menu, no drinks"}, "lines": [{"label": {"es": "Gaia (≈1 h 30 min)", "en": "Gaia (≈1 h 30 min)"}, "amount": 128.7, "unit": "persona"}, {"label": {"es": "Ondina (≈2 h 30 min)", "en": "Ondina (≈2 h 30 min)"}, "amount": 152.7, "unit": "persona"}, {"label": {"es": "Cloris", "en": "Cloris"}, "amount": 152.7, "unit": "persona"}, {"label": {"es": "La Salita (≈3 h)", "en": "La Salita (≈3 h)"}, "amount": 190.7, "unit": "persona"}, {"label": {"es": "Plato extra", "en": "Extra dish"}, "amount": 23, "unit": "persona"}], "example": {"party": 2, "items": [{"label": {"es": "Gaia", "en": "Gaia"}, "qty": 2, "amount": 128.7}], "note": {"es": "Para dos: 257,40 / 305,40 / 381,40 € de menú según formato, bebida aparte.", "en": "For two: €257.40 / €305.40 / €381.40 of menu depending on format, drinks extra."}}, "includes": {"bebida": "aparte", "pan": "desconocido", "postre": "incluido", "cafe": "desconocido", "suplementos": "desconocido"}, "source": "https://www.anarkiagroup.com/menus-la-salita-4", "kids_cost": {"es": "Menú infantil 55 €; no prueba que un menú de varias horas encaje con un niño que necesita moverse.", "en": "Children’s menu €55; it does not prove a multi-hour menu suits a child who needs to move."}},
+      "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"mon": [["13:30", "14:45"], ["20:00", "21:30"]], "tue": [["13:30", "14:45"], ["20:00", "21:30"]], "wed": [["13:30", "14:45"], ["20:00", "21:30"]], "thu": [["13:30", "14:45"], ["20:00", "21:30"]], "fri": [["13:30", "14:45"], ["20:00", "21:30"]], "sat": [["13:30", "14:45"], ["20:00", "21:30"]]}, "note": {"es": "Lunes a sábado; franjas de comida y cena publicadas (hora de entrada a un menú largo). Domingo y festivos no constan.", "en": "Monday to Saturday; published lunch and dinner windows (arrival times for a long menu). Sunday and holidays not stated."}, "source": "https://www.anarkiagroup.com/inicio/la-salita"},
       "sources": ["https://www.anarkiagroup.com/menus-la-salita-4", "https://wanderlog.com/es/list/geoCategory/1817154/best-spots-for-fried-chicken-in-valencia"]
     },
     {
@@ -158,7 +146,7 @@
           "not_for": "Quien necesita una silla concreta o luz natural sin comprobar antes mesa y asiento.",
           "order": "Elige formato (mediodía o EXCEL·LENT) tras confirmar precio e inclusiones con el restaurante.",
           "may_disappoint": "David K (TheFork, 5,5/10, hace dos años) vio correcta la comida pero echó en falta explicaciones del recorrido y luz natural. Opiniones recientes son muy favorables al trato. No hay base para un defecto recurrente.",
-          "before": "Los precios proceden de TheFork y están por ratificar. Que la carta diga «2026» no garantiza que cada dato esté actualizado."
+          "before": "El EXCEL·LENT (158,80 €, maridaje 85 € aparte) está en su web; el menú de mediodía (89,80 €) solo en TheFork, por ratificar. Martes a sábado."
         },
         "en": {
           "offer": "Cooking rooted in the region.",
@@ -166,21 +154,11 @@
           "not_for": "Anyone who needs a particular chair or natural light, without checking table and seating first.",
           "order": "Choose a format (lunch or EXCEL·LENT) after confirming price and inclusions with the restaurant.",
           "may_disappoint": "David K (TheFork, 5.5/10, two years ago) found the food correct but missed explanations of the courses and natural light. Recent reviews are very positive about service. No basis for a recurring fault.",
-          "before": "Prices come from TheFork and still need confirming. A menu headed '2026' does not guarantee every detail is up to date."
+          "before": "EXCEL·LENT (€158.80, wine pairing €85 extra) is on its website; the lunch menu (€89.80) only on TheFork, to be confirmed. Tuesday to Saturday."
         }
       },
-      "price": {
-        "per_adult_base": 89.8, "base_confirmed": false,
-        "basis": { "es": "menú mediodía según TheFork (por ratificar)", "en": "lunch menu per TheFork (to be confirmed)" },
-        "lines": [
-          { "label": { "es": "Mediodía (TheFork)", "en": "Lunch (TheFork)" }, "amount": 89.8, "unit": "persona", "third_party": true },
-          { "label": { "es": "EXCEL·LENT (TheFork)", "en": "EXCEL·LENT (TheFork)" }, "amount": 158.8, "unit": "persona", "third_party": true }
-        ],
-        "example": { "party": 2, "items": [ { "label": { "es": "Mediodía", "en": "Lunch" }, "qty": 2, "amount": 89.8 } ], "note": { "es": "Para dos: 179,60 / 317,60 € antes de extras no confirmados.", "en": "For two: €179.60 / €317.60 before unconfirmed extras." } },
-        "includes": { "bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido" },
-        "source": "https://www.thefork.es/restaurante/riff-r9399/menu"
-      },
-      "hours": { "status": "desconocido" },
+      "price": {"per_adult_base": 89.8, "base_confirmed": false, "basis": {"es": "menú mediodía según TheFork (por ratificar)", "en": "lunch menu per TheFork (to be confirmed)"}, "lines": [{"label": {"es": "Mediodía (TheFork)", "en": "Lunch (TheFork)"}, "amount": 89.8, "unit": "persona", "third_party": true}, {"label": {"es": "EXCEL·LENT (su web)", "en": "EXCEL·LENT (its website)"}, "amount": 158.8, "unit": "persona", "third_party": false}, {"label": {"es": "Maridaje del EXCEL·LENT", "en": "EXCEL·LENT wine pairing"}, "amount": 85, "unit": "persona"}], "example": {"party": 2, "items": [{"label": {"es": "Mediodía", "en": "Lunch"}, "qty": 2, "amount": 89.8}], "note": {"es": "Para dos: 179,60 / 317,60 € antes de extras no confirmados.", "en": "For two: €179.60 / €317.60 before unconfirmed extras."}}, "includes": {"bebida": "desconocido", "pan": "desconocido", "postre": "desconocido", "cafe": "desconocido", "suplementos": "desconocido"}, "source": "https://www.thefork.es/restaurante/riff-r9399/menu"},
+      "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"tue": [["13:30", "15:00"], ["20:00", "21:30"]], "wed": [["13:30", "15:00"], ["20:00", "21:30"]], "thu": [["13:30", "15:00"], ["20:00", "21:30"]], "fri": [["13:30", "15:00"], ["20:00", "21:30"]], "sat": [["13:30", "15:00"], ["20:00", "21:30"]]}, "note": {"es": "Martes a sábado. Su web indica que no se sientan mesas después de las 15:15 ni de las 21:45. Domingo, lunes y festivos no constan.", "en": "Tuesday to Saturday. Its website says no tables are seated after 15:15 or 21:45. Sunday, Monday and holidays not stated."}, "source": "https://restaurante-riff.com/"},
       "sources": ["https://restaurante-riff.com/", "https://www.thefork.es/restaurante/riff-r9399/menu", "https://www.thefork.com/restaurant/riff-r9399/reviews"]
     },
     {
@@ -205,19 +183,8 @@
           "before": "Weekends and holidays +€1.50. Do not copy its prices to Cremaet, even though they share a group."
         }
       },
-      "price": {
-        "per_adult_base": 8.5, "base_overrides": {"sat": 10, "sun": 10, "festivo": 10},
-        "basis": { "es": "esmorzar completo entre semana", "en": "full esmorzar deal on a weekday" },
-        "lines": [
-          { "label": { "es": "Esmorzar completo", "en": "Full esmorzar deal" }, "amount": 8.5, "unit": "persona" },
-          { "label": { "es": "Esmorzar con medio bocadillo", "en": "Esmorzar with half sandwich" }, "amount": 7.5, "unit": "persona" },
-          { "label": { "es": "Suplemento fin de semana y festivos", "en": "Weekend and holiday supplement" }, "amount": 1.5, "unit": "persona" }
-        ],
-        "example": { "party": 2, "items": [ { "label": { "es": "Esmorzar completo (laborable)", "en": "Full esmorzar (weekday)" }, "qty": 2, "amount": 8.5 } ], "note": { "es": "17 € entre semana o 20 € en fin de semana, antes de suplementos de relleno o café.", "en": "€17 on a weekday or €20 at weekends, before filling or coffee upgrades." } },
-        "includes": { "bebida": "incluido", "pan": "no_aplica", "postre": "no_aplica", "cafe": "incluido", "suplementos": "aparte" },
-        "source": "https://barcassalla.es/carta/esmorzar/"
-      },
-      "hours": { "status": "parcial", "service": [["09:30", "12:00"]], "note": { "es": "Servicio de esmorzar 09:30–12:00; días exactos por confirmar.", "en": "Esmorzar service 09:30–12:00; exact days to be confirmed." }, "source": "https://barcassalla.es/almuerzos/" },
+      "price": {"per_adult_base": 8.5, "base_overrides": {"sat": 10, "sun": 10, "festivo": 10}, "basis": {"es": "esmorzar completo entre semana", "en": "full esmorzar deal on a weekday"}, "lines": [{"label": {"es": "Esmorzar completo", "en": "Full esmorzar deal"}, "amount": 8.5, "unit": "persona"}, {"label": {"es": "Esmorzar con medio bocadillo", "en": "Esmorzar with half sandwich"}, "amount": 7.5, "unit": "persona"}, {"label": {"es": "Suplemento fin de semana y festivos", "en": "Weekend and holiday supplement"}, "amount": 1.5, "unit": "persona"}, {"label": {"es": "Cruasán o tostada con café", "en": "Croissant or toast with coffee"}, "amount": 3.5, "unit": "persona"}], "example": {"party": 2, "items": [{"label": {"es": "Esmorzar completo (laborable)", "en": "Full esmorzar (weekday)"}, "qty": 2, "amount": 8.5}], "note": {"es": "17 € entre semana o 20 € en fin de semana, antes de suplementos de relleno o café.", "en": "€17 on a weekday or €20 at weekends, before filling or coffee upgrades."}}, "includes": {"bebida": "incluido", "pan": "no_aplica", "postre": "no_aplica", "cafe": "incluido", "suplementos": "aparte"}, "source": "https://barcassalla.es/carta/esmorzar/"},
+      "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"mon": [["09:30", "24:30"]], "tue": [["09:30", "24:30"]], "wed": [["09:30", "24:30"]], "thu": [["09:30", "24:30"]], "fri": [["09:30", "24:30"]], "sat": [["09:30", "24:30"]], "sun": [["09:30", "24:30"]]}, "service": [["09:30", "12:00"]], "note": {"es": "Abierto todos los días de 9:30 a 00:30. La carta de almuerzo se sirve de 9:30 a 12:00, sin reservas en ese turno.", "en": "Open daily 9:30–00:30. The esmorzar menu is served 9:30–12:00, with no bookings for that service."}, "source": "https://barcassalla.es/"},
       "evidence_awards": [ { "label": { "es": "Cacau d'Or 2024 al grupo Gastroadictos (no premio individual del bar)", "en": "Cacau d'Or 2024 to the Gastroadictos group (not an award to this bar alone)" }, "url": "https://www.hosteleriaenvalencia.com/Proveedores?id=10766", "year": 2024 } ],
       "sources": ["https://barcassalla.es/carta/esmorzar/", "https://barcassalla.es/almuerzos/"]
     },
@@ -231,7 +198,7 @@
           "fits": "Otro punto de partida accesible para el esmorzar.",
           "not_for": "Llamarlo plan de playa: está al inicio de la Avenida del Puerto, no en primera línea.",
           "order": "La Cabanyalera lleva titaina y huevo frito.",
-          "may_disappoint": "El precio del bocadillo no demuestra que incluya bebida y café: no lo confundas con un esmorzar completo.",
+          "may_disappoint": "El precio del bocadillo no incluye bebida ni café según lo publicado: no lo confundas con un esmorzar completo. La web da 6,00 € y 5,40 € sin explicar la diferencia.",
           "before": "Mismo grupo que Cassalla; no trasladamos sus tarifas."
         },
         "en": {
@@ -239,18 +206,12 @@
           "fits": "Another easy starting point for esmorzar.",
           "not_for": "A beach plan: it is at the start of Avenida del Puerto, not on the seafront.",
           "order": "The Cabanyalera comes with titaina (a tomato, pepper and tuna sauté) and a fried egg.",
-          "may_disappoint": "The sandwich price is not proven to include a drink and coffee: do not mistake it for the whole ritual.",
+          "may_disappoint": "As published, the sandwich price does not include a drink or coffee: do not mistake it for the whole ritual. The website shows €6.00 and €5.40 without explaining the difference.",
           "before": "Same group as Cassalla; we do not transfer its prices."
         }
       },
-      "price": {
-        "per_adult_base": 6,
-        "basis": { "es": "un bocadillo entero (sin bebida ni café confirmados)", "en": "one full sandwich (drink and coffee not confirmed)" },
-        "lines": [ { "label": { "es": "Bocadillo entero", "en": "Full sandwich" }, "amount": 6, "unit": "bocadillo" } ],
-        "includes": { "bebida": "desconocido", "pan": "no_aplica", "postre": "no_aplica", "cafe": "desconocido", "suplementos": "desconocido" },
-        "source": "https://barcremaet.com/carta/esmorzar/"
-      },
-      "hours": { "status": "parcial", "service": [["09:30", "12:00"]], "note": { "es": "Servicio de bocadillos 09:30–12:00; días exactos por confirmar.", "en": "Sandwich service 09:30–12:00; exact days to be confirmed." }, "source": "https://barcremaet.com/" },
+      "price": {"per_adult_base": 6, "basis": {"es": "un bocadillo entero (sin bebida ni café confirmados)", "en": "one full sandwich (drink and coffee not confirmed)"}, "lines": [{"label": {"es": "Bocadillo Cabanyalera", "en": "Cabanyalera sandwich"}, "amount": 6, "unit": "bocadillo"}, {"label": {"es": "Cruasán o tostada con café", "en": "Croissant or toast with coffee"}, "amount": 3.5, "unit": "persona"}], "includes": {"bebida": "desconocido", "pan": "no_aplica", "postre": "no_aplica", "cafe": "desconocido", "suplementos": "desconocido"}, "source": "https://barcremaet.com/en/our-menu/esmorzar/", "note": {"es": "La web muestra para la Cabanyalera 6,00 € y 5,40 € sin explicar la diferencia, y no publica precio de almuerzo completo ni recargo de fin de semana.", "en": "The website shows €6.00 and €5.40 for the Cabanyalera without explaining the difference, and publishes no full-esmorzar price or weekend surcharge."}},
+      "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"mon": [["09:30", "24:30"]], "tue": [["09:30", "24:30"]], "wed": [["09:30", "24:30"]], "thu": [["09:30", "24:30"]], "fri": [["09:30", "24:30"]], "sat": [["09:30", "24:30"]], "sun": [["09:30", "24:30"]]}, "note": {"es": "Abierto todos los días de 9:30 a 00:30. La web actual no publica una franja de almuerzo.", "en": "Open daily 9:30–00:30. The current website does not publish an esmorzar time window."}, "source": "https://barcremaet.com/"},
       "evidence_awards": [ { "label": { "es": "Cacau d'Or 2024 al grupo Gastroadictos (no premio individual del bar)", "en": "Cacau d'Or 2024 to the Gastroadictos group (not an award to this bar alone)" }, "url": "https://www.hosteleriaenvalencia.com/Proveedores?id=10766", "year": 2024 } ],
       "sources": ["https://barcremaet.com/carta/esmorzar/", "https://barcremaet.com/"]
     },
@@ -263,21 +224,21 @@
           "offer": "Bodega con tradición de esmorzar cerca de la playa.",
           "fits": "Un esmorzar antes de pasear por el Cabanyal o el paseo marítimo.",
           "not_for": "El domingo: cerrado según web y carta. Ni encadenar después una paella enorme por inercia.",
-          "order": "Confirma el servicio y el esmorzar vigente antes de ir.",
+          "order": "Almuerzo entero con café (14 €) o medio (9,50 €), de lunes a viernes.",
           "may_disappoint": "Sin auditoría nueva de Google. Un premio de hace años es contexto, no prueba de que cada bocadillo de hoy sea perfecto.",
-          "before": "La web y la carta discrepan sobre el sábado: verifícalo."
+          "before": "Sábados y festivos no hay menú de almuerzo. La web y la carta discrepan en el cierre del sábado (16:00 o 15:30)."
         },
         "en": {
           "offer": "An old bodega with an esmorzar tradition near the beach.",
           "fits": "An esmorzar before walking around Cabanyal or along the seafront.",
           "not_for": "Sundays: closed according to both website and menu. Nor for following it with a huge paella out of habit.",
-          "order": "Check the service and current esmorzar deal before going.",
+          "order": "Full esmorzar with coffee (€14) or half (€9.50), Monday to Friday.",
           "may_disappoint": "No new Google audit. An award from years ago is background, not proof that every sandwich today is perfect.",
-          "before": "The website and menu disagree about Saturdays: check."
+          "before": "No esmorzar menu on Saturdays or holidays. The website and menu disagree on Saturday closing (16:00 or 15:30)."
         }
       },
-      "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Esmorzar vigente por confirmar.", "en": "Current esmorzar deal to be confirmed." }, "source": "https://bodegalapascuala.es/wp-content/uploads/2025/12/CARTA-ESPA%C3%91OL-LA-PASCUALA.pdf" },
-      "hours": { "status": "contradictorio", "weekly": { "sun": [] }, "note": { "es": "Domingo cerrado; sábado contradictorio entre web y carta.", "en": "Closed Sunday; Saturday contradictory between website and menu." } },
+      "price": {"per_adult_base": 14, "base_overrides": {"sat": null, "festivo": null}, "basis": {"es": "almuerzo entero con café (lunes a viernes)", "en": "full esmorzar with coffee (Monday to Friday)"}, "lines": [{"label": {"es": "Almuerzo entero con café", "en": "Full esmorzar with coffee"}, "amount": 14, "unit": "persona"}, {"label": {"es": "Almuerzo entero sin café", "en": "Full esmorzar without coffee"}, "amount": 13.5, "unit": "persona"}, {"label": {"es": "Almuerzo medio con café", "en": "Half esmorzar with coffee"}, "amount": 9.5, "unit": "persona"}, {"label": {"es": "Almuerzo medio sin café", "en": "Half esmorzar without coffee"}, "amount": 9, "unit": "persona"}, {"label": {"es": "Suplemento cremaet", "en": "Cremaet supplement"}, "amount": 1, "unit": "persona"}], "example": {"party": 2, "items": [{"label": {"es": "Almuerzo entero con café", "en": "Full esmorzar with coffee"}, "qty": 2, "amount": 14}]}, "includes": {"bebida": "desconocido", "pan": "no_aplica", "postre": "no_aplica", "cafe": "incluido", "suplementos": "aparte"}, "note": {"es": "Solo de lunes a viernes; sábados y festivos no hay menú de almuerzo. Los bocadillos marcados llevan suplemento (la web da 2,00 € y 2,50 € en sitios distintos).", "en": "Monday to Friday only; no esmorzar menu on Saturdays or holidays. Marked sandwiches carry a supplement (the website gives €2.00 and €2.50 in different places)."}, "source": "https://bodegalapascuala.es/"},
+      "hours": {"status": "parcial", "checked_on": "2026-10-25", "weekly": {"mon": [["09:00", "15:30"]], "tue": [["09:00", "15:30"]], "wed": [["09:00", "15:30"]], "thu": [["09:00", "15:30"]], "fri": [["09:00", "15:30"]], "sat": [["09:00", "15:30"]], "sun": []}, "note": {"es": "La web dice que el sábado cierra a las 16:00 y la carta, a las 15:30: usamos la hora más temprana. Festivos: «consultar». Sábados y festivos no hay menú de almuerzo.", "en": "The website says Saturday closes at 16:00 and the menu says 15:30: we use the earlier time. Holidays: ‘ask’. No esmorzar menu on Saturdays or holidays."}, "source": "https://bodegalapascuala.es/"},
       "evidence_awards": [ { "label": { "es": "Cacau d'Or (edición exacta pendiente de fuente primaria)", "en": "Cacau d'Or (exact edition pending a primary source)" }, "url": "https://valenciaplaza.com/guiahedonista/comer3/amstel-homenajea-a-los-mejores-locales-para-almorzar-en-fallas", "year": null } ],
       "sources": ["https://bodegalapascuala.es/", "https://bodegalapascuala.es/wp-content/uploads/2025/12/CARTA-ESPA%C3%91OL-LA-PASCUALA.pdf"]
     },
@@ -304,7 +265,7 @@
         }
       },
       "price": { "per_adult_base": null, "lines": [], "includes": {}, "note": { "es": "Precio actual no confirmado.", "en": "Current prices not confirmed." } },
-      "hours": { "status": "parcial", "weekly": { "mon": [], "thu": [], "fri": [["13:00", "16:30"], ["20:30", "23:30"]], "sat": [["13:00", "16:30"], ["20:30", "23:30"]], "sun": [["13:00", "16:30"]] }, "note": { "es": "Web con AM/PM incoherente: interpretamos reloj de 24 h y hay que reconfirmar. Martes y miércoles no constan.", "en": "Website writes AM/PM inconsistently: we read it as 24-hour time, to be reconfirmed. Tuesday and Wednesday not stated." }, "source": "https://restaurantefernandet.com/ubicacion/" },
+      "hours": {"status": "documentado", "checked_on": "2026-10-25", "weekly": {"mon": [], "tue": [], "wed": [], "thu": [], "fri": [["13:00", "16:30"], ["20:30", "23:30"]], "sat": [["13:00", "16:30"], ["20:30", "23:30"]], "sun": [["13:00", "16:30"]]}, "note": {"es": "Lunes a jueves cerrado. La web escribe las horas con AM/PM incoherente; interpretamos reloj de 24 h. Sin esmorzar matinal publicado.", "en": "Closed Monday to Thursday. The website writes times with inconsistent AM/PM; we read them as 24-hour time. No morning esmorzar published."}, "source": "https://restaurantefernandet.com/ubicacion/"},
       "evidence_awards": [ { "label": { "es": "Cacau d'Or, reportado como 2020 (cerrar con archivo del organizador)", "en": "Cacau d'Or, reported as 2020 (to be confirmed with the organiser's archive)" }, "url": "https://topvalencia.net/mejores-almuerzos-2021/", "year": 2020 } ],
       "sources": ["https://restaurantefernandet.com/ubicacion/", "https://restaurantefernandet.com/carta-fernandet/", "https://www.tripadvisor.es/Restaurant_Review-g1063695-d14193522-Reviews-Bar_Fernandet-Sueca_Province_of_Valencia_Valencian_Community.html"]
     }

@@ -78,3 +78,18 @@ test('ninguna dirección de ruta sale de una sucursal sin identificar', () => {
     for (const id of ids) assert.ok(data.byId[id].address, `${r.id}/${id}`);
   }
 });
+
+test('datos verificados el 25/10/2026: precios oficiales y reglas por día', () => {
+  const pas = data.byId.pascuala;
+  assert.equal(pas.price.per_adult_base, 14);
+  assert.equal(pas.price.base_overrides.sat, null, 'sábados sin menú de almuerzo');
+  assert.equal(pas.hours.weekly.sun.length, 0);
+  const pri = data.byId.principal.price;
+  assert.match(pri.minimum.es, /mínimo 2 raciones/);
+  assert.ok(pri.lines.some((l) => l.amount === 17 && /por encargo/.test(l.label.es)));
+  assert.equal(data.byId.riff.price.lines.find((l) => l.amount === 158.8).third_party, false);
+  assert.equal(data.byId.riff.price.base_confirmed, false, 'el menú de mediodía sigue siendo de TheFork');
+  assert.equal(data.byId.hundred.zone, 'mercat');
+  assert.ok(data.byId.hundred.address_source.includes('visitvalencia.com'));
+  assert.equal(data.byId.hundred.hours.status, 'desconocido', 'no usamos horario de agregadores');
+});

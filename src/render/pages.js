@@ -308,6 +308,7 @@ function placePage(ctx, lang, p) {
       ${receipt(p, lang)}
       <div class="mapbox">
         ${p.address ? `<p><strong>${e(ui.address)}:</strong> ${e(p.address)}${p.city && p.city !== 'Valencia' ? `, ${e(p.city)}` : ''}</p>` : `<p>${e(ui.branchPending)}</p>`}
+        ${p.address_source ? `<p class="small">${e(ui.addressSource)}: <a href="${e(p.address_source)}" rel="nofollow noopener">${e(new URL(p.address_source).hostname.replace(/^www\./, ''))}</a></p>` : ''}
         <p><a class="btn" href="${e(p.maps.search)}" rel="nofollow noopener">${icon('pin')}<span>${e(ui.maps)}</span></a></p>
         ${p.maps.walk && p.scope === 'valencia' ? `<p><a href="${e(p.maps.walk)}" rel="nofollow noopener">${e(ui.mapsWalk)}</a></p>` : ''}
         <p class="small">${e(ui.mapsNote)}</p>

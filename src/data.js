@@ -38,7 +38,7 @@ function domainOf(url) {
 
 export function buildEvidence(place) {
   const ev = [];
-  for (const url of place.sources || []) {
+  for (const url of [...(place.sources || []), ...(place.address_source ? [place.address_source] : [])]) {
     ev.push({ kind: 'documental', url, domain: domainOf(url), date: place.checked_on });
   }
   if (place.reviews_sample) {
